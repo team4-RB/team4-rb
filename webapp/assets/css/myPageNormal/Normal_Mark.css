@@ -38,10 +38,16 @@ nav ul li {
 /* ============================ */
 .div_mark{
   flex:1;
+  display: flex;
+  flex-direction: column;
+}
+.div_mark div{
+  font-size: 30px;
+  margin: 30px;
 }
 .mark_nav{
   display: flex;
-  margin: 0px 150px;
+  margin: 100px 150px 0px 150px;
 }
 .mark_nav ul{
   display: flex;
@@ -63,4 +69,12 @@ nav ul li {
   display: flex;
   list-style-type: none;
   
+}
+button{
+  background-color: red;
+  color: white;
+  width: 80px;
+  height: 40px;
+  margin-left: 590px;
+  border-radius: 15px;
 }
