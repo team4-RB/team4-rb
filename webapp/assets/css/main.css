@@ -61,22 +61,56 @@ main{
   height: 100%;
 }
 .news_banner{
+  /* 이게 .slides-wrap임. */
+  margin-top: 35px;
   background-color: gray;
   width: 100%;
   height: 300px;
   border-radius: 30px;
+
+  /* 슬라이드 박스로 설정하기 위한 요소 */
+  overflow: hidden;
+  position: relative;
 }
+.news_banner .slide-box{
+  display: flex;
+  height: 300px;
+  left: 0;
+  position: absolute;
+  background-color: yellow;
+}
+.slide-box li{
+  background-color: green;
+}
+.slide-img{
+  width: 1200px;
+  height: 300px;
+}
+.slide-box li:first-child > .slide-img{
+  background-color: lightblue;
+
+}
+.slide-box li:nth-child(2) > .slide-img{
+  background-color: lightgreen;
+}
+.slide-box li:last-child > .slide-img{
+  background-color: lightcoral;
+}
+
 .recommend{
+  margin-top: 50px;
   background-color: aliceblue;
   height: 250px;
   display: flex;
 }
 .recommend_activity {
+  margin-right: 10px;
   background-color: olive;
   border-radius: 20px;
   flex: 1;
 }
 .recommend_board{
+  margin-left: 10px;
   background-color: darksalmon;
   border-radius: 20px;
   flex: 1;
@@ -133,10 +167,75 @@ main{
   width: 130px;
   text-align: center;
 }
-
 .explore{
+  margin-top: 50px;
   background-color: aquamarine;
   height: 550px;
+  display: flex;
+}
+.explore_map{
+  margin-right: 10px;
+  height: 100%;
+  background-color:#1D3266;
+  flex: 1;
+  border-radius: 20px;
+}
+.explore_care{
+  margin-left: 10px;
+  height: 100%;
+  width: 300px;
+  background-color:darkkhaki;
+  border-radius: 20px;
+}
+.care_profile{
+  background-color: crimson;
+  display: flex;
+  position: relative;
+}
+.profile_introduction{
+  flex-wrap: wrap;
+}
+.profile_pic_box{
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+.profile_pic{
+  width: 70px;
+}
+.day_box{
+  display: flex;
+  padding-left: 7px;
+  background-color: black;
+  width: max-content;
+}
+.day{
+  border: solid 3px #1D3266;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  margin-right: 7px;
+}
+.profile_text{
+  background-color: #1D3266;
+  height: max-content;
+  position: absolute;
+  left: 50%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile_name{
+  background-color: wheat;
+  width: max-content;
+}
+.profile_introduction{
+  width: 100px;
+  background-color: pink;
 }
 footer{
   width: 100%;
