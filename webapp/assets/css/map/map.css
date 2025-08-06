@@ -10,7 +10,7 @@
     font-style: normal;
 }
 
-header, footer{
+.header, .footer{
   width: 100%;
   height: 110px;
   background-color: #FFF8EF;
@@ -22,9 +22,17 @@ main{
   background-color: #FFE7C9;
 }
 
-.map_container .map_api{
-  width: 100px;
-  height: 100px;
-  background-color: white;
-  margin: auto;
+.map_container{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+.map_api{
+  align-content: center;
+}
+
+.map_api > img{
+  width: 100%;
+  height: 80%;
 }
