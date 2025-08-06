@@ -1,170 +1,98 @@
-*{
+* {
   margin: 0;
   padding: 0;
   font-family: 'pretendard-regular';
 }
 
 @font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
 }
 
-header, footer{
+header,
+footer {
   width: 100%;
   height: 110px;
   background-color: rgb(0, 0, 0);
 }
 
-h1{
+h1 {
   padding: 35px;
   text-align: center;
 }
 
-main{
+main {
   width: 100%;
   height: calc(100vh - 220px);
-  background-color: #FFE7C9;
+  background-color: #ffe7c9;
 }
 
-.subway_subwayLine button{
-  background-color: #FFC376;
+.subway_subwayLine {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.subway_subwayLine button {
+  background-color: #fff8ef;
+  border-radius: 30px;
   width: 130px;
   height: 55px;
   display: inline-block;
   font-size: 16px;
-  transition: background-color 0.3s ease;
   cursor: pointer;
+  transition: background-color 0.1s ease;
+  border: none;
+  margin: 0 5px;
 }
 
-.subway_subwayLine{
-  width: 100%;
-  margin: auto;
-  align-items: center;
-  text-align: center;
+.subway_subwayLine button:hover {
+  background-color: #ffc376;
 }
 
-.subway_subway_img{
-  width: 100%;
-  margin: auto;
-  align-items: center;
-  text-align: center;
+/* 선택된 버튼 색상 */
+.selected-btn {
+  background-color: #ffc376 !important;
 }
 
-.map_section{
+.map_section {
   display: flex;
   justify-content: center;
   gap: 30px;
   padding: 20px;
 }
 
-
-.map_section div{
+.map_section > div {
   display: none;
 }
 
-.map_section{
-  display: flex;
-  justify-content: center;
-  padding: 15px;
-}
-
-/* 역리스트 */
-.station_list{
+.station_list {
   width: 197px;
-  height: 554px;
+  height: 418px;
   background-color: #ffffff;
   font-size: 24px;
   padding: 10px;
+  overflow-y: auto;
+  text-align: center;
 }
 
-.station_list div{
+.station_name {
   cursor: pointer;
-  padding: 10px;
+  padding: 8px 10px;
+  list-style: none;
 }
 
-.station_info{
+.station_name:hover {
+  background-color: #ffc376;
+}
+
+.station_info {
   width: 100%;
   padding: 20px;
   text-align: center;
   font-size: 20px;
-  background-color: #FFC376;
-}
-/* 전체호선 관련 allline*/
-.subway_subwayLine #all{
-  background-color: #FFF8EF;
-  border-radius: 30px;
-  width: 130px;
-  height: 55px;
-  display: inline-block;
-  text-align: center;
-}
-
-.subway_alline_img{
-  display: block;
-}
-
-/* 2호선 관련 */
-.subway_subwayLine #line2{
-  background-color: #FFF8EF;
-  border-radius: 30px;
-  width: 130px;
-  height: 55px;
-  display: inline-block;
-}
-
-/* 3호선 관련 */
-.subway_subwayLine #line3{
-  background-color: #FFF8EF;
-  border-radius: 30px;
-  width: 130px;
-  height: 55px;
-  display: inline-block;
-}
-
-/* 4호선 관련 */
-.subway_subwayLine #line4{
-  background-color: #FFF8EF;
-  border-radius: 30px;
-  width: 130px;
-  height: 55px;
-  display: inline-block;
-}
-
-/* 7호선 관련 */
-.subway_subwayLine #line7{
-  background-color: #FFF8EF;
-  border-radius: 30px;
-  width: 130px;
-  height: 55px;
-  display: inline-block;
-}
-
-/* 9호선 관련 */
-.subway_subwayLine #line9{
-  background-color: #FFF8EF;
-  border-radius: 30px;
-  width: 130px;
-  height: 55px;
-  display: inline-block;
-}
-
-/* 신분당선 관련 */
-.subway_subwayLine #dxline{
-  background-color: #FFF8EF;
-  border-radius: 30px;
-  width: 130px;
-  height: 55px;
-  display: inline-block;
-}
-
-
-/* 마우스로 동작 하는거 관련 */
-.station_list div:hover{
-  background-color: #FFC376;
-}
-
-.subway_subwayLine button:hover{
-  background-color: #FFC376;
+  background-color: #ffc376;
 }
