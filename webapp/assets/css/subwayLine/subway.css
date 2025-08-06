@@ -1,0 +1,110 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'pretendard-regular';
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+header, footer{
+  width: 100%;
+  height: 110px;
+  background-color: rgb(0, 0, 0);
+}
+
+h1{
+  padding: 35px;
+  text-align: center;
+}
+
+main{
+  width: 100%;
+  height: calc(100vh - 220px);
+  background-color: #FFE7C9;
+}
+
+.subway_subwayLine{
+  width: 100%;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+}
+
+.subway_subway_img{
+  width: 100%;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+}
+
+/* 전체호선 관련 */
+.subway_subwayLine #all{
+  background-color: #FFF8EF;
+  border-radius: 30px;
+  width: 130px;
+  height: 55px;
+  display: inline-block;
+  text-align: center;
+}
+
+.subway_subway_img #allline{
+  width: 935px;
+  height: 555px;
+  text-align: center;
+  display: inline-block;
+  justify-content: center;
+}
+
+.subway_subwayLine #line2{
+  background-color: #FFF8EF;
+  border-radius: 30px;
+  width: 130px;
+  height: 55px;
+  display: inline-block;
+}
+
+.subway_subwayLine #line3{
+  background-color: #FFF8EF;
+  border-radius: 30px;
+  width: 130px;
+  height: 55px;
+  display: inline-block;
+}
+
+.subway_subwayLine #line4{
+  background-color: #FFF8EF;
+  border-radius: 30px;
+  width: 130px;
+  height: 55px;
+  display: inline-block;
+}
+
+.subway_subwayLine #line7{
+  background-color: #FFF8EF;
+  border-radius: 30px;
+  width: 130px;
+  height: 55px;
+  display: inline-block;
+}
+
+.subway_subwayLine #line9{
+  background-color: #FFF8EF;
+  border-radius: 30px;
+  width: 130px;
+  height: 55px;
+  display: inline-block;
+}
+
+.subway_subwayLine #dxline{
+  background-color: #FFF8EF;
+  border-radius: 30px;
+  width: 130px;
+  height: 55px;
+  display: inline-block;
+}
+ 
