@@ -42,12 +42,11 @@ main {
   display: flex;
   flex-direction: column;
 }
-
-<<<<<<< HEAD
-.div_mark div {
-=======
+form{
+  flex: 1;
+  margin-top: 50px;
+}
 .div_mark .title {
->>>>>>> main
   font-size: 30px;
   margin: 30px;
 }
@@ -61,12 +60,9 @@ main {
 .mark_nav {
   display: flex;
   margin: 0px 150px 0px 150px;
-<<<<<<< HEAD
-=======
   height: 50px;
   align-items: center;
   background-color: rgb(191, 201, 201);
->>>>>>> main
 }
 
 .mark_nav ul {
@@ -77,11 +73,7 @@ main {
   justify-content: space-around;
 }
 
-<<<<<<< HEAD
-.mark_nav ul input {
-=======
 .mark_nav input {
->>>>>>> main
   margin-left: 20px;
 }
 
@@ -98,13 +90,9 @@ main {
 .page ul li{
   margin: 10px;
 }
-<<<<<<< HEAD
-
-=======
 .div_delete{
   margin: 0;
 }
->>>>>>> main
 button {
   background-color: red;
   color: white;
