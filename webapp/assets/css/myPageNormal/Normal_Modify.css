@@ -46,6 +46,10 @@ main {
   font-size: 30px;
   margin: 30px;
 }
+form{
+  flex: 1;
+  margin: 30px;
+}
 .arlim{
   background-color: blueviolet;
   display: flex;
@@ -65,4 +69,7 @@ main {
   display: flex;
   align-items: center;
   margin-left: 20px;
+}
+form .normalmodify{
+  display: flex;
 }
