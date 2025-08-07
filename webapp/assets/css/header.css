@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    /* font-weight: 500; 적용 안됨 */
+    font-style: normal;
+}
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration-line: none;
+  list-style-type: none;
+  color: black;
+  font-family: 'Pretendard-Regular';
+  /* #FFE7C9 */
+  /* #1D3266 */
+}
+header{
+  background-color: #FFF8EF;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+header div span a img{
+  height: 60px;
+}
+header div{
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header div span a{
+  font-size: 16px;
+  margin-right: 7px;
+}
+nav{
+  background-color: #1D3266;
+}
+nav ul{
+  display: flex;
+  justify-content:space-around;
+}
+
+nav ul li div a{
+  text-decoration-line: none;
+  color: white;
+}
+nav ul li div{
+  height: 50px;
+}
