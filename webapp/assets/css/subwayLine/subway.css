@@ -36,6 +36,7 @@ main {
   padding-bottom: 15px;
 }
 
+
 .subway_subwayLine button {
   background-color: #fff8ef;
   border-radius: 30px;
@@ -68,6 +69,11 @@ main {
   gap: 30px;
   padding: 20px;
   
+}
+.map_section .subway_alline_img{
+  text-align: center;
+  justify-content: center;
+  display: flex;
 }
 
 .map_section div {
