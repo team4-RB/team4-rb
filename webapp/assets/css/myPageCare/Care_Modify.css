@@ -3,7 +3,8 @@
   padding: 0;
 }
 
-header, footer {
+header,
+footer {
   width: 100%;
   height: 110px;
   background-color: bisque;
@@ -15,7 +16,7 @@ main {
   display: flex;
 }
 
-nav {
+.main_sidebar {
   width: 180px;
   height: 100%;
   background-color: rgb(159, 159, 255);
@@ -23,7 +24,7 @@ nav {
   flex-direction: column;
 }
 
-.main_sidebar div{
+.main_sidebar div {
   height: 150px;
   width: 150px;
   background-color: rgb(27, 255, 217);
@@ -34,28 +35,20 @@ nav {
 .main_sidebar ul li {
   padding: 15px;
 }
-/* ======================== */
 
-.pw_check{
+/* ============================= */
+.div_mark{
   flex: 1;
-  font-size: 20px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+}
+.div_mark .title {
+  font-size: 30px;
+  margin: 30px;
 }
 
-input{
-  width: 400px;
-  height: 50px;
-  margin-left: 20px;
-  font-size: 20px;
-}
-button{
-  width: 100px;
-  height: 40px;
-}
-form div{
-  display: block;
-  padding-left: 100px;
-  color: red;
+.info{
+  background-color: aqua;
+  text-align: center;
+  justify-content: center;
 }
