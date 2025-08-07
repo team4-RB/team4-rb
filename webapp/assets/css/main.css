@@ -196,6 +196,7 @@ main{
   display: flex;
   flex-direction: column;
   margin-top: 20px;
+  background-color: #1D3266;
 }
 .profile_info{
   display: flex;
