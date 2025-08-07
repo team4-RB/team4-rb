@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header,
+footer {
+  width: 100%;
+  height: 110px;
+  background-color: bisque;
+}
+
+main {
+  width: 100%;
+  height: calc(100vh - 200px);
+  display: flex;
+}
+
+.main_sidebar {
+  width: 180px;
+  height: 100%;
+  background-color: rgb(159, 159, 255);
+  display: flex;
+  flex-direction: column;
+}
+
+.main_sidebar div {
+  height: 150px;
+  width: 150px;
+  background-color: rgb(27, 255, 217);
+  border-radius: 100%;
+  margin: 15px;
+}
+
+.main_sidebar ul li {
+  padding: 15px;
+}
+
+/* ============================= */
+.div_mark {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}

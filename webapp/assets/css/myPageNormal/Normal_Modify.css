@@ -72,4 +72,22 @@ form{
 }
 form .normalmodify{
   display: flex;
+  flex-direction: column;
+  background-color: beige;
+  border: 1px solid black;
+}
+form .normalmodify div{
+  display: flex;
+  margin: 0px;
+  background-color: rgb(255, 172, 46);
+  height: 50px;
+}
+
+form .normalmodify div div{
+  margin-right: 50px;
+  align-items: center;
+  border: 1px solid black;
+}
+form .normalmodify div nav ul li{
+  list-style-type: none;
 }
