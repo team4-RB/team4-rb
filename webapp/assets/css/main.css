@@ -91,6 +91,15 @@ main{
 
 }
 .slide-box li:nth-child(2) > .slide-img{
+  background-color: rgb(238, 144, 180);
+}
+.slide-box li:nth-child(3) > .slide-img{
+  background-color: rgb(132, 130, 243);
+}
+.slide-box li:nth-child(4) > .slide-img{
+  background-color: rgb(224, 238, 144);
+}
+.slide-box li:nth-child(5) > .slide-img{
   background-color: lightgreen;
 }
 .slide-box li:last-child > .slide-img{
@@ -190,14 +199,13 @@ main{
 .care_profile{
   background-color: crimson;
   display: flex;
-  position: relative;
 }
 .profile_introduction{
   flex-wrap: wrap;
 }
 .profile_pic_box{
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   overflow: hidden;
   border-radius: 50%;
   margin-left: 10px;
@@ -222,9 +230,8 @@ main{
 .profile_text{
   background-color: #1D3266;
   height: max-content;
-  position: absolute;
-  left: 50%;
-  width: 50%;
+  left: 40%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -232,10 +239,12 @@ main{
 .profile_name{
   background-color: wheat;
   width: max-content;
+  font-size: 16px;
 }
 .profile_introduction{
   width: 100px;
   background-color: pink;
+  font-size: 10px;
 }
 footer{
   width: 100%;
