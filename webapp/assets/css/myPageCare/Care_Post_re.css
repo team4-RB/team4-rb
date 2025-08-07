@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 header,
@@ -37,55 +36,96 @@ main {
   padding: 15px;
 }
 
-/* ----------------------------- */
-.post_edit {
+/* ------------------*/
+
+
+.post_edit{
   flex: 1;
   padding: 40px 100px;
 }
 
-.post_edit h2 {
+.re_title h2{
   padding: 5px;
   font-size: 30px;
   border: 2px solid black;
 }
-.re_post_info {
+
+.re_post_info{
   display: flex;
   padding: 5px;
   background-color: aqua;
   font-size: 24px;
   border: 2px solid black;
 }
-.post_content_re {
+
+.re_post_info span{
+  display: block;
+}
+
+.re_post_content{
   margin-top: 10px;
-  padding: 20px;
-  background-color: #fdfdfd;
+  padding: 5px;
+  background-color: white;
   border: 2px solid black;
-  height: auto;
   width: auto;
   height: 500px;
 }
 
 .buttons {
   display: flex;
-  justify-content: flex-end;
+  justify-content: right;
   gap: 5px;
-  margin-top: 5px 0px 5px;
+  margin: 5px 0px 5px; 
 }
 
-.buttons button {
+.buttons button{
   width: 100px;
   height: 50px;
   border-radius: 15px;
   cursor: pointer;
 }
 
-.btn_cancle {
-  background-color: white;
-  color: red;
-}
-
-.btn_compelete {
-  background-color: navy;
+.btn_cancle{
+  background-color: #FF0000;
   color: white;
 }
 
+.btn_compelete{
+  background-color: #2F52AA;
+  color: white;
+}
+
+.modal {
+  /* display: none; */
+  position: fixed;
+  top: 0;
+  width: 900px;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 10px;
+  margin-left: 30%;
+}
+
+.modal_box {
+  background-color: aqua;
+  text-align: center;
+  padding: 30px;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal_buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: right;
+  gap: 20px;
+  
+}
+
+#check {
+  background-color: #2F52AA;
+  color: white;
+}
