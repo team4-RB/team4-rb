@@ -10,6 +10,8 @@
   margin: 20px 0;
 }
 
-.terms_all {
+.terms_checkbox > label {
   display: flex;
+  gap: 12px;
 }
+
