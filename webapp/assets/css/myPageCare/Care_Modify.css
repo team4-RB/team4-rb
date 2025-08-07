@@ -46,3 +46,9 @@ main {
   font-size: 30px;
   margin: 30px;
 }
+
+.info{
+  background-color: aqua;
+  text-align: center;
+  justify-content: center;
+}
