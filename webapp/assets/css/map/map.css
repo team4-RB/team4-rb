@@ -10,7 +10,7 @@
     font-style: normal;
 }
 
-.header, .footer{
+#header, #footer{
   width: 100%;
   height: 110px;
   background-color: #FFF8EF;
@@ -46,6 +46,15 @@ main{
   margin: auto 40px;
 }
 
+.closebtn{
+  text-align: right;
+  font-size: 25px;
+  font-weight: bold;
+  top:10px;
+  right:10px;
+  cursor:pointer;
+}
+
 .map_info, .map_detail{
   background-color: white;
   margin: 20px 30px 20px;
@@ -63,7 +72,7 @@ main{
 }
 
 .modalbox{
-  display: flex;
+  display: none;
   background-color: rgba(217, 217, 217, 0.7);
   width: 100%;
   height: 100%;
@@ -96,4 +105,10 @@ main{
   font-size: 30px;
   margin: auto;
   padding-bottom: 20px;
+}
+
+.wishbtn{
+  width: 50px;
+  height: 25px;
+  
 }
