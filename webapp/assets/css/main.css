@@ -145,13 +145,10 @@ main{
 .board_list li{
   flex: 1;
   padding: 10px 0;
-  border: 1px solid black;
+  border-bottom: 1px solid black;
 }
 .board_list li a{
   display: flex;
-}
-.board_list li a span{
-  color:red;
 }
 .board_list_number{
   width: 60px;
@@ -196,7 +193,6 @@ main{
   display: flex;
   flex-direction: column;
   margin-top: 20px;
-  background-color: #1D3266;
 }
 .profile_info{
   display: flex;
