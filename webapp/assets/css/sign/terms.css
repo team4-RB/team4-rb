@@ -1,0 +1,98 @@
+.terms {
+  /* border: 1px solid black; */
+  width: 450px;
+  margin: 0 auto;
+}
+form {
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.terms_title>p {
+  font-size: 30px;
+  text-align: center;
+  margin: 20px 0;
+}
+.terms_checkbox {
+  display: -webkit-inline-box;
+}
+
+.terms_checkbox>label {
+  display: flex;
+  gap: 12px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+label {
+  display: inline-block;
+  align-items: center;
+  cursor: pointer;
+  /* border: 1px solid black; */
+}
+
+label > p {
+  font-size: 20px;
+  
+}
+
+.all_p {
+  font-weight: bolder;
+}
+
+#all+label > div,
+#check1+label > div,
+#check2+label > div,
+#check3+label > div {
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-image: url('./../../img/sign/unchecked.PNG');
+  background-size: cover;
+}
+
+#all:checked+label > div,
+#check1:checked+label > div ,
+#check2:checked+label > div ,
+#check3:checked+label > div {
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-image: url('./../../img/sign/checked.PNG');
+  background-size: cover;
+}
+
+
+.terms_all, .term {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 16px;
+}
+
+.term > p {
+  border: 1px solid black;
+  padding : 10px;
+}
+
+span {
+  color: #1D3266;
+  font-weight: bolder;
+}
+
+.next_btn {
+  width: 100%;
+  text-align: center;
+}
+
+.next_btn > button {
+  padding: 10px 80px;
+  border-radius: 30px;
+  color: white;
+  background-color: #1D3266;
+  border: none;
+}
