@@ -47,3 +47,4 @@ slidesWrap.addEventListener("mouseover", stopSlide);
 slidesWrap.addEventListener("mouseout", startSlide);
 
 startSlide();
+
