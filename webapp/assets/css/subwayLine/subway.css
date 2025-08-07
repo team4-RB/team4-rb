@@ -49,9 +49,13 @@ main {
   margin: 0 5px;
 }
 
+.subway_subwayLine:checked{
+  background-color: #ffc376;
+}
 .subway_subwayLine button:hover {
   background-color: #ffc376;
 }
+
 
 /* 선택된 버튼 색상 */
 .selected-btn {
