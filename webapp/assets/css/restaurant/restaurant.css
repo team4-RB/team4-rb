@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    /* font-weight: 500; 적용 안됨 */
+    font-style: normal;
+}
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration-line: none;
+  list-style-type: none;
+  color: black;
+  font-family: 'Pretendard-Regular';
+  /* #FFE7C9 */
+  /* #1D3266 */
+}
+header{
+  background-color: #FFF8EF;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+header div span a img{
+  height: 60px;
+}
+header div{
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header div span a{
+  font-size: 16px;
+  margin-right: 7px;
+}
+nav{
+  background-color: #1D3266;
+}
+nav ul{
+  display: flex;
+  justify-content:space-around;
+}
+
+nav ul li div a{
+  text-decoration-line: none;
+  color: white;
+}
+nav ul li div{
+  height: 50px;
+}
+main{
+  background-color: #FFE7C9;
+  /* height: calc(100vh - 220px); */
+  display: flex;
+  justify-content: center;
+}
+.main_body{
+  width: 1200px;
+  height: 100%;
+}
+.page_title{
+  background-color: yellowgreen;
+  font-size: 30px;
+}
+
+.context{
+  display: flex;
+}
+.region_select{
+  width: 400px;
+  background-color: olive;
+}
+.region_list{
+  background-color: aquamarine;
+  width: 40%;
+}
+.restaurant_select{
+  background-color: orange;
+  flex: 1;
+}
+footer{
+  width: 100%;
+  height: 110px;
+  background-color: #FFF8EF;
+  display: flex;
+  justify-content: center;
+}
+.footerDiv{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 700px;
+}
+footer div ul{
+  display: flex;
+  justify-content: space-between;
+}
+footer div span{
+  padding-top: 10px;
+  text-align: center;
+  font-size: 10px;
+}
+footer div ul li p{
+  font-size: 10px;
+}
