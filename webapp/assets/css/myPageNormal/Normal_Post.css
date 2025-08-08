@@ -42,7 +42,10 @@ main {
   display: flex;
   flex-direction: column;
 }
-
+form{
+  flex: 1;
+  margin-top: 50px;
+}
 .div_mark .title {
   font-size: 30px;
   margin: 30px;

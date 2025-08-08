@@ -46,6 +46,10 @@ main {
   font-size: 30px;
   margin: 30px;
 }
+form{
+  flex: 1;
+  margin: 30px;
+}
 .arlim{
   background-color: blueviolet;
   display: flex;
@@ -65,4 +69,25 @@ main {
   display: flex;
   align-items: center;
   margin-left: 20px;
+}
+form .normalmodify{
+  display: flex;
+  flex-direction: column;
+  background-color: beige;
+  border: 1px solid black;
+}
+form .normalmodify div{
+  display: flex;
+  margin: 0px;
+  background-color: rgb(255, 172, 46);
+  height: 50px;
+}
+
+form .normalmodify div div{
+  margin-right: 50px;
+  align-items: center;
+  border: 1px solid black;
+}
+form .normalmodify div nav ul li{
+  list-style-type: none;
 }
