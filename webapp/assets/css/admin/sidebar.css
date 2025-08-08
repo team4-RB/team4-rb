@@ -19,7 +19,7 @@
   flex-direction: column;
   justify-content: flex-start;
   list-style-type: none;
-     background-color: #D9D9D9;
+  background-color: #D9D9D9;
 }
  
 .sidebar > ul > a > li, .sidebar > ul > div > li {
@@ -32,12 +32,12 @@
 
 }
 
-ul> a >li:hover {
+ul> a >.side_attach:hover {
   background-color: #2F52AA;
   opacity: 0.5;
 }
 
-ul> div > li:hover {
+ul> div > .side_attach:hover {
   background-color: #2F52AA;
   opacity: 0.5;
 }

@@ -85,4 +85,13 @@ main {
  .board_type{
   width: 150px;
   height: 95%;
+  /* border: 1px solid black; */
+ }
+.board_body {
+    width: 1300px;
+}
+
+ .board_body > ul {
+  display : flex;
+
  }
