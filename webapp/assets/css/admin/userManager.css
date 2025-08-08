@@ -20,3 +20,7 @@ main {
 .searchbox > input {
   border: 1px solid black;
 }
+
+.search_column{
+  border: 1px solid black
+}
