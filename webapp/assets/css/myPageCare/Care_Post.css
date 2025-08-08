@@ -74,6 +74,29 @@ main {
   margin-left: 20px;
 }
 
+.post_list input {
+  margin-left: 20px;
+}
+.post_list{
+  display: flex;
+  align-items: center;
+  margin: 0px 150px;
+  height: 50px;
+}
+
+.post_list ul{
+  display: flex;
+  flex: 1;
+  list-style-type: none;
+  justify-content: space-around;
+}
+
+.post_list a{
+  text-decoration: none;
+  color: black;
+}
+
+
 .page {
   display: flex;
   justify-content: center;
