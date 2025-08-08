@@ -1,40 +1,54 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'pretendard-regular';
 }
 
-header,
-footer {
-  width: 100%;
-  height: 110px;
-  background-color: bisque;
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: #ffffff;
 }
 
 main {
-  width: 100%;
-  height: calc(100vh - 200px);
   display: flex;
+  min-height: calc(100vh - 220px);
 }
 
-.main_sidebar {
+.sidebar {
   width: 180px;
-  height: 100%;
-  background-color: rgb(159, 159, 255);
-  display: flex;
-  flex-direction: column;
+  background-color: #2f4db1;
+  color: white;
+  padding: 20px 0;
 }
 
-.main_sidebar div {
-  height: 150px;
-  width: 150px;
-  background-color: rgb(27, 255, 217);
-  border-radius: 100%;
-  margin: 15px;
+.sidebar img {
+  height: 130px;
+  width: 130px;
+  background-color: #ff80ab;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: block;
 }
 
-.main_sidebar ul li {
-  padding: 15px;
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
 }
+
+.sidebar li {
+  padding: 12px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  color: white;
+  text-decoration-line: none;
+}
+
 /* ============================= */
 .div_mark {
   flex: 1;
@@ -100,4 +114,96 @@ button {
   margin-left: 150px;
   border-radius: 15px;
   border: 0px;
+}
+
+
+
+.modal_bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 500;
+}
+
+.modal_box {
+  background-color: white;
+  width: 650px;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal_read {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal_title {
+  font-size: 18px;
+}
+
+.modal_close {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.sender_info {
+  font-size: 14px;
+  color: #333;
+}
+
+.sender_info strong {
+  color: #000;
+}
+
+.sender_id {
+  font-weight: 500;
+}
+
+.message_content {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 12px;
+  background-color: #f9f9f9;
+  font-size: 14px;
+  min-height: 100px;
+  white-space: pre-line;
+}
+
+.modal_button {
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.btn_reply {
+  background-color: navy;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn_delete {
+  background-color: white;
+  color: red;
+  border: 1px solid red;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
 }

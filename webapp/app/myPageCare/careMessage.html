@@ -6,27 +6,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Care_Messeage</title>
   <link rel="stylesheet" href="./../../assets/css/myPageCare/careMessage.css">
+  <link rel="stylesheet" href="./../../assets/css/header.css">
+  <link rel="stylesheet" href="./../../assets/css/footer.css">
+  <script defer src="./../../assets/js/main/include.js"></script>
 </head>
 
 <body>
-  <header>
-
-  </header>
+  <div id="header"></div>
   <main>
-    <nav class="main_sidebar">
-      <div></div>
+    <nav class="sidebar">
       <ul>
-        <a href="#">
+        <a href=""><img src="./../../assets/img/myPageCare/peple.jpg" alt=""></a>
+        <a href="">
           <li>개인정보 수정</li>
         </a>
-        
-        <li>찜한 목록</li>
-        <li>매칭 기록</li>
-        <li>쪽지함</li>
-        <li>게시글 관리</li>
-        <li>포인트 환급</li>
-        <li>1 대 1 문의</li>
-        <li>회원 탈퇴</li>
+        <a href="">
+          <li>찜한 목록</li>
+        </a>
+        <a href="">
+          <li>매칭 기록</li>
+        </a>
+        <a href="">
+          <li>쪽지함</li>
+        </a>
+        <a href="">
+          <li>게시글 관리</li>
+        </a>
+        <a href="">
+          <li>포인트 환급</li>
+        </a>
+        <a href="">
+          <li>1 대 1 문의</li>
+        </a>
+        <a href="">
+          <li>회원 탈퇴</li>
+        </a>
       </ul>
     </nav>
 
@@ -65,9 +79,43 @@
       </div>
     </div>
   </main>
-  <footer>
 
-  </footer>
+<div class="modal_bg" id="msgModal">
+  <div class="modal_box">
+    <div class="modal_read">
+      <span class="modal_title">받은 쪽지 읽기</span>
+      <span class="modal_close" onclick="closeMsgModal()">&times;</span>
+    </div>
+    <div class="modal_info">
+      <div class="sender_info">
+        <span>보낸 사람 : </span>강버들 | <span class="sender_id">kangbudle01</span>
+      </div>
+      <div class="message_content">
+        쪽지 확인하시면 카톡 좀 봐주세요
+      </div>
+    </div>
+    <div class="modal_button">
+      <button class="btn_reply">답장</button>
+      <button class="btn_delete">삭제</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal_bg" id="sendSuccessModal">
+    <div class="modal_box modal_send">
+      <p class="send_message">쪽지를 보냈습니다.</p>
+      <div class="modal_button">
+        <button class="btn_confirm" onclick="closeSendModal()">확인</button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div id="footer"></div>
+
+
+
 </body>
 
 </html>
