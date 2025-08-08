@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>포인트 지급/환급 내역</title>
+  <link rel="stylesheet" href="./../../assets/css/myPageCare/Care_Point_list.css" />
+</head>
+<body>
+  <header></header>
+
+  <main>
+    <nav class="sidebar">
+      <div class="profile"></div>
+      <ul>
+        <li>개인정보 수정</li>
+        <li>찜한 목록</li>
+        <li>매칭 기록</li>
+        <li>쪽지함</li>
+        <li>게시글 관리</li>
+        <li>포인트 환급</li>
+        <li>1 대 1 문의</li>
+        <li>회원 탈퇴</li>
+      </ul>
+    </nav>
+
+    <section class="point-history">
+      <div class="history-box">
+        <div class="history-section">
+          <h3>환급 내역</h3>
+          <div class="month-control">
+            <button>&lt;</button>
+            <span>8월</span>
+            <button>&gt;</button>
+          </div>
+          <div class="table-box">
+            <div class="table-header">
+              <span>순번</span>
+              <span>환급 포인트</span>
+              <span>날짜</span>
+            </div>
+            <div class="table-row">
+              <span>1</span>
+              <span>38,000P</span>
+              <span>2025-08-02</span>
+            </div>
+          </div>
+          <div class="pagination">
+            &lt; <span class="active">1</span> 2 3 4 ... &gt;
+          </div>
+        </div>
+
+        <div class="history-section" id="takepoint">
+          <h3>받은 포인트 내역</h3>
+          <div class="month-control">
+            <button>&lt;</button>
+            <span>8월</span>
+            <button>&gt;</button>
+          </div>
+          <div class="table-box">
+            <div class="table-header">
+              <span>순번</span>
+              <span>지급자</span>
+              <span>지급 포인트</span>
+              <span>날짜</span>
+            </div>
+            <div class="table-row">
+              <span>1</span>
+              <span>아무개</span>
+              <span>5,000P</span>
+              <span>2025-08-02</span>
+            </div>
+          </div>
+          <div class="pagination">
+            &lt; <span class="active">1</span> 2 3 4 ... &gt;
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer></footer>
+</body>
+</html>
