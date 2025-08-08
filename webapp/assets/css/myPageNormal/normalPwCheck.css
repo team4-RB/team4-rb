@@ -17,7 +17,7 @@ main {
   flex-direction: column;
 }
 
-.main_sidebar div {
+.main_sidebar img {
   height: 150px;
   width: 150px;
   background-color: rgb(27, 255, 217);

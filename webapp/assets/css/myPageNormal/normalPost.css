@@ -17,7 +17,7 @@ main {
   flex-direction: column;
 }
 
-.main_sidebar div {
+.main_sidebar img {
   height: 150px;
   width: 150px;
   background-color: rgb(27, 255, 217);
@@ -36,40 +36,68 @@ main {
   display: flex;
   flex-direction: column;
 }
-form{
+form {
   flex: 1;
   margin-top: 50px;
 }
+
 .div_mark .title {
   font-size: 30px;
   margin: 30px;
 }
 
-.div_choose ul {
+.div_choose ul{
   display: flex;
   list-style-type: none;
   padding-left: 150px;
 }
-
-.mark_nav {
+.div_choose ul li{
+  margin: 10px;
+}
+.mark_nav{
   display: flex;
-  margin: 0px 150px 0px 150px;
+  margin:  0px 150px;
   height: 50px;
   align-items: center;
   background-color: rgb(191, 201, 201);
 }
-
-.mark_nav ul {
+.mark_nav div{
   display: flex;
   flex: 1;
-  list-style-type: none;
-  background-color: rgb(191, 201, 201);
-  justify-content: space-around;
 }
 
-.mark_nav input {
-  margin-left: 20px;
+.mark_nav div div{
+  justify-content: center;
 }
+.mark_nav input{
+  margin: 0px 30px;
+  width: 30px;
+  height: 30px;
+}
+.mark_list{
+  display: flex;
+  margin: 0px 150px;
+  height: 50px;
+  align-items: center;
+  background-color: rgb(223, 235, 235);
+}
+.mark_list a{
+  display: flex;
+  flex: 1;
+}
+.mark_list a div{
+  display: flex;
+  flex: 1;
+}
+.mark_list input{
+  margin: 0px 30px;
+  width: 30px;
+  height: 30px;
+}
+.mark_list div div{
+  justify-content: center;
+}
+
 
 .page {
   display: flex;
@@ -86,6 +114,7 @@ form{
 }
 .div_delete{
   margin: 0;
+  padding: 0;
 }
 button {
   background-color: red;
