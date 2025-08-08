@@ -6,17 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>뉴스페이지</title>
   <link rel="stylesheet" href="./../../assets/css/news/news.css">
+  <link rel="stylesheet" href="./../../assets/css/header.css">
+  <link rel="stylesheet" href="./../../assets/css/footer.css">
+  <script defer src="./../../assets/js/main/include.js"></script>
   <script defer src="./../../assets/js/news/news.js"></script>
 </head>
 
 <body>
-  <div class="header">
-
-  </div>
+  <div id="header"></div>
   <main>
     <div class="news_container">
       <div class="news_topmenu">
-        <div class="all_news"><a href="./../../dummy.html">&plus;전체보기</a></div>
+        <div class="all_news"><a href="./../../app/news/newsList.html">&plus;전체보기</a></div>
         <div class="title">NEWS</div>
         <div class="searchbar">
           <form action="get">
@@ -27,19 +28,29 @@
           </button>
         </div>
       </div>
-    </div>
-    <div class="slides">
-      <div class="card1"><a href="./../../dummy.html"></a></div>
-      <div class="card2"><a href="./../../dummy.html"></a></div>
-      <div class="card3"><a href="./../../dummy.html"></a></div>
-      <!-- <div class="card4"></div> -->
-      <!-- <div class="card5"></div> -->
+      <div class="slides_wrap">
+        <ul class="slides">
+          <li>
+            <div class="card"><a href="./../../dummy.html"></a></div>
+          </li>
+          <li>
+            <div class="card"><a href="./../../dummy.html"></a></div>
+          </li>
+          <li>
+            <div class="card"><a href="./../../dummy.html"></a></div>
+          </li>
+          <li>
+            <div class="card"><a href="./../../dummy.html"></a></div>
+          </li>
+          <li>
+            <div class="card"><a href="./../../dummy.html"></a></div>
+          </li>
+        </ul>
+      </div>
     </div>
     </div>
   </main>
-  <div class="footer">
-
-  </div>
+  <div id="footer"></div>
 </body>
 
 </html>
