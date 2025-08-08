@@ -20,7 +20,7 @@
   <main>
     <div id="sidebar"></div>
     <section class="userManager">
-      <div>
+      <div class="searchcontent">
         <div class="title">
           <h1>회원관리</h1>
         </div>
@@ -34,10 +34,21 @@
               <option value="phone">회원 전화번호</option>
               <option value="type">회원 분류</option>
             </select>
+            <input type="text">
+            <button>검색</button>
           </div>
         </form>
-        <div></div>
-        <div></div>
+        <div class="table">
+          <div class="board_column">
+            <div class="board_head board_number">회원 번호</div>
+            <div class="board_head board_name">회원 이름</div>
+            <div class="board_head board_id">회원 아이디</div>
+            <div class="board_head board_email">회원 이메일</div>
+            <div class="board_head board_phone">회원 전화번호</div>
+            <div class="board_head board_type">회원 분류</div>
+          </div>
+          <div></div>
+        </div>
 
       </div>
     </section>
