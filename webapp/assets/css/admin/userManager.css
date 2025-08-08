@@ -2,7 +2,7 @@ main {
   width: 100%;
 }
 
-.searchcontent{
+.searchcontent {
   margin-left: 40px;
   /* border: 1px solid black; */
   display: flex;
@@ -12,9 +12,9 @@ main {
 
 .userManager {
   width: calc(100% - 201px);
-    position: relative;
-    left: 201px;
-    height: 100%;
+  position: relative;
+  left: 201px;
+  height: 100%;
 }
 
 .title {
@@ -29,59 +29,104 @@ main {
   display: flex;
 }
 
-
-.search_column{
-  border: 1px solid black
+.search_column {
+  border: 1px solid black;
 }
 
 .searchbox > input {
   width: 500px;
   height: 30px;
   border: 1px solid black;
-} 
+}
 
- .searchbox > button{
+.searchbox > button {
   width: 50px;
   border: 1px solid black;
- }
+}
 
- .board_column {
-  width:1300px;
-  height:40px;
+.board_column {
+  width: 90%;
+  height: 40px;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   display: flex;
-  background-color: #D9D9D9;
- }
+  background-color: #d9d9d9;
+}
 
- .board_head {
+.board_head {
   /* border: 1px solid black; */
   display: flex;
   align-items: center;
   justify-content: center;
- }
+}
 
- .board_number {
+.board_number {
   width: 150px;
   height: 95%;
- }
- .board_name{
+}
+.board_name {
   width: 150px;
   height: 95%;
- }
- .board_id{
+}
+.board_id {
   width: 150px;
   height: 95%;
- }
- .board_email{
+}
+.board_email {
   width: 400px;
   height: 95%;
- }
- .board_phone{
+}
+.board_phone {
   width: 400px;
   height: 95%;
- }
- .board_type{
+}
+.board_type {
   width: 150px;
   height: 95%;
- }
+}
+
+.table_body {
+  display: flex;
+}
+
+/* 테스트(간격 조절) */
+/* .board_head {
+  border: 1px solid black;
+  } */
+/* .table_body > li {
+    border: 1px solid black;
+  } */
+
+.body_number,
+.body_name,
+.body_id,
+.body_type {
+  width: 124px;
+  height: 30px;
+}
+
+.body_email,
+.body_phone {
+  width: 330px;
+  height: 30px;
+}
+
+.table_body > li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid black;
+}
+
+.paging_box {
+  width: 70%;
+  /* border: 1px solid black; */
+  margin: 0 auto;
+}
+
+.paging {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+}

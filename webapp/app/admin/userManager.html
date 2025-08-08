@@ -1,63 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원관리</title>
+    <link rel="stylesheet" href="./../../assets/css/admin/" />
+    <link rel="stylesheet" href="./../../assets/css/header.css" />
+    <link rel="stylesheet" href="./../../assets/css/footer.css" />
+    <link rel="stylesheet" href="./../../assets/css/admin/basic.css" />
+    <link rel="stylesheet" href="./../../assets/css/admin/userManager.css" />
+    <link rel="stylesheet" href="./../../assets/css/admin/sidebar.css" />
+    <script defer src="./../../assets/js/main/include.js"></script>
+    <script defer src="./../../assets/js/admin/admin.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>회원관리</title>
-  <link rel="stylesheet" href="./../../assets/css/admin/">
-  <link rel="stylesheet" href="./../../assets/css/header.css">
-  <link rel="stylesheet" href="./../../assets/css/footer.css">
-  <link rel="stylesheet" href="./../../assets/css/admin/basic.css">
-  <link rel="stylesheet" href="./../../assets/css/admin/userManager.css">
-  <link rel="stylesheet" href="./../../assets/css/admin/sidebar.css">
-  <script defer src="./../../assets/js/main/include.js"></script>
-  <script defer src="./../../assets/js/admin/admin.js"></script>
-</head>
-
-<body>
-  <div id="header"></div>
-  <main>
-    <div id="sidebar"></div>
-    <section class="userManager">
-      <div class="searchcontent">
-        <div class="title">
-          <h1>회원관리</h1>
-        </div>
-        <form action="" method="">
-          <div class="searchbox">
-            <select name="column" id="" class="search_column">
-              <option value="number">회원 번호</option>
-              <option value="name">회원 이름</option>
-              <option value="id">회원 아이디</option>
-              <option value="email">회원 이메일</option>
-              <option value="phone">회원 전화번호</option>
-              <option value="type">회원 분류</option>
-            </select>
-            <input type="text">
-            <button>검색</button>
+  <body>
+    <div id="header"></div>
+    <main>
+      <div id="sidebar"></div>
+      <section class="userManager">
+        <div class="searchcontent">
+          <div class="title">
+            <h1>회원관리</h1>
           </div>
-        </form>
-        <div class="table">
-          <div class="board_column">
-            <div class="board_head board_number">회원 번호</div>
-            <div class="board_head board_name">회원 이름</div>
-            <div class="board_head board_id">회원 아이디</div>
-            <div class="board_head board_email">회원 이메일</div>
-            <div class="board_head board_phone">회원 전화번호</div>
-            <div class="board_head board_type">회원 분류</div>
+          <form action="" method="">
+            <div class="searchbox">
+              <select name="column" id="" class="search_column">
+                <option value="number">회원 번호</option>
+                <option value="name">회원 이름</option>
+                <option value="id">회원 아이디</option>
+                <option value="email">회원 이메일</option>
+                <option value="phone">회원 전화번호</option>
+                <option value="type">회원 분류</option>
+              </select>
+              <input type="text" />
+              <button>검색</button>
+            </div>
+          </form>
+          <div class="table">
+            <div class="board_column">
+              <div class="board_head board_number">회원 번호</div>
+              <div class="board_head board_name">회원 이름</div>
+              <div class="board_head board_id">회원 아이디</div>
+              <div class="board_head board_email">회원 이메일</div>
+              <div class="board_head board_phone">회원 전화번호</div>
+              <div class="board_head board_type">회원 분류</div>
+            </div>
+            <div class="table">
+              <ul class="table_body">
+                <li class="body_number">1</li>
+                <li class="body_name">가나다</li>
+                <li class="body_id">abc123</li>
+                <li class="body_email">bellguy@naver.com</li>
+                <li class="body_phone">010-1234-5678</li>
+                <li class="body_type">일반</li>
+              </ul>
+              <ul class="table_body">
+                <li class="body_number">2</li>
+                <li class="body_name">가나다</li>
+                <li class="body_id">abc123</li>
+                <li class="body_email">bellguy@naver.com</li>
+                <li class="body_phone">010-1234-5678</li>
+                <li class="body_type">일반</li>
+              </ul>
+              <ul class="table_body">
+                <li class="body_number">3</li>
+                <li class="body_name">가나다</li>
+                <li class="body_id">abc123</li>
+                <li class="body_email">bellguy@naver.com</li>
+                <li class="body_phone">010-1234-5678</li>
+                <li class="body_type">일반</li>
+              </ul>
+              <ul class="table_body">
+                <li class="body_number">4</li>
+                <li class="body_name">가나다</li>
+                <li class="body_id">abc123</li>
+                <li class="body_email">bellguy@naver.com</li>
+                <li class="body_phone">010-1234-5678</li>
+                <li class="body_type">일반</li>
+              </ul>
+              <ul class="table_body">
+                <li class="body_number">5</li>
+                <li class="body_name">가나다</li>
+                <li class="body_id">abc123</li>
+                <li class="body_email">bellguy@naver.com</li>
+                <li class="body_phone">010-1234-5678</li>
+                <li class="body_type">일반</li>
+              </ul>
+              <ul class="table_body">
+                <li class="body_number">6</li>
+                <li class="body_name">가나다</li>
+                <li class="body_id">abc123</li>
+                <li class="body_email">bellguy@naver.com</li>
+                <li class="body_phone">010-1234-5678</li>
+                <li class="body_type">일반</li>
+              </ul>
+              <ul class="table_body">
+                <li class="body_number">7</li>
+                <li class="body_name">가나다</li>
+                <li class="body_id">abc123</li>
+                <li class="body_email">bellguy@naver.com</li>
+                <li class="body_phone">010-1234-5678</li>
+                <li class="body_type">일반</li>
+              </ul>
+              <ul class="table_body">
+                <li class="body_number">8</li>
+                <li class="body_name">가나다</li>
+                <li class="body_id">abc123</li>
+                <li class="body_email">bellguy@naver.com</li>
+                <li class="body_phone">010-1234-5678</li>
+                <li class="body_type">일반</li>
+              </ul>
+            </div>
           </div>
-          <div></div>
+          <div class="paging_box">
+            <ul class="paging">
+              <li class="prev">
+                <a href="">&lt;</a>
+              </li>
+              <li class="page_number">
+                <a href="">1</a>
+              </li>
+              <li class="page_number">
+                <a href="">2</a>
+              </li>
+              <li class="page_number">
+                <a href="">3</a>
+              </li>
+              <li class="page_number">
+                <a href="">4</a>
+              </li>
+              <li class="page_number">...</li>
+              <li class="next">
+                <a href="">&gt;</a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </section>
+    </main>
 
-      </div>
-    </section>
-  </main>
-
-
-
-  <div id="footer"></div>
-
-</body>
-
+    <div id="footer"></div>
+  </body>
 </html>
