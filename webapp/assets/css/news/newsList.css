@@ -81,6 +81,8 @@ main {
   height: 150px;
   background-color: #FFF8EF;
   margin: 10px 20px;
+  border: 1px solid black;
+  border-radius: 20px;
 }
 
 .pagination{
@@ -91,4 +93,9 @@ main {
 .active{
   color: red;
   cursor: default;
+}
+
+.card p {
+  margin: 30px auto;
+  text-align: center;
 }

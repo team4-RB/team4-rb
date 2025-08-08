@@ -63,32 +63,39 @@ main {
   margin-top: 50px;
 }
 
-.search_result_card{
+.search_result_card {
   width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.search_result_card > ul{
+.search_result_card>ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.card{
+.card {
   width: 350px;
   height: 150px;
   background-color: #FFF8EF;
   margin: 10px 20px;
+  border: 1px solid black;
+  border-radius: 20px;
 }
 
-.pagination{
+.pagination {
   text-align: center;
   cursor: pointer;
 }
 
-.active{
+.active {
   color: red;
   cursor: default;
+}
+
+.card p {
+  margin: 30px auto;
+  text-align: center;
 }
