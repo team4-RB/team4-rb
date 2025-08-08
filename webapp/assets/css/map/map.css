@@ -10,12 +10,6 @@
     font-style: normal;
 }
 
-#header, #footer{
-  width: 100%;
-  height: 110px;
-  background-color: #FFF8EF;
-}
-
 main{
   width: 100%;
   height: calc(100vh - 220px);
