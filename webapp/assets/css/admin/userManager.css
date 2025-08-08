@@ -1,0 +1,87 @@
+main {
+  width: 100%;
+}
+
+.searchcontent{
+  margin-left: 40px;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.userManager {
+  width: calc(100% - 201px);
+    position: relative;
+    left: 201px;
+    height: 100%;
+}
+
+.title {
+  width: 100%;
+}
+
+.title > h1 {
+  padding: 20px;
+}
+
+.searchbox {
+  display: flex;
+}
+
+
+.search_column{
+  border: 1px solid black
+}
+
+.searchbox > input {
+  width: 500px;
+  height: 30px;
+  border: 1px solid black;
+} 
+
+ .searchbox > button{
+  width: 50px;
+  border: 1px solid black;
+ }
+
+ .board_column {
+  width:1300px;
+  height:40px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  display: flex;
+  background-color: #D9D9D9;
+ }
+
+ .board_head {
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+ .board_number {
+  width: 150px;
+  height: 95%;
+ }
+ .board_name{
+  width: 150px;
+  height: 95%;
+ }
+ .board_id{
+  width: 150px;
+  height: 95%;
+ }
+ .board_email{
+  width: 400px;
+  height: 95%;
+ }
+ .board_phone{
+  width: 400px;
+  height: 95%;
+ }
+ .board_type{
+  width: 150px;
+  height: 95%;
+ }
