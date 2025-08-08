@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'pretendard-regular';
+}
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  background-color: #e6f0ff;
+  color: #222;
+}
+
+header, footer {
+  height: 100px;
+  background-color: black;
+}
+
+main {
+  display: flex;
+}
+
+.sidebar {
+  width: 180px;
+  min-height: 700px;
+  background-color: #2f4db1;
+  color: white;
+  padding: 20px 0;
+}
+
+.sidebar .profile {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: #ff80ab;
+  margin: 0 auto 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 12px 20px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.point-history {
+  flex: 1;
+  padding: 40px;
+  background-color: #fff;
+}
+
+.history-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.history-section {
+  flex: 1;
+}
+
+.month-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 150px 0 20px;
+}
+
+.month-control button {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.table-box {
+  border: 1px solid #999;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+.table-header, .table-row {
+  display: flex;
+  padding: 12px 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.table-header {
+  background-color: #f7f7f7;
+  font-weight: bold;
+}
+
+.table-header span,
+.table-row span {
+  flex: 1;
+  text-align: center;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.pagination span {
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.pagination .active {
+  color: red;
+  font-weight: bold;
+}
