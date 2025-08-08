@@ -15,43 +15,9 @@
   /* #FFE7C9 */
   /* #1D3266 */
 }
-header{
-  background-color: #FFF8EF;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-header div span a img{
-  height: 60px;
-}
-header div{
-  height: 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-header div span a{
-  font-size: 16px;
-  margin-right: 7px;
-}
-nav{
-  background-color: #1D3266;
-}
-nav ul{
-  display: flex;
-  justify-content:space-around;
-}
-
-nav ul li div a{
-  text-decoration-line: none;
-  color: white;
-}
-nav ul li div{
-  height: 50px;
-}
 main{
   background-color: #FFE7C9;
-  /* height: calc(100vh - 220px); */
+  height: calc(100vh - 220px);
   display: flex;
   justify-content: center;
 }
@@ -60,10 +26,10 @@ main{
   height: 100%;
 }
 .page_title{
+  margin-top: 40px;
   background-color: yellowgreen;
   font-size: 30px;
 }
-
 .context{
   display: flex;
 }
@@ -75,32 +41,29 @@ main{
   background-color: aquamarine;
   width: 40%;
 }
+.region_button{
+  border-radius: 15px;
+  background-color: gray;
+  text-align: center;
+  font-size: 20px;
+  height: 30px;
+  position: relative;
+}
+.region_mark{
+  position: absolute;
+  right: -25px;
+  width: 0;
+  height: 0;
+  border-bottom: 15px solid transparent;
+  border-top: 15px solid transparent;
+  border-left: 25px solid transparent;
+  border-right: 25px solid white;
+  /* display: none; */
+}
+/* .region_button:hover .region_mark{
+  display: block;
+} */
 .restaurant_select{
   background-color: orange;
   flex: 1;
-}
-footer{
-  width: 100%;
-  height: 110px;
-  background-color: #FFF8EF;
-  display: flex;
-  justify-content: center;
-}
-.footerDiv{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 700px;
-}
-footer div ul{
-  display: flex;
-  justify-content: space-between;
-}
-footer div span{
-  padding-top: 10px;
-  text-align: center;
-  font-size: 10px;
-}
-footer div ul li p{
-  font-size: 10px;
 }
