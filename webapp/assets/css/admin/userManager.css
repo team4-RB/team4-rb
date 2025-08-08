@@ -1,0 +1,22 @@
+main {
+  width: 100%;
+}
+
+.userManager {
+  width: calc(100% - 201px);
+    position: relative;
+    left: 201px;
+    height: 100%;
+}
+
+.title {
+  width: 100%;
+}
+
+.title > h1 {
+  padding: 20px;
+}
+
+.searchbox > input {
+  border: 1px solid black;
+}
