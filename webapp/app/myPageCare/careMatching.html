@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>매칭기록</title>
-  <link rel="stylesheet" href="./../../assets/css/myPageCare/Care_Matching.css">
+  <link rel="stylesheet" href="./../../assets/css/myPageCare/careMatching.css">
 </head>
 <body>
   <header>
@@ -27,14 +27,8 @@
   
     <div class="div_mark">
       <div class="title"> 매칭 기록 </div>
-      <nav class="div_choose">
-        <ul>
-          <li>작성한 게시글 목록</li>
-        </ul>
-  
-      </nav>
-      <nav class="matching_month">
-        <ul>
+      <div class="matching_month">
+        <ul class="months">
           <li>1월</li>
           <li>2월</li>
           <li>3월</li>
@@ -48,11 +42,21 @@
           <li>11월</li>
           <li>12월</li>
         </ul>
-      </nav>
-      <div class="matching_list">
-        <ul>
-          <li> 2일 김괭이 일반회원      |  이용 시간 :   09 : 00 ~ 18 : 00    |  포인트 사용 : 10,000     |   이용 상태 : 완료/진행중/취소</li>
-          <hr>
+        <ul class="matching_list">
+          <li class="matching">
+            <div class="matching_day">
+              2일
+            </div>
+            <div class="matching_member">
+              김괭이
+            </div>
+            <div class="matching_time">
+              이용 시간: 09:00 ~ 18:00
+            </div>
+            <div class="matching_point">
+              포인트 사용: 10,000
+            </div>
+          </li>
         </ul>
       </div>
       <nav class="page">
