@@ -4,6 +4,7 @@ input {
   border-radius: 10px;
   font-size: 16px;
   padding: 4px 10px;
+  border: 1px solid black;
 }
 
 button {
@@ -78,12 +79,6 @@ label > input {
   left: 36px;
 }
 
-.sign_level > label {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
 .sign_id {
   position: relative;
   left: 73px;
@@ -128,7 +123,39 @@ label > input {
   left: 0px;
 }
 
+.file {
+  display: flex;
+  gap: 12px;
+  position: relative;
+  left: 151px;
+}
+
+.file_title {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 12px;
+}
+
+.sign_level > ul {
+  list-style-type: none;
+  width: 100%;
+}
+
+.sign_level > ul > li {
+  width: 100%;
+  padding-bottom: 8px;
+  margin: 10px auto;
+  border-bottom: 1px solid black;
+}
+
 .sign_btn > button {
   padding: 8px 100px;
   border-radius: 30px;
+}
+
+.file > input {
+  width: 300px;
+  height: 20px;
+  border-radius: 36px;
 }

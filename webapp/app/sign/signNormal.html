@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>회원가입(돌봄)</title>
+  <title>회원가입(일반)</title>
   <link rel="stylesheet" href="./../../assets/css/sign/basic.css">
-  <link rel="stylesheet" href="./../../assets/css/sign/sign_care.css">
+  <link rel="stylesheet" href="./../../assets/css/sign/signNormal.css">
+  <link rel="stylesheet" href="./../../assets/css/header.css">
+  <link rel="stylesheet" href="./../../assets/css/footer.css">
+  <script defer src="./../../assets/js/main/include.js"></script>
 </head>
 <body>
-  <header>
-    <h1>헤더더더</h1>
-  </header>
+  <div id="header"></div>
   <main>
     <section class="sign">
       <form action="" method="" class="sign_form">
@@ -71,25 +72,19 @@
             돌봄회원
           </label>
         </div>
-          
-          <div class="file">
-            <input type="text" readonly>
-            <button>파일첨부</button>
-          </div>
-          <div class="file">
-            <input type="text" readonly>
-            <button>파일첨부</button>
-          </div>
         <div class="sign_box sign_level">
-          <div class="file_title">
-            첨부파일 
-          </div>
-          <ul>
-            <li>운전면허증</li>
-            <li>운전면허증</li>
-            <li>운전면허증</li>
-            <li>운전면허증</li>
-          </ul>
+          <label for="level1">
+            <input type="radio" id="level1" name="level" value="level">보행 가능(계단 사용 가능)&nbsp&nbsp&nbsp&nbsp&nbsp[1레벨]
+          </label>
+          <label for="level2">
+            <input type="radio" id="level2" name="level" value="level">보행 가능(계단 사용 불가능) [2레벨]
+          </label>
+          <label for="level3">
+            <input type="radio" id="level3" name="level" value="level">보행 가능(휠체어 사용)&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp[3레벨]
+          </label>
+          <label for="level4">
+            <input type="radio" id="level4" name="level" value="level">보행 가능(휠체어 없음)&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp[4레벨]
+          </label>
         </div>
         <div class="sign_box sign_btn">
           <button>가입하기</button>
