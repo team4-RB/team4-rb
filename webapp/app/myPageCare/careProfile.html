@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>프로필 수정</title>
+  <link rel="stylesheet" href="./../../assets/css/header.css">
+  <link rel="stylesheet" href="./../../assets/css/footer.css">
+  <link rel="stylesheet" href="./../../assets/css/myPageCare/careProfile.css">
+  <script defer src="./../../assets/js/main/include.js"></script>
+</head>
+
+<body>
+  <div id="header"></div>
+
+  <main>
+    <nav class="sidebar">
+
+      <ul>
+        <a href=""><img src="./../../assets/img/myPageCare/peple.jpg" alt=""></a>
+        <a href="">
+          <li>개인정보 수정</li>
+        </a>
+        <a href="">
+          <li>찜한 목록</li>
+        </a>
+        <a href="">
+          <li>매칭 기록</li>
+        </a>
+        <a href="">
+          <li>쪽지함</li>
+        </a>
+        <a href="">
+          <li>게시글 관리</li>
+        </a>
+        <a href="">
+          <li>포인트 환급</li>
+        </a>
+        <a href="">
+          <li>1 대 1 문의</li>
+        </a>
+        <a href="">
+          <li>회원 탈퇴</li>
+        </a>
+      </ul>
+    </nav>
+
+    <div class="div_mark">
+      <div class="title">프로필 수정</div>
+
+      <div class="main_container">
+        <ul class="profile_section">
+          <img src="./../../assets/img/myPageCare/peple.jpg" alt="사람사진">
+          <button>파일 선택</button>
+          <button>확인</button>
+        </ul>
+
+        <form action="" method="get">
+          <div class="caremodify">
+            <div class="name_date">
+              <div class="possible_date">
+                <div>요일</div>
+                <button>월</button>
+                <button>화</button>
+                <button>수</button>
+                <button>목</button>
+                <button>금</button>
+                <button>토</button>
+                <button>일</button>
+                <button id="check">확인</button>
+              </div>
+              <div>
+                <div class="recode">이력</div>
+                  <li>
+                    <label class="license" for="license"> 자격증 1 </label>
+                    <input type="file" id="license" placeholder="자격증 1">
+                  </li>
+                </div>
+                <li>
+                  <label class="license" for="manuscript"> 계좌 사본 </label>
+                  <input type="file" id="manuscript" placeholder="계좌 사본">
+                </li>
+                <li>
+                  <label class="license" for="experience"> 주요 이력 </label>
+                  <input type="file" id="experience" placeholder="이력">
+                </li>
+                <div></div>
+              </div>
+            </div>
+            <div>
+              <div>주소</div>
+              <nav>
+                <ul>
+                  <li><input type="text" placeholder="12345"></li>
+                  <li>
+                    <input type="text" placeholder="서울 특별시">
+                    <button>우편번호 찾기</button>
+                  </li>
+                  <li>
+                    <input type="text" placeholder="123동 123호">
+                    <button>확인</button>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div>
+              <div>이메일</div>
+              <input type="text" placeholder="fdsfs@naver.com">
+              <button>수정</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
