@@ -3,7 +3,7 @@ const sidebar = document.querySelector(".sidebar");
 const modalBox = document.querySelector(".modalbox");
 const closeBtn = document.querySelector(".closebtn");
 const wishBtn = document.querySelector(".wishbtn");
-const modal_closebtn = document.querySelector(".modal_closebtn");
+const modalClosebtn = document.querySelector(".modal_closebtn");
 
 //이미지 클릭 시 사이드바 띄우기
 mapImg.addEventListener("click", function () {
@@ -21,7 +21,7 @@ closeBtn.addEventListener("click", function () {
 })
 
 //모달창 닫기 클릭 시 로그인페이지 이동(지금은 더미페이지 이동)
-modal_closebtn.addEventListener("click", function () {
+modalClosebtn.addEventListener("click", function () {
   modalBox.style.display = 'none';
   location.href = './../../dummy.html';
 })
