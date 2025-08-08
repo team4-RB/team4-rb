@@ -17,12 +17,10 @@ main {
   flex-direction: column;
 }
 
-.main_sidebar img{
+.main_sidebar ul li img{
   height: 150px;
   width: 150px;
-  background-color: rgb(27, 255, 217);
   border-radius: 100%;
-  margin: 15px;
 }
 
 .main_sidebar ul li {
