@@ -1,5 +1,6 @@
 main {
   width: 100%;
+  z-index: -1;
 }
 
 .searchcontent {
@@ -83,50 +84,4 @@ main {
 .board_type {
   width: 150px;
   height: 95%;
-}
-
-.table_body {
-  display: flex;
-}
-
-/* 테스트(간격 조절) */
-/* .board_head {
-  border: 1px solid black;
-  } */
-/* .table_body > li {
-    border: 1px solid black;
-  } */
-
-.body_number,
-.body_name,
-.body_id,
-.body_type {
-  width: 124px;
-  height: 30px;
-}
-
-.body_email,
-.body_phone {
-  width: 330px;
-  height: 30px;
-}
-
-.table_body > li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 1px solid black;
-}
-
-.paging_box {
-  width: 70%;
-  /* border: 1px solid black; */
-  margin: 0 auto;
-}
-
-.paging {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-  justify-content: center;
 }
