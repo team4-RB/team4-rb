@@ -42,7 +42,60 @@ main {
   padding: 15px;
 }
 
-/* ----------------------------- */
+
+.div_mark{
+  background-color:olive;
+  flex: 1;
+  color: white;
+}
+
+.div_mark .title{
+  background-color: gainsboro;
+  font-size: 30px;
+  margin-top: 30px;
+}
+.matching_month{
+  background-color: pink;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 50px;
+  height: 60%;
+  border-radius: 30px;
+  border: solid 5px black;
+}
+.months{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: solid 1px black;
+  background-color: aqua;
+  padding-bottom: 10px;
+}
+.matching_month ul li{
+  list-style-type: none;
+  background-color: blueviolet;
+}
+.matching {
+  display: flex;
+}
+.matching_day{
+  width: 50px;
+  text-align: center;
+}
+.matching_member{
+  width: 50px;
+  text-align: center;
+}
+.matching_time{
+  width: 50px;
+  text-align: center;
+}
+.matching_point{
+  width: 50px;
+  text-align: center;
+}
+/*
+-----------------------------
 .post_edit {
   flex: 1;
   padding: 40px 100px;
@@ -93,4 +146,4 @@ main {
   background-color: navy;
   color: white;
 }
-
+*/
