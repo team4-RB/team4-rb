@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 100%;
+  height: calc(100vh - 200px);
+  display: flex;
+}
+
+.main_sidebar {
+  width: 180px;
+  height: 100%;
+  background-color: rgb(159, 159, 255);
+  display: flex;
+  flex-direction: column;
+}
+
+.main_sidebar img {
+  height: 150px;
+  width: 150px;
+  background-color: rgb(27, 255, 217);
+  border-radius: 100%;
+  margin: 15px;
+}
+
+.main_sidebar ul li {
+  padding: 15px;
+  border-bottom: 1px solid black;
+}
+
+/* ============================= */
+
+.pw_check{
+  flex: 1;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input{
+  width: 400px;
+  height: 50px;
+  margin-left: 20px;
+  font-size: 20px;
+  border: 1px solid black;
+}
+button{
+  width: 100px;
+  height: 40px;
+}
+form div{
+  display: block;
+  padding-left: 100px;
+  color: red;
+}

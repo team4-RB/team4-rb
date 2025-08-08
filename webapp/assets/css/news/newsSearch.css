@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+main {
+  width: 100%;
+  height: calc(100vh - 220px);
+  background-color: #FFE7C9;
+}
+
+.search_result_container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.search_result_topmenu {
+  display: flex;
+  flex-direction: row;
+  margin: 0px auto;
+}
+
+.searchIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.searchbar {
+  display: flex;
+  justify-content: center;
+}
+
+.underbar {
+  background-color: #FFE7C9;
+  border: 0px;
+  border-bottom: 1px solid black;
+}
+
+.search_btn {
+  max-width: 20px;
+  max-height: 20px;
+  background-color: #FFE7C9;
+  border: 0px;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 30px;
+  margin-right: 300px;
+  margin-top: 70px;
+}
+
+.searchbar {
+  margin-left: 200px;
+  margin-top: 50px;
+}
+
+.search_result_card {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search_result_card>ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 350px;
+  height: 150px;
+  background-color: #FFF8EF;
+  margin: 10px 20px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+.pagination {
+  text-align: center;
+  cursor: pointer;
+}
+
+.active {
+  color: red;
+  cursor: default;
+}
+
+.card p {
+  margin: 30px auto;
+  text-align: center;
+}
