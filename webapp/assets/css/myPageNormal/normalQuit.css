@@ -74,8 +74,22 @@ main {
  }
 form{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin: 60px 300px;
   justify-content: space-between;
 }
 
+.quit_box{
+  border: 1px solid black;
+  border-radius: 15px;
+  background-color: bisque;
+  font-size: 20px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+button{
+  justify-content: end;
+  width: 100px;
+}
