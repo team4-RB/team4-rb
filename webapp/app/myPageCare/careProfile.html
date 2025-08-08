@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,16 +10,15 @@
   <link rel="stylesheet" href="./../../assets/css/myPageCare/careProfile.css">
   <script defer src="./../../assets/js/main/include.js"></script>
 </head>
+
 <body>
   <div id="header"></div>
 
   <main>
-      <nav class="sidebar">
-      
+    <nav class="sidebar">
+
       <ul>
-        <a href="">
-          <div class="profile"><a href=""><img src="./../../assets/img/myPageCare/peple.jpg" alt=""></a></div>
-        </a>
+        <a href=""><img src="./../../assets/img/myPageCare/peple.jpg" alt=""></a>
         <a href="">
           <li>개인정보 수정</li>
         </a>
@@ -45,70 +45,86 @@
         </a>
       </ul>
     </nav>
+
     <div class="div_mark">
       <div class="title">프로필 수정</div>
-      <div class="arlim">
-        <div>
 
-        </div>
-        <nav>
-          <ul>
-           <img src="./../../assets/img/myPageCare/peple.jpg" alt="사람사진">
-          </ul>
-        </nav>
-      </div>
-      <form action="" method="get">
-        <div>
-          <div>회원 정보</div>
-        </div>
-        <div class="caremodify">
-          <div class="name_date">
-            <div >
-              <div>요일</div>
-              <div>이름</div>
+      <div class="main_container">
+        <ul class="profile_section">
+          <img src="./../../assets/img/myPageCare/peple.jpg" alt="사람사진">
+          <button>파일 선택</button>
+          <button>확인</button>
+        </ul>
+
+        <form action="" method="get">
+          <div class="caremodify">
+            <div class="name_date">
+              <div class="possible_date">
+                <div>요일</div>
+                <button>월</button>
+                <button>화</button>
+                <button>수</button>
+                <button>목</button>
+                <button>금</button>
+                <button>토</button>
+                <button>일</button>
+                <button id="check">확인</button>
+              </div>
+              <div>
+                <div class="recode">이력
+                  <li>
+                    <label class="license" for="license"> 파일 선택 </label>
+                    <input type="file" id="license" placeholder="자격증 1" style="display: none;">
+                  </li>
+                </div>
+                <li>
+                  <input type="file" placeholder="계좌 사본">
+                </li>
+                <li>
+                  <input type="file" placeholder="이력">
+                </li>
+                <div></div>
+              </div>
             </div>
             <div>
-              <div>이력</div>
-              <div>2025-08-02</div>
+              <div>주소</div>
+              <nav>
+                <ul>
+                  <li><input type="text" placeholder="12345"></li>
+                  <li>
+                    <input type="text" placeholder="서울 특별시">
+                    <button>우편번호 찾기</button>
+                  </li>
+                  <li>
+                    <input type="text" placeholder="123동 123호">
+                    <button>확인</button>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div>
+              <div>전화번호</div>
+              <div>010-1234-5678</div>
+              <button>수정</button>
+            </div>
+            <div>
+              <div>아이디</div>
+              <div>qwer</div>
+            </div>
+            <div>
+              <div>이메일</div>
+              <input type="text" placeholder="fdsfs@naver.com">
+              <button>수정</button>
+            </div>
+            <div>
+              <div>비밀번호</div>
+
             </div>
           </div>
-          <div>
-            <div>주소</div>
-            <nav>
-              <ul>
-                <li><input type="text" placeholder="12345"></li>
-                <li>
-                  <input type="text" placeholder="서울 특별시">
-                  <button>우편번호 찾기</button>
-                </li>
-                <li>
-                  <input type="text" placeholder="123동 123호">
-                  <button>확인</button>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div>
-            <div>전화번호</div>
-            <div>010-1234-5678</div>
-            <button>수정</button>
-          </div>
-          <div>
-            <div>아이디</div>
-            <div>qwer</div>
-          </div>
-          <div>
-            <div>이메일</div>
-            <input type="text" placeholder="fdsfs@naver.com">
-            <button>수정</button>
-          </div>
-          <div>
-            <div>비밀번호</div>
-
-          </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   </main>
 </body>
+
 </html>

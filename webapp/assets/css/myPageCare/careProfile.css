@@ -27,12 +27,15 @@ main {
   padding: 20px 0;
 }
 
-.sidebar div {
+.sidebar img {
   height: 130px;
   width: 130px;
   background-color: #ff80ab;
   border-radius: 50%;
   margin: 0 auto 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .sidebar ul {
@@ -44,4 +47,86 @@ main {
   padding: 12px 20px;
   font-size: 15px;
   cursor: pointer;
+}
+
+/* ******* */
+.main_container{
+  display: flex;
+  flex-direction: column;
+}
+
+.div_mark{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.title{
+  padding: 40px 100px 0px;
+
+}
+
+.profile_section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.profile_section img{
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 0px;
+}
+
+.profile_section button{
+  margin-bottom: 0;
+  margin: 5px;
+  bottom: 0;
+  align-items: flex-end;
+}
+
+form .caremodify{
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(189, 189, 170);
+  border: 1px solid black;
+}
+
+.possible_date{
+  display: flex;
+  border-radius: 50%;
+}
+
+.possible_date button{
+  border-radius: 50%;
+  background-color: white;
+  margin: 20px 10px;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.possible_date #check{
+  background-color: #2f4db1;
+  color: white;
+  border-radius: 15%;
+  height: 20px;
+  width: 50px;
+}
+.possible_date div{
+  margin-top: 20px;
+}
+
+.recode{
+  display: flex;
+
+}
+.license{
+  border: 2px solid black;
+  margin: 20px;
 }
