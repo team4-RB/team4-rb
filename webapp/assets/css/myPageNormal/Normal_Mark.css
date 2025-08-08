@@ -45,6 +45,9 @@ main {
   font-size: 30px;
   margin: 30px;
 }
+form{
+  flex: 1;
+}
 .mark_nav{
   display: flex;
   margin: 100px 150px 0px 150px;
