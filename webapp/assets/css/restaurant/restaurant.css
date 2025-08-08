@@ -69,7 +69,7 @@ main{
   border-top: 15px solid transparent;
   border-left: 25px solid transparent;
   border-right: 25px solid white;
-  /* display: none; */
+  display: none;
 }
 .region_small{
   background-color: crimson;
