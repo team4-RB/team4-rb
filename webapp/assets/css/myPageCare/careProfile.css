@@ -124,9 +124,13 @@ form .caremodify{
 
 .recode{
   display: flex;
-
 }
-.license{
-  border: 2px solid black;
-  margin: 20px;
+.license .manuscript .experience{
+  border: 1px solid black;
+  margin: 20px; 
+  width: 200px;
+}
+
+.recode > li :nth-child(1){
+  
 }
