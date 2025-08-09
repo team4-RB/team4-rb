@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'pretendard-regular';
+}
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+main {
+  display: flex;
+  min-height: calc(100vh - 220px);
+  flex-direction: row;
+}
+
+.sidebar img {
+  height: 130px;
+  width: 130px;
+  background-color: #ff80ab;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+.sidebar {
+  width: 180px;
+  background-color: #2f4db1;
+  color: white;
+  padding: 20px 0;
+}
+
+.sidebar img {
+  height: 130px;
+  width: 130px;
+  background-color: #ff80ab;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidebar li {
+  padding: 12px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  color: white;
+  text-decoration-line: none;
+}
+
+/* ============================= */
+
+.station_info {
+  display: flex;
+  flex: 1;
+  width: 50%;
+  height: auto;
+  
+  flex-direction: column;
+  margin-top: 70px;
+}
+
+.station_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.station_img img {
+  width: 600px;
+  height: 400px;
+}
+
+.station_exit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+.line_number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: row;
+}
+
+.line_number img {
+  margin: 30px;
+  display: flex;
+  flex-direction: row;
+  width: 100px;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.map_api {
+  display: flex;
+  flex: 1;
+  width: 50%;
+
+  flex-direction: column;
+  margin-top: 70px;
+    display: flex;
+  align-items: center;
+}

@@ -18,7 +18,14 @@ header, footer {
   height: 100px;
   background-color: black;
 }
-
+.sidebar img {
+  height: 130px;
+  width: 130px;
+  background-color: #ff80ab;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: block;
+}
 main {
   display: flex;
 }

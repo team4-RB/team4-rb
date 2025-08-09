@@ -30,6 +30,39 @@ document.addEventListener('DOMContentLoaded', function () {
       if (currentLine === null) {
         return;
       }
+      buttons.forEach(function (btn){
+        btn.classList.remove('selected-btn');
+      });
+      button.classList.add('selected-btn');
+
+      for (var j = 0; j < mapDivs.length; j++){
+        mapDivs[j].style.display = 'none';
+      }
+      var showMap = document.querySelector('.' + currentLine.lineImg);
+      if (showMap){
+        showMap.style.display = 'block';
+      }
+
+      for (var k = 0; k < lines.length; k++){
+        var listDiv = document.getElementById(lines[k].stationListId);
+        if (listDiv) {
+          listDiv.style.display = 'none';
+        }
+      }
+
+      var showList = document.getElementById(currentLine.stationListId);
+      if (showList) {
+        showList.style.display = 'block';
+      }
+
+      var stations = showList.querySelectorAll('.station_name');
+      stations.forEach(function(station){
+        station.onclick = function() {
+          var name = station.textContent();
+          stationInfo.innerHTML = "";
+        };
+      });
     })
-  })
+    document.getElementById("all").click;
+  });
 });

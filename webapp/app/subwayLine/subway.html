@@ -1,151 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RB</title>
-<link rel="stylesheet" href="./../../assets/css/subwayLine/subway.css">
-<script defer src="./../../assets/js/subwayLine/subway.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RB</title>
+  <link rel="stylesheet" href="./../../assets/css/header.css">
+  <link rel="stylesheet" href="./../../assets/css/footer.css">
+  <script defer src="./../../assets/js/main/include.js"></script>
+  <link rel="stylesheet" href="./../../assets/css/subwayLine/subway.css">
+  <script defer src="./../../assets/js/subwayLine/subway.js"></script>
 </head>
+
 <body>
-<header>
+  <div id="header"></div>
 
-</header>
-<main>
-  <h1>지하철 노선도</h1>
-  <div class="subway">
-    <div class="subway_subwayLine">
-      <button id="all"> 전체 </button>
-      <button id="line2"> 2호선 </button>
-      <button id="line3"> 3호선 </button>
-      <button id="line4"> 4호선 </button>
-      <button id="line7"> 7호선 </button>
-      <button id="line9"> 9호선 </button>
-      <button id="dxline"> 신분당선 </button>
+  <main>
+    <h1>지하철 노선도</h1>
+    <div class="subway">
+      <div class="subway_subwayLine">
+        <button id="all"> 전체 </button>
+        <button id="line2"> 2호선 </button>
+        <button id="line3"> 3호선 </button>
+        <button id="line4"> 4호선 </button>
+        <button id="line7"> 7호선 </button>
+        <button id="line9"> 9호선 </button>
+        <button id="dxline"> 신분당선 </button>
+      </div>
     </div>
-  </div>
-  <div class="map_section">
-    <div class="subway_allline_img">
-      <img src="./../../assets/img/subwayLine/allline.png" alt="전체호선사진">
-    </div>
-    <div class="subway_line2_img">
-      <img src="./../../assets/img/subwayLine/line2.png" alt="2호선사진">
-    </div>
-    <div class="subway_line3_img">
-      <img src="./../../assets/img/subwayLine/line3.png" alt="3호선사진">
-    </div>
-    <div class="subway_line4_img">
-      <img src="./../../assets/img/subwayLine/line4.png" alt="4호선사진">
-    </div>
-    <div class="subway_line7_img">
-      <img src="./../../assets/img/subwayLine/line7.png" alt="7호선사진">
-    </div>
-    <div class="subway_line9_img">
-      <img src="./../../assets/img/subwayLine/line9.png" alt="9호선사진">
-    </div>
-    <div class="subway_dxline_img">
-      <img src="./../../assets/img/subwayLine/dxline.png" alt="신분당선사진">
-    </div>
+    <div class="map_section">
+      <div class="subway_allline_img">
+        <img src="./../../assets/img/subwayLine/allline.png" alt="전체호선사진">
+      </div>
+      <div class="subway_line2_img">
+        <img src="./../../assets/img/subwayLine/line2.png" alt="2호선사진">
+      </div>
+      <div class="subway_line3_img">
+        <img src="./../../assets/img/subwayLine/line3.png" alt="3호선사진">
+      </div>
+      <div class="subway_line4_img">
+        <img src="./../../assets/img/subwayLine/line4.png" alt="4호선사진">
+      </div>
+      <div class="subway_line7_img">
+        <img src="./../../assets/img/subwayLine/line7.png" alt="7호선사진">
+      </div>
+      <div class="subway_line9_img">
+        <img src="./../../assets/img/subwayLine/line9.png" alt="9호선사진">
+      </div>
+      <div class="subway_dxline_img">
+        <img src="./../../assets/img/subwayLine/dxline.png" alt="신분당선사진">
+      </div>
 
-    <div class="station_list" id="allline_station">
+      <div class="station_list" id="allline_station">
         <h3>전체 역 목록</h3>
-      <ul>
-        <li class="station_name">동작</li>
-        <li class="station_name">구반포</li>
-        <li class="station-name">신반포</li>
-        <li class="station_name">고속터미널</li>
-        <li class="station_name">사평</li>
-        <li class="station_name">신논현</li>
-        <li class="station_name">총신대입구</li>
-        <li class="station_name">내방</li>
-        <li class="station_name">반포</li>
-        <li class="station_name">논현</li>
-        <li class="station_name">사당</li>
-        <li class="station_name">방배</li>
-        <li class="station_name">서초</li>
-        <li class="station_name">교대</li>
-        <li class="station_name">강남</li>
-        <li class="station_name">신사</li>
-        <li class="station_name">양재</li>
-        <li class="station_name">양재시민의숲</li>
-        <li class="station_name">청계산입구</li>
-        <li class="station_name">잠원</li>
-        <li class="station_name">남부터미널</li>
-      </ul>
+        <ul>
+          
+          <li class="station_name"><a href="./../../app/subwayLine/dongjack.html">동작</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/gubanpo.html">구반포</a></li>
+          <li class="station-name"><a href="./../../app/subwayLine/shinbanpo.html">신반포</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/gosukterminner.html">고속터미널</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/sapeung.html">사평</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/sinnonehyun.html">신논현</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/chungshindae.html">총신대입구</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/nebang.html">내방</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/banpo.html">반포</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/nonehyune.html">논현</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/sadang.html">사당</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/bangbae.html">방배</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/seacho.html">서초</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/gyudae.html">교대</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/gangnam.html">강남</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/shinsa.html">신사</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/yangjae.html">양재</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/yangjeaforest.html">양재시민의숲</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/chunggyae.html">청계산입구</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/jameone.html">잠원</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/nambuterminer.html">남부터미널</a></li>
+        </ul>
+      </div>
+
+      <div class="station_list" id="line2_stations">
+        <h3>2호선 역 목록</h3>
+        <ul>
+          <li class="station_name"><a href="./../../app/subwayLine/sadang.html">사당</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/bangbae.html">방배</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/seacho.html">서초</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/gyudae.html">교대</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/gangnam.html">강남</a></li>
+        </ul>
+      </div>
+
+      <div class="station_list" id="line3_stations">
+        <h3>3호선 역 목록</h3>
+        <ul>
+          <li class="station_name"><a href="./../../app/subwayLine/shinsa.html">신사</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/jameone.html">잠원</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/gosukterminner.html">고속터미널</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/gyudae.html">교대</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/nambuterminer.html">남부터미널</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/dongjack.html">양재</a></li>
+        </ul>
+      </div>
+
+      <div class="station_list" id="line4_stations">
+        <h3>4호선 역 목록</h3>
+        <ul>
+          <li class="station_name"><a href="./../../app/subwayLine/dongjack.html">동작</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/chungshindae.html">총신대입구</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/sadang.html">사당</a></li>
+        </ul>
+      </div>
+
+      <div class="station_list" id="line7_stations">
+        <h3>7호선 역 목록</h3>
+        <ul>
+          <li class="station_name"><a href="./../../app/subwayLine/chungshindae.html">총신대입구</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/nebang.html">내방</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/gosukterminner.html">고속터미널</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/banpo.html">반포</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/nonehyune.html">논현</a></li>
+        </ul>
+      </div>
+
+      <div class="station_list" id="line9_stations">
+        <h3>9호선 역 목록</h3>
+        <ul>
+          <li class="station_name"><a href="./../../app/subwayLine/dongjack.html">동작</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/gubanpo.html">구반포</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/shinbanpo.html">신반포</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/gosukterminner.html">고속터미널</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/sapeung.html">사평</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/dongjack.html">신논현</a></li>
+        </ul>
+      </div>
+
+      <div class="station_list" id="dxline_stations">
+        <h3>신분당선 역 목록</h3>
+        <ul>
+          <li class="station_name"><a href="./../../app/subwayLine/shinsa.html">신사</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/nonehyune.html">논현</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/sinnonehyun.html">신논현</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/gangnam.html">강남</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/yangjae.html">양재</a></li>
+          <li class="station_name"><a href="./../../app/subwayLine/yangjeaforest.html">양재시민의숲</a></li>
+          <li class="station_item"><a href="./../../app/subwayLine/chunggyae.html">청계산입구</a></li>
+        </ul>
+      </div>
     </div>
 
-    <div class="station_list" id="line2_stations">
-      <h3>2호선 역 목록</h3>
-      <ul>
-        <li class="station_name">사당</li>
-        <li class="station_name">방배</li>
-        <li class="station_name">서초</li>
-        <li class="station_name">교대</li>
-        <li class="station_name">강남</li>
-      </ul>
-    </div>
-
-    <div class="station_list" id="line3_stations">
-      <h3>3호선 역 목록</h3>
-      <ul>
-        <li class="station_name">신사</li>
-        <li class="station_name">잠원</li>
-        <li class="station_name">고속터미널</li>
-        <li class="station_name">교대</li>
-        <li class="station_name">남부터미널</li>
-        <li class="station_name">양재</li>
-      </ul>
-    </div>
-
-    <div class="station_list" id="line4_stations">
-      <h3>4호선 역 목록</h3>
-      <ul>
-        <li class="station_name">동작</li>
-        <li class="station_name">총신대입구</li>
-        <li class="station_name">사당</li>
-      </ul>
-    </div>
-
-    <div class="station_list" id="line7_stations">
-      <h3>7호선 역 목록</h3>
-      <ul>
-        <li class="station_name">총신대입구</li>
-        <li class="station_name">내방</li>
-        <li class="station_name">고속터미널</li>
-        <li class="station_name">반포</li>
-        <li class="station_name">논현</li>
-      </ul>
-    </div>
-
-    <div class="station_list" id="line9_stations">
-      <h3>9호선 역 목록</h3>
-      <ul>
-        <li class="station_name">동작</li>
-        <li class="station_name">구반포</li>
-        <li class="station_name">신반포</li>
-        <li class="station_name">고속터미널</li>
-        <li class="station_name">사평</li>
-        <li class="station_name">신논현</li>
-      </ul>
-    </div>
-
-    <div class="station_list" id="dxline_stations">
-      <h3>신분당선 역 목록</h3>
-      <ul>
-        <li class="station_name">신사</li>
-        <li class="station_name">논현</li>
-        <li class="station_name">신논현</li>
-        <li class="station_name">강남</li>
-        <li class="station_name">양재</li>
-        <li class="station_name">양재시민의숲</li>
-        <li class="station_item">청계산입구</li>
-      </ul>
-    </div>
-  </div>
-
-</main>
-<footer>
-
-</footer>
+  </main>
+  <div id="footer"></div>
 </body>
+
 </html>
