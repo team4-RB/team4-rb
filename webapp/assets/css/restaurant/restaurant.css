@@ -72,11 +72,13 @@ main{
   display: none;
 }
 .region_small{
+  /* 얘가 하양이!!! */
   background-color: crimson;
   width: 215px;
   border-radius: 30px;
   margin-left: 25px;
   height: 100%;
+  display: none;
 }
 .region_small ul{
   background-color: aqua;
@@ -117,8 +119,10 @@ main{
 }
 .restaurant_card{
   background-color: blanchedalmond;
+  opacity: 0;
   flex: 1;
   margin: 10px;
+  /* display: none; */
   display: flex;
   flex-direction: column;
 }
