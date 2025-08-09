@@ -20,8 +20,14 @@ var restaurants = [
   ['토스트', '강남', '9시~18시', '010-1234-5678']
 ];
 
-function showCards(){
 
+
+
+
+
+
+function showCards(num, value){
+  console.log("num은 "+ num + ", value는 " + value);
   for(let i = 0 ;i < 4;i++){
     if(i < restaurants.length){
       let str = "";
@@ -55,7 +61,8 @@ function reClicked(num){
   // 리스트 초기화
   reSmallList.innerHTML = "";
 
-  // 각 문자열 출력
+  // 동네별 버튼 생성
+  let d = 0;
   for(ar of arr[num]){
     console.log(ar, typeof ar);
 
@@ -66,8 +73,13 @@ function reClicked(num){
 
     const li = document.createElement("li");
     li.innerText = ar;
+    li.value = d;
+    li.onclick = function(){
+      showCards(num, li.value);
+    };
 
     reSmallList.appendChild(li);
+    d++;
   }
   
 
@@ -84,7 +96,7 @@ function reClicked(num){
     j++;
   }
 
-  showCards();
+  
 
 
 
