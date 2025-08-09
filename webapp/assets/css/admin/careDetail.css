@@ -1,0 +1,271 @@
+main {
+  width: 100%;
+  /* height: 100%; */
+}
+
+.detail_page {
+  width: calc(100% - 201px);
+  height: 100%;
+  position: relative;
+  left: 201px;
+}
+
+.detail_box {
+  width: 90%;
+  height: 100%;
+  /* border: 1px solid black; */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.detail_title {
+  padding-top: 12px;
+}
+.detail_form {
+  width: 100%;
+  height: 100%;
+}
+
+.detail_content {
+  border: 2px solid black;
+  width: 90%;
+  height: 88%;
+  border-radius: 20px;
+  background-color: #eeeeee;
+}
+
+.detail_content_name {
+  display: flex;
+  width: 100%;
+  height: 10%;
+  align-items: center;
+  border-bottom: 2px solid black;
+}
+
+.table_head_name {
+  width: 10%;
+  height: 100%;
+  border-right: 2px solid black;
+  line-height: 40px;
+  text-align: center;
+  border-top-right-radius: 14px;
+  background-color: #d9d9d9;
+  border-top-left-radius: 20px;
+}
+
+.table_member_type {
+  display: flex;
+  width: 30%;
+  border-right: 1px solid black;
+}
+
+.table_member_type > .type_label {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.type_label {
+  display: flex;
+  gap: 15px;
+}
+
+.table_name_detail {
+  border-right: 1px solid black;
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.table_name_detail > button {
+  background-color: #2f52aa;
+  color: white;
+  padding: 4px 15px;
+  border-radius: 14px;
+}
+
+.table_member_type_title {
+  width: 40%;
+  height: 100%;
+  border-right: 1px solid black;
+  line-height: 33px;
+  text-align: center;
+}
+.table_join_date {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.table_join_title {
+  width: 30%;
+  /* height: 100%; */
+  border-right: 1px solid black;
+  text-align: center;
+  line-height: 33px;
+}
+.table_join_detail {
+  width: 65%;
+  /* height: 100%; */
+  text-align: center;
+}
+
+.detail_content_address {
+  display: flex;
+  height: 25%;
+  border-bottom: 2px solid black;
+}
+
+.table_head_address {
+  width: 10%;
+  height: 100%;
+  border-right: 2px solid black;
+  background-color: #d9d9d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table_address_detail {
+  width: 90.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+.table_address_detail > input[type="text"] {
+  width: 70%;
+  height: 30px;
+  position: relative;
+  left: 30px;
+  background-color: inherit;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.detail_content_phone,
+.detail_content_email,
+.detail_content_id,
+.detail_content_pw,
+.detail_content_point {
+  display: flex;
+  height: 10.6%;
+  border-bottom: 2px solid black;
+}
+.table_head {
+  width: 10%;
+  height: 100%;
+  border-right: 2px solid black;
+  background-color: #d9d9d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.table_detail {
+  width: 90.5%;
+  display: flex;
+  /* justify-content: center; */
+  /* gap: 12px; */
+  align-items: center;
+}
+
+.table_detail > input[type="text"] {
+  width: 70%;
+  height: 30px;
+  position: relative;
+  left: 30px;
+  background-color: inherit;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.detail_content_point {
+  height: 9%;
+  display: flex;
+}
+.table_head_pw {
+  width: 10%;
+  height: 100%;
+  border-right: 2px solid black;
+  background-color: #d9d9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table_point_detail {
+  width: 90.5%;
+  display: flex;
+  /* justify-content: center; */
+  /* gap: 12px; */
+  align-items: center;
+}
+
+.table_point_detail > input[type="text"] {
+  width: 15%;
+  height: 20px;
+  position: relative;
+  left: 30px;
+  background-color: inherit;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.table_point_detail > button {
+  position: relative;
+  left: 90px;
+  background-color: #2f52aa;
+  border-radius: 10px;
+  padding: 4px 10px;
+  color: white;
+}
+
+.delete {
+  width: 90%;
+  /* border: 1px solid black; */
+  height: 10%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.delete > .delete_btn {
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+
+.detail_content_account {
+  display: flex;
+  height: 10.6%;
+}
+
+.table_head_account {
+  width: 10%;
+  height: 100%;
+  border-right: 2px solid black;
+  background-color: #d9d9d9;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.update_btn {
+  width: 10%;
+  height: 30px;
+  position: relative;
+  left: 60px;
+  background-color: #2f52aa;
+  border: 1px solid black;
+  border-radius: 14px;
+  color: white;
+}
