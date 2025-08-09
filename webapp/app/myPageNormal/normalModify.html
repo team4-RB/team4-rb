@@ -46,60 +46,62 @@
         <div>
           <div>회원 정보</div>
         </div>
-        <div class="normalmodify">
-          <div>
-            <div>성명</div>
-            <div>이름</div>
-          </div>
-          <div>
-            <div>상태</div>
-            <div>1레벨</div>
-          </div>
-          <div>
-            <div>주소</div>
-            <nav>
+        <nav class="normalmodify">
+          <ul>
+            <li class="member">
               <ul>
-                <li><input type="text" placeholder="12345"></li>
-                <li>
-                  <input type="text" placeholder="서울 특별시">
-                  <button>우편번호 찾기</button>
-                </li>
-                <li>
-                  <input type="text" placeholder="123동 123호">
-                  <button>확인</button>
+                <li class="info">성명</li>
+                <li class="myinfo">이름</li>
+              </ul>
+            </li>
+            <li class="member">
+              <ul>
+                <li class="info">상태</li>
+                <li class="myinfo">레벨</li>
+              </ul>
+            </li>
+            <li class="member">
+              <ul>
+                <li class="info">주소</li>
+                <li class="myinfo">
+                  <ul>
+                    <li><input type="text" placeholder="우편번호"></li>
+                    <li><input type="text" placeholder="주소"><button>우편번호 찾기</button></li>
+                    <li><input type="text" placeholder="상세주소"><button>확인</button></li>
+                  </ul>
                 </li>
               </ul>
-            </nav>
-          </div>
-          <div>
-            <div>전화번호</div>
-            <div>010-1234-5678</div>
-            <button>수정</button>
-          </div>
-          <div>
-            <div>아이디</div>
-            <div>qwer</div>
-          </div>
-          <div>
-            <div>이메일</div>
-            <input type="text" placeholder="fdsfs@naver.com">
-            <button>수정</button>
-          </div>
-          <div>
-            <div>비밀번호</div>
-            <nav>
+            </li>
+            <li class="member">
               <ul>
-                <li>
-                  <input type="password" placeholder="비밀번호를 입력하여 주십시오">
-                </li>
-                <li>
-                  <input type="password" placeholder="새 비밀번호를 다시 입력하여 주십시오">
-                  <button>확인</button>
-                </li>
+                <li class="info">전화번호</li>
+                <li class="myinfo"><div>010-1234-5678</div><button>수정</button></li>
               </ul>
-            </nav>
-          </div>
-        </div>
+            </li>
+            <li class="member">
+              <ul>
+                <li class="info">아이디</li>
+                <li class="myinfo">아이디</li>
+              </ul>
+            </li>
+            <li class="member">
+              <ul>
+                <li class="info">이메일</li>
+                <li class="myinfo"><input type="text" placeholder="이메일"><button>수정</button></li>
+              </ul>
+            </li>
+            <li class="member">
+              <ul>
+                <li class="info">비밀번호</li>
+                <li class="myinfo">
+                  <ul>
+                    <li><input type="password" placeholder="비밀번호 입력"></li>
+                    <li><input type="password" placeholder="새 비밀번호 입력"><button>확인</button></li></li>
+                  </ul>
+              </ul>
+            </li>
+          </ul>
+        </nav>
       </form>
     </div>
   </main>

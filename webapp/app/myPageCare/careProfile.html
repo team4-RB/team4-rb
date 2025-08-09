@@ -7,16 +7,15 @@
   <title>프로필 수정</title>
   <link rel="stylesheet" href="./../../assets/css/header.css">
   <link rel="stylesheet" href="./../../assets/css/footer.css">
-  <link rel="stylesheet" href="./../../assets/css/myPageCare/careProfile.css">
   <script defer src="./../../assets/js/main/include.js"></script>
+  <link rel="stylesheet" href="./../../assets/css/myPageCare/careProfile.css">
+  <script defer src="./../../assets/js/myPageCare/careProfile.js"></script>
 </head>
-
 <body>
   <div id="header"></div>
 
   <main>
     <nav class="sidebar">
-
       <ul>
         <a href=""><img src="./../../assets/img/myPageCare/peple.jpg" alt=""></a>
         <a href="">
@@ -58,9 +57,10 @@
 
         <form action="" method="get">
           <div class="caremodify">
+            
             <div class="name_date">
+              <div>요일</div>
               <div class="possible_date">
-                <div>요일</div>
                 <button>월</button>
                 <button>화</button>
                 <button>수</button>
@@ -70,50 +70,92 @@
                 <button>일</button>
                 <button id="check">확인</button>
               </div>
-              <div>
-                <div class="recode">이력</div>
+            </div>
+
+            <div class="recode">
+              <div>이력</div>
+              <div class="reode_detail">
+                <ul>
                   <li>
                     <label class="license" for="license"> 자격증 1 </label>
                     <input type="file" id="license" placeholder="자격증 1">
                   </li>
-                </div>
-                <li>
-                  <label class="license" for="manuscript"> 계좌 사본 </label>
-                  <input type="file" id="manuscript" placeholder="계좌 사본">
-                </li>
-                <li>
-                  <label class="license" for="experience"> 주요 이력 </label>
-                  <input type="file" id="experience" placeholder="이력">
-                </li>
-                <div></div>
-              </div>
-            </div>
-            <div>
-              <div>주소</div>
-              <nav>
-                <ul>
-                  <li><input type="text" placeholder="12345"></li>
                   <li>
-                    <input type="text" placeholder="서울 특별시">
-                    <button>우편번호 찾기</button>
+                    <label class="license" for="manuscript"> 계좌 사본 </label>
+                    <input type="file" id="manuscript" placeholder="계좌 사본">
                   </li>
                   <li>
-                    <input type="text" placeholder="123동 123호">
-                    <button>확인</button>
+                    <label class="license" for="experience"> 주요 이력 </label>
+                    <input type="file" id="experience" placeholder="이력">
                   </li>
                 </ul>
-              </nav>
+              </div>
             </div>
-            <div>
+
+            <div class="place">
+              <div>지역</div>
+              <div class="palce_detail">
+                <nav>
+                  <ul>
+                    <li><input type="text" placeholder="우편번호 입력"></li>
+                    <li>
+                      <input type="text" placeholder="주소 입력">
+                      <button>우편번호 찾기</button>
+                    </li>
+                    <li>
+                      <input type="text" placeholder="상세 주소">
+                      <button>확인</button>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+
+            <div class="email">
               <div>이메일</div>
-              <input type="text" placeholder="fdsfs@naver.com">
-              <button>수정</button>
+              <div class="email_detail">
+                <input type="email" placeholder="fdsfs@naver.com">
+                <button>수정</button>
+              </div>
+            </div>
+
+            <div class="introduce">
+              <div>소개글</div>
+              <div class="introduce_detail">
+                <input type="text" placeholder="소개글을 입력하세요">
+                <button>확인</button>
+              </div>
             </div>
           </div>
         </form>
       </div>
     </div>
   </main>
+
+<div id="uploadSuccessModal" class="modal">
+  <div class="modal-content">
+    <p>파일이 업로드 되었습니다.</p>
+    <button id="uploadConfirmBtn" onclick="closeuploadSuccessModal()">확인</button>
+  </div>
+</div>
+
+<!-- <div id="saveSuccessModal" class="modal">
+  <div class="modal-content">
+    <p>정보가 저장되었습니다.</p>
+    <button id="saveConfirmBtn">확인</button>
+  </div>
+</div> -->
+
+<!-- <div id="proposeSuccessModal" class="modal">
+  <div class="modal-content">
+    <p>이력 수정 신청이 완료되었습니다.</p>
+    <button id="saveConfirmBtn">확인</button>
+  </div>
+</div> -->
+<footer>
+  <div id="footer"></div>
+</footer>
+
 </body>
 
 </html>
