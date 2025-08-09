@@ -30,6 +30,12 @@ document.addEventListener('DOMContentLoaded', function () {
       if (currentLine === null) {
         return;
       }
+      buttons.forEach(function (btn){
+        btn.classList.remove('selected-btn');
+      });
+      button.classList.add('selected-btn');
+
+      if()
     })
   })
 });

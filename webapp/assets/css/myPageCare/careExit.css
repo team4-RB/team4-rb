@@ -39,6 +39,14 @@ main {
   list-style: none;
   padding-left: 0;
 }
+.sidebar img {
+  height: 130px;
+  width: 130px;
+  background-color: #ff80ab;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: block;
+}
 
 .sidebar li {
   padding: 12px 20px;

@@ -2,13 +2,16 @@
   margin: 0;
   padding: 0;
   font-family: 'pretendard-regular';
+
 }
+
 @font-face {
   font-family: 'Pretendard-Regular';
   src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
+
 header,
 footer {
   width: 100%;
@@ -22,13 +25,6 @@ main {
   display: flex;
 }
 
-.main_sidebar {
-  width: 180px;
-  height: 100%;
-  background-color: rgb(159, 159, 255);
-  display: flex;
-  flex-direction: column;
-}
 .sidebar img {
   height: 130px;
   width: 130px;
@@ -37,6 +33,15 @@ main {
   margin: 0 auto 20px;
   display: block;
 }
+
+.main_sidebar {
+  width: 180px;
+  height: 100%;
+  background-color: rgb(159, 159, 255);
+  display: flex;
+  flex-direction: column;
+}
+
 .main_sidebar div {
   height: 150px;
   width: 150px;
@@ -52,18 +57,18 @@ main {
 /* ------------------*/
 
 
-.post_dp{
+.careReferenceCheck {
   flex: 1;
   padding: 40px 100px;
 }
 
-.title h2{
+.title h2 {
   padding: 5px;
   font-size: 30px;
   border: 2px solid black;
 }
 
-.post_info{
+.careReferenceCheck_info {
   display: flex;
   padding: 5px;
   background-color: aqua;
@@ -71,11 +76,11 @@ main {
   border: 2px solid black;
 }
 
-.post_info span{
+.careReferenceCheck_info span {
   display: block;
 }
 
-.post_content{
+.careReferenceCheck_content {
   margin-top: 10px;
   padding: 5px;
   background-color: #fdfdfd;
@@ -89,113 +94,53 @@ main {
   display: flex;
   justify-content: right;
   gap: 5px;
-  margin: 5px 0px 5px; 
+  margin: 5px 0px 5px;
 }
 
-.buttons button{
+.buttons button {
   width: 100px;
   height: 50px;
   border-radius: 15px;
   cursor: pointer;
 }
 
-.btn_delete{
-  background-color: #FF0000;
-  color: white;
-}
 
-.btn_retry{
-  background-color: #2F52AA;
-  color: white;
-}
 
-.reply{
+.reply {
   border: 2px solid black;
 }
+
 .comment {
   padding: 5px;
   border: 2px solid black;
 }
 
-.reply h4{
+.reply h4 {
   padding: 10px;
 }
 
-.author{
+.author {
   font-weight: bold;
   display: block;
 }
 
-.cmt_content{
+.cmt_content {
   margin: 5px 5px 5px 10px;
 }
 
-.date{
+.date {
   display: block;
   text-align: right;
 }
 
-.comments form text{
+.comments form text {
   height: 60px;
   padding: 10px;
 }
-.comments input{
+
+.comments input {
   justify-content: right;
   align-items: right;
   width: 800px;
   text-align: center;
-}
-.btn-comment {
-  padding: 10px 20px;
-  background-color: #2F52AA;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.modal{
-  /* display: none; */
-  position: fixed;
-  top: 0;
-  width: 900px;
-  height: 400px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  z-index: 10px;
-  margin-left: 30%;
-}
-
-.modal_box{
-  background-color: aqua;
-  text-align: center;
-  padding: 30px;
-  border-radius: 30px;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal_buttons{
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.modal_buttons button {
-  padding: 8px 20px;
-  cursor: pointer;
-  border-radius: 15px;
-}
-
-#confirmDelete{
-  background-color: #2F52AA;
-  color: white;
-}
-
-#cancelDelete{
-  background-color: white;
-  border: 2px solid red;
-  color: black;
 }

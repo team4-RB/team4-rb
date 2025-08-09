@@ -29,7 +29,14 @@ main {
   display: flex;
   flex-direction: column;
 }
-
+.sidebar img {
+  height: 130px;
+  width: 130px;
+  background-color: #ff80ab;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: block;
+}
 .main_sidebar div {
   height: 150px;
   width: 150px;

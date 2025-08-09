@@ -15,7 +15,14 @@ footer {
   height: 110px;
   background-color: bisque;
 }
-
+.sidebar img {
+  height: 130px;
+  width: 130px;
+  background-color: #ff80ab;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: block;
+}
 main {
   width: 100%;
   height: calc(100vh - 200px);
@@ -29,14 +36,7 @@ main {
   display: flex;
   flex-direction: column;
 }
-.sidebar img {
-  height: 130px;
-  width: 130px;
-  background-color: #ff80ab;
-  border-radius: 50%;
-  margin: 0 auto 20px;
-  display: block;
-}
+
 .main_sidebar div {
   height: 150px;
   width: 150px;
@@ -52,7 +52,7 @@ main {
 /* ------------------*/
 
 
-.post_dp{
+.reference_dp{
   flex: 1;
   padding: 40px 100px;
 }
@@ -63,7 +63,7 @@ main {
   border: 2px solid black;
 }
 
-.post_info{
+.reference_info{
   display: flex;
   padding: 5px;
   background-color: aqua;
@@ -71,11 +71,11 @@ main {
   border: 2px solid black;
 }
 
-.post_info span{
+.reference_info span{
   display: block;
 }
 
-.post_content{
+.reference_content{
   margin-top: 10px;
   padding: 5px;
   background-color: #fdfdfd;
@@ -99,12 +99,12 @@ main {
   cursor: pointer;
 }
 
-.btn_delete{
+.btn_cancle{
   background-color: #FF0000;
   color: white;
 }
 
-.btn_retry{
+.btn_compelete{
   background-color: #2F52AA;
   color: white;
 }
@@ -145,7 +145,7 @@ main {
   width: 800px;
   text-align: center;
 }
-.btn-comment {
+.btn_compelete {
   padding: 10px 20px;
   background-color: #2F52AA;
   color: white;
