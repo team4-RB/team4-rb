@@ -3,6 +3,7 @@ const reMarks = document.getElementsByClassName("region_mark");
 const reSmall = document.getElementsByClassName("region_small");
 const reSmallList = document.getElementById("region_small_list");
 const reCards = document.getElementsByClassName("restaurant_card");
+const reStars = document.getElementsByClassName("star_img");
 
 var regionNum = 0;
 var arr = [
@@ -15,14 +16,10 @@ var arr = [
 ];
 
 var restaurants = [
-  ['춘리', '방배동', '9시~11시', '010-1234-5678'],
-  ['오삼불고기', '역삼동', '8시~1시', '010-1234-5678'],
-  ['토스트', '강남', '9시~18시', '010-1234-5678']
+  ['비엔나커피하우스', '서울특별시 서초구 방배로 126', '평일 08:30 - 23:00 | 주말 11:00 - 23:00', '02-585-1683'],
+  ['아트메이저', '서울특별시 서초구 서초대로 114', '월~금 : 08:30 ~ 21:50 토,일 : 09:00 ~ 21:50', '02-521-6239'],
+  ['스타벅스', '서울특별시 서초구 방배로 84 (방배동,유성빌딩 지상1층)', '매장 07:00 - 21:00 딜리버스 10:00 - 20:30~18시', '-']
 ];
-
-
-
-
 
 
 
@@ -30,12 +27,15 @@ function showCards(num, value){
   console.log("num은 "+ num + ", value는 " + value);
   for(let i = 0 ;i < 4;i++){
     if(i < restaurants.length){
+      let c =` ` + (num + 1) + ` ` + (value + 1) + ` ` + (i + 1);
+
       let str = "";
       str += `<div class="restaurant_name">` + restaurants[i][0];
-      str += `</div><div class="restaurant_introduce"><div class="restaurant_info"><div>` + restaurants[i][1];
-      str += `</div><div>` + restaurants[i][2];
-      str += `</div><div>` + restaurants[i][3];
-      str += `</div></div><div class="restaurant_mark"><div>` + "별";
+      str += c; // 좌표 확인 용
+      str += `</div><div class="restaurant_introduce"><div class="restaurant_info"><div>` + `⌂ ` + restaurants[i][1];
+      str += `</div><div>` + `⌂ ` + restaurants[i][2];
+      str += `</div><div>` + `⌂ ` + restaurants[i][3];
+      str += `</div></div><div class="restaurant_mark"><div onclick="togleStar(` + i + `)" class="star_img_box"><img class="star_img" src="./../../assets/img/restaurant/star.png">`;
       str += `</div><div>` + "찜하기";
       str += `</div></div></div></div>`;
       reCards[i].innerHTML = str;
@@ -61,7 +61,7 @@ function reClicked(num){
   // 리스트 초기화
   reSmallList.innerHTML = "";
 
-  // 동네별 버튼 생성
+  // 행정동별 버튼 생성
   let d = 0;
   for(ar of arr[num]){
     console.log(ar, typeof ar);
@@ -85,7 +85,7 @@ function reClicked(num){
 
 
 
-
+  // 화살표 표시
   var j = 0;
   for(i of reMarks){
     if(j==num){
@@ -96,8 +96,21 @@ function reClicked(num){
     j++;
   }
 
-  
 
 
 
 }
+
+
+function togleStar(num){
+  console.log("별! " + num);
+  if(reStars[num].style.left == "-100%"){
+    reStars[num].style.left = "0";
+  }else{
+    reStars[num].style.left = "-100%";
+  }
+
+}
+
+reClicked(0);
+showCards(0, 0);
