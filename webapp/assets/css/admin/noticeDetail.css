@@ -77,12 +77,33 @@
 
 .notice_content {
   width: 100%;
-  height: 90%;
+  height: 60%;
 }
 #content {
   margin: 0 auto;
+  display: flex;
   width: 90%;
-  height: 65%;
+  height: 100%;
   border: 1px solid black;
   resize: none;
+}
+
+.notice_btn {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  /* border: 1px solid black; */
+}
+
+.list,
+.update {
+  margin: 10px;
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.update {
+  background-color: #2f52aa;
+  color: white;
 }
