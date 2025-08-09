@@ -17,12 +17,10 @@ main {
   flex-direction: column;
 }
 
-.main_sidebar img {
+.main_sidebar ul li img {
   height: 150px;
   width: 150px;
-  background-color: rgb(27, 255, 217);
   border-radius: 100%;
-  margin: 15px;
 }
 
 .main_sidebar ul li {
@@ -36,68 +34,95 @@ main {
   display: flex;
   flex-direction: column;
 }
-form {
-  flex: 1;
-  margin-top: 50px;
-}
 
 .div_mark .title {
   font-size: 30px;
   margin: 30px;
 }
 
-.div_choose ul{
-  display: flex;
-  list-style-type: none;
-  padding-left: 150px;
-}
-.div_choose ul li{
-  margin: 10px;
-}
-.mark_nav{
-  display: flex;
-  margin:  0px 150px;
-  height: 50px;
-  align-items: center;
-  background-color: rgb(191, 201, 201);
-}
-.mark_nav div{
-  display: flex;
-  flex: 1;
+form {
+  width: 100%;
 }
 
-.mark_nav div div{
-  justify-content: center;
+.div_choose {
+  width: 500px;
 }
-.mark_nav input{
-  margin: 0px 30px;
-  width: 30px;
-  height: 30px;
+
+.div_choose ul {
+  display: flex;
+  list-style-type: none;
+  padding: 50px 0px 0px 150px;
 }
-.mark_list{
+
+.div_choose ul li {
+  margin: 10px;
+}
+
+.mark_nav {
   display: flex;
   margin: 0px 150px;
   height: 50px;
   align-items: center;
-  background-color: rgb(223, 235, 235);
+  background-color: rgb(191, 201, 201);
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
-.mark_list a{
+
+.mark_nav ul {
   display: flex;
-  flex: 1;
 }
-.mark_list a div{
+
+.mark_nav ul li {
   display: flex;
-  flex: 1;
+  justify-content: center;
+  align-items: center;
 }
-.mark_list input{
+
+.mark_nav input {
   margin: 0px 30px;
   width: 30px;
   height: 30px;
 }
-.mark_list div div{
-  justify-content: center;
+
+.name div {
+  width: 100px;
+  text-align: center;
 }
 
+.posttitle div {
+  width: 900px;
+  text-align: center;
+}
+
+.day div {
+  width: 200px;
+  text-align: center;
+}
+
+.mark_list {
+  display: flex;
+  margin: 0px 150px;
+  height: 50px;
+  align-items: center;
+  background-color: rgb(215, 238, 238);
+  border-bottom: 1px solid black;
+}
+
+.mark_list ul {
+  display: flex;
+}
+
+.mark_list ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mark_list input {
+  margin: 0px 30px;
+  width: 30px;
+  height: 30px;
+}
 
 .page {
   display: flex;
@@ -109,13 +134,16 @@ form {
   display: flex;
   list-style-type: none;
 }
-.page ul li{
+
+.page ul li {
   margin: 10px;
 }
-.div_delete{
+
+.div_delete {
   margin: 0;
   padding: 0;
 }
+
 button {
   background-color: red;
   color: white;
