@@ -32,6 +32,7 @@ main {
 
 .search_column {
   border: 1px solid black;
+  width: 150px;
 }
 
 .searchbox > input {
@@ -66,22 +67,77 @@ main {
   height: 95%;
 }
 .board_name {
-  width: 150px;
+  width: 300px;
   height: 95%;
 }
 .board_id {
+  width: 200px;
+  height: 95%;
+}
+.board_date {
+  width: 350px;
+  height: 95%;
+}
+
+.board_condition {
+  width: 100px;
+  height: 95%;
+}
+
+.table_body {
+  display: flex;
+}
+
+/* 테스트(간격 조절) */
+/* .board_head {
+  border: 1px solid black;
+  } */
+/* .table_body > li {
+    border: 1px solid black;
+  } */
+
+.table_content {
+  width: 90%;
+}
+
+.body_number {
   width: 150px;
-  height: 95%;
+  height: 30px;
 }
-.board_email {
-  width: 400px;
-  height: 95%;
+.body_condition {
+  width: 100px;
+  height: 30px;
 }
-.board_phone {
-  width: 400px;
-  height: 95%;
+
+.body_name {
+  width: 300px;
+  height: 30px;
 }
-.board_type {
-  width: 150px;
-  height: 95%;
+.body_id {
+  width: 200px;
+  height: 30px;
+}
+.body_date {
+  width: 350px;
+  height: 30px;
+}
+
+.table_body > li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid black;
+}
+
+.paging_box {
+  width: 70%;
+  /* border: 1px solid black; */
+  margin: 0 auto;
+}
+
+.paging {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
 }
