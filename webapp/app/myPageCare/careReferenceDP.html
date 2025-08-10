@@ -9,13 +9,13 @@
   <link rel="stylesheet" href="./../../assets/css/footer.css">
   <script defer src="./../../assets/js/main/include.js"></script>
   <link rel="stylesheet" href="./../../assets/css/myPageCare/careReferenceDP.css">
+  <script defer src="./../../assets/js/myPageCare/careReferenceDP.js"></script>
 </head>
 
 <body>
   <div id="header"></div>
   <main>
     <nav class="main_sidebar">
-      <div></div>
       <ul>
         <li><a href="./careProfile.html"><img src="./../../assets/img/myPageNormal/normalMember.jpg" alt="#"></a></li>
         <li><a href="./careModify.html">개인정보 수정</a></li>
@@ -31,25 +31,25 @@
 
     <section class="reference_dp">
       <div class="title">
-        <h2>[문의] 다크모드 요청</h2>
-      </div>
-      <div class="tools">
-        <!-- 이거 어케 할지 질문 -->
+        <input type="text">
+
       </div>
       <div class="reference_info">
         <span>등록자명 : 아무개</span>
         <span>등록일 : 2025-08-04</span><br>
       </div>
-      <div class="reference_content">
-        라이트 모드가 눈이 아픕니다 <br>
-        그러므로 다크모드 추가 요청 드립니다 <br>
+      <div class="tools">
 
-        아무개 올림
+        <textarea name="" id=""></textarea>
+      
+      </div>
+      <div class="re_post_content">
+        <textarea id="contentInput" placeholder="내용을 입력하세요"></textarea>
       </div>
       <div class="buttons">
-        <button class="btn_list">목록</button>
-        <button class="btn_cancle">삭제</button>
-        <button class="btn_compelete">등록</button>
+        <a class="btn_list" href="./careReference.html">목록</a>
+        <a class="btn_cancle" href="./careReferenceDP.html">취소</a>
+        <button type="button" class="btn_compelete" id="saveBtn">수정완료</button>
       </div>
     </section>
   </main>
@@ -65,7 +65,7 @@
     </div>
   </div>
 
-    <div id="footer"></div>
+  <div id="footer"></div>
 
 
 </body>

@@ -50,9 +50,10 @@ main {
   margin: 0 5px;
 }
 
-.subway_subwayLine:checked{
+.subway_subwayLine:checked {
   background-color: #ffc376;
 }
+
 .subway_subwayLine button:hover {
   background-color: #ffc376;
 }
@@ -68,9 +69,10 @@ main {
   justify-content: center;
   gap: 30px;
   padding: 20px;
-  
+
 }
-.map_section .subway_alline_img{
+
+.map_section .subway_alline_img {
   text-align: center;
   justify-content: center;
   display: flex;
@@ -108,3 +110,11 @@ main {
   background-color: #ffc376;
 }
 
+.map_section .subway_allline_img {
+  display: flex;
+  justify-content: center;
+}
+
+#allline_station {
+  display: block;
+}
