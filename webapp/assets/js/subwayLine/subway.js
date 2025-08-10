@@ -30,20 +30,20 @@ document.addEventListener('DOMContentLoaded', function () {
       if (currentLine === null) {
         return;
       }
-      buttons.forEach(function (btn){
+      buttons.forEach(function (btn) {
         btn.classList.remove('selected-btn');
       });
       button.classList.add('selected-btn');
 
-      for (var j = 0; j < mapDivs.length; j++){
+      for (var j = 0; j < mapDivs.length; j++) {
         mapDivs[j].style.display = 'none';
       }
       var showMap = document.querySelector('.' + currentLine.lineImg);
-      if (showMap){
+      if (showMap) {
         showMap.style.display = 'block';
       }
 
-      for (var k = 0; k < lines.length; k++){
+      for (var k = 0; k < lines.length; k++) {
         var listDiv = document.getElementById(lines[k].stationListId);
         if (listDiv) {
           listDiv.style.display = 'none';
@@ -56,13 +56,13 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       var stations = showList.querySelectorAll('.station_name');
-      stations.forEach(function(station){
-        station.onclick = function() {
+      stations.forEach(function (station) {
+        station.onclick = function () {
           var name = station.textContent();
           stationInfo.innerHTML = "";
         };
       });
     })
-    document.getElementById("all").click;
+    document.getElementById("all").click();
   });
 });

@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 100%;
+  height: calc(100vh - 200px);
+  display: flex;
+}
+
+.main_sidebar {
+  width: 180px;
+  height: 100%;
+  background-color: rgb(159, 159, 255);
+  display: flex;
+  flex-direction: column;
+}
+
+.main_sidebar ul li img {
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+}
+
+.main_sidebar ul li {
+  padding: 15px;
+  border-bottom: 1px solid black;
+}
+
+/* ============================= */
+
+
+.reference_dp {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 40px 100px;
+}
+
+.title h2 {
+  padding: 5px;
+  font-size: 30px;
+  border: 2px solid black;
+}
+
+.reference_info {
+  display: flex;
+  padding: 5px;
+  background-color: aqua;
+  font-size: 24px;
+  border: 2px solid black;
+}
+.tools{
+  background-color: #FF0000;
+  height: 50px;
+}
+.reference_info span {
+  display: block;
+}
+
+.reference_content {
+  margin-top: 10px;
+  padding: 5px;
+  background-color: #fdfdfd;
+  border: 2px solid black;
+  height: auto;
+  width: auto;
+  height: 500px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: right;
+  gap: 5px;
+  margin: 5px 0px 5px;
+}
+
+.buttons button {
+  width: 100px;
+  height: 50px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.btn_cancle {
+  background-color: #ffffff;
+  border: 2px solid red;
+}
+
+.btn_compelete {
+  background-color: #2F52AA;
+  color: white;
+}
+
+.reply {
+  border: 2px solid black;
+}
+
+.comment {
+  padding: 5px;
+  border: 2px solid black;
+}
+
+.reply h4 {
+  padding: 10px;
+}
+
+.author {
+  font-weight: bold;
+  display: block;
+}
+
+.cmt_content {
+  margin: 5px 5px 5px 10px;
+}
+
+.date {
+  display: block;
+  text-align: right;
+}
+
+.comments form text {
+  height: 60px;
+  padding: 10px;
+}
+
+.comments input {
+  justify-content: right;
+  align-items: right;
+  width: 800px;
+  text-align: center;
+}
+
+.btn_compelete {
+  padding: 10px 20px;
+  background-color: #2F52AA;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 900px;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 10px;
+  margin-left: 30%;
+}
+
+.modal_box {
+  background-color: aqua;
+  text-align: center;
+  padding: 30px;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal_buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.modal_buttons button {
+  padding: 8px 20px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+#confirmDelete {
+  background-color: #2F52AA;
+  color: white;
+}
+
+#cancelDelete {
+  background-color: white;
+  border: 2px solid red;
+  color: black;
+}

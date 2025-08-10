@@ -30,9 +30,9 @@
         안녕하세요
       </div>
       <div class="buttons">
-        <button class="btn_list"> <a href="./carePost.html"></a>목록</button>
-        <button class="btn_delete">삭제</button>
-        <button class="btn_retry">수정</button>
+        <a class="btn_list" href="./carePost.html">목록</a>
+        <a class="btn_delete" href="#deleteModal">삭제</a>
+        <a class="btn_retry" href="./carePostRe.html" id="editLink">수정</a>
       </div>
 
       <section class="reply">
@@ -58,10 +58,10 @@
   <div class="modal" id="deleteModal">
     <div class="modal_box">
       <p>정말로 게시글을 삭제하시겠습니까?</p>
-      <div class="modal_buttons">
-        <button id="confirmDelete">확인</button>
-        <button id="cancelDelete">취소</button>
-      </div>
+      <form method="post" action="" class="modal_buttons">
+      <button type="submit" id="confirmDelete">확인</button>
+      <a id="cancelDelete" class="btn_cancel" href="#">취소</a>
+    </form>
     </div>
   </div>
 

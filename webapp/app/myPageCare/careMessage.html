@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./../../assets/css/header.css">
   <link rel="stylesheet" href="./../../assets/css/footer.css">
   <script defer src="./../../assets/js/main/include.js"></script>
+  <script defer src="./../../assets/js/myPageCare/careMessage.js"></script>
 </head>
 
 <body>
@@ -38,13 +39,90 @@
         </ul>
 
       </nav>
-      <nav class="mark_nav">
-        <input type="checkbox">
+      <nav class="mark_nav">   
         <ul>
-          <li>보낸 사람</li>
-          <li>제목</li>
-          <li>날짜</li>
-          <li>읽음 상태</li>
+          <li><input type="checkbox"></li>
+          <li class="name">
+            <div>보낸 사람</div>
+          </li>
+          <li class="messeagetitle">
+            <div>제목</div>
+          </li>
+          <li class="day">
+            <div>날짜</div>
+          </li>
+          <li class="read">
+            <div>읽음 상태</div>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="mark_list">
+        <ul>
+          <li><input type="checkbox"></li>
+          <li class="name"><a href="">
+              <div>티라노사우루스</div>
+            </a></li>
+          <li class="messeagetitle"><a href="">
+              <div>나는 티라노</div>
+            </a></li>
+          <li class="day"><a href="">
+              <div>2025-08-10</div>
+            </a></li>
+          <li class="read"><a href="">
+              <div>읽음</div>
+            </a></li>
+        </ul>
+      </nav>
+      <nav class="mark_list">
+        <ul>
+          <li><input type="checkbox"></li>
+          <li class="name"><a href="">
+              <div>보낸 사람</div>
+            </a></li>
+          <li class="messeagetitle"><a href="">
+              <div>제목</div>
+            </a></li>
+          <li class="day"><a href="">
+              <div>날짜</div>
+            </a></li>
+          <li class="read"><a href="">
+              <div>읽음 상태</div>
+            </a></li>
+        </ul>
+      </nav>
+      <nav class="mark_list">
+        <ul>
+          <li><input type="checkbox"></li>
+          <li class="name"><a href="">
+              <div>보낸 사람</div>
+            </a></li>
+          <li class="messeagetitle"><a href="">
+              <div>제목</div>
+            </a></li>
+          <li class="day"><a href="">
+              <div>날짜</div>
+            </a></li>
+          <li class="read"><a href="">
+              <div>읽음 상태</div>
+            </a></li>
+        </ul>
+      </nav>
+      <nav class="mark_list">
+        <ul>
+          <li><input type="checkbox"></li>
+          <li class="name"><a href="">
+              <div>보낸 사람</div>
+            </a></li>
+          <li class="messeagetitle"><a href="">
+              <div>제목</div>
+            </a></li>
+          <li class="day"><a href="">
+              <div>날짜</div>
+            </a></li>
+          <li class="read"><a href="">
+              <div>읽음 상태</div>
+            </a></li>
         </ul>
       </nav>
       <nav class="page">
@@ -59,12 +137,12 @@
 
       </nav>
       <div class="div_delete">
-        <button>삭제</button>
+        <button class="btn_list_delete">삭제</button>
       </div>
     </div>
   </main>
 
-  <!-- <div class="modal_bg" id="msgModal">
+  <div class="modal_bg" id="msgModal">
     <div class="modal_box">
       <div class="modal_read">
         <span class="modal_title">받은 쪽지 읽기</span>
@@ -72,10 +150,10 @@
       </div>
       <div class="modal_info">
         <div class="sender_info">
-          <span>보낸 사람 : </span>강버들 | <span class="sender_id">kangbudle01</span>
+          <span>보낸 사람 : </span>티라노사우루스 | <span class="sender_id">Trano</span>
         </div>
         <div class="message_content">
-          쪽지 확인하시면 카톡 좀 봐주세요
+          나는나는 육식 공룡 풀떼기는 안먹지
         </div>
       </div>
       <div class="modal_button">
@@ -83,9 +161,9 @@
         <button class="btn_delete">삭제</button>
       </div>
     </div>
-  </div> -->
+  </div>
 
-  <!-- <div class="modal_bg" id="sendMsgModal">
+  <div class="modal_bg" id="sendMsgModal">
   <div class="modal_box">
     <div class="modal_read">
       <span class="modal_title">쪽지 보내기</span>
@@ -93,7 +171,7 @@
     </div>
     <div class="modal_info">
       <div class="sender_info">
-        <span>받는 사람 : </span>강버들 | <span class="sender_id">kangbudle01</span>
+        <span>받는 사람 : </span>스태고사우루스 | <span class="sender_id">stago</span>
       </div>
       <textarea class="message_textarea" placeholder="내용을 입력하세요"></textarea>
     </div>
@@ -102,7 +180,7 @@
       <button class="btn_cancel">취소</button>
     </div>
   </div>
-</div> -->
+</div>
 
   <div class="modal_bg" id="sendSuccessModal">
     <div class="modal_box modal_send">
@@ -113,7 +191,7 @@
     </div>
   </div>
 
-<!-- <div class="modal_bg" id="deleteMsgModal">
+  <div class="modal_bg" id="deleteMsgModal">
   <div class="modal_box confirm_modal">
     <p class="confirm_text">정말로 쪽지를 삭제하시겠습니까?</p>
     <div class="confirm_buttons">
@@ -121,35 +199,35 @@
       <button class="btn_cancel" onclick="closeDeleteModal()">취소</button>
     </div>
   </div>
-</div> -->
+</div>
 
-<!-- <div class="modal_bg" id="sendSuccessModal">
+  <div class="modal_bg" id="sendSuccessModal">
     <div class="modal_box modal_send">
       <p class="send_message">쪽지가 삭제되었습니다.</p>
       <div class="modal_button">
         <button class="btn_confirm" onclick="closeSendModal()">확인</button>
       </div>
     </div>
-  </div> -->
-<div class="modal_bg" id="sentMsgReadModal">
-  <div class="modal_box read_modal">
-    <div class="modal_header">
-      <span class="modal_title">보낸 쪽지 읽기</span>
-      <span class="modal_close" onclick="closeSentMsgModal()">&times;</span>
-    </div>
-    <div class="modal_info">
-      <div class="receiver_info">
-        <span>받는 사람 : </span>강버들 | <span class="receiver_id">kangbudle01</span>
+  </div> 
+  <div class="modal_bg" id="sentMsgReadModal">
+    <div class="modal_box read_modal">
+      <div class="modal_header">
+        <span class="modal_title">보낸 쪽지 읽기</span>
+        <span class="modal_close" onclick="closeSentMsgModal()">&times;</span>
       </div>
-      <div class="message_content">
-        나 이대나온 남자야. 까불지마
+      <div class="modal_info">
+        <div class="receiver_info">
+          <span>받는 사람 : </span>강버들 | <span class="receiver_id">kangbudle01</span>
+        </div>
+        <div class="message_content">
+          나 이대나온 남자야. 까불지마
+        </div>
       </div>
-    </div>
-    <div class="modal_button">
-      <button class="btn_delete">삭제</button>
+      <div class="modal_button">
+        <button class="btn_delete">삭제</button>
+      </div>
     </div>
   </div>
-</div>
 
 
   <div id="footer"></div>

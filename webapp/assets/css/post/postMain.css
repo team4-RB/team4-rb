@@ -157,3 +157,43 @@ form{
 .page ul li {
   margin: 10px;
 }
+
+
+.modal {
+  display: none;
+  position: fixed;
+  justify-content: center;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  position: fixed;
+  top: 25%;
+  left: 40%;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  width: 400px;
+  height: 200px;
+  text-align: center;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content p {
+  margin: 50px 0px 20px 0px;
+  font-size: 20px;
+
+}
+#sendxbutton {
+  display: flex;
+  justify-content: end;
+  font-size: 30px;
+  background-color: white;
+  color: black;
+  margin-left: 350px;
+}

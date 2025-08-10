@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="./../../assets/css/post/postDetail.css">
+  <link rel="stylesheet" href="./../../assets/css/post/postDetaillogin.css">
   <link rel="stylesheet" href="./../../assets/css/header.css">
   <link rel="stylesheet" href="./../../assets/css/footer.css">
   <script defer src="./../../assets/js/main/include.js"></script>
@@ -46,7 +46,7 @@
             <div>안녕하세요</div>
           </li>
           <li class="button">
-            <button class="button_list">목록</button>
+            <button class="button_list"><a href="./postMain.html">목록</a></button>
             <button class="button_delete">삭제</button>
             <button class="button_enroll">등록</button>
           </li>
@@ -79,6 +79,15 @@
       </nav>
     </form>
   </main>
+  <div class="checkmodal" id="editModal">
+    <div class="modal_box">
+      <p>이 게시글을 삭제하시겠습니까?</p>
+      <div class="modal_buttons">
+        <a href="./postMain.html"><button id="check">확인</button></a>
+        <button id="cancle">취소</button>
+      </div>
+    </div>
+  </div>
   <div id="footer"></div>
 </body>
 </html>

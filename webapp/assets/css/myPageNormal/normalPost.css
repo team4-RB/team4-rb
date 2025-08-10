@@ -56,6 +56,7 @@ form {
 
 .div_choose ul li {
   margin: 10px;
+  text-decoration: underline;
 }
 
 .mark_nav {

@@ -40,10 +40,10 @@ main {
 .main_sidebar ul {
   list-style: none;
 }
-.main_sidebar li {
+.main_sidebar ul li {
   padding: 12px 20px;
-  font-size: 15px;
   cursor: pointer;
+  color: #ffffff;
 }
 
 /* *-******************* */
