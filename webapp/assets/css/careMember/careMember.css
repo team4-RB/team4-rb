@@ -1,0 +1,171 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    /* font-weight: 500; 적용 안됨 */
+    font-style: normal;
+}
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration-line: none;
+  list-style-type: none;
+  color: black;
+  font-family: 'Pretendard-Regular';
+  /* #FFE7C9 */
+  /* #1D3266 */
+}
+main{
+  background-color: #FFE7C9;
+  /* height: calc(100vh - 220px); */
+  display: flex;
+  justify-content: center;
+}
+.main_body{
+  width: 1100px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(104, 104, 104, 0.1);
+}
+.page_title{
+  /* background-color: yellowgreen; */
+  margin-top: 30px;
+  font-size: 24px;
+  text-align: center;
+}
+#search_area{
+  margin-top: 20px;
+  background-color: white;
+  height: 50px;
+  width: 600px;
+  border: solid 1px black;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#search_criteria{
+  /* background-color: rebeccapurple; */
+  width: 80px;
+  border-radius: 4px;
+  margin-left: 20px;
+}
+#criteria{
+  flex: 1;
+  margin: 0 10px;
+}
+#search_icon_box{
+  width: 25px;
+  margin-right: 20px;
+}
+#search_icon{
+  width: 100%;
+}
+.context{
+  margin-top: 30px;
+  /* background-color: orange; */
+  width: 1000px;
+  overflow: hidden;
+}
+.card_row{
+  width: 100%;
+  /* background-color: blue; */
+  display: flex;
+  margin-bottom: 20px;
+}
+#card_list_1,
+#card_list_2{
+  display: flex;
+  justify-content: space-around;
+  /* background-color: yellow; */
+  width: 100%;
+  height: max-content;
+}
+.care_card{
+  background-color: #FFF8EF;
+  width: 230px;
+  height: 330px;
+  border-radius: 30px;
+  border: solid 3px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.heart_img_box{
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  overflow: hidden;
+  right: 0;
+  margin: 10px;
+}
+.heart_img{
+  position: absolute;
+  height: 100%;
+}
+.profile{
+  /* background-color: green; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile_pic_box{
+  /* background-color: aquamarine; */
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: solid 2px black;
+  margin-top: 45px;
+}
+.profile_pic{
+  width: 100%;
+}
+.profile_name{
+  background-color: wheat;
+  width: max-content;
+  font-size: 16px;
+  border-radius: 15px;
+  padding: 5px 13px;
+  border: solid 1px black;
+  margin: 20px 10px 0 10px;
+}
+.day_row{
+  /* background-color: crimson; */
+  display: flex;
+  padding-left: 7px;
+  /* margin: 5px 0 0 2px; */
+  margin: 0 10px;
+  margin-top: 10px;
+}
+.day{
+  border: solid 3px #1D3266;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  margin-right: 7px;
+  font-size: 10;
+  background-color: wheat;
+}
+.profile_intro{
+  /* background-color: greenyellow; */
+  margin: 0 10px;
+  text-align: center;
+  margin-top: 10px;
+}
+.short_intro{
+  margin: 5px 0;
+  font-size: 10px;
+}
+.long_intro{
+  margin: 5px 0;
+  font-size: 10px;
+}
+#pagenation{
+  text-align: center;
+  margin: 30px 0;
+}
