@@ -76,47 +76,40 @@ form{
   margin: 100px 250px 0px 250px;
 }
 
-.quit_box{
-  border: 1px solid black;
+.exit-box {
+  border: 2px solid #000;
   border-radius: 15px;
-  background-color: bisque;
-  font-size: 20px;
+  overflow: hidden;
+  font-size: 16px;
+}
+
+.exit-row {
   display: flex;
-  flex-direction: column;
-  height: 200px;
+  border-bottom: 1px solid #000;
 }
-.quit_day{
-  display: flex;
-  border-bottom: 1px solid black;
+
+.exit-row:last-child {
+  border-bottom: none;
 }
-.quit_text{
-  height: 100px;
-  width: 200px;
-  border-right: 1px solid black;
+
+.exit-label {
+  width: 150px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-right: 1px solid #000;
 }
-.quit_today{
-  margin-left: 20px;
+
+.exit-value {
+  flex: 1;
+  padding: 15px;
 }
-.quit_day div{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.quit_reason{
-  display: flex;
-}
-.quit_reason div{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.quit_reason input{
-  width: 400px;
-  height: 50px;
-  font-size: 20px;
-  margin-left: 20px;
-  border: 1px solid black;
-  border-radius: 15px;
+
+.exit-select {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  font-size: 15px;
+  background-color: #fff;
 }
 
 button{
@@ -127,4 +120,96 @@ button{
   border-radius: 15px;
   font-size: 20px;
   margin-top: 30px;
+}
+.checkmodal {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 900px;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 10px;
+  margin-left: 30%;
+}
+
+.modal_box {
+  background-color: aqua;
+  text-align: center;
+  padding: 30px;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.modal_box :nth-child(2){
+  color: red;
+}
+
+.modal_buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.modal_buttons button {
+  padding: 8px 20px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+#check{
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+#cancle{
+  background-color: blue;
+  color: white;
+  border: 1px solid black;
+}
+
+.modal {
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 900px;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 10px;
+  margin-left: 30%;
+}
+
+.modal_box {
+  background-color: aqua;
+  text-align: center;
+  padding: 30px;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal_box :nth-child(2) {
+  color: red;
+}
+
+.modal_buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.modal_buttons button {
+  padding: 8px 20px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.modal #check {
+  background-color: blue;
+  color: white;
+  border: 1px solid black;
 }
