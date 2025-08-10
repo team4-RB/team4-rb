@@ -1,0 +1,89 @@
+.modal{
+  position: absolute;
+  background-color: rebeccapurple;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+  background-color: rgba(104, 104, 104, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 안 보여지게 해 둠 */
+  display: none;
+}
+.modal_window{
+  position: absolute;
+  background-color: white;
+  padding: 17px;
+  border-radius: 30px;
+}
+.modal_x_box{
+  height: 25px;
+  /* background-color: aquamarine; */
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}
+.modal_x{
+  height: 100%;
+  /* background-color:aqua; */
+  right: 0;
+}
+.modal_body_confirm{
+  /* 여기 width 값으로 모달 창 크기 조정 가능 */
+  width: 400px;
+  /* background-color: fuchsia; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#modal_text{
+  font-size: 20px;
+  text-align: center;
+  padding-top: 30px;
+  padding-top: 20px
+}
+.modal_button_box{
+  margin-top: 20px;
+  display: flex;
+  width: 100%;
+  /* background-color: greenyellow; */
+  justify-content: center;
+}
+.modal_check_button{
+  background-color: #1D3266;
+  color: white;
+  width: 80px;
+  height: 38px;
+  border-radius: 15px;
+  border: solid 1px black;
+  margin: 9px;
+}
+.modal_cancel_button{
+  background-color: white;
+  color:#1D3266;
+  width: 80px;
+  height: 38px;
+  border-radius: 15px;
+  border: solid 1px black;
+  margin: 9px;
+}
+.modal_confirm_showup{
+  width: 100%;
+  height: 50px;
+  background-color: aqua;
+  text-align: center;
+}
+
+
+
+/* 변경된 이름을 입력하세요 */
+#new_name{
+  margin-top: 20px;
+  width: 200px;
+  height: 20px;
+  border: solid 2px black;
+  border-radius: 5px;
+  padding: 0 10px;
+}
