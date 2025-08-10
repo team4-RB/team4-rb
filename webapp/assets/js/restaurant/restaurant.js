@@ -25,14 +25,24 @@ var restaurants = [
 
 function showCards(num, value){
   console.log("num은 "+ num + ", value는 " + value);
+
+  const villages = document.getElementsByClassName('village');
+  for(v of villages){
+    v.style.backgroundColor = 'white';
+    v.style.color = 'black';
+  }
+
+  villages[value].style.backgroundColor = '#1D3266';
+  villages[value].style.color = 'white';
+
   for(let i = 0 ;i < 4;i++){
     if(i < restaurants.length){
       let c =` ` + (num + 1) + ` ` + (value + 1) + ` ` + (i + 1);
 
       let str = "";
-      str += `<div class="restaurant_name">` + restaurants[i][0];
-      str += c; // 좌표 확인 용
-      str += `</div><div class="restaurant_introduce"><div class="restaurant_info"><div>` + `⌂ ` + restaurants[i][1];
+      str += `<a href="/team04-RB_frontend/webapp/app/restaurant/restaurantDetail.html?restaurant=`+ i +`"><div class="restaurant_name">` + restaurants[i][0];
+      str += c; // 좌표 확인용
+      str += `</div></a><div class="restaurant_introduce"><div class="restaurant_info"><div>` + `⌂ ` + restaurants[i][1];
       str += `</div><div>` + `⌂ ` + restaurants[i][2];
       str += `</div><div>` + `⌂ ` + restaurants[i][3];
       str += `</div></div><div class="restaurant_mark"><div onclick="togleStar(` + i + `)" class="star_img_box"><img class="star_img" src="./../../assets/img/restaurant/star.png">`;
@@ -51,6 +61,16 @@ function showCards(num, value){
 function reClicked(num){
   // 입력한 숫자
   console.log("숫자는 : " + num);
+
+  //버튼 색 초기화
+  for(button of reButtons){
+    button.style.backgroundColor = 'white';
+    button.style.color = 'black';
+  }
+
+  //누른 버튼 스타일 수정
+  reButtons[num].style.backgroundColor = '#1D3266';
+  reButtons[num].style.color = 'white';
 
   // 판 보이기
   reSmall[0].style.display = "block";
@@ -74,6 +94,7 @@ function reClicked(num){
     const li = document.createElement("li");
     li.innerText = ar;
     li.value = d;
+    li.className += 'village';
     li.onclick = function(){
       showCards(num, li.value);
     };

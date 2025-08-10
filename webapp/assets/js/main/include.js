@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }else{
     // 헤더 불러오기(비로그인)
-  fetch('/team04-RB_frontend/webapp/header.html')
+  fetch('/team04-RB_frontend/webapp/header.html') //임시
     .then(response => response.text())
     .then(data => {
       document.getElementById('header').innerHTML = data;

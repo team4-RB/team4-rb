@@ -66,7 +66,6 @@ main {
 .post_info{
   display: flex;
   padding: 5px;
-  background-color: aqua;
   font-size: 24px;
   border: 2px solid black;
 }
@@ -155,7 +154,7 @@ main {
 }
 
 .modal{
-  /* display: none; */
+  display: none;
   position: fixed;
   top: 0;
   width: 900px;
@@ -166,9 +165,10 @@ main {
   z-index: 10px;
   margin-left: 30%;
 }
-
+.modal.open {
+  display: flex;
+}
 .modal_box{
-  background-color: aqua;
   text-align: center;
   padding: 30px;
   border-radius: 30px;
