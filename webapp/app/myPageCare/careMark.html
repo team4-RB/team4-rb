@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Care_Mark</title>
 
   <link rel="stylesheet" href="./../../assets/css/header.css">
@@ -10,7 +11,9 @@
   <script defer src="./../../assets/js/main/include.js"></script>
 
   <link rel="stylesheet" href="./../../assets/css/myPageCare/careMark.css">
+  <script defer src="./../../assets/js/myPageCare/careMark.js"></script>
 </head>
+
 <body>
   <div id="header"></div>
 
@@ -29,17 +32,53 @@
       </ul>
     </nav>
 
-    <div class="div_mark">
-      <div class="title">찜한 목록</div>
-
-      <div class="table_wrap">
+    <form action="" method="get">
+      <div class="div_mark">
+        <div class="title">찜한 목록</div>
         <nav class="mark_nav">
           <ul>
             <li><input type="checkbox"></li>
-            <li class="name"><div>이름</div></li>
-            <li class="location"><div>위치</div></li>
-            <li class="phone"><div>전화번호</div></li>
+            <li class="name">
+              <div>이름</div>
+            </li>
+            <li class="location">
+              <div>위치</div>
+            </li>
+            <li class="phone">
+              <div>전화번호</div>
+            </li>
           </ul>
+        </nav>
+        <nav class="mark_list"><a href="./../restaurant/restaurantDetail.html">
+            <ul>
+              <li><input type="checkbox"></li>
+              <li class="name">
+                <div>이름</div>
+              </li>
+              <li class="location">
+                <div>위치</div>
+              </li>
+              <li class="phone">
+                <div>전화번호</div>
+              </li>
+            </ul>
+
+          </a>
+        </nav>
+        <nav class="mark_list"><a href="./../restaurant/restaurantDetail.html">
+          <ul>
+            <li><input type="checkbox"></li>
+            <li class="name">
+              <div>이름</div>
+            </li>
+            <li class="location">
+              <div>위치</div>
+            </li>
+            <li class="phone">
+              <div>전화번호</div>
+            </li>
+          </ul>
+        </a>
         </nav>
         <nav class="mark_list">
           <ul>
@@ -69,35 +108,7 @@
             </li>
           </ul>
         </nav>
-        <nav class="mark_list">
-          <ul>
-            <li><input type="checkbox"></li>
-            <li class="name">
-              <div>이름</div>
-            </li>
-            <li class="location">
-              <div>위치</div>
-            </li>
-            <li class="phone">
-              <div>전화번호</div>
-            </li>
-          </ul>
-        </nav>
-        <nav class="mark_list">
-          <ul>
-            <li><input type="checkbox"></li>
-            <li class="name">
-              <div>이름</div>
-            </li>
-            <li class="location">
-              <div>위치</div>
-            </li>
-            <li class="phone">
-              <div>전화번호</div>
-            </li>
-          </ul>
-        </nav>
-        
+
         <nav class="page">
           <ul>
             <li><a href="">&lt;</a></li>
@@ -108,12 +119,14 @@
             <li><a href="">&gt;</a></li>
           </ul>
         </nav>
-      <div class="div_delete">
-        <button type="button" class="btn_delete">찜 삭제</button>
+        <div class="div_delete">
+          <button>찜 삭제</button>
+        </div>
       </div>
-    </div>
-  </main>
+    </form>
 
+  </main>
   <div id="footer"></div>
 </body>
+
 </html>

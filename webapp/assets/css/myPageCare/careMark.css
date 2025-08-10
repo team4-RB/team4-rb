@@ -1,8 +1,15 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'pretendard-regular';
 }
 
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
 main {
   width: 100%;
   height: calc(100vh - 200px);
@@ -12,9 +19,10 @@ main {
 .main_sidebar {
   width: 180px;
   height: 100%;
-  background-color: rgb(159, 159, 255);
+  background-color: #2f4db1;
   display: flex;
   flex-direction: column;
+  color: white;
 }
 
 .main_sidebar ul li img {
@@ -25,23 +33,26 @@ main {
 
 .main_sidebar ul li {
   padding: 15px;
-  border-bottom: 1px solid black;
+  color: white;
 }
 
 /* ============================= */
-.div_mark{
-  flex:1;
+.div_mark {
+  flex: 1;
   display: flex;
   flex-direction: column;
 }
-.div_mark .title{
+
+.div_mark .title {
   font-size: 30px;
   margin: 30px;
 }
-form{
+
+form {
   width: 100%;
 }
-.mark_nav{
+
+.mark_nav {
   display: flex;
   margin: 100px 150px 0px 150px;
   height: 50px;
@@ -50,28 +61,33 @@ form{
   border-top: 1px solid black;
   border-bottom: 1px solid black;
 }
-.mark_nav ul{
+
+.mark_nav ul {
   display: flex;
 }
 
-.mark_nav ul li{
+.mark_nav ul li {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.mark_nav input{
+
+.mark_nav input {
   margin: 0px 30px;
   width: 30px;
   height: 30px;
 }
-.name div{
+
+.name div {
   width: 100px;
   text-align: center;
 }
+
 .location div {
   width: 1000px;
   text-align: center;
 }
+
 .phone div {
   width: 200px;
   text-align: center;
@@ -85,6 +101,7 @@ form{
   background-color: rgb(214, 236, 236);
   border-bottom: 1px solid black;
 }
+
 .mark_list ul {
   display: flex;
 }
@@ -101,22 +118,26 @@ form{
   height: 30px;
 }
 
-.page{
+.page {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.page ul{
+
+.page ul {
   display: flex;
   list-style-type: none;
 }
-.page ul li{
+
+.page ul li {
   margin: 10px;
 }
-.div_delete{
+
+.div_delete {
   display: flex;
   justify-content: center;
 }
+
 button {
   background-color: red;
   color: white;
@@ -124,48 +145,4 @@ button {
   height: 40px;
   border-radius: 15px;
 
-}
-.mark_nav ul li:first-child {
-  width: 56px;
-  justify-content: center;
-}
-.mark_list ul li:first-child {
-  width: 56px;
-  justify-content: center;
-}
-
-.name {
-  width: 140px;
-} 
-.location {
-  flex: 1;
-} 
-.phone {
-  width: 200px;
-} 
-
-.name div {
-  box-sizing: border-box;
-  padding: 0 8px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.location div {
-  box-sizing: border-box;
-  padding: 0 8px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.phone div {
-  box-sizing: border-box;
-  padding: 0 8px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.mark_list:hover {
-  background: #eaf2f2;
 }
