@@ -1,8 +1,8 @@
-<div class="modal">
+<div id="modal">
   <div class="modal_window">
     <div class="modal_body_confirm">
       <div class="modal_x_box">
-        <img onclick="turnOffModal()" class="modal_x" src="/team04-RB_frontend/webapp/assets/img/main/xIcon.png">
+        <img onclick="modalCareAllowRejectNone()" class="modal_x" src="/team04-RB_frontend/webapp/assets/img/main/xIcon.png">
       </div>
       <p id="modal_text">
         <!-- 돌봄회원 가입 반려 -->
@@ -10,10 +10,10 @@
       </p>
       <input type="text" id="reason_reject">
       <div class="modal_button_box">
-        <button onclick="modalCheck()" class="modal_check_button">
+        <button onclick="modalCareAllowRejectCheck()" class="modal_check_button">
           확인
         </button>
-        <button onclick="modalCancel()" class="modal_cancel_button">
+        <button onclick="modalCareAllowRejectCancel()" class="modal_cancel_button">
           취소
         </button>
       </div>

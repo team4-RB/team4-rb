@@ -1,13 +1,18 @@
-<div class="modal">
+<div id="modal">
   <div class="modal_window">
     <div class="modal_body_confirm">
       <div class="modal_x_box">
         <img onclick="turnOffModal()" class="modal_x" src="/team04-RB_frontend/webapp/assets/img/main/xIcon.png">
       </div>
       <p id="modal_text">
-        변경된 이름을 입력하세요
+        <!-- 돌봄회원 가입 반려 -->
+        쪽지보내기
       </p>
-      <input type="text" id="new_name">
+      <div class="letter_info">
+        <span>보내는 사람 : </span>
+        <span id="writer_name">강버들</span><span> | </span><spani id="writer_id">kangbudle01</span>
+      </div>
+      <textarea type="text" id="letter_text"></textarea>
       <div class="modal_button_box">
         <button onclick="modalCheck()" class="modal_check_button">
           확인
