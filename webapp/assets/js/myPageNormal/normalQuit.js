@@ -1,0 +1,21 @@
+const next = document.getElementById("next");
+const check = document.getElementById("check");
+const cancle = document.getElementById("cancle");
+
+const checkmodal = document.querySelector('checkmodal');
+const modal = document.querySelector('modal');
+
+next.addEventListener('click', function () {
+  checkmodal.style.display = 'block';
+});
+check.addEventListener('click', function () {
+  checkmodal.style.display = 'none';
+  modal.style.display = 'block'; 
+});
+cancle.addEventListener('click', function () {
+  modal.style.display = 'none';
+});
+
+
+
+
