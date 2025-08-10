@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./../../assets/css/header.css">
   <link rel="stylesheet" href="./../../assets/css/footer.css">
   <script defer src="./../../assets/js/main/include.js"></script>
+  <script defer src="./../../assets/js/myPageNormal/normalmodify.js"></script>
 </head>
 </head>
 <body>
@@ -20,7 +21,7 @@
         <a href="./normalMark.html"><li>찜한 목록</li></a>
         <a href="./normalheart.html"><li>하트 목록</li></a>
         <a href="./normalMatching.html"><li>매칭 기록</li></a>
-        <a href="./normalMesseage.html"><li>쪽지함</li></a>
+        <a href="./normalsendMesseage.html"><li>쪽지함</li></a>
         <a href="./normalPost.html"><li>게시글 관리</li></a>
         <a href="./normalPoint.html"><li>포인트 충전</li></a>
         <a href="./normalReference.html"><li>1 대 1 문의</li></a>
@@ -66,8 +67,8 @@
                 <li class="myinfo">
                   <ul>
                     <li><input type="text" placeholder="우편번호"></li>
-                    <li><input type="text" placeholder="주소"><button>우편번호 찾기</button></li>
-                    <li><input type="text" placeholder="상세주소"><button>확인</button></li>
+                    <li><input type="text" placeholder="주소"><button id="mailbutton">우편번호 찾기</button></li>
+                    <li><input type="text" placeholder="상세주소"><button id="addressbutton">확인</button></li>
                   </ul>
                 </li>
               </ul>
@@ -75,7 +76,7 @@
             <li class="member">
               <ul>
                 <li class="info">전화번호</li>
-                <li class="myinfo"><div>010-1234-5678</div><button>수정</button></li>
+                <li class="myinfo"><div>010-1234-5678</div><button id="phonebutton">수정</button></li>
               </ul>
             </li>
             <li class="member">
@@ -87,7 +88,7 @@
             <li class="member">
               <ul>
                 <li class="info">이메일</li>
-                <li class="myinfo"><input type="text" placeholder="이메일"><button>수정</button></li>
+                <li class="myinfo"><input type="text" placeholder="이메일"><button id="emailbutton">수정</button></li>
               </ul>
             </li>
             <li class="member">
@@ -96,7 +97,7 @@
                 <li class="myinfo">
                   <ul>
                     <li><input type="password" placeholder="비밀번호 입력"></li>
-                    <li><input type="password" placeholder="새 비밀번호 입력"><button>확인</button></li></li>
+                    <li><input type="password" placeholder="새 비밀번호 입력"><button id="pwbutton">확인</button></li></li>
                   </ul>
               </ul>
             </li>
@@ -105,6 +106,36 @@
       </form>
     </div>
   </main>
+  <div class="modal_address">
+    <div class="modal-content">
+      <p>주소 수정이 완료 되었습니다.</p>
+      <button id="saveConfirmBtn">확인</button>
+    </div>
+  </div>
+  <div class="modal_phone">
+    <div class="modal-content">
+      <p>전화번호 수정이 완료 되었습니다.</p>
+      <button id="saveConfirmBtn">확인</button>
+    </div>
+  </div>
+  <div class="modal_email">
+    <div class="modal-content">
+      <p>이메일 수정이 완료 되었습니다.</p>
+      <button id="saveConfirmBtn">확인</button>
+    </div>
+  </div>
+  <div class="modal_pw">
+    <div class="modal-content">
+      <p>비밀번호 수정이 완료 되었습니다.</p>
+      <button id="saveConfirmBtn">확인</button>
+    </div>
+  </div>
+  <div class="modal_mail">
+    <div class="modal-content">
+      <p>우편번호 찾기 api?</p>
+      <button id="saveConfirmBtn">확인</button>
+    </div>
+  </div>
   <div id="footer"></div>
 </body>
 </html>

@@ -1,0 +1,293 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 100%;
+  height: calc(100vh - 200px);
+  display: flex;
+}
+
+.main_sidebar {
+  width: 180px;
+  height: 100%;
+  background-color: rgb(159, 159, 255);
+  display: flex;
+  flex-direction: column;
+}
+
+.main_sidebar ul li img {
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+}
+
+.main_sidebar ul li {
+  padding: 15px;
+  border-bottom: 1px solid black;
+}
+
+/* ============================= */
+.div_mark {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.div_mark .title {
+  font-size: 30px;
+  margin: 30px;
+}
+
+form {
+  width: 100%;
+}
+
+.div_choose {
+  width: 500px;
+}
+
+.div_choose ul {
+  display: flex;
+  list-style-type: none;
+  padding: 50px 0px 0px 150px;
+}
+
+.div_choose ul li {
+  margin: 10px;
+}
+
+.reseive a {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.mark_nav {
+  display: flex;
+  margin: 0px 150px;
+  height: 50px;
+  align-items: center;
+  background-color: rgb(191, 201, 201);
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.mark_nav ul {
+  display: flex;
+}
+
+.mark_nav ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mark_nav input {
+  margin: 0px 30px;
+  width: 30px;
+  height: 30px;
+}
+
+.mark_list {
+  display: flex;
+  margin: 0px 150px;
+  height: 50px;
+  align-items: center;
+  background-color: rgb(215, 238, 238);
+  border-bottom: 1px solid black;
+}
+
+.mark_list ul {
+  display: flex;
+}
+
+.mark_list ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mark_list input {
+  margin: 0px 30px;
+  width: 30px;
+  height: 30px;
+}
+
+.name div {
+  width: 100px;
+  text-align: center;
+}
+
+.messeagetitle div {
+  width: 800px;
+  text-align: center;
+}
+
+#headline {
+  cursor: pointer;
+}
+
+.day div {
+  width: 200px;
+  text-align: center;
+}
+
+.read div {
+  width: 200px;
+  text-align: center;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.page ul li {
+  margin: 10px;
+}
+
+.div_delete {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background-color: red;
+  color: white;
+  width: 80px;
+  height: 40px;
+  margin-left: 150px;
+  border-radius: 15px;
+  border: 0px;
+}
+
+
+
+
+.modal {
+  display: none;
+  position: fixed;
+  justify-content: center;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  position: fixed;
+  top: 25%;
+  left: 40%;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  width: 400px;
+  text-align: center;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content p {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.content {
+  display: flex;
+  justify-content: start;
+  width: auto;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.sendmember {
+  display: flex;
+  justify-content: start;
+}
+
+#sendBtn {
+  margin: 20px 0px 0px 0px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #001860;
+  color: white;
+  cursor: pointer;
+  justify-content: center;
+}
+
+#deleteBtn {
+  margin: 20px 0px 0px 0px;
+  padding: 10px;
+  border: 2px solid red;
+  border-radius: 10px;
+  background-color: white;
+  color: red;
+  cursor: pointer;
+  justify-content: center;
+}
+
+#sendxbutton {
+  display: flex;
+  justify-content: end;
+  font-size: 30px;
+  background-color: white;
+  color: black;
+  margin-left: 300px;
+}
+
+#reseivexbutton {
+  display: flex;
+  justify-content: end;
+  font-size: 30px;
+  background-color: white;
+  color: black;
+  margin-left: 300px;
+}
+
+
+.modal_delete {
+  display: none;
+  position: fixed;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-checkcontent {
+  position: fixed;
+  top: 0;
+  left: 40%;
+  background-color: #fff;
+  padding: 40px;
+  border: 1px solid #ccc;
+  width: 400px;
+  text-align: center;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-checkcontent button {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #001860;
+  color: white;
+  cursor: pointer;
+}
