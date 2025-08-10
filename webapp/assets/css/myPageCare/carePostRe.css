@@ -9,7 +9,27 @@
   font-weight: 400;
   font-style: normal;
 }
-header,
+
+html {
+  height: 100%;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1 0 auto;
+}
+#footer {
+  margin-top: auto;
+}
+
+header {
+  width: 100%;
+  height: 110px;
+  background-color: bisque;
+}
 footer {
   width: 100%;
   height: 110px;
@@ -18,14 +38,12 @@ footer {
 
 main {
   width: 100%;
-  height: calc(100vh - 200px);
   display: flex;
 }
-
 .main_sidebar {
   width: 180px;
   height: 100%;
-  background-color: rgb(159, 159, 255);
+  background-color: rgb(159,159,255);
   display: flex;
   flex-direction: column;
 }
@@ -40,105 +58,142 @@ main {
 .main_sidebar div {
   height: 150px;
   width: 150px;
-  background-color: rgb(27, 255, 217);
+  background-color: rgb(27,255,217);
   border-radius: 100%;
   margin: 15px;
 }
-
 .main_sidebar ul li {
   padding: 15px;
 }
 
-/* ------------------*/
-
-
-.post_edit{
+/* *-************** */
+.post_edit {
   flex: 1;
   padding: 40px 100px;
 }
 
-.re_title h2{
+.re_title h2 {
   padding: 5px;
   font-size: 30px;
   border: 2px solid black;
 }
 
-.re_post_info{
+.re_post_info {
   display: flex;
+  gap: 12px;
   padding: 5px;
-  background-color: aqua;
   font-size: 24px;
   border: 2px solid black;
+  background-color: #fff;
 }
-
-.re_post_info span{
+.re_post_info span {
   display: block;
 }
 
-.re_post_content{
+.re_post_content {
   margin-top: 10px;
   padding: 5px;
-  background-color: white;
+  background-color: #ffffff;
   border: 2px solid black;
-  width: auto;
-  height: 500px;
+  min-height: 500px;
+}
+#contentInput {
+  width: 100%;
+  height: 460px;
+  font-size: 16px;
+  line-height: 1.5;
+  border: none;
+  outline: none;
+  resize: vertical;
 }
 
 .buttons {
   display: flex;
-  justify-content: right;
-  gap: 5px;
-  margin: 5px 0px 5px; 
+  justify-content: flex-end;
+  gap: 8px;
+  margin: 10px 0;
 }
-
-.buttons button{
-  width: 100px;
-  height: 50px;
-  border-radius: 15px;
+.buttons a,
+.buttons button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  border: 0;
   cursor: pointer;
+  text-decoration: none;
+}
+.btn_list {
+  background: #f1f1f1;
+  color: #222;
+}
+.btn_cancle {
+  background: #FF4D4F;
+  color: #fff;
+}
+.btn_compelete {
+  background: #2F52AA;
+  color: #fff;
 }
 
-.btn_cancle{
-  background-color: #FF0000;
-  color: white;
-}
 
-.btn_compelete{
-  background-color: #2F52AA;
-  color: white;
-}
 
 .modal {
-  /* display: none; */
   position: fixed;
-  top: 0;
-  width: 900px;
-  height: 400px;
+  margin-top: 0px;
+  inset: 0;
+  display: none;
+  align-items: flex-start;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  z-index: 10px;
-  margin-left: 30%;
+  background: rgba(0, 0, 0, .45);
+  z-index: 1000;
+}
+.modal.open {
+  display: flex;
 }
 
-.modal_box {
-  background-color: aqua;
+.modal-content {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 28px 22px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.2);
   text-align: center;
-  padding: 30px;
-  border-radius: 30px;
-  justify-content: center;
-  align-items: center;
+  width: min(640px, 92vw);
+  box-sizing: border-box;
 }
 
 .modal_buttons {
-  margin-top: 20px;
   display: flex;
-  justify-content: right;
-  gap: 20px;
-
+  justify-content: center;
+  gap: 14px;
+  margin-top: 12px;
 }
-
-#check {
-  background-color: #2F52AA;
-  color: white;
+.modal_buttons button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  font-size: 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 0;
+  background: #2F52AA;
+  color: #fff;
+}
+.modal_buttons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  font-size: 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  background: #ffffff;
+  color: #e60023;
+  border: 2px solid #e60023;
 }

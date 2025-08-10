@@ -17,12 +17,10 @@ main {
   flex-direction: column;
 }
 
-.main_sidebar img {
+.main_sidebar ul li img {
   height: 150px;
   width: 150px;
-  background-color: rgb(27, 255, 217);
   border-radius: 100%;
-  margin: 15px;
 }
 
 .main_sidebar ul li {
@@ -32,84 +30,142 @@ main {
 
 /* ============================= */
 .div_mark{
-  flex: 1;
+  flex:1;
   display: flex;
   flex-direction: column;
 }
-.div_mark .title {
+.div_mark .title{
   font-size: 30px;
   margin: 30px;
 }
 form{
-  flex: 1;
-  margin: 10px 150px;
+  width: 100%;
 }
-.arlim{
-  background-color: blueviolet;
+.mark_nav{
   display: flex;
-  flex-direction: row;
-  margin: 0px 30px;
-  border-radius: 15px;
-  border: 1px solid black;
-  height: 100px;
-}
-.arlim div{
-  background-color: blanchedalmond;
-  width: 20px;
-  height: 20px;
-  margin: 20px;
-}
-.arlim nav{
-  display: flex;
+  margin: 100px 150px 0px 150px;
+  height: 50px;
   align-items: center;
-  margin-left: 20px;
-}
-form .caremodify{
-  display: flex;
-  flex-direction: column;
-  background-color: beige;
-  border: 1px solid black;
-}
-.member{
+  background-color: rgb(191, 201, 201);
+  border-top: 1px solid black;
   border-bottom: 1px solid black;
 }
-.member ul{
+.mark_nav ul{
   display: flex;
-}
-.info{
-  display: flex;
-  width: 200px;
-  height: auto;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
-  border-right: 1px solid black;
-  background-color: aqua;
-  padding: 5px 0px;
-}
-.myinfo {
-  display: flex;
-  align-items: center;
-  font-size: 20px;
-  margin-left: 20px;
-}
-.myinfo ul{
-  display: flex;
-  flex-direction: column;
 }
 
-input{
-  width: 400px;
-  height: 40px;
-  font-size: 20px;
-  margin: 5px 0px;
+.mark_nav ul li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-button{
-  margin: 10px;
-  background-color: blue;
-  color: white;
-  width: 100px;
+.mark_nav input{
+  margin: 0px 30px;
+  width: 30px;
   height: 30px;
+}
+.name div{
+  width: 100px;
+  text-align: center;
+}
+.location div {
+  width: 1000px;
+  text-align: center;
+}
+.phone div {
+  width: 200px;
+  text-align: center;
+}
+
+.mark_list {
+  display: flex;
+  margin: 0px 150px;
+  height: 50px;
+  align-items: center;
+  background-color: rgb(214, 236, 236);
+  border-bottom: 1px solid black;
+}
+.mark_list ul {
+  display: flex;
+}
+
+.mark_list ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mark_list input {
+  margin: 0px 30px;
+  width: 30px;
+  height: 30px;
+}
+
+.page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page ul{
+  display: flex;
+  list-style-type: none;
+}
+.page ul li{
+  margin: 10px;
+}
+.div_delete{
+  display: flex;
+  justify-content: center;
+}
+button {
+  background-color: red;
+  color: white;
+  width: 80px;
+  height: 40px;
   border-radius: 15px;
-  cursor: pointer;
+
+}
+.mark_nav ul li:first-child {
+  width: 56px;
+  justify-content: center;
+}
+.mark_list ul li:first-child {
+  width: 56px;
+  justify-content: center;
+}
+
+.name {
+  width: 140px;
+} 
+.location {
+  flex: 1;
+} 
+.phone {
+  width: 200px;
+} 
+
+.name div {
+  box-sizing: border-box;
+  padding: 0 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.location div {
+  box-sizing: border-box;
+  padding: 0 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.phone div {
+  box-sizing: border-box;
+  padding: 0 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mark_list:hover {
+  background: #eaf2f2;
 }

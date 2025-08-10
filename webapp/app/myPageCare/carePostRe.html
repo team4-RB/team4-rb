@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./../../assets/css/footer.css">
   <script defer src="./../../assets/js/main/include.js"></script>
   <link rel="stylesheet" href="./../../assets/css/myPageCare/carePostRe.css">
+  <script defer src="./../../assets/js/myPageCare/carePostRe.js"></script>
 </head>
 
 <body>
@@ -30,15 +31,24 @@
         <!-- 이거 어케 할지 질문 -->
       </div>
       <div class="re_post_content">
-        안녕하세요. 제 조상은 티라노 사우루스이고 저는 와이라노사우루스입니다
+        <textarea id="contentInput" placeholder="내용을 입력하세요"></textarea>
       </div>
       <div class="buttons">
-        <button class="btn_list">목록</button>
-        <button class="btn_cancle">취소</button>
-        <button class="btn_compelete">수정완료</button>
+        <a class="btn_list" href="./carePost.html">목록</a>
+        <a class="btn_cancle" href="./carePostDP.html">취소</a>
+        <button type="button" class="btn_compelete" id="saveBtn">수정완료</button>
       </div>
     </section>
   </main>
+
+  <div id="proposeSuccessModal" class="modal">
+    <div class="modal-content">
+      <p>수정이 완료되었습니다.</p>
+      <div class="modal_buttons">
+        <button id="saveConfirmBtn">확인</button>
+      </div>
+    </div>
+  </div>
   <div id="footer"></div>
 
 </body>
