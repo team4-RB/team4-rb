@@ -22,7 +22,7 @@ phonemodal.addEventListener('click', function () {
   openphone.style.display = 'block';
 });
 emailmodal.addEventListener('click', function () {
-  openmail.style.display = 'block';
+  openemail.style.display = 'block';
 });
 pwmodal.addEventListener('click', function () {
   openpw.style.display = 'block';

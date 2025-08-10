@@ -1,8 +1,6 @@
-const pwCheck = document.getElementById("pwaccord");
+const pwChecktext = document.getElementById("pwaccord");
+const pwCheck = document.querySelector('checkBtn');
 
 pwCheck.addEventListener('click', function () {
-  const pw=true;
-  if(pw){
-    window.location.href="normalModify.html";
-  }
+  window.location.href="./normalModify.html";
 });

@@ -48,6 +48,9 @@ input{
 button{
   width: 100px;
   height: 40px;
+  border-radius: 15px;
+  background-color: blue;
+  color: white;
 }
 form div{
   display: block;

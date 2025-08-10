@@ -101,12 +101,21 @@ form{
   display: flex;
   flex-direction: column;
 }
-.point_have .button button{
+#chargeBtn{
   width: 250px;
   height: 60px;
   margin: 30px;
-  border: 1px solid black;
+  border: 1px solid blue;
   border-radius: 15px;
+  background-color: white;
+}
+#chargehis{
+  width: 250px;
+  height: 60px;
+  margin: 30px;
+  border: 1px solid blue;
+  border-radius: 15px;
+  background-color: white;
 }
 
 .point_use{
@@ -268,7 +277,7 @@ form{
 
 
 .modal_history {
-  /* display: none; */
+  display: none;
   position: fixed;
   justify-content: center;
   top: 0;
@@ -297,61 +306,42 @@ form{
   font-size: 20px;
 }
 
-.payapi {
+.charge_history {
   border: 1px solid black;
   margin: 5px;
-  height: 40px;
+  height: 360px;
   border-radius: 15px;
   display: flex;
   align-items: center;
-  padding-left: 20px;
-}
-
-.charge {
-  border: 1px solid black;
-  margin: 5px;
-  height: 40px;
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  padding-left: 20px;
-}
-
-.charge_point {
   display: flex;
   flex-direction: column;
-  font-size: 16px;
+  padding: 20px;
+}
+.charge_month{
+  margin-bottom: 20px;
 }
 
-.charge_point li ul {
+.charge_month ul{
   display: flex;
   flex-direction: row;
 }
+.charge_month ul :nth-child(2){
+  margin: 0px 100px;
+}
+.charge_month ul li button{
+  width: 30px;
+  height: 30px;
+}
+.charge_day{
 
-.charge_point li ul li {
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 300px;
+  text-align: start;
+}
+.charge_day ul li{
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
 }
 
-.charge_point li ul :first-child {
-  margin: 5px 10px;
-}
-
-.charge_point li ul :nth-child(2) {
-  margin: 5px 0px;
-  flex: 1;
-  border: 1px solid black;
-  border-radius: 15px;
-}
-
-.modal-content input {
-  width: 350px;
-  height: 40px;
-  font-size: 16px;
-  text-align: center;
-}
 
 
 #completeBtn {
