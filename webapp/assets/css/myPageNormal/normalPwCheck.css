@@ -54,3 +54,6 @@ form div{
   padding-left: 100px;
   color: red;
 }
+#pwaccord{
+  display: none;
+}
