@@ -1,15 +1,15 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const saveBtn = document.getElementById('saveBtn');   // 수정완료 버튼
-  const modal   = document.getElementById('editModal'); // 모달 래퍼(.modal)
-  const okBtn   = document.getElementById('check');     // 확인 버튼(id가 check)
+  const saveBtn = document.getElementById('saveBtn');
+  const modal   = document.getElementById('editModal');
+  const okBtn   = document.getElementById('check');
 
   function openModal(){
     modal.classList.add('open');
-    document.body.style.overflow = 'hidden'; // 배경 스크롤 잠금
+    document.body.style.overflow = 'hidden';
   }
   function closeModal(){
     modal.classList.remove('open');
-    document.body.style.overflow = '';       // 스크롤 복구
+    document.body.style.overflow = '';
   }
 
   saveBtn && saveBtn.addEventListener('click', function(e){
@@ -19,10 +19,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   okBtn && okBtn.addEventListener('click', function(){
     closeModal();
-    // 필요하면 여기서 이동: location.href = './careReference.html';
   });
 
-  // 배경 클릭 시 닫기
   modal && modal.addEventListener('click', function(e){
     if (e.target === modal) closeModal();
   });

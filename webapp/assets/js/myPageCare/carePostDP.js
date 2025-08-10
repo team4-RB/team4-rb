@@ -28,9 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
       deleteModal.classList.remove('open');
 
-      // location.reload(); 
-
-      // carePostDP.js (선택)
       document.addEventListener('DOMContentLoaded', () => {
         const edit = document.getElementById('editLink');
         if (!edit) return;

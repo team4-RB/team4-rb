@@ -51,12 +51,13 @@ main {
   padding: 0;
 }
 
-.sidebar li {
+.sidebar ul li {
   padding: 12px 20px;
   font-size: 15px;
   cursor: pointer;
+  color: #ffffff;
 }
-
+/* ************** */
 .point-history {
   flex: 1;
   padding: 40px;

@@ -43,7 +43,7 @@ main {
 .main_sidebar {
   width: 180px;
   height: 100%;
-  background-color: rgb(159,159,255);
+  background-color: #2f4db1;
   display: flex;
   flex-direction: column;
 }
@@ -64,6 +64,7 @@ main {
 }
 .main_sidebar ul li {
   padding: 15px;
+  color: #ffffff;
 }
 
 /* ============================= */
