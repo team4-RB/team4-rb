@@ -1,10 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'pretendard-regular';
-
+  font-family: 'Pretendard-Regular';
 }
-
 @font-face {
   font-family: 'Pretendard-Regular';
   src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
@@ -25,15 +23,6 @@ main {
   display: flex;
 }
 
-.sidebar img {
-  height: 130px;
-  width: 130px;
-  background-color: #ff80ab;
-  border-radius: 50%;
-  margin: 0 auto 20px;
-  display: block;
-}
-
 .main_sidebar {
   width: 180px;
   height: 100%;
@@ -41,7 +30,14 @@ main {
   display: flex;
   flex-direction: column;
 }
-
+.main_sidebar img {
+  height: 130px;
+  width: 130px;
+  background-color: #ff80ab;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: block;
+}
 .main_sidebar div {
   height: 150px;
   width: 150px;
@@ -49,14 +45,11 @@ main {
   border-radius: 100%;
   margin: 15px;
 }
-
 .main_sidebar ul li {
   padding: 15px;
+  color: #ffffff;
 }
-
-/* ------------------*/
-
-
+/* ********************* */
 .careReferenceCheck {
   flex: 1;
   padding: 40px 100px;
@@ -65,69 +58,83 @@ main {
 .title h2 {
   padding: 5px;
   font-size: 30px;
-  border: 2px solid black;
+  border: 2px solid #000;
 }
 
 .careReferenceCheck_info {
   display: flex;
+  gap: 12px;
   padding: 5px;
-  background-color: aqua;
   font-size: 24px;
-  border: 2px solid black;
+  border: 2px solid #000;
 }
-
 .careReferenceCheck_info span {
   display: block;
 }
 
 .careReferenceCheck_content {
   margin-top: 10px;
-  padding: 5px;
+  padding: 12px;
   background-color: #fdfdfd;
-  border: 2px solid black;
-  height: auto;
-  width: auto;
-  height: 500px;
+  border: 2px solid #000;
+  min-height: 300px;
+  line-height: 1.6;
+  font-size: 18px;
+  box-sizing: border-box;
 }
 
 .buttons {
   display: flex;
-  justify-content: right;
-  gap: 5px;
-  margin: 5px 0px 5px;
+  justify-content: flex-end;
+  gap: 10px;
+  margin: 14px 0;
 }
-
+.buttons a,
 .buttons button {
-  width: 100px;
-  height: 50px;
-  border-radius: 15px;
+  min-width: 120px;
+  height: 48px;
+  padding: 0 18px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  text-decoration: none;
   cursor: pointer;
 }
-
-
+.btn_list {
+  background: #f1f1f1;
+  color: #222;
+}
+.btn_cancle {
+  background: #FF4D4F;
+  color: #fff;
+}
+.btn_compelete {
+  background: #2F52AA;
+  color: #fff;
+}
 
 .reply {
-  border: 2px solid black;
+  border: 2px solid #000;
 }
-
 .comment {
   padding: 5px;
-  border: 2px solid black;
+  border: 2px solid #000;
 }
-
 .reply h4 {
   padding: 10px;
 }
-
 .author {
   font-weight: bold;
   display: block;
 }
-
 .cmt_content {
   margin: 5px 5px 5px 10px;
 }
-
 .date {
   display: block;
   text-align: right;
@@ -137,10 +144,7 @@ main {
   height: 60px;
   padding: 10px;
 }
-
 .comments input {
-  justify-content: right;
-  align-items: right;
   width: 800px;
   text-align: center;
 }

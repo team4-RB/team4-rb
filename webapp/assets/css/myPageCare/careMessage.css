@@ -1,290 +1,306 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'pretendard-regular';
-}
-
-@font-face {
-  font-family: 'Pretendard-Regular';
-  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-
-body {
-  background-color: #ffffff;
-}
+  box-sizing: border-box; }
 
 main {
+  width: 100%;
+  height: calc(100vh - 200px);
   display: flex;
-  min-height: calc(100vh - 220px);
+  background: #ffffff;
 }
-.sidebar img {
-  height: 130px;
-  width: 130px;
-  background-color: #ff80ab;
-  border-radius: 50%;
-  margin: 0 auto 20px;
-  display: block;
-}
+
 .sidebar {
   width: 180px;
   background-color: #2f4db1;
-  color: white;
-  padding: 20px 0;
 }
-
-.sidebar img {
-  height: 130px;
-  width: 130px;
-  background-color: #ff80ab;
-  border-radius: 50%;
-  margin: 0 auto 20px;
+.sidebar ul li {
+  list-style: none;
+  padding: 15px;
+  color: #ffffff;
+}
+.sidebar ul li img {
+  width: 150px; height: 150px; border-radius: 50%;
   display: block;
 }
-
-.sidebar ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.sidebar li {
-  padding: 12px 20px;
-  font-size: 15px;
-  cursor: pointer;
-  color: white;
-  text-decoration-line: none;
-}
-
-/* ============================= */
+/*****************/
 .div_mark {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
-
 .div_mark .title {
   font-size: 30px;
   margin: 30px;
 }
 
-.div_choose ul{
-  display: flex;
-  list-style-type: none;
-  padding-left: 150px;
-}
-.div_choose ul li{
-  margin: 10px;
-}
-.mark_nav {
-  display: flex;
-  margin: 0px 150px 0px 150px;
-  height: 50px;
-  align-items: center;
-  background-color: rgb(191, 201, 201);
+.div_choose {
+  width: 500px;
 }
 
-.mark_nav ul {
+.div_choose ul {
+  list-style: none;
   display: flex;
-  flex: 1;
-  list-style-type: none;
-  background-color: rgb(191, 201, 201);
-  justify-content: space-around;
+  gap: 10px;
+  padding: 50px 0 0 150px;
+}
+
+.mark_nav {
+  margin: 0 150px;
+  height: 50px;
+  display: flex; align-items: center;
+  background: rgb(191, 201, 201);
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.mark_nav ul {
+  list-style: none;
+  display: flex;
+  width: 100%;
+}
+.mark_nav ul li { 
+  flex: none;
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .mark_nav input {
-  margin-left: 20px;
+  width: 30px;
+  height: 30px;
+  margin: 0 30px;
+}
+
+.mark_list {
+  margin: 0 150px;
+  height: 50px;
+  display: flex; align-items: center;
+  background: rgb(215, 238, 238);
+  border-bottom: 1px solid #000;
+  cursor: pointer;
+}
+.mark_list:hover {
+  background: #eaf2f2;
+}
+.mark_list ul {
+  list-style: none;
+  display: flex; 
+  width: 100%;
+}
+
+.mark_list ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mark_list input {
+  width: 30px;
+  height: 30px;
+  margin: 0 30px; 
+  cursor: default;
+}
+
+.name div{
+  width: 100px;
+  text-align: center;
+}
+
+.messeagetitle div {
+  width: 800px;
+  text-align: center;
+}
+.day div {
+  width: 200px;
+  text-align: center;
+}
+
+.read div {
+  width: 200px;
+  text-align: center;
 }
 
 .page {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
-
 .page ul {
+  list-style: none;
   display: flex;
-  list-style-type: none;
 }
-.page ul li{
+.page ul li {
   margin: 10px;
 }
-.div_delete{
-  margin: 0;
-  padding: 0;
-}
-button {
-  background-color: red;
-  color: white;
-  width: 80px;
-  height: 40px;
+
+.div_delete button {
   margin-left: 150px;
-  border-radius: 15px;
-  border: 0px;
+  width: 80px; height: 40px;
+  background: #e53935; color: #fff;
+  border: none; border-radius: 15px;
+  cursor: pointer;
+  font-weight: 700;
 }
 
 
 
-
-
-.modal_bg .modal {
+.modal_bg {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.45);
+  z-index: 1000;
+}
+
+.modal_bg.open {
   display: flex;
-  justify-content: center;
   align-items: center;
-  z-index: 500;
+  justify-content: center;
 }
 
 
 .modal_box {
-  background-color: white;
-  width: 500px;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-  position: relative;
+  width: 420px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.25);
+  overflow: hidden;
 }
 
 .modal_read {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: relative;
+  padding: 14px 18px;
+  text-align: center;
+  border-bottom: 1px solid #eaeaea;
+  font-weight: 700;
+  font-size: 20px;
 }
-
 .modal_title {
-  font-size: 18px;
+  color: #111;
 }
-
-.modal-content {
-  position: fixed;
-  top: 60%;
-}
-
-.modal_bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-
 .modal_close {
+  position: absolute;
+  right: 16px;
+  top: 8px;
   font-size: 24px;
   cursor: pointer;
 }
 
+.modal_info {
+  padding: 16px 18px;
+}
 .sender_info {
   font-size: 14px;
-  color: #333;
+  color: #444;
+  margin-bottom: 10px;
 }
-.sender_info strong .sender_id {
-  font-weight: 500;
+.sender_id { color: #2f4db1;
+  font-weight: 700;
+  text-decoration: none;
 }
 
 .message_content {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 12px;
-  background-color: #f9f9f9;
-  font-size: 14px;
-  min-height: 100px;
-  white-space: pre-line;
+  min-height: 220px;
+  padding: 14px 12px;
+  border: 2px solid #d9d9d9;
+  border-radius: 12px;
+  background: #fff;
+  color: #111;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow: auto;
 }
 
-.modal_button .confirm_buttons {
+.modal_button {
   display: flex;
+  gap: 10px;
   justify-content: center;
-  align-items: center;
-  gap: 20px;
-  margin-top: 20px;
-}
-.confirm_buttons {
-  margin-top: 0;  
-}
-.btn_reply {
-  background-color: navy;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 14px;
-  padding: 10px 20px;
-  cursor: pointer;
+  padding: 14px 18px 18px;
 }
 
-.btn_delete .btn_cancel {
-  background-color: white;
-  color: red;
-  border: 1px solid red;
-  border-radius: 5px;
-  font-size: 14px;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-weight: bold;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  display: flex;
-}
-
-.btn_confirm {
-  background-color: #2f4db1;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 14px;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.modal-content {
-  background-color: #fff;
-  padding: 40px;
-  border: 1px solid #ccc;
-  width: 400px;
-  border-radius: 20px;
-  text-align: center;
-  position: relative;
-}
-
-.modal-content button {
-  margin-top: 20px;
-  padding: 10px 30px;
-  border: none;
+.modal_button button {
+  min-width: 92px;
+  height: 40px;
   border-radius: 10px;
-  background-color: #001860;
-  color: white;
-  cursor: pointer;
-}
-
-#sendMsgModal .btn_send {
-  background-color: #0011a8;
-  color: white;
-  padding: 10px 24px;
-  border-radius: 8px;
   border: none;
-  font-weight: bold;
-  font-size: 14px;
+  font-weight: 700;
   cursor: pointer;
 }
 
-#sendMsgModal .btn_cancel {
-  background-color: white;
-  color: red;
-  padding: 10px 24px;
-  border: 1px solid red;
-  border-radius: 8px;
-  font-weight: bold;
-  font-size: 14px;
+.btn_reply {
+  background: #2f4db1;
+  color: #fff;
+}    
+
+.btn_delete {
+  background: #fff;
+  color: #ff0400;
+  border: 2px solid #ff0400;
+}  
+
+.write_modal {
+  width: 420px;
+}
+
+.message_textarea{
+  width: 100%;
+  min-height: 220px;
+  padding: 12px;
+  border: 2px solid #d9d9d9;
+  border-radius: 12px;
+  outline: none;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.confirm_modal {
+  width: 420px;
+  padding: 22px 20px;
+}
+
+.confirm_text {
+  padding: 24px 16px 8px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #111;
+}
+
+.confirm_buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 12px 16px 6px;
+}
+
+.confirm_buttons .btn_confirm,
+.confirm_buttons .btn_cancel {
+  min-width: 92px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
   cursor: pointer;
+}
+
+.modal_button .btn_send,
+.modal_button .btn_confirm,
+.confirm_buttons .btn_confirm {
+  background: #2f4db1;
+  color: #fff;
+}
+
+.modal_button .btn_cancel,
+.confirm_buttons .btn_cancel {
+  background: #fff;
+  color: #ff0400;
+  border: 2px solid #ff0400;
+}
+
+.modal_send .send_message {
+  padding: 24px 16px 8px;
+  text-align: center;
+  font-size: 16px;
+  color: #111;
 }

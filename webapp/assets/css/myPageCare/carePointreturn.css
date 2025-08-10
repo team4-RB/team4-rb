@@ -12,13 +12,14 @@
 body {
   font-family: 'Noto Sans KR', sans-serif;
 }
+
 header,
 footer {
   width: 100%;
   height: 110px;
   background-color: black;
 }
-.sidebar img {
+.main_sidebar img {
   height: 130px;
   width: 130px;
   background-color: #ff80ab;
@@ -36,34 +37,21 @@ main {
   color: white;
   padding: 20px 0;
 }
-
-.main_sidebar div {
-  height: 130px;
-  width: 130px;
-  background-color: #ff80ab;
-  border-radius: 50%;
-  margin: 0 auto 20px;
-}
-
 .main_sidebar ul {
   list-style: none;
-  padding-left: 0;
 }
-
-.main_sidebar li {
+.main_sidebar ul li {
   padding: 12px 20px;
-  font-size: 15px;
   cursor: pointer;
+  color: #ffffff;
 }
 
-/* ********** */
-
+/* *-******************* */
 .return_section {
   flex: 1;
   padding: 40px 80px;
   background-color: white;
 }
-
 .return_section h2 {
   font-size: 24px;
   margin-bottom: 20px;
@@ -76,59 +64,69 @@ main {
   background-color: #f2f2f2;
   margin-bottom: 30px;
 }
-
-
 .info_box li {
   margin-bottom: 15px;
   font-size: 16px;
   margin-left: 10px;
 }
 
-.point-table {
+.point_table {
+  width: 760px;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 10px;
+  background: white;
+}
+.point_table_wrap {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
+  align-items: center; 
+  margin-top: 20px;
 }
-
-.point-row {
+.point_fixed {
+  min-height: 54px;
   display: flex;
   align-items: center;
-  padding: 10px 0;
-  justify-content: center;
+  padding: 0 14px;
+  background: #f7f8fa;
+  border-right: 1px solid #e5e7eb;
+  font-size: 14px;
+  color: #222;
+  font-weight: 500;
+}
+.point_fixed > label { cursor: default; }
+
+.point_row {
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 14px;
+  font-size: 14px;
+  color: #111;
 }
 
-.point-row label {
-  width: 140px;
-  font-size: 15px;
-  text-align: left;
-  padding: 20px;
-}
-
-.point-row input {
+#input_point {
   width: 150px;
-  padding: 6px;
+  height: 36px;
+  padding: 0 10px;
   text-align: right;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-right: 8px;
+  border: 1px solid #cfd4e2;
+  border-radius: 6px;
+  outline: none;
 }
 
-.small-text {
+.point_row input + span {
   font-size: 12px;
-  color: #aaa;
+  color: #7a8194;
 }
-
 
 .return_button {
   margin-top: 30px;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-}
 
+}
 .return_button button {
   padding: 12px 24px;
   margin-right: 20px;
@@ -137,56 +135,63 @@ main {
   cursor: pointer;
   border: none;
 }
-
 .btn_return {
   background-color: #2F52AA;
   color: white;
+  padding: 12px 24px; 
+  border-radius: 10px;
+  cursor: pointer;
 }
-
 .btn_return_list {
   background-color: white;
-  border: 2px solid black;
+  border: 2px solid black;  
   color: #2F52AA;
+  padding: 12px 24px;
+  border-radius: 10px; 
+  cursor: pointer; 
 }
 
 .modal {
-  /* display: none; */
+  display: none;
   position: fixed;
-  top: 0;
-  z-index: 10;
-  width: 100vw;
-  height: 100vh;
+  inset: 0;
   background-color: rgba(0, 0, 0, 0.4);
-  justify-content: center;
-  align-items: center;
-  display: flex;
+  z-index: 500;
 }
 
 .modal_box {
-  background-color: white;
-  top: 0;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
   padding: 40px;
   border-radius: 30px;
   text-align: center;
   border: 3px solid black;
   width: 400px;
-  justify-content: center;
-  align-items: center;  
+  max-width: calc(100vw - 40px);
+  box-shadow: 0 8px 26px rgba(0,0,0,0.2);
 }
 
 .modal_box p {
   font-size: 20px;
-  margin-bottom: 30px;
+  font-weight: 500;
+  color: black;      
+  margin-bottom: 30px; 
+
 }
 
 .modal_buttons {
-  display: flex;
-  justify-content: center;
+  display: flex; 
+  justify-content: center; 
+  gap: 12px;
 }
 
 .modal_buttons button {
   padding: 10px 30px;
   font-size: 16px;
+  font-weight: 600;
   background-color: #2F52AA;
   color: white;
   border: none;

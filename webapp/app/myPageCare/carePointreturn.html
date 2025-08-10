@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./../../assets/css/footer.css">
   <script defer src="./../../assets/js/main/include.js"></script>
   <link rel="stylesheet" href="./../../assets/css/myPageCare/carePointreturn.css">
+  <script defer src="./../../assets/js/myPageCare/carePointreturn.js"></script>
 </head>
 
 <body>
@@ -38,42 +39,52 @@
           <li>메 아이 비 해~피 매일 웃고 싶어요~</li>
         </ul>
       </div>
-      <div class="point-table">
-        <div class="point-row">
-          <label>보유 포인트</label>
-          <span>38,960 P</span>
-        </div>
-        <div class="point-row">
-          <label for="input-point">신청 포인트</label>
-          <input type="text" id="input-point" value="38,000">
-          <span class="small-text">(최대 10만 포인트)</span>
+      <div class="point_table_wrap">
+        <div class="point_table">
+          <div class="point_fixed"><label>보유 포인트</label></div>
+          <div class="point_row"><span>38,960 P</span></div>
         </div>
 
-        <div class="point-row">
-          <label>예상 전환 포인트</label>
-          <span>34,200 P</span>
+        <div class="point_table">
+          <div class="point_fixed"><label for="input_point">신청 포인트</label></div>
+          <div class="point_row">
+            <input type="text" id="input_point" value="38,000">
+            <span>(최대 10만 포인트)</span>
+          </div>
         </div>
 
-        <div class="point-row">
-          <label>입금 대상 계좌</label>
-          <span>[기업은행] 506502-04-342422</span>
+        <div class="point_table">
+          <div class="point_fixed"><label>예상 전환 포인트</label></div>
+          <div class="point_row"><span>34,200 P</span></div>
         </div>
+
+        <div class="point_table">
+          <div class="point_fixed"><label>입금 대상 계좌</label></div>
+          <div class="point_row"><span>[기업은행] 506502-04-342422</span></div>
+        </div>
+
       </div>
+
       <div class="return_button">
-        <button class="btn_return">환급 신청</button><br>
-        <button class="btn_return_list">환급/지급 내역</button>
+        <button class="btn_return" id="btn_return">환급 신청</button>
+
+        <div class="modal" id="refundModal">
+          <div class="modal_box">
+            <p>환급 신청이 완료되었습니다.</p>
+            <div class="modal_buttons">
+              <button id="refundConfirm">확인</button>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn_return_list">
+          <a href="./carePointList.html">환급/지급 내역</a>
+        </button>
       </div>
     </section>
   </main>
-  <div id="footer"></div>
 
-  <div class="modal" id="refundModal">
-    <div class="modal_box">
-      <p>환급 신청이 완료되었습니다.</p>
-      <div class="modal_buttons">
-        <button id="refundConfirm">확인</button>
-      </div>
-    </div>
-  </div>
+  <div id="footer"></div>
+</body>
 
 </html>

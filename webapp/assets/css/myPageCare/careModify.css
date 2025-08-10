@@ -2,12 +2,14 @@
   margin: 0;
   padding: 0;
 }
+
 @font-face {
   font-family: 'Pretendard-Regular';
   src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
+
 header,
 footer {
   width: 100%;
@@ -16,24 +18,28 @@ footer {
 }
 
 main {
-  width: 100%;
-  height: calc(100vh - 200px);
   display: flex;
+  min-height: calc(100vh - 110px);
+  padding-bottom: 110px;
 }
-.sidebar img {
+
+.main_sidebar img {
   height: 130px;
   width: 130px;
-  background-color: #ff80ab;
+  background-color: #2f4db1;
   border-radius: 50%;
   margin: 0 auto 20px;
   display: block;
 }
+
 .main_sidebar {
+  flex: 0 0 180px;
   width: 180px;
-  height: 100%;
-  background-color: rgb(159, 159, 255);
+  height: auto;
+  background-color: #2f4db1;
   display: flex;
   flex-direction: column;
+  align-self: stretch;
 }
 
 .main_sidebar div {
@@ -46,67 +52,206 @@ main {
 
 .main_sidebar ul li {
   padding: 15px;
+  color: #ffffff;
 }
 
 /* ============================= */
-.div_mark{
+.div_mark {
   flex: 1;
   display: flex;
   flex-direction: column;
+  max-width: 980px;
+  margin: 0 auto;
+  background: #fff;
 }
-.div_mark .title {
-  font-size: 30px;
-  margin: 30px;
-}
-form{
+
+.arlim {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-height: 86px;
+  padding: 14px 18px;
+  margin: 8px 0 20px;
+  background: #d9d9d9;
+  border: 2px solid #000;
+  border-radius: 12px;
+  width: 100%;
   flex: 1;
-  margin: 30px;
-}
-.arlim{
-  background-color: blueviolet;
-  display: flex;
-  flex-direction: row;
-  margin: 0px 30px;
-  border-radius: 15px;
-  border: 1px solid black;
-  height: 100px;
-}
-.arlim div{
-  background-color: blanchedalmond;
-  width: 20px;
-  height: 20px;
-  margin: 20px;
-}
-.arlim nav{
-  display: flex;
-  align-items: center;
-  margin-left: 20px;
-}
-form .caremodify{
-  display: flex;
-  flex-direction: column;
-  background-color: beige;
-  border: 1px solid black;
-}
-form .caremodify div{
-  display: flex;
-  margin: 0px;
-  background-color: rgb(255, 172, 46);
-  height: 50px;
 }
 
-form .caremodify div div{
-  margin-right: 50px;
-  align-items: center;
-  border: 1px solid black;
-  width: 50px;
-}
-form .caremodify div nav ul li{
-  list-style-type: none;
+.arlim nav {
+  flex: 1;
 }
 
-.name_date{
+.arlim nav ul {
+  list-style: none;
+}
+
+.arlim nav ul li {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+form {
+  margin: 0 0 40px;
+}
+
+form>div:first-child {
+  border: 2px solid #000;
+  border-bottom: none;
+  background: #fff;
+}
+
+form>div:first-child>div {
+  padding: 10px 14px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.caremodify {
+  display: block;
+  border: 2px solid #000;
+  background: #fff;
+}
+
+.member {
+  border-top: 2px solid #000;
+}
+
+.member:first-child {
+  border-top: 2px solid #000;
+}
+
+.member>ul {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  align-items: center;
+  min-height: 58px;
+}
+
+.member>ul>.info {
   display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  background: #fff;
+  border-right: 2px solid #000;
+  font-weight: 600;
+}
+
+.member>ul>.myinfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+}
+
+.member>ul>.myinfo>ul {
+  display: grid;
+  gap: 8px;
+  width: 100%;
+}
+
+.member>ul>.myinfo>ul>li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.member>ul>.myinfo>ul>li input {
+  flex: 1;
+}
+
+.myinfo input[type="text"] {
+  height: 36px;
+  padding: 0 10px;
+  border: 2px solid #000;
+  border-radius: 6px;
+  outline: none;
+  background: #fff;
+}
+
+.myinfo input[type="password"] {
+  height: 36px;
+  padding: 0 10px;
+  border: 2px solid #000;
+  border-radius: 6px;
+  outline: none;
+  background: #fff;
+}
+
+.myinfo input[type="email"] {
+  height: 36px;
+  padding: 0 10px;
+  border: 2px solid #000;
+  border-radius: 6px;
+  outline: none;
+  background: #fff;
+}
+
+.myinfo input::placeholder {
+  color: #9aa0a6;
+}
+
+.myinfo button {
+  height: 32px;
+  padding: 0 12px;
+  border: 2px solid #2f4db1;
+  background: #2f4db1;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+
+
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 500;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  top: 0px;
+  left: 50%;
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  border: 2px solid #000;
+  max-width: 400px;
+  width: 100%;
   text-align: center;
+  justify-content: center;
+  position: absolute;
+  transform: translateX(-50%);
 }
 
+.modal-content p {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.modal-buttons .btn,
+.modal-content button {
+  padding: 10px 22px;
+  border-radius: 10px;
+  border: 2px solid #2f4db1;
+  background: #2f4db1;
+  color: #fff;
+  cursor: pointer;
+}

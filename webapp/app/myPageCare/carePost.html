@@ -9,13 +9,13 @@
   <link rel="stylesheet" href="./../../assets/css/footer.css">
   <script defer src="./../../assets/js/main/include.js"></script>
   <link rel="stylesheet" href="./../../assets/css/myPageCare/carePost.css">
+  <script defer src="./../../assets/js/myPageCare/carePost.js"></script>
 </head>
 
 <body>
   <div id="header"></div>
   <main>
     <nav class="main_sidebar">
-      <div></div>
       <ul>
         <li><a href="./careProfile.html"><img src="./../../assets/img/myPageNormal/normalMember.jpg" alt="#"></a></li>
         <li><a href="./careModify.html">개인정보 수정</a></li>
@@ -29,61 +29,124 @@
       </ul>
     </nav>
 
-    <div class="div_mark">
-      <div class="title">게시글 관리 </div>
-      <nav class="div_choose">
-        <ul>
-          <li>작성한 게시글 목록</li>
-        </ul>
+    <form action="" method="get">
+      <div class="div_mark">
+        <div class="title">게시글 관리</div>
+        <nav class="div_choose">
+          <ul>
+            <li>작성한 게시글 목록</li>
+          </ul>
+        </nav>
+        <nav class="mark_nav">
+          <ul>
+            <li><input type="checkbox"></li>
+            <li class="name">
+              <div>작성자</div>
+            </li>
+            <li class="posttitle">
+              <div>제목</div>
+            </li>
+            <li class="day">
+              <div>날짜</div>
+            </li>
+          </ul>
+        </nav>
+        <nav class="mark_list">
+          <ul>
+            <li><input type="checkbox"></li>
+            <li class="name"><a href="">
+                <div>작성자</div>
+              </a></li>
+            <li class="posttitle"><a href="">
+                <div>제목</div>
+              </a></li>
+            <li class="day"><a href="">
+                <div>날짜</div>
+              </a></li>
+          </ul>
+        </nav>
+        <nav class="mark_list">
+          <ul>
+            <li><input type="checkbox"></li>
+            <li class="name"><a href="">
+                <div>작성자</div>
+              </a></li>
+            <li class="posttitle"><a href="">
+                <div>제목</div>
+              </a></li>
+            <li class="day"><a href="">
+                <div>날짜</div>
+              </a></li>
+          </ul>
+        </nav>
+        <nav class="mark_list">
+          <ul>
+            <li><input type="checkbox"></li>
+            <li class="name"><a href="">
+                <div>작성자</div>
+              </a></li>
+            <li class="posttitle"><a href="">
+                <div>제목</div>
+              </a></li>
+            <li class="day"><a href="">
+                <div>날짜</div>
+              </a></li>
+          </ul>
+        </nav>
+        <nav class="mark_list">
+          <ul>
+            <li><input type="checkbox"></li>
+            <li class="name"><a href="">
+                <div>작성자</div>
+              </a></li>
+            <li class="posttitle"><a href="">
+                <div>제목</div>
+              </a></li>
+            <li class="day"><a href="">
+                <div>날짜</div>
+              </a></li>
+          </ul>
+        </nav>
 
-      </nav>
-      <nav class="mark_nav">
-        <input type="checkbox">
-        <ul>
-          <div>
-            <li>작성자</li>
-          </div>
-          <li>제목</li>
-          <li>날짜</li>
-        </ul>
-      </nav>
-
-      <div class="post_list">
-        <input type="checkbox">
-        <ul>
-          <li>아무개</li>
-          <li><a href="#">안녕하세요</a></li>
-          <li>2025-08-02</li>
-
-        </ul>
+        <nav class="page">
+          <ul>
+            <a href="">
+              <li>&lt;</li>
+            </a>
+            <a href="">
+              <li>1</li>
+            </a>
+            <a href="">
+              <li>2</li>
+            </a>
+            <a href="">
+              <li>3</li>
+            </a>
+            <a href="">
+              <li>4</li>
+            </a>
+            <a href="">
+              <li>&gt;</li>
+            </a>
+          </ul>
+        </nav>
+        <div class="div_delete">
+          <button>삭제</button>
+        </div>
       </div>
+    </form>
 
-      <div class="post_list">
-        <input type="checkbox">
-        <ul>
-          <li>아무개</li>
-          <li><a href="#">읽어주세요 급함!!!!</a></li>
-          <li>2025-08-02</li>
-        </ul>
-      </div>
-      <nav class="page">
-        <ul>
-          <li>&lt;</li>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>&gt;</li>
-        </ul>
-
-      </nav>
-      <div class="div_delete">
-        <button>삭제</button>
+  </main>
+  <div class="modal" id="deleteModal">
+    <div class="modal_box">
+      <p>정말로 게시글을 삭제하시겠습니까?</p>
+      <div class="modal_buttons">
+        <button id="confirmDelete">확인</button>
+        <button id="cancelDelete">취소</button>
       </div>
     </div>
-  </main>
+  </div>
   <div id="footer"></div>
-
 </body>
 
 </html>

@@ -117,3 +117,23 @@ input {
   color: white;
   border-radius: 8px;
 }
+
+.alert {
+  display: none;
+}
+
+.error_box,
+.error_box_msg {
+  display: none;
+  padding-left: 77px;
+}
+
+.error_phone,
+.error_msg {
+  color: red;
+  font-size: 12px;
+  /* border: 1px solid black; */
+}
+.okay_msg {
+  font-size: 12px;
+}
