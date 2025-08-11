@@ -134,7 +134,7 @@ form {
 
 .checkmodal {
   display: none;
-  position: fixed;
+  position: fixed; 
   top: 0;
   width: 900px;
   height: 400px;
@@ -146,7 +146,8 @@ form {
 }
 
 .modal_box {
-  background-color: aqua;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
   text-align: center;
   padding: 30px;
   border-radius: 30px;

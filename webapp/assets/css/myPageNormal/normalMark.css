@@ -2,7 +2,12 @@
   margin: 0;
   padding: 0;
 }
-
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
 main {
   width: 100%;
   height: calc(100vh - 200px);
@@ -12,66 +17,81 @@ main {
 .main_sidebar {
   width: 180px;
   height: 100%;
-  background-color: rgb(159, 159, 255);
+  background-color: #2f4db1;
+  color: #fff;
   display: flex;
   flex-direction: column;
 }
 
 .main_sidebar ul li img {
-  height: 150px;
-  width: 150px;
+  height: 130px;
+  width: 130px;
   border-radius: 100%;
+  margin: 0 auto 20px;
 }
 
 .main_sidebar ul li {
-  padding: 15px;
-  border-bottom: 1px solid black;
+  padding: 12px 20px;
 }
 
 /* ============================= */
-.div_mark{
-  flex:1;
+.div_mark {
+  flex: 1;
   display: flex;
   flex-direction: column;
 }
-.div_mark .title{
+
+.div_mark .title {
   font-size: 30px;
   margin: 30px;
 }
-form{
+
+form {
   width: 100%;
 }
-.mark_nav{
+
+.mark_nav {
   display: flex;
-  margin: 100px 150px 0px 150px;
+  margin: 30px 150px 0px 150px;
   height: 50px;
   align-items: center;
   background-color: rgb(191, 201, 201);
   border-top: 1px solid black;
   border-bottom: 1px solid black;
 }
-.mark_nav ul{
+
+.mark_nav ul {
+  width: 100%;
   display: flex;
+  justify-content: space-between
 }
 
-.mark_nav ul li{
+.mark_nav ul li {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgb(191, 201, 201);
 }
-.mark_nav input{
+
+.mark_nav input {
   margin: 0px 30px;
   width: 30px;
   height: 30px;
 }
-.name div{
+
+.name_col div,
+.name div {
   width: 100px;
   text-align: center;
 }
+
+.location_col div,
 .location div {
   width: 1000px;
   text-align: center;
 }
+
+.phone_col div,
 .phone div {
   width: 200px;
   text-align: center;
@@ -80,44 +100,55 @@ form{
 .mark_list {
   display: flex;
   margin: 0px 150px;
-  height: 50px;
+  background-color: rgb(214, 236, 236);
+  background-color: pink;
+  flex-direction: column;
+  height: 400px;
+}
+
+.mark_list li {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  height: 50px;
   background-color: rgb(214, 236, 236);
   border-bottom: 1px solid black;
-}
-.mark_list ul {
-  display: flex;
+
 }
 
-.mark_list ul li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.mark_list li input,
+.mark_list li div,
+.mark_list li a {
+  background-color: rgb(255, 255, 255);
 }
 
-.mark_list input {
+.checkbox_li {
   margin: 0px 30px;
   width: 30px;
   height: 30px;
 }
 
-.page{
+.page {
+  margin-top: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgb(255, 255, 255);
 }
-.page ul{
-  display: flex;
-  list-style-type: none;
-}
-.page ul li{
+
+.page li {
   margin: 10px;
+  font-size: 20px;
+  background-color: rgb(255, 255, 255);
 }
-.div_delete{
+
+.div_delete {
   display: flex;
   justify-content: center;
 }
+
 button {
+  margin: 10px;
   background-color: red;
   color: white;
   width: 80px;

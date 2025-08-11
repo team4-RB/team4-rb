@@ -4,7 +4,8 @@ const deletebutton = document.querySelector('.button_delete');
 
 const checkmodal = document.querySelector('.checkmodal');
 
-deletebutton.addEventListener('click', function () {
+deletebutton.addEventListener('click', function (e) {
+  e.preventDefault();
   checkmodal.style.display = 'block';
 });
 cancle.addEventListener('click', function () {

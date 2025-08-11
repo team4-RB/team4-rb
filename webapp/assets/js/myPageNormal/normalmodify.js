@@ -12,24 +12,39 @@ const pwmodal = document.getElementById("pwbutton");
 
 const modalclose = document.getElementById("saveConfirmBtn");
 
-addressmodal.addEventListener('click', function () {
+addressmodal.addEventListener('click', function(e) {
+  e.preventDefault();
   openaddress.style.display = 'block';
 });
 mailmodal.addEventListener('click', function(e) {
   e.preventDefault();
   openmail.style.display = 'block';
 });
-phonemodal.addEventListener('click', function () {
+phonemodal.addEventListener('click', function(e) {
+  e.preventDefault();
   openphone.style.display = 'block';
 });
-emailmodal.addEventListener('click', function () {
+emailmodal.addEventListener('click', function(e) {
+  e.preventDefault();
   openemail.style.display = 'block';
 });
-pwmodal.addEventListener('click', function () {
+pwmodal.addEventListener('click', function(e) {
+  e.preventDefault();
   openpw.style.display = 'block';
 });
 
 function openmailModalClose(){
-    openmail.style.display = 'none';
-  console.log("우편모달확인버튼눌림");
+  openmail.style.display = 'none';
+}
+function openaddressModalClose(){
+  openaddress.style.display = 'none';
+}
+function openphoneModalClose(){
+  openphone.style.display = 'none';
+}
+function openpwModalClose(){
+  openpw.style.display = 'none';
+}
+function openemailModalClose(){
+  openemail.style.display = 'none';
 }

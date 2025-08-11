@@ -40,7 +40,7 @@ function showCards(num, value){
       let c =` ` + (num + 1) + ` ` + (value + 1) + ` ` + (i + 1);
 
       let str = "";
-      str += `<a href="/team04-RB_frontend/webapp/app/restaurant/restaurantDetail.html?restaurant=`+ i +`"><div class="restaurant_name">` + restaurants[i][0];
+      str += `<a href="./../../../app/restaurant/restaurantDetail.html?restaurant=`+ i +`"><div class="restaurant_name">` + restaurants[i][0];
       str += c; // 좌표 확인용
       str += `</div></a><div class="restaurant_introduce"><div class="restaurant_info"><div>` + `⌂ ` + restaurants[i][1];
       str += `</div><div>` + `⌂ ` + restaurants[i][2];
