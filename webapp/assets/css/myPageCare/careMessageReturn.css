@@ -129,6 +129,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .mark_list input {
@@ -193,16 +194,15 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0,0,0,0.45);
   z-index: 1000;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal_bg.open {
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
-
 
 .modal_box {
   width: 420px;
@@ -277,11 +277,6 @@ main {
   cursor: pointer;
 }
 
-.btn_reply {
-  background: #2f4db1;
-  color: #fff;
-}
-
 .btn_delete {
   background: #fff;
   color: #ff0400;
@@ -333,13 +328,6 @@ main {
   cursor: pointer;
 }
 
-.modal_button .btn_send,
-.modal_button .btn_confirm,
-.confirm_buttons .btn_confirm {
-  background: #2f4db1;
-  color: #fff;
-}
-
 .modal_button .btn_cancel,
 .confirm_buttons .btn_cancel {
   background: #fff;
@@ -352,4 +340,9 @@ main {
   text-align: center;
   font-size: 16px;
   color: #111;
+}
+
+.btn_confirm {
+  background-color: #2f4db1;
+  color: white;
 }
