@@ -65,7 +65,10 @@ document.addEventListener('DOMContentLoaded', function () {
   sendBtn?.addEventListener('click', () => {
     closeSendModal();
     openStatusModal('쪽지를 보냈습니다.');
+    document.getElementById('message_textarea').value = '';
   });
+
+
 
   const deleteConfirmModal = $('#deleteMsgModal');
   function openDeleteConfirm() { deleteConfirmModal?.classList.add('open'); }
