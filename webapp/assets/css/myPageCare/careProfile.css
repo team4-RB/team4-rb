@@ -12,7 +12,7 @@
 }
 
 body {
-  background-color: #cbe3ff;
+  background-color: #ffffff;
 }
 
 main {
@@ -42,6 +42,12 @@ main {
 }
 
 .sidebar li {
+  padding: 12px 20px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.sidebar li a {
   padding: 12px 20px;
   cursor: pointer;
   color: #ffffff;
@@ -86,9 +92,10 @@ main {
   margin-bottom: 0px;
   padding: 5px 10px;
   background-color: white;
-  border: 1px solid #ccc;
   cursor: pointer;
   border-radius: 5px;
+  align-self: flex-end;
+
 }
 
 .caremodify {
@@ -181,6 +188,8 @@ main {
   padding: 5px 10px;
   border-radius: 6px;
   cursor: pointer;
+  background-color: #2f4db1;
+  color: white;
 }
 
 .email_detail {
@@ -198,6 +207,8 @@ main {
   padding: 5px 10px;
   border-radius: 6px;
   cursor: pointer;
+  background-color: #2f4db1;
+  color: white;
 }
 
 .introduce_detail {

@@ -1,67 +1,72 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const deleteButton = document.querySelector('.btn_list_delete');
-  const deleteModal = document.getElementById('deleteModal');
-  const cancelDeleteButton = document.getElementById('cancelDelete');
-  const confirmDeleteButton = document.getElementById('confirmDelete');
+  var delBtn = document.querySelector('.btn_list_delete');
+  var deleteModal = document.getElementById('deleteModal');
+  var checkModal = document.getElementById('checkModal');
+  var doneModal = document.getElementById('chek_deleteModal');
 
-  // deleteButton.addEventListener('click', function (e) {
-  //   e.preventDefault();
-  //   deleteModal.classList.add('open');
-  // });
-  cancelDeleteButton.addEventListener('click', function () {
-    deleteModal.classList.remove('open');
-  });
-  confirmDeleteButton.addEventListener('click', function () {
-    console.log('게시글 삭제 완료');
-    deleteModal.classList.remove('open');
-  });
+  var cancelDeleteButton = document.getElementById('cancelDelete');
+  var confirmDeleteButton = document.getElementById('confirmDelete');
+  var confirmDeleteCheckButton = document.getElementById('confirmDelete_check');
+  var doneConfirmButton = document.getElementById('check_confirmDelete');
 
-  const master = document.querySelector('.mark_nav input[type="checkbox"]');
-  const rows = Array.from(document.querySelectorAll('.mark_list input[type="checkbox"]'));
+  var masterCB = document.querySelector('.mark_nav input[type="checkbox"]');
+  var rows = Array.prototype.slice.call(document.querySelectorAll('.mark_list input[type="checkbox"]'));
 
-  function refreshMaster() {
-    const total = rows.length;
-    const checked = rows.filter(cb => cb.checked).length;
-
-    if (checked === 0) {
-      master.checked = false;
-      master.indeterminate = false;
-    } else if (checked === total) {
-      master.checked = true;
-      master.indeterminate = false;
-    } else {
-      master.checked = false;
+  function countChecked() {
+    var c = 0;
+    for (var i = 0; i < rows.length; i++) {
+      if (rows[i].checked) c++;
     }
+    return c;
   }
 
+  function refreshMaster() {
+    var total = rows.length;
+    var checked = countChecked();
+    if (checked === 0) {
+      masterCB.checked = false;
+    } else if (checked === total) {
+      masterCB.checked = true;
+    } else {
+      masterCB.checked = false;
+    }
+  }
   refreshMaster();
 
-  master.addEventListener('change', () => {
-    rows.forEach(cb => (cb.checked = master.checked));
-    master.indeterminate = false;
+  masterCB && masterCB.addEventListener('change', function () {
+    for (var i = 0; i < rows.length; i++) rows[i].checked = masterCB.checked;
   });
-
 
   rows.forEach(cb => cb.addEventListener('change', refreshMaster));
 
-  deleteConfirmModal?.addEventListener('click', e => {
-    if (e.target === deleteConfirmModal) closeDeleteConfirm();
+  function openM(m) { m && m.classList.add('open'); }
+  function closeM(m) { m && m.classList.remove('open'); }
+
+  delBtn && delBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    if (countChecked() === 0) {
+      openM(checkModal);
+    } else {
+      openM(deleteModal);
+    }
   });
 
-  window.confirmDelete = function () {
-    closeDeleteConfirm();
-    openStatusModal('쪽지가 삭제되었습니다.');
-  };
 
-  deleteButton?.addEventListener('click', e => {
-    e.preventDefault();
-    deleteModal.classList.add('open');
-    const checked = getRowCbs().filter(cb => cb.checked);
-    if (checked.length === 0) {
-      openStatusModal('삭제할 쪽지를 선택하세요.');
-      return;
-    }
-    openDeleteConfirm();
+  cancelDeleteButton && cancelDeleteButton.addEventListener('click', function () {
+    closeM(deleteModal);
+  });
+
+  confirmDeleteButton && confirmDeleteButton.addEventListener('click', function () {
+    closeM(deleteModal);
+    console.log('게시글 삭제 완료');
+    openM(doneModal);
+  });
+
+  confirmDeleteCheckButton && confirmDeleteCheckButton.addEventListener('click', function () {
+    closeM(checkModal);
+  });
+
+  doneConfirmButton && doneConfirmButton.addEventListener('click', function () {
+    closeM(doneModal);
   });
 });
-

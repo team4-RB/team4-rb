@@ -1,4 +1,5 @@
-* { margin: 0;
+* {
+  margin: 0;
   padding: 0;
   font-family: 'pretendard-regular';
 }
@@ -6,11 +7,12 @@
 @font-face {
   font-family: 'Pretendard-Regular';
   src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-  font-weight: 400; font-style: normal;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
-  background-color: #cbe3ff;
+  background-color: #ffffff;
 }
 
 main {
@@ -21,13 +23,8 @@ main {
 .sidebar {
   width: 180px;
   background-color: #2f4db1;
-  color: #fff;
+  color: white;
   padding: 20px 0;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding-left: 0;
 }
 
 .sidebar img {
@@ -39,12 +36,23 @@ main {
   display: block;
 }
 
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
 .sidebar li {
   padding: 12px 20px;
-  font-size: 15px;
   cursor: pointer;
   color: #ffffff;
 }
+
+.sidebar li a {
+  padding: 12px 20px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
 
 /* *************************** */
 .exit-section {
