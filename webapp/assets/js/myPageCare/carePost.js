@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const deleteButton = document.querySelector('.div_delete button');
+  const deleteButton = document.querySelector('.btn_list_delete');
   const deleteModal = document.getElementById('deleteModal');
   const cancelDeleteButton = document.getElementById('cancelDelete');
   const confirmDeleteButton = document.getElementById('confirmDelete');
@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', function () {
     deleteModal.classList.remove('open');
   });
 
-  const master = document.querySelector('.mark_nav input[type="checkbox"]'); 
-  const rows = Array.from(document.querySelectorAll('.mark_list input[type="checkbox"]')); 
+  const master = document.querySelector('.mark_nav input[type="checkbox"]');
+  const rows = Array.from(document.querySelectorAll('.mark_list input[type="checkbox"]'));
 
   function refreshMaster() {
     const total = rows.length;
@@ -41,6 +41,9 @@ document.addEventListener('DOMContentLoaded', function () {
     master.indeterminate = false;
   });
 
+
+  
+  
   rows.forEach(cb => cb.addEventListener('change', refreshMaster));
 });
 
