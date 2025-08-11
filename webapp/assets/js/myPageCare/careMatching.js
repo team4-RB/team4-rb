@@ -1,53 +1,99 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const addButton = document.querySelector('.div_add button');
-  const matchingAddModal = document.getElementById('matching_add');
-  const cancelModalButton = document.getElementById('cansel_modal');
-  const months = document.querySelectorAll('.month');
-  const element = document.getElementById('active');
+  let monthBtns = document.querySelectorAll('.month');
+  let listBox = document.querySelector('.matching_list');
+  let addBtn = document.querySelector('.div_add button');
+  let addModal = document.getElementById('matching_add');
+  let cancelBtn = document.getElementById('cansel_modal');
+  let saveBtn = document.getElementById('success_modal');
+  let doneModal = document.getElementById('complete_modal');
+  let okBtn = document.getElementById('success_button');
+  let form = addModal.querySelector('form');
 
-  if (addButton) {
-    addButton.addEventListener('click', function () {
-      matchingAddModal.style.display = 'flex';
-    });
-  }
+  let data = JSON.parse(localStorage.getItem('match_data') || '{}');
+  let nowMonth = new Date().getMonth() + 1;
 
-
-
-  months.forEach(month => {
-    month.addEventListener('click', function (event) {
-      months.forEach(m => {
-        if (m !== month) {
-          m.removeAttribute("id");
-        }
-      });
-      if (month.id !== "active") {
-        month.id = "active";
-      } else {
-        month.removeAttribute("id");
-      }
+  monthBtns.forEach(function (btn, idx) {
+    btn.addEventListener('click', function () {
+      nowMonth = idx + 1;
+      monthBtns.forEach(b => b.removeAttribute('id'));
+      btn.id = 'active';
+      showList();
     });
   });
 
+  monthBtns[nowMonth - 1].id = 'active';
+  showList();
 
-  if (cancelModalButton) {
-    cancelModalButton.addEventListener('click', function (e) {
-      e.preventDefault();
-      matchingAddModal.style.display = 'none';
-    });
-  }
-  const successModalButton = document.getElementById('success_modal');
-  const completeModal = document.getElementById('complete_modal');
-  if (successModalButton) {
-    successModalButton.addEventListener('click', function (e) {
-      e.preventDefault();
-      matchingAddModal.style.display = 'none';
-      completeModal.style.display = 'flex';
-    });
-  }
-  const confirmButton = document.getElementById('success_button');
-  if (confirmButton) {
-    confirmButton.addEventListener('click', function () {
-      completeModal.style.display = 'none';
+  addBtn.addEventListener('click', function () {
+    addModal.style.display = 'flex';
+  });
+
+  cancelBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    addModal.style.display = 'none';
+  });
+
+  saveBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    let name = form.querySelectorAll('input')[0].value.trim();
+    let date = form.querySelectorAll('input')[1].value.trim();
+    let time = form.querySelectorAll('input')[2].value.trim();
+    let point = form.querySelectorAll('input')[3].value.trim();
+
+    if (!name || !date || !time || !point) {
+      alert('Please fill all!');
+      return;
+    }
+
+    let dateObj = new Date(date);
+    let monthNum = dateObj.getMonth() + 1;
+    let dayText = dateObj.getDate() + '일';
+
+    let newItem = {
+      day: dayText,
+      name: name,
+      time: '이용 시간: ' + time,
+      point: '포인트 사용: ' + Number(point).toLocaleString(),
+      status: '완료 / 취소 / 진행중'
+    };
+
+    if (!data[monthNum]) data[monthNum] = [];
+    data[monthNum].push(newItem);
+    localStorage.setItem('match_data', JSON.stringify(data));
+
+    addModal.style.display = 'none';
+    doneModal.style.display = 'flex';
+
+    nowMonth = monthNum;
+    monthBtns.forEach(b => b.removeAttribute('id'));
+    monthBtns[nowMonth - 1].id = 'active';
+    showList();
+
+    form.reset();
+  });
+
+  okBtn.addEventListener('click', function () {
+    doneModal.style.display = 'none';
+  });
+
+  function showList() {
+    listBox.innerHTML = '';
+    let arr = data[nowMonth] || [];
+    if (arr.length === 0) {
+      listBox.innerHTML = '<li class="matching"><div style="width:100%; text-align:center;">등록된 일정 없음</div></li>';
+      return;
+    }
+    arr.forEach(function (item) {
+      let li = document.createElement('li');
+      li.className = 'matching';
+      li.innerHTML = `
+        <div class="matching_day">${item.day}</div>
+        <div class="matching_member">${item.name}</div>
+        <div class="matching_time">${item.time}</div>
+        <div class="matching_point">${item.point}</div>
+        <div class="check">${item.status}</div>
+      `;
+      listBox.appendChild(li);
     });
   }
 });

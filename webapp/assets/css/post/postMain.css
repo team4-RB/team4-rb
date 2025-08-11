@@ -9,7 +9,7 @@ main {
   display: flex;
 }
 form{
-  background-color: rgb(233, 145, 30);
+  background-color: rgb(255, 255, 255);
   display: flex;
   flex: 1;
   margin: 10px 100px;
@@ -140,6 +140,9 @@ form{
   width: 100px;
   height: 30px;
   background-color: blue;
+  color: white;
+}
+.search a{
   color: white;
 }
 

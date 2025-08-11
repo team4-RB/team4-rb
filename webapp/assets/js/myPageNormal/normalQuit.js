@@ -28,5 +28,8 @@ function checkmodal(){
   modal.style.display='block';
 }
 
-
+function canclemodal() {
+  e.preventDefault();
+  checkmodal.style.display = 'none';
+}
 

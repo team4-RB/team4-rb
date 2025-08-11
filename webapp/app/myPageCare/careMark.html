@@ -120,12 +120,30 @@
           </ul>
         </nav>
         <div class="div_delete">
-          <button>찜 삭제</button>
+          <button type="button" id="btnDelete">찜 삭제</button>
         </div>
       </div>
     </form>
 
   </main>
+    <div class="modal" id="deleteModal">
+    <div class="modal_box">
+      <p>찜한 가게를 삭제하시겠습니까?</p>
+      <div class="modal_buttons">
+        <button id="confirmDelete">확인</button>
+        <button id="cancelDelete">취소</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="chek_deleteModal">
+    <div class="modal_box">
+      <p>찜이 삭제 되었습니다.</p>
+      <div class="modal_buttons">
+        <button id="check_confirmDelete">확인</button>
+      </div>
+    </div>
+  </div>
   <div id="footer"></div>
 </body>
 

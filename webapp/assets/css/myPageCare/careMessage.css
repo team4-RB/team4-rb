@@ -1,34 +1,65 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  font-family: 'pretendard-regular';
+}
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: #ffffff;
+}
 
 main {
-  width: 100%;
-  height: calc(100vh - 200px);
   display: flex;
-  background: #ffffff;
+  min-height: calc(100vh - 220px);
 }
 
 .sidebar {
   width: 180px;
   background-color: #2f4db1;
+  color: white;
+  padding: 20px 0;
 }
-.sidebar ul li {
-  list-style: none;
-  padding: 15px;
-  color: #ffffff;
-}
-.sidebar ul li img {
-  width: 150px; height: 150px; border-radius: 50%;
+
+.sidebar img {
+  height: 130px;
+  width: 130px;
+  background-color: #ff80ab;
+  border-radius: 50%;
+  margin: 0 auto 20px;
   display: block;
 }
+
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidebar li {
+  padding: 12px 20px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.sidebar li a {
+  padding: 12px 20px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
 /*****************/
 .div_mark {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
+
 .div_mark .title {
   font-size: 30px;
   margin: 30px;
@@ -42,27 +73,29 @@ main {
   list-style: none;
   display: flex;
   gap: 10px;
-  padding: 50px 0 0 150px;
+  padding: 50px 0 5px 250px;
 }
 
 .mark_nav {
-  margin: 0 150px;
-  height: 50px;
-  display: flex; align-items: center;
-  background: rgb(191, 201, 201);
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-}
-.mark_nav ul {
-  list-style: none;
   display: flex;
-  width: 100%;
-}
-.mark_nav ul li { 
-  flex: none;
-  display:flex;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1000px;
+  height: 50px;
   align-items: center;
+  background-color: rgb(191, 201, 201);
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.mark_nav ul {
+  display: flex;
+}
+
+.mark_nav ul li {
+  display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .mark_nav input {
@@ -72,19 +105,23 @@ main {
 }
 
 .mark_list {
-  margin: 0 150px;
+  display: flex;
+  margin: 0px auto;
+  width: 80%;
+  max-width: 1000px;
   height: 50px;
-  display: flex; align-items: center;
-  background: rgb(215, 238, 238);
-  border-bottom: 1px solid #000;
-  cursor: pointer;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid black;
 }
+
 .mark_list:hover {
   background: #eaf2f2;
 }
+
 .mark_list ul {
   list-style: none;
-  display: flex; 
+  display: flex;
   width: 100%;
 }
 
@@ -97,19 +134,19 @@ main {
 .mark_list input {
   width: 30px;
   height: 30px;
-  margin: 0 30px; 
-  cursor: default;
+  margin: 0 30px;
 }
 
-.name div{
+.name div {
   width: 100px;
   text-align: center;
 }
 
 .messeagetitle div {
-  width: 800px;
+  width: 400px;
   text-align: center;
 }
+
 .day div {
   width: 200px;
   text-align: center;
@@ -123,20 +160,26 @@ main {
 .page {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
+
 .page ul {
   list-style: none;
   display: flex;
 }
+
 .page ul li {
   margin: 10px;
 }
 
 .div_delete button {
   margin-left: 150px;
-  width: 80px; height: 40px;
-  background: #e53935; color: #fff;
-  border: none; border-radius: 15px;
+  width: 80px;
+  height: 40px;
+  background: #e53935;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
   cursor: pointer;
   font-weight: 700;
 }
@@ -148,8 +191,9 @@ main {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.45);
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
   z-index: 1000;
 }
 
@@ -164,7 +208,7 @@ main {
   width: 420px;
   background: #fff;
   border-radius: 14px;
-  box-shadow: 0 20px 60px rgba(0,0,0,.25);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .25);
   overflow: hidden;
 }
 
@@ -176,9 +220,11 @@ main {
   font-weight: 700;
   font-size: 20px;
 }
+
 .modal_title {
   color: #111;
 }
+
 .modal_close {
   position: absolute;
   right: 16px;
@@ -190,12 +236,15 @@ main {
 .modal_info {
   padding: 16px 18px;
 }
+
 .sender_info {
   font-size: 14px;
   color: #444;
   margin-bottom: 10px;
 }
-.sender_id { color: #2f4db1;
+
+.sender_id {
+  color: #2f4db1;
   font-weight: 700;
   text-decoration: none;
 }
@@ -231,19 +280,19 @@ main {
 .btn_reply {
   background: #2f4db1;
   color: #fff;
-}    
+}
 
 .btn_delete {
   background: #fff;
   color: #ff0400;
   border: 2px solid #ff0400;
-}  
+}
 
 .write_modal {
   width: 420px;
 }
 
-#message_textarea{
+#message_textarea {
   width: 100%;
   min-height: 220px;
   padding: 12px;

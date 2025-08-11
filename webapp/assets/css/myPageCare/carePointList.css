@@ -3,21 +3,30 @@
   padding: 0;
   font-family: 'pretendard-regular';
 }
+
 @font-face {
   font-family: 'Pretendard-Regular';
   src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
+
 body {
-  background-color: #e6f0ff;
-  color: #222;
+  background-color: #ffffff;
 }
 
-header, footer {
-  height: 100px;
-  background-color: black;
+main {
+  display: flex;
+  min-height: calc(100vh - 220px);
 }
+
+.sidebar {
+  width: 180px;
+  background-color: #2f4db1;
+  color: white;
+  padding: 20px 0;
+}
+
 .sidebar img {
   height: 130px;
   width: 130px;
@@ -26,37 +35,24 @@ header, footer {
   margin: 0 auto 20px;
   display: block;
 }
-main {
-  display: flex;
-}
-
-.sidebar {
-  width: 180px;
-  min-height: 700px;
-  background-color: #2f4db1;
-  color: white;
-  padding: 20px 0;
-}
-
-.sidebar .profile {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  background-color: #ff80ab;
-  margin: 0 auto 20px;
-}
 
 .sidebar ul {
   list-style: none;
-  padding: 0;
+  padding-left: 0;
 }
 
-.sidebar ul li {
+.sidebar li {
   padding: 12px 20px;
-  font-size: 15px;
   cursor: pointer;
   color: #ffffff;
 }
+
+.sidebar li a {
+  padding: 12px 20px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
 /* ************** */
 .point-history {
   flex: 1;

@@ -12,7 +12,7 @@
 }
 
 body {
-  background-color: #cbe3ff;
+  background-color: #ffffff;
 }
 
 main {
@@ -47,6 +47,12 @@ main {
   color: #ffffff;
 }
 
+.sidebar li a {
+  padding: 12px 20px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
 /* ********************* */
 .div_mark {
   flex: 1;
@@ -54,6 +60,7 @@ main {
   flex-direction: column;
   width: 100%;
 }
+
 
 .title {
   padding: 40px 100px 0px;
@@ -81,13 +88,14 @@ main {
   object-fit: cover;
 }
 
-.profile_section button {
-  margin: 0 5px;
+.profile_section input {
+  margin-bottom: 0px;
   padding: 5px 10px;
   background-color: white;
-  border: 1px solid #ccc;
   cursor: pointer;
   border-radius: 5px;
+  align-self: flex-end;
+
 }
 
 .caremodify {
@@ -180,6 +188,8 @@ main {
   padding: 5px 10px;
   border-radius: 6px;
   cursor: pointer;
+  background-color: #2f4db1;
+  color: white;
 }
 
 .email_detail {
@@ -197,6 +207,8 @@ main {
   padding: 5px 10px;
   border-radius: 6px;
   cursor: pointer;
+  background-color: #2f4db1;
+  color: white;
 }
 
 .introduce_detail {

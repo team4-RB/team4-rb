@@ -1,130 +1,57 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const $ = (sel, root = document) => root.querySelector(sel);
-  const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+const markList = document.getElementsByClassName("mark_list");
+markList[0].innerHTML = "";
 
 
-  const readModal = $('#msgModal');
-  const readCloseX = readModal?.querySelector('.modal_close');
-  function openReadModal() { readModal?.classList.add('open'); }
-  function closeReadModal() { readModal?.classList.remove('open'); }
-  window.closeMsgModal = closeReadModal;
 
-  const rows = $$('.mark_list');
-  rows.forEach(row => {
-    row.addEventListener('click', e => {
-      if (e.target.closest('input[type="checkbox"]')) return; 
-      e.preventDefault();
-      openReadModal();
-    });
-  });
+for (let i = 0; i < 8; i++) {
+  const li = document.createElement("li");
+  li.id = 'li_' + i;
 
-  readCloseX?.addEventListener('click', closeReadModal);
-  readModal?.addEventListener('click', e => {
-    if (e.target === readModal) closeReadModal();
-  });
+  let str = ``;
 
+  str += `<input class="checkbox_li" name="mark_check" type="checkbox" value = "`;
+  str += `` + i;
+  str += `"><div class="name"><div>이름` + i + `</div></div>`;
+  str += `<a class="location" href="./../restaurant/restaurantDetail.html"><div>위치</div></a>`;
+  str += `<div class="phone"><div>전화번호</div></div>`;
 
-  const sendModal = $('#sendMsgModal');
-  const sendCloseX = sendModal?.querySelector('.modal_close');
-  const sendCancel = sendModal?.querySelector('.btn_cancel');
-  const sendBtn = sendModal?.querySelector('.btn_send');
-  const replyBtn = $('#msgModal .btn_reply');
+  li.innerHTML = str;
 
-  function openSendModal() { sendModal?.classList.add('open'); }
-  function closeSendModal() { sendModal?.classList.remove('open'); }
-  window.closeSendMsgModal = closeSendModal;
+  markList[0].appendChild(li);
 
-  replyBtn?.addEventListener('click', () => {
-    closeReadModal();
-    openSendModal();
-  });
+}
 
-  sendCloseX?.addEventListener('click', closeSendModal);
-  sendCancel?.addEventListener('click', closeSendModal);
-  sendModal?.addEventListener('click', e => {
-    if (e.target === sendModal) closeSendModal();
-  });
-
-
-  const statusModal = $('#sendSuccessModal');
-  const statusMsgEl = statusModal?.querySelector('.send_message');
-  function openStatusModal(message) {
-    if (statusMsgEl) statusMsgEl.textContent = message;
-    statusModal?.classList.add('open');
-  }
-  function closeStatusModal() { statusModal?.classList.remove('open'); }
-  window.closeSendModal = function () {
-    closeSendModal();
-    closeStatusModal();
-  };
-
-  statusModal?.addEventListener('click', e => {
-    if (e.target === statusModal) closeStatusModal();
-  });
-
-  sendBtn?.addEventListener('click', () => {
-    closeSendModal();
-    openStatusModal('쪽지를 보냈습니다.');
-  });
-
-  const deleteConfirmModal = $('#deleteMsgModal');
-  function openDeleteConfirm() { deleteConfirmModal?.classList.add('open'); }
-  function closeDeleteConfirm() { deleteConfirmModal?.classList.remove('open'); }
-  window.closeDeleteModal = closeDeleteConfirm;
-
-  const deleteBtnInRead = $('#msgModal .btn_delete');
-  deleteBtnInRead?.addEventListener('click', () => {
-    closeReadModal();
-    openDeleteConfirm();
-  });
-
-  window.confirmDelete = function () {
-    closeDeleteConfirm();
-    openStatusModal('쪽지가 삭제되었습니다.');
-  };
-
-  deleteConfirmModal?.addEventListener('click', e => {
-    if (e.target === deleteConfirmModal) closeDeleteConfirm();
-  });
-
-
-  document.addEventListener('keydown', e => {
-    if (e.key !== 'Escape') return;
-    const openModals = $$('.modal_bg.open');
-    if (!openModals.length) return;
-    openModals[openModals.length - 1].classList.remove('open');
-  });
-
-  const headCb = $('.mark_nav input[type="checkbox"]');
-  const getRowCbs = () => $$('.mark_list input[type="checkbox"]');
-
-  function syncHeaderFromRows() {
-    const cbs = getRowCbs();
-    const total = cbs.length;
-    const checked = cbs.filter(cb => cb.checked).length;
-    if (!headCb) return;
-    if (total === 0) {
-      headCb.checked = false;
-      return;
+function delMarks() {
+  const checkbox = document.querySelectorAll('input[name="mark_check"]');
+  console.log(checkbox, typeof checkbox);
+  let j = 0;
+  for (i of checkbox) {
+    if (i.checked) {
+      const ll = document.getElementById("li_" + i.value);
+      console.log(document.getElementById("li_" + i.value));
+      ll.remove();
+      console.log("i값 : " + i.value);
     }
-    headCb.checked = (checked === total);
+    j++;
   }
+  const cc = document.getElementById("checkbox_col");
+  cc.checked = false;
+}
 
-  headCb?.addEventListener('change', () => {
-    getRowCbs().forEach(cb => cb.checked = headCb.checked);
-  });
-  getRowCbs().forEach(cb => cb.addEventListener('change', syncHeaderFromRows));
-  syncHeaderFromRows();
-
-
-  const mainDeleteBtn = document.querySelector('.btn_list_delete');
-  mainDeleteBtn?.addEventListener('click', e => {
-    e.preventDefault();
-    const checked = getRowCbs().filter(cb => cb.checked);
-    if (checked.length === 0) {
-      openStatusModal('삭제할 쪽지를 선택하세요.');
-      return;
+function toggleMarksAll() {
+  const cc = document.getElementById("checkbox_col");
+  const marks = document.getElementsByName("mark_check");
+  if (cc.checked) {
+    let ggggg = 0;
+    for (c of marks) {
+      c.checked = true;
+      console.log('트루라네~' + ggggg);
+      ggggg++;
     }
-    openDeleteConfirm();
-  });
-});
+  } else {
+    for (c of marks) {
+      c.checked = false;
+      console.log('뻘스.');
+    }
+  }
+}

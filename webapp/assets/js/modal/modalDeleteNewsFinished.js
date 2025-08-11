@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
   // html 문서에 모달 불러오기
-  fetch('/team04-RB_frontend/webapp/app/modal/modalDeleteNewsFinished.html')
+  fetch('./../../../app/modal/modalDeleteNewsFinished.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('modalDeleteNewsFinished').innerHTML = data;
@@ -14,6 +14,20 @@ const modalDeleteNewsFinished = document.getElementById("modalDeleteNewsFinished
 //뉴스 제목
 const newsTitle = "오늘의 뉴스";
 
+
+const link = "./../../app/admin/newsBoard.html";
+const link2 = "./../../app/admin/bannerBoard.html";
+
+function linkHref() {
+  location.href=link;
+}
+
+function cancle() {
+  linkHref();
+}
+function cancle2() {
+  location.href=link2;
+}
 // 모달이 나타나는 함수(버튼에 추가하여 사용)
 function modalDeleteNewsFinishedShow() {
   console.log("딜리트뉴스피니시드");
@@ -41,6 +55,7 @@ function modalDeleteNewsFinishedNone(){
 //확인 버튼
 function modalDeleteNewsFinishedCheck(){
   modalDeleteNewsFinishedNone();
+  linkHref();
 }
 //취소 버튼
 function modalDeleteNewsFinishedCancel(){

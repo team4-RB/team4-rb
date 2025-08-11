@@ -2,7 +2,12 @@
   margin: 0;
   padding: 0;
 }
-
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
 main {
   width: 100%;
   height: calc(100vh - 200px);
@@ -12,20 +17,21 @@ main {
 .main_sidebar {
   width: 180px;
   height: 100%;
-  background-color: rgb(159, 159, 255);
+  background-color: #2f4db1;
+  color: #fff;
   display: flex;
   flex-direction: column;
 }
 
 .main_sidebar ul li img {
-  height: 150px;
-  width: 150px;
+  height: 130px;
+  width: 130px;
   border-radius: 100%;
+  margin: 0 auto 20px;
 }
 
 .main_sidebar ul li {
-  padding: 15px;
-  border-bottom: 1px solid black;
+  padding: 12px 20px;
 }
 
 /* ============================= */
@@ -89,7 +95,7 @@ form {
   margin: 0px 150px;
   height: 50px;
   align-items: center;
-  background-color: rgb(215, 238, 238);
+  background-color: rgb(255, 255, 255);
   border-bottom: 1px solid black;
 }
 

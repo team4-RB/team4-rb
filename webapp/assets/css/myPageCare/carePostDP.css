@@ -177,7 +177,9 @@ main {
   cursor: pointer;
 }
 
+#deleteModal {
 
+}
 
 
 .modal {
@@ -242,8 +244,8 @@ main {
   color: white;
 }
 
-.btn_cancel {
-  background-color: white;
+#cansleDelete {
+  color: #FF0000;
   border: 2px solid red;
-  color: red;
+  background-color: white;
 }
