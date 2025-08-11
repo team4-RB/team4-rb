@@ -4,10 +4,10 @@ document.addEventListener('DOMContentLoaded', function () {
   const cancelDeleteButton = document.getElementById('cancelDelete');
   const confirmDeleteButton = document.getElementById('confirmDelete');
 
-  deleteButton.addEventListener('click', function (e) {
-    e.preventDefault();
-    deleteModal.classList.add('open');
-  });
+  // deleteButton.addEventListener('click', function (e) {
+  //   e.preventDefault();
+  //   deleteModal.classList.add('open');
+  // });
   cancelDeleteButton.addEventListener('click', function () {
     deleteModal.classList.remove('open');
   });
@@ -41,17 +41,27 @@ document.addEventListener('DOMContentLoaded', function () {
     master.indeterminate = false;
   });
 
-  deleteButton.addEventListener('click', e => {
+
+  rows.forEach(cb => cb.addEventListener('change', refreshMaster));
+
+  deleteConfirmModal?.addEventListener('click', e => {
+    if (e.target === deleteConfirmModal) closeDeleteConfirm();
+  });
+
+  window.confirmDelete = function () {
+    closeDeleteConfirm();
+    openStatusModal('쪽지가 삭제되었습니다.');
+  };
+
+  deleteButton?.addEventListener('click', e => {
     e.preventDefault();
+    deleteModal.classList.add('open');
     const checked = getRowCbs().filter(cb => cb.checked);
     if (checked.length === 0) {
       openStatusModal('삭제할 쪽지를 선택하세요.');
-    } else {
-      e.preventDefault();
-      deleteButton.classList.add('open');
+      return;
     }
     openDeleteConfirm();
   });
-  rows.forEach(cb => cb.addEventListener('change', refreshMaster));
 });
 

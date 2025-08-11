@@ -55,6 +55,7 @@ main {
   width: 100%;
 }
 
+
 .title {
   padding: 40px 100px 0px;
   font-size: 24px;
@@ -81,8 +82,8 @@ main {
   object-fit: cover;
 }
 
-.profile_section button {
-  margin: 0 5px;
+.profile_section input {
+  margin-bottom: 0px;
   padding: 5px 10px;
   background-color: white;
   border: 1px solid #ccc;
