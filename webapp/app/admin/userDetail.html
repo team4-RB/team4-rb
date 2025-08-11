@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="./../../assets/css/admin/sidebar.css" />
     <script defer src="./../../assets/js/main/include.js"></script>
     <script defer src="./../../assets/js/admin/admin.js"></script>
+    <script defer src="./../../assets/js/modal/modalEditName.js"></script>
+    <script defer src="./../../assets/js/modal/modalDeleteMember.js"></script>
+    <script defer src="./../../assets/js/modal/modalPointChargeLog.js"></script>
+    <link rel="stylesheet" href="./../../assets/css/modalAdmin.css">
   </head>
   <body>
     <div id="header"></div>
@@ -28,7 +32,7 @@
                 <div class="table_head_name">성명</div>
                 <div class="table_name_detail">
                   <span id="name">슬립핑</span>
-                  <button>수정</button>
+                  <button onclick="modalEditNameShow()">수정</button>
                 </div>
                 <div class="table_member_type">
                   <div class="table_member_type_title">
@@ -88,17 +92,20 @@
                 <div class="table_head_point">포인트 잔액</div>
                 <div class="table_point_detail">
                   <input type="text" readonly />
-                  <button>충전내역 조회</button>
+                  <button onclick="modalPointChargeLogShow()">충전내역 조회</button>
                 </div>
               </div>
             </div>
             <div class="delete">
-              <button type="submit" class="delete_btn">삭제</button>
+              <button type="submit" class="delete_btn"  onclick="modalDeleteMemberShow()">삭제</button>
             </div>
           </form>
         </div>
       </section>
     </main>
     <div id="footer"></div>
+    <div id="modalEditName"></div>
+    <div id="modalDeleteMember"></div>
+    <div id="modalPointChargeLog"></div>
   </body>
 </html>

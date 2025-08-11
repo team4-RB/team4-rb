@@ -12,6 +12,7 @@ const modalPointRefundLog = document.getElementById("modalPointRefundLog");
 
 // 모달이 나타나는 함수(버튼에 추가하여 사용)
 function modalPointRefundLogShow() {
+     event.preventDefault();
   console.log("모달버튼클릭");
   modalPointRefundLog.style.display = "flex";
 }
