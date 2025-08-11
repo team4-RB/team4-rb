@@ -9,6 +9,19 @@ main {
   display: flex;
   flex-direction: column;
 }
+.del{
+  display: flex;
+  justify-content: end;
+}
+.button_del{
+  margin-right: 100px;
+  width: 100px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 15px;
+  background-color: red;
+  color: white;
+}
 form {
   background-color: rgb(255, 255, 255);
   display: flex;
@@ -153,6 +166,18 @@ form {
   justify-content: center;
   align-items: center;
 }
+.exit-value {
+  flex: 1;
+  padding: 15px;
+}
+
+.exit-select {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  font-size: 15px;
+  background-color: #fff;
+}
 
 .modal_buttons {
   margin-top: 20px;
@@ -174,6 +199,48 @@ form {
 }
 
 #cancle {
+  background-color: blue;
+  color: white;
+  border: 1px solid black;
+}
+
+
+
+.notmodal {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 900px;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 10px;
+  margin-left: 30%;
+}
+
+.modal_box {
+  background-color: aqua;
+  text-align: center;
+  padding: 30px;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.modal_buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.modal_buttons button {
+  padding: 8px 20px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+#notcheck {
   background-color: blue;
   color: white;
   border: 1px solid black;

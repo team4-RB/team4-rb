@@ -63,10 +63,15 @@ form {
   border: 1px solid black;
   height: 500px;
 }
+.input textarea{
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+}
 input{
   width: 100%;
   height: 40px;
-  font-size: 20px;
+
 }
 
 
@@ -91,4 +96,45 @@ input{
   border: 1px solid black;
   background-color: blue;
   color: white;
+}
+
+
+.notmodal {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 900px;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 10px;
+  margin-left: 30%;
+}
+
+.modal_box {
+  background-color: aqua;
+  text-align: center;
+  padding: 30px;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.modal_buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.modal_buttons button {
+  padding: 8px 20px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+#notcheck {
+  background-color: blue;
+  color: white;
+  border: 1px solid black;
 }
