@@ -39,7 +39,7 @@ function modalCareAllowFinishedNone(){
 }
 //확인 버튼
 function modalCareAllowFinishedCheck(){
-  linkHref();
+  // linkHref();
   modalCareAllowFinishedNone();
 }
 //취소 버튼

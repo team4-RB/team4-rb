@@ -7,6 +7,16 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+const link = "./../../app/admin/newsBoard.html";
+
+function linkHref() {
+  location.href=link;
+}
+
+function cancle() {
+  linkHref();
+}
+
 //모달 요소 가져오기
 const modalCareModifyFinished = document.getElementById("modalCareModifyFinished");
 
@@ -26,6 +36,7 @@ function modalCareModifyFinishedShow() {
 function modalCareModifyFinishedNone(){
   modalCareModifyFinished.style.display = "none";
   document.onkeydown = null; // onkeydown 이벤트 제거
+  linkHref()
 }
 //확인 버튼
 function modalCareModifyFinishedCheck(){
@@ -36,3 +47,4 @@ function modalCareModifyFinishedCancel(){
   modalCareModifyFinishedNone();
 }
 modalCareModifyFinishedNone();
+
