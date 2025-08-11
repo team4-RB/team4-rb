@@ -19,8 +19,8 @@ function cancle() {
 }
 function loginSuccess(){
   if(id.value==='admin' && pw.value==='admin') {
-    location.href=link;
     alert("로그인 완료, 관리자 페이지 이동");
+    location.href=link;
   } else {
     alert("로그인 실패!!")
   }
