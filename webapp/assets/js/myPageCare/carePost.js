@@ -41,9 +41,17 @@ document.addEventListener('DOMContentLoaded', function () {
     master.indeterminate = false;
   });
 
-
-  
-  
+  deleteButton.addEventListener('click', e => {
+    e.preventDefault();
+    const checked = getRowCbs().filter(cb => cb.checked);
+    if (checked.length === 0) {
+      openStatusModal('삭제할 쪽지를 선택하세요.');
+    } else {
+      e.preventDefault();
+      deleteButton.classList.add('open');
+    }
+    openDeleteConfirm();
+  });
   rows.forEach(cb => cb.addEventListener('change', refreshMaster));
 });
 

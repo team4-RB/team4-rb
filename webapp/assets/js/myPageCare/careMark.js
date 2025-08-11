@@ -1,19 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const $ = (s, r = document) => r.querySelector(s);
-  const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
 
-  const master = document.getElementById('checkAll')
-    || $('.mark_nav input[type="checkbox"]');
-
-  const getRows = () => $$('.row_chk');
+  const master = document.querySelector('.mark_nav input[type="checkbox"]');
+  const rows = Array.from(document.querySelectorAll('.mark_list input[type="checkbox"]'));
 
   function refreshMaster() {
-    if (!master) return;
-    const rows = getRows();
     const total = rows.length;
     const checked = rows.filter(cb => cb.checked).length;
 
-    if (total === 0 || checked === 0) {
+    if (checked === 0) {
       master.checked = false;
       master.indeterminate = false;
     } else if (checked === total) {
@@ -21,23 +15,15 @@ document.addEventListener('DOMContentLoaded', function () {
       master.indeterminate = false;
     } else {
       master.checked = false;
-      master.indeterminate = true; 
     }
   }
 
   refreshMaster();
-  window.addEventListener('load', refreshMaster);
-  window.addEventListener('pageshow', refreshMaster);
-  setTimeout(refreshMaster, 0);
 
-  master?.addEventListener('change', () => {
-    const rows = getRows();
+  master.addEventListener('change', () => {
     rows.forEach(cb => (cb.checked = master.checked));
     master.indeterminate = false;
   });
+  rows.forEach(cb => cb.addEventListener('change', refreshMaster));
 
-  document.addEventListener('change', (e) => {
-    if (!e.target.matches('.row_chk')) return;
-    refreshMaster();
-  });
 });
