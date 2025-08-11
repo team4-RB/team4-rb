@@ -47,7 +47,7 @@ main {
  }
 
  .arlim {
-   background-color: blueviolet;
+   background-color: rgb(180, 180, 180);
    display: flex;
    flex-direction: row;
    margin: 0px 30px;
@@ -76,7 +76,7 @@ form{
 .point_have{
   border: 1px solid black;
   border-radius: 15px;
-  background-color: bisque;
+  background-color: rgb(225, 225, 225);
   width: 400px;
   display: flex;
   flex-direction: column;
@@ -91,6 +91,7 @@ form{
   width: 300px;
   height: 60px;
   border: 1px solid black;
+  background-color: white;
   border-radius: 15px;
   display: flex;
   align-items: center;
@@ -121,7 +122,7 @@ form{
 .point_use{
   border: 1px solid black;
   border-radius: 15px;
-  background-color: bisque;
+  background-color: rgb(226, 226, 226);
   width: 400px;
   display: flex;
   flex-direction: column;
@@ -145,6 +146,7 @@ form{
 }
 .point_use .point_total_use{
   border: 1px solid black;
+  background-color: white;
   border-radius: 15px;
   width: 350px;
   height: 270px;
@@ -158,6 +160,7 @@ form{
 }
 .point_day{
   border: 1px solid black;
+  background-color: rgb(224, 224, 224);
   border-radius: 15px;
   width: 300px;
   height: 200px;
@@ -356,7 +359,7 @@ form{
   width: 100px;
 }
 
-#deleteBtn {
+#deletebutton {
   margin: 20px 20px 0px 20px;
   padding: 10px;
   border: 2px solid red;
