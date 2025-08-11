@@ -15,6 +15,7 @@ let input;
 
 // 모달이 나타나는 함수(버튼에 추가하여 사용)
 function modalEditNameShow() {
+  event.preventDefault();
   console.log("모달버튼클릭");
   modalEditName.style.display = "flex";
   input = document.getElementById("new_name");
@@ -43,6 +44,8 @@ function modalEditNameCheck(){
   console.log("전달할 값 : ", value);
   alert("입력됨 - " + value);
   modalEditNameNone();
+  const nameSpan = document.getElementById("name");
+  nameSpan.innerHTML = value
 }
 function modalEditNameCancel(){
   modalEditNameNone();

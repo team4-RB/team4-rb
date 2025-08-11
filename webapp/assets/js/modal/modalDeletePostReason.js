@@ -21,6 +21,11 @@ function modalDeletePostReasonShow() {
   modalDeletePostReason.style.display = "flex";
 }
 
+const link = "./../../app/admin/report.html"
+function linkHref() {
+  location.href=link;
+}
+
 //모달 끄기 함수(모달 내부 x이미지에 추가되어 있음)
 function modalDeletePostReasonNone(){
   modalDeletePostReason.style.display = "none";
@@ -31,6 +36,7 @@ function modalDeletePostReasonCheck(){
 
   alert(reasons[reasonValue]);
   modalDeletePostReasonNone();
+    linkHref()
 }
 function modalDeletePostReasonCancel(){
   modalDeletePostReasonNone();

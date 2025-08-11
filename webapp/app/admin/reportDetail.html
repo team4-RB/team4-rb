@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="./../../assets/css/admin/sidebar.css" />
     <script defer src="./../../assets/js/main/include.js"></script>
     <script defer src="./../../assets/js/admin/admin.js"></script>
+    <script defer src="./../../assets/js/modal/modalDeletePostReason.js"></script>
+    <link rel="stylesheet" href="./../../assets/css/modalAdmin.css">
   </head>
   <body>
     <div id="header"></div>
@@ -77,10 +79,11 @@
         </div>
         <div class="notice_btn">
           <button class="list">목록</button>
-          <button class="delete">삭제</button>
+          <button class="delete" onclick="modalDeletePostReasonShow()" type="button">삭제</button>
         </div>
       </section>
     </main>
     <div id="footer"></div>
+    <div id="modalDeletePostReason"></div>
   </body>
 </html>

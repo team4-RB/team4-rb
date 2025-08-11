@@ -15,13 +15,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
   months.forEach(month => {
     month.addEventListener('click', function (event) {
-      for(i of months) {
-        if (event.type === 'click'){
-          month.id = "active";
+      months.forEach(m => {
+        if (m !== month) {
+          m.removeAttribute("id");
         }
-        else {
-          months.removeAttribute('id');
-        }
+      });
+      if (month.id !== "active") {
+        month.id = "active";
+      } else {
+        month.removeAttribute("id");
       }
     });
   });
