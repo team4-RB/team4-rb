@@ -128,8 +128,11 @@ form {
   height: 50px;
   text-align: center;
   margin-right: 7px;
-  font-size: 16px;
+  font-size: 20px;
   background-color: wheat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .profile_intro{
   /* background-color: greenyellow; */
@@ -144,4 +147,8 @@ form {
 .long_intro{
   margin: 5px 0;
   font-size: 16px;
+}
+#pagenation{
+  text-align: center;
+  margin: 30px 0;
 }

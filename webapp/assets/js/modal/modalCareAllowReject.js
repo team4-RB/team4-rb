@@ -13,8 +13,19 @@ const modalCareAllowReject = document.getElementById("modalCareAllowReject");
 //input 요소 담을 변수
 let input;
 
+
+const link = "./../../app/admin/careRequest.html";
+function linkHref() {
+  location.href=link;
+}
+
+function cancle() {
+  linkHref();
+}
+
 // 모달이 나타나는 함수(버튼에 추가하여 사용)
 function modalCareAllowRejectShow() {
+  event.preventDefault();
   console.log("모달버튼클릭");
   modalCareAllowReject.style.display = "flex";
   input = document.getElementById("reason_reject");
@@ -25,6 +36,7 @@ function modalCareAllowRejectShow() {
       modalCareAllowRejectCheck();
     }
   };
+  linkHref();
 }
 
 //모달 끄기 함수(모달 내부 x이미지에 추가되어 있음)

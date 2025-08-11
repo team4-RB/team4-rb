@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="./../../assets/css/admin/sidebar.css" />
     <script defer src="./../../assets/js/main/include.js"></script>
     <script defer src="./../../assets/js/admin/admin.js"></script>
+        <script defer src="./../../assets/js/modal/modalAddNewsFinished.js"></script>
+    <link rel="stylesheet" href="./../../assets/css/modalAdmin.css">
   </head>
   <body>
     <div id="header"></div>
@@ -44,11 +46,12 @@
           />
         </div>
         <div class="add_btn">
-          <button class="cancle">취소</button>
-          <button class="add">수정 완료</button>
+          <button class="cancle" onclick="cancle()">취소</button>
+          <button class="add" onclick="modalAddNewsFinishedShow()">수정 완료</button>
         </div>
       </section>
     </main>
     <div id="footer"></div>
+    <div id="modalAddNewsFinished"></div>
   </body>
 </html>
