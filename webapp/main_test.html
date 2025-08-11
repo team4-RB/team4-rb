@@ -10,10 +10,15 @@
   <script defer src="./assets/js/main/main.js"></script>
   <script defer src="./assets/js/main/include.js"></script>
 
-  <link rel="stylesheet" href="./assets/css/modal.css">
+  <link rel="stylesheet" href="./assets/css/modalAdmin.css">
+  <script defer src="./assets/js/modal/modalAdminLoginFailed.js"></script>
+  <script defer src="./assets/js/modal/modalDeleteNewsFinished.js"></script>
 </head>
 <body>
   <div id="header"></div>
+  <!-- 모달 테스트 버튼 -->
+  <div onclick="modalAdminLoginFailedShow()">관리자 로그인 실패 모달 버튼</div>
+  <div onclick="modalDeleteNewsFinishedShow()">뉴스삭제완료제목건드림모달버튼</div>
   <main>
     <div class="main_body">
       <div class="news_banner">
@@ -282,6 +287,8 @@
     </div>
   </main>
   <div id="footer"></div>
-  <!-- 메인 -->
+  <!-- 모달 -->
+  <div id="modalAdminLoginFailed"></div>
+  <div id="modalDeleteNewsFinished"></div>
 </body>
 </html> 
