@@ -23,5 +23,5 @@ closeBtn.addEventListener("click", function () {
 //모달창 닫기 클릭 시 로그인페이지 이동(지금은 더미페이지 이동)
 modalClosebtn.addEventListener("click", function () {
   modalBox.style.display = 'none';
-  location.href = './../../dummy.html';
+  location.href = './../../app/login/login.html';
 })
