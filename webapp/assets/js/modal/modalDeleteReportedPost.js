@@ -10,11 +10,19 @@ window.addEventListener('DOMContentLoaded', () => {
 //모달 요소 가져오기
 const modalDeleteReportedPost = document.getElementById("modalDeleteReportedPost");
 
+
+const link = "./../../app/admin/report.html";
+function linkHref() {
+  location.href=link;
+}
+
+function cancle() {
+  linkHref();
+}
 // 모달이 나타나는 함수(버튼에 추가하여 사용)
 function modalDeleteReportedPostShow() {
   console.log("모달버튼클릭");
   modalDeleteReportedPost.style.display = "flex";
-
   //엔터로 확인 버튼 누르기
   document.onkeydown = (event) => {
     if(event.key === "Enter"){
@@ -32,6 +40,7 @@ function modalDeleteReportedPostCheck(){
   console.log("신고글 삭제 선택");
   alert("신고글 삭제 선택")
   modalDeleteReportedPostNone();
+  linkHref();
 }
 //취소 버튼
 function modalDeleteReportedPostCancel(){

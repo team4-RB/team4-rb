@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./../../assets/css/header.css">
   <link rel="stylesheet" href="./../../assets/css/footer.css">
   <script defer src="./../../assets/js/main/include.js"></script>
+  <script defer src="./../../assets/js/admin/admin.js"></script>
 </head>
 
 <body>
@@ -22,13 +23,13 @@
             <p>LOGIN · 관리자</p>
           </div>
           <div class="id_box">
-            <input type="text" placeholder="USER ID" />
+            <input type="text" placeholder="USER ID" id="id"/>
           </div>
           <div class="pw_box">
-            <input type="password" placeholder="PASSWORD" />
+            <input type="password" placeholder="PASSWORD" id="pw"/>
           </div>
           <div class="bt_box">
-            <button>로그인</button>
+            <button onclick="loginSuccess()">로그인</button>
           </div>
         </div>
       </form>

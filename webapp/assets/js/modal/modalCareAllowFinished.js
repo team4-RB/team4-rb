@@ -10,11 +10,21 @@ window.addEventListener('DOMContentLoaded', () => {
 //모달 요소 가져오기
 const modalCareAllowFinished = document.getElementById("modalCareAllowFinished");
 
+const link = "./../../app/admin/careRequest.html";
+function linkHref() {
+  location.href=link;
+}
+
+function cancle() {
+  linkHref();
+}
+
 // 모달이 나타나는 함수(버튼에 추가하여 사용)
 function modalCareAllowFinishedShow() {
+  event.preventDefault();
   console.log("모달버튼클릭");
   modalCareAllowFinished.style.display = "flex";
-
+  
   //엔터로 확인 버튼 누르기
   document.onkeydown = (event) => {
     if(event.key === "Enter"){
@@ -29,6 +39,7 @@ function modalCareAllowFinishedNone(){
 }
 //확인 버튼
 function modalCareAllowFinishedCheck(){
+  linkHref();
   modalCareAllowFinishedNone();
 }
 //취소 버튼
