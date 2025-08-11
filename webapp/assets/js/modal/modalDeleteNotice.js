@@ -29,7 +29,7 @@ function modalDeleteNoticeNone(){
   document.onkeydown = null; // onkeydown 이벤트 제거
 }
 
-const link = "./../../app/admin/report.html"
+const link = "./../../app/admin/notice.html"
 function linkHref() {
   location.href=link;
 }

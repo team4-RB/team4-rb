@@ -10,6 +10,13 @@ window.addEventListener('DOMContentLoaded', () => {
 //모달 요소 가져오기
 const modalAddNewsFinished = document.getElementById("modalAddNewsFinished");
 
+
+const link = "./../../app/admin/newsBoard.html";
+function linkHref() {
+  location.href=link;
+}
+
+
 // 모달이 나타나는 함수(버튼에 추가하여 사용)
 function modalAddNewsFinishedShow() {
   console.log("모달버튼클릭");
@@ -30,9 +37,14 @@ function modalAddNewsFinishedNone(){
 //확인 버튼
 function modalAddNewsFinishedCheck(){
   modalAddNewsFinishedNone();
+  linkHref()
 }
 //취소 버튼
 function modalAddNewsFinishedCancel(){
   modalAddNewsFinishedNone();
 }
 modalAddNewsFinishedNone();
+
+function cancle () {
+  linkHref()
+}
