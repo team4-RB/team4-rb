@@ -36,9 +36,9 @@ for(let i = 0 ; i < 3;i++){
 
 function switchHeart(num){
   console.log(hearts[num].style.left);
-  if(hearts[num].style.left == "-100%"){
-    hearts[num].style.left = "0%";
-  }else{
+  if(hearts[num].style.left == "00%"){
     hearts[num].style.left = "-100%";
+  }else{
+    hearts[num].style.left = "00%";
   }
 }
