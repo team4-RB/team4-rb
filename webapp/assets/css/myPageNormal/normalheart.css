@@ -78,7 +78,7 @@ form {
   position: absolute;
   height: 100px;
   width: 100px;
-  /* overflow: hidden; */
+  overflow: hidden;
   right: 0;
   margin: 10px;
 }
