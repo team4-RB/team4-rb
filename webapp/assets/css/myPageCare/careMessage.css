@@ -243,7 +243,7 @@ main {
   width: 420px;
 }
 
-.message_textarea{
+#message_textarea{
   width: 100%;
   min-height: 220px;
   padding: 12px;

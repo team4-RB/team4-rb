@@ -152,11 +152,12 @@ button {
   margin-left: 150px;
   border-radius: 15px;
   border: 0px;
+  cursor: pointer;
 }
 
 
 .modal {
-  display: none;
+  display: block;
   position: fixed;
   top: 0px;
   left: 50%;
@@ -173,7 +174,7 @@ button {
 }
 
 .modal.open {
-  display: flex;
+  /* display: flex; */
   visibility: visible;
   opacity: 1;
   transition: opacity 0.3s ease;
@@ -204,7 +205,6 @@ button {
   font-size: 14px;
   font-weight: bold;
   border: none;
-  transition: background-color 0.2s ease, transform 0.1s ease;
   min-width: 70px;   
 }
 
@@ -213,7 +213,11 @@ button {
   color: white;
   margin-left: 10px;
 }
-
+#confirmDelete_check {
+  background-color: #2F52AA;
+  color: white;
+  margin-left: 10px;
+}
 #cancelDelete {
   background-color: white;
   border: 2px solid red;

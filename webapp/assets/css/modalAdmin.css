@@ -43,6 +43,12 @@
   padding-top: 30px;
   padding-top: 20px
 }
+.modal_text{
+  font-size: 20px;
+  text-align: center;
+  padding-top: 30px;
+  padding-top: 20px
+}
 .modal_button_box{
   margin-top: 20px;
   display: flex;

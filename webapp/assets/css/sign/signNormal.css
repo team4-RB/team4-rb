@@ -176,3 +176,83 @@ label > input {
 .error_email_msg {
   color: red;
 }
+
+.correct_email {
+  font-size: 14px;
+  display: none;
+}
+
+/* ㅌㅅㅌ */
+
+.timer {
+  width: 50px;
+  height: 50%;
+}
+
+.box_next > button {
+  padding: 8px 30px;
+  background-color: #1d3266;
+  color: white;
+  border-radius: 8px;
+}
+
+.alert {
+  display: none;
+}
+
+.error_box,
+.error_box_msg {
+  display: none;
+  padding-left: 77px;
+}
+
+.error_phone,
+.error_msg {
+  color: red;
+  font-size: 12px;
+  /* border: 1px solid black; */
+}
+.okay_msg {
+  font-size: 12px;
+}
+
+.file {
+  display: flex;
+  gap: 12px;
+  position: relative;
+  left: 151px;
+}
+
+.file_title {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 12px;
+}
+
+.sign_level > ul {
+  list-style-type: none;
+  width: 100%;
+}
+
+.sign_level > ul > li {
+  width: 100%;
+  padding-bottom: 8px;
+  margin: 10px auto;
+  border-bottom: 1px solid black;
+}
+
+.sign_btn > button {
+  padding: 8px 100px;
+  border-radius: 30px;
+}
+
+.file > input {
+  width: 300px;
+  height: 20px;
+  border-radius: 36px;
+}
+
+.section_care {
+  display:none;
+}

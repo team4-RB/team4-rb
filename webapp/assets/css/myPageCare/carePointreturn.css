@@ -150,7 +150,14 @@ main {
   border-radius: 10px; 
   cursor: pointer; 
 }
-
+.btn_return_list a {
+  background-color: white;
+  border: 2px solid black;  
+  color: black;
+  padding: 12px 24px;
+  border-radius: 10px; 
+  cursor: pointer; 
+}
 .modal {
   display: none;
   position: fixed;
