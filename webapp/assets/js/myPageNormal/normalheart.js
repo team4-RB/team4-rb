@@ -12,7 +12,7 @@ for(let i = 0 ; i < 3;i++){
   let str = "";
   str += `<div class="heart_img_box"><img onclick="switchHeart(`;
   str += i;
-  str += `)" class="heart_img" src="./../../assets/img/careMember/heart_icon.png"></div><a href="./careMemberDetail.html" class="profile"><div class="profile_pic_box"><img class="profile_pic" src="./../../assets/img/careMember/profilePicCare.png"></div><div class="profile_name">`;
+  str += `)" class="heart_img" src="./../../assets/img/careMember/heart_icon.png"></div><a href="./../careMember/careMemberDetail.html" class="profile"><div class="profile_pic_box"><img class="profile_pic" src="./../../assets/img/careMember/profilePicCare.png"></div><div class="profile_name">`;
   str += `김괭이`;
   str += `</div><div class="day_row">`;
   str += `<div class="day">화</div>`;
@@ -36,9 +36,9 @@ for(let i = 0 ; i < 3;i++){
 
 function switchHeart(num){
   console.log(hearts[num].style.left);
-  if(hearts[num].style.left == "00%"){
+  if(hearts[num].style.left == "0%"){
     hearts[num].style.left = "-100%";
   }else{
-    hearts[num].style.left = "00%";
+    hearts[num].style.left = "0%";
   }
 }
