@@ -1,41 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>관리자로그인</title>
+    <link rel="stylesheet" href="./../../assets/css/admin/basic.css" />
+    <link rel="stylesheet" href="./../../assets/css/admin/adminLogin.css" />
+    <link rel="stylesheet" href="./../../assets/css/header.css" />
+    <link rel="stylesheet" href="./../../assets/css/footer.css" />
+    <script defer src="./../../assets/js/main/include.js"></script>
+    <script defer src="./../../assets/js/admin/adminlogin.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>관리자로그인</title>
-  <link rel="stylesheet" href="./../../assets/css/admin/basic.css">
-  <link rel="stylesheet" href="./../../assets/css/admin/adminLogin.css">
-  <link rel="stylesheet" href="./../../assets/css/header.css">
-  <link rel="stylesheet" href="./../../assets/css/footer.css">
-  <script defer src="./../../assets/js/main/include.js"></script>
-  <script defer src="./../../assets/js/admin/admin.js"></script>
-</head>
-
-<body>
-  <div id="header"></div>
-  <main>
-    <section class="login">
-      <form action="" method="">
-        <div class="box">
-          <div class="box_title">
-            <p>LOGIN · 관리자</p>
+  <body>
+    <div id="header"></div>
+    <main>
+      <section class="login">
+        <form action="" method="">
+          <div class="box">
+            <div class="box_title">
+              <p>LOGIN · 관리자</p>
+            </div>
+            <div class="id_box">
+              <input type="text" placeholder="USER ID" id="id" />
+            </div>
+            <div class="pw_box">
+              <input type="password" placeholder="PASSWORD" id="pw" />
+            </div>
+            <div class="bt_box">
+              <button onclick="loginSuccess()">로그인</button>
+            </div>
           </div>
-          <div class="id_box">
-            <input type="text" placeholder="USER ID" id="id"/>
-          </div>
-          <div class="pw_box">
-            <input type="password" placeholder="PASSWORD" id="pw"/>
-          </div>
-          <div class="bt_box">
-            <button onclick="loginSuccess()">로그인</button>
-          </div>
-        </div>
-      </form>
-    </section>
-  </main>
-  <div id="footer"></div>
-</body>
-
+        </form>
+      </section>
+    </main>
+    <div id="footer"></div>
+  </body>
 </html>

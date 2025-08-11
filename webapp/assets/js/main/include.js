@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   if(isLogin){
     // 헤더 불러오기(로그인)
-  fetch('/team04-RB_frontend/webapp/header_login.html')
+  fetch('./../../header_login.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('header').innerHTML = data;
@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
   // 푸터 불러오기
-  fetch('/team04-RB_frontend/webapp/footer.html')
+  fetch('./../../footer.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('footer').innerHTML = data;

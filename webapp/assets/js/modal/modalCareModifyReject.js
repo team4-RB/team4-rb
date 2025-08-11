@@ -1,9 +1,9 @@
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener("DOMContentLoaded", () => {
   // html 문서에 모달 불러오기
-  fetch('/team04-RB_frontend/webapp/app/modal/modalCareModifyReject.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('modalCareModifyReject').innerHTML = data;
+  fetch("/team04-RB_frontend/webapp/app/modal/modalCareModifyReject.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("modalCareModifyReject").innerHTML = data;
     });
 });
 
@@ -15,13 +15,12 @@ let input;
 
 const link = "./../../app/admin/careCareer.html";
 function linkHref() {
-  location.href=link;
+  location.href = link;
 }
 
 function cancle() {
   linkHref();
 }
-
 
 // 모달이 나타나는 함수(버튼에 추가하여 사용)
 function modalCareModifyRejectShow() {
@@ -36,27 +35,27 @@ function modalCareModifyRejectShow() {
       modalCareModifyRejectCheck();
     }
   };
-  linkHref()
 }
 
 //모달 끄기 함수(모달 내부 x이미지에 추가되어 있음)
-function modalCareModifyRejectNone(){
+function modalCareModifyRejectNone() {
   if (input) {
     input.onkeyup = null; // 이벤트 제거
-   }
+  }
   modalCareModifyReject.style.display = "none";
 }
-function modalCareModifyRejectCheck(){
+function modalCareModifyRejectCheck() {
   const value = input.value.trim();
-  if(!value){
+  if (!value) {
     alert("반려 사유를 입력하세요.");
     return;
   }
   console.log("전달할 값 : ", value);
   alert("입력됨 - " + value);
   modalCareModifyRejectNone();
+  linkHref();
 }
-function modalCareModifyRejectCancel(){
+function modalCareModifyRejectCancel() {
   modalCareModifyRejectNone();
 }
 modalCareModifyRejectNone();
