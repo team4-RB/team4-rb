@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Pretendard-Regular';
+}
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+header,
+footer {
+  width: 100%;
+  height: 110px;
+
+}
+
+main {
+  width: 100%;
+  height: calc(100vh - 200px);
+  display: flex;
+}
+
+.main_sidebar {
+  width: 180px;
+  height: 100%;
+  background-color: #2f4db1;
+  display: flex;
+  color: white;
+  flex-direction: column;
+}
+.main_sidebar img {
+  height: 130px;
+  width: 130px;
+  background-color: #ff80ab;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: block;
+}
+.main_sidebar div {
+  height: 150px;
+  width: 150px;
+  background-color: #2f4db1;
+  border-radius: 100%;
+  margin: 15px;
+}
+.main_sidebar ul li {
+  padding: 15px;
+  color: #ffffff;
+}
+/* *********************** */
+.reference_dp {
+  flex: 1;
+  padding: 40px 100px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.title h2 {
+  padding: 5px;
+  font-size: 30px;
+  border: 2px solid #000;
+}
+.title input[type="text"] {
+  width: 100%;
+  height: 56px;
+  box-sizing: border-box;
+  padding: 0 16px;
+  font-size: 20px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  outline: none;
+}
+
+.reference_info {
+  display: flex;
+  gap: 12px;
+  padding: 5px;
+  font-size: 24px;
+  border: 2px solid #000;
+}
+.reference_info span {
+  display: block;
+}
+
+.re_post_content,
+.reference_content {
+  margin-top: 14px;
+  padding: 0;
+  border: 0;
+  min-height: 300px;
+}
+#contentInput {
+  width: 100%;
+  min-height: 500px;
+  box-sizing: border-box;
+  padding: 16px;
+  font-size: 18px;
+  line-height: 1.6;
+  border: 2px solid #000;
+  border-radius: 10px;
+  outline: none;
+  resize: vertical;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin: 14px 0;
+}
+.buttons a,
+.buttons button {
+  min-width: 120px;
+  height: 48px;
+  padding: 0 18px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn_list {
+  background: #f1f1f1;
+  color: #222;
+}
+.btn_cancle {
+  background: #FF4D4F;
+  color: #fff;
+}
+.btn_compelete {
+  background: #2F52AA;
+  color: #fff;
+}
+
+.reply {
+  border: 2px solid #000;
+}
+.comment {
+  padding: 5px;
+  border: 2px solid #000;
+}
+.reply h4 {
+  padding: 10px;
+}
+.author {
+  display: block;
+}
+.cmt_content {
+  margin: 5px 5px 5px 10px;
+}
+.date {
+  display: block;
+  text-align: right;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 0;
+  background: rgba(0,0,0,.45);
+  z-index: 3000;
+}
+.modal.open {
+  display: flex;
+}
+
+.modal_box {
+  background: #fff;
+  width: min(640px, 92vw);
+  box-sizing: border-box;
+  border-radius: 18px;
+  padding: 28px 22px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.2);
+  text-align: center;
+  margin-top: 0px;
+}
+
+.modal_buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.modal_buttons button {
+  padding: 10px 24px;
+  cursor: pointer;
+  border-radius: 12px;
+  border: 0;
+  font-weight: 600;
+}
+#confirmDelete,
+#check {
+  background-color: #2F52AA;
+  color: #fff;
+}
+#cancelDelete {
+  background-color: #fff;
+  border: 2px solid red;
+  color: #000;
+}

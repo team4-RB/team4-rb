@@ -1,103 +1,306 @@
 * {
   margin: 0;
   padding: 0;
-}
-
-header,
-footer {
-  width: 100%;
-  height: 110px;
-  background-color: bisque;
-}
+  box-sizing: border-box; }
 
 main {
   width: 100%;
   height: calc(100vh - 200px);
   display: flex;
+  background: #ffffff;
 }
 
-.main_sidebar {
+.sidebar {
   width: 180px;
-  height: 100%;
-  background-color: rgb(159, 159, 255);
-  display: flex;
-  flex-direction: column;
+  background-color: #2f4db1;
 }
-
-.main_sidebar div {
-  height: 150px;
-  width: 150px;
-  background-color: rgb(27, 255, 217);
-  border-radius: 100%;
-  margin: 15px;
-}
-
-.main_sidebar ul li {
+.sidebar ul li {
+  list-style: none;
   padding: 15px;
+  color: #ffffff;
 }
-/* ============================= */
+.sidebar ul li img {
+  width: 150px; height: 150px; border-radius: 50%;
+  display: block;
+}
+/*****************/
 .div_mark {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
-
 .div_mark .title {
   font-size: 30px;
   margin: 30px;
 }
 
-.div_choose ul{
-  display: flex;
-  list-style-type: none;
-  padding-left: 150px;
-}
-.div_choose ul li{
-  margin: 10px;
-}
-.mark_nav {
-  display: flex;
-  margin: 0px 150px 0px 150px;
-  height: 50px;
-  align-items: center;
-  background-color: rgb(191, 201, 201);
+.div_choose {
+  width: 500px;
 }
 
-.mark_nav ul {
+.div_choose ul {
+  list-style: none;
   display: flex;
-  flex: 1;
-  list-style-type: none;
-  background-color: rgb(191, 201, 201);
-  justify-content: space-around;
+  gap: 10px;
+  padding: 50px 0 0 150px;
+}
+
+.mark_nav {
+  margin: 0 150px;
+  height: 50px;
+  display: flex; align-items: center;
+  background: rgb(191, 201, 201);
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.mark_nav ul {
+  list-style: none;
+  display: flex;
+  width: 100%;
+}
+.mark_nav ul li { 
+  flex: none;
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .mark_nav input {
-  margin-left: 20px;
+  width: 30px;
+  height: 30px;
+  margin: 0 30px;
+}
+
+.mark_list {
+  margin: 0 150px;
+  height: 50px;
+  display: flex; align-items: center;
+  background: rgb(215, 238, 238);
+  border-bottom: 1px solid #000;
+  cursor: pointer;
+}
+.mark_list:hover {
+  background: #eaf2f2;
+}
+.mark_list ul {
+  list-style: none;
+  display: flex; 
+  width: 100%;
+}
+
+.mark_list ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mark_list input {
+  width: 30px;
+  height: 30px;
+  margin: 0 30px; 
+  cursor: default;
+}
+
+.name div{
+  width: 100px;
+  text-align: center;
+}
+
+.messeagetitle div {
+  width: 800px;
+  text-align: center;
+}
+.day div {
+  width: 200px;
+  text-align: center;
+}
+
+.read div {
+  width: 200px;
+  text-align: center;
 }
 
 .page {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
-
 .page ul {
+  list-style: none;
   display: flex;
-  list-style-type: none;
 }
-.page ul li{
+.page ul li {
   margin: 10px;
 }
-.div_delete{
-  margin: 0;
-  padding: 0;
-}
-button {
-  background-color: red;
-  color: white;
-  width: 80px;
-  height: 40px;
+
+.div_delete button {
   margin-left: 150px;
-  border-radius: 15px;
-  border: 0px;
+  width: 80px; height: 40px;
+  background: #e53935; color: #fff;
+  border: none; border-radius: 15px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+
+
+.modal_bg {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.45);
+  z-index: 1000;
+}
+
+.modal_bg.open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.modal_box {
+  width: 420px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.25);
+  overflow: hidden;
+}
+
+.modal_read {
+  position: relative;
+  padding: 14px 18px;
+  text-align: center;
+  border-bottom: 1px solid #eaeaea;
+  font-weight: 700;
+  font-size: 20px;
+}
+.modal_title {
+  color: #111;
+}
+.modal_close {
+  position: absolute;
+  right: 16px;
+  top: 8px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal_info {
+  padding: 16px 18px;
+}
+.sender_info {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 10px;
+}
+.sender_id { color: #2f4db1;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.message_content {
+  min-height: 220px;
+  padding: 14px 12px;
+  border: 2px solid #d9d9d9;
+  border-radius: 12px;
+  background: #fff;
+  color: #111;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow: auto;
+}
+
+.modal_button {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 14px 18px 18px;
+}
+
+.modal_button button {
+  min-width: 92px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn_reply {
+  background: #2f4db1;
+  color: #fff;
+}    
+
+.btn_delete {
+  background: #fff;
+  color: #ff0400;
+  border: 2px solid #ff0400;
+}  
+
+.write_modal {
+  width: 420px;
+}
+
+.message_textarea{
+  width: 100%;
+  min-height: 220px;
+  padding: 12px;
+  border: 2px solid #d9d9d9;
+  border-radius: 12px;
+  outline: none;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.confirm_modal {
+  width: 420px;
+  padding: 22px 20px;
+}
+
+.confirm_text {
+  padding: 24px 16px 8px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #111;
+}
+
+.confirm_buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 12px 16px 6px;
+}
+
+.confirm_buttons .btn_confirm,
+.confirm_buttons .btn_cancel {
+  min-width: 92px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.modal_button .btn_send,
+.modal_button .btn_confirm,
+.confirm_buttons .btn_confirm {
+  background: #2f4db1;
+  color: #fff;
+}
+
+.modal_button .btn_cancel,
+.confirm_buttons .btn_cancel {
+  background: #fff;
+  color: #ff0400;
+  border: 2px solid #ff0400;
+}
+
+.modal_send .send_message {
+  padding: 24px 16px 8px;
+  text-align: center;
+  font-size: 16px;
+  color: #111;
 }

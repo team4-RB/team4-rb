@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Care_PostDetailPage</title>
+  <link rel="stylesheet" href="./../../assets/css/header.css">
+  <link rel="stylesheet" href="./../../assets/css/footer.css">
+  <script defer src="./../../assets/js/main/include.js"></script>
+  <link rel="stylesheet" href="./../../assets/css/myPageCare/careReferenceDP.css">
+  <script defer src="./../../assets/js/myPageCare/careReferenceDP.js"></script>
+</head>
+
+<body>
+  <div id="header"></div>
+  <main>
+    <nav class="main_sidebar">
+      <ul>
+        <li><a href="./careProfile.html"><img src="./../../assets/img/myPageNormal/normalMember.jpg" alt="#"></a></li>
+        <li><a href="./careModify.html">개인정보 수정</a></li>
+        <li><a href="./careMark.html">찜한 목록</a></li>
+        <li><a href="./careMatching.html">매칭 기록</a></li>
+        <li><a href="./careMessage.html">쪽지함</a></li>
+        <li><a href="./carePost.html">게시글 관리</a></li>
+        <li><a href="./carePointreturn.html">포인트 환급</a></li>
+        <li><a href="./careReference.html">1 대 1 문의</a></li>
+        <li><a href="./careExit.html">회원 탈퇴</a></li>
+      </ul>
+    </nav>
+
+    <section class="reference_dp">
+      <div class="title">
+        <input type="text">
+
+      </div>
+      <div class="reference_info">
+        <span>등록자명 : 아무개</span>
+        <span>등록일 : 2025-08-04</span><br>
+      </div>
+      <div class="tools">
+
+        <textarea name="" id=""></textarea>
+      
+      </div>
+      <div class="re_post_content">
+        <textarea id="contentInput" placeholder="내용을 입력하세요"></textarea>
+      </div>
+      <div class="buttons">
+        <a class="btn_list" href="./careReference.html">목록</a>
+        <a class="btn_cancle" href="./careReferenceDP.html">취소</a>
+        <button type="button" class="btn_compelete" id="saveBtn">수정완료</button>
+      </div>
+    </section>
+  </main>
+  <footer>
+
+  </footer>
+  <div class="modal" id="editModal" ;>
+    <div class="modal_box">
+      <p>문의가 등록 되었습니다.</p>
+      <div class="modal_buttons">
+        <button id="check"> <a href=""></a>확인</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+
+
+</body>
+
+</html>

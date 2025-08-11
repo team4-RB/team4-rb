@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함께 걸음</title>
+  <link rel="stylesheet" href="./../../assets/css/careMember/careMember.css">
+  <link rel="stylesheet" href="./../../assets/css/header.css">
+  <link rel="stylesheet" href="./../../assets/css/footer.css">
+  <script defer src="./../../assets/js/main/include.js"></script>
+  <script defer src="./../../assets/js/careMember/careMember.js"></script>
+</head>
+<body>
+  <div id="header"></div>
+  <main>
+    <div class="main_body">
+      <p class="page_title">
+        돌봄회원 리스트
+      </p>
+      <div id="search_area">
+        <select id="search_criteria">
+          <option value="name">
+            이름
+          </option>
+          <option value="day">
+            요일
+          </option>
+        </select>
+        <input type="text" id="criteria" placeholder="검색어를 입력하세요">
+        <div id="search_icon_box">
+          <img id="search_icon" src="./../../assets/img/careMember/search_icon.png">
+        </div>
+      </div>
+      <div class="context">
+        <div class="card_row">
+          <ul id="card_list_1">
+          </ul>
+        </div>
+        <div class="card_row">
+          <ul id="card_list_2">
+          </ul>
+        </div>
+        <div id="pagenation">
+          페이지네이션
+        </div>
+      </div>
+    </div>
+  </main>
+  <div id="footer"></div>
+</body>
+</html> 

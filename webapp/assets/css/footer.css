@@ -15,7 +15,7 @@
   /* #FFE7C9 */
   /* #1D3266 */
 }
-.site-footer{
+#site-footer{
   width: 100%;
   height: 110px;
   background-color: #FFF8EF;
@@ -28,15 +28,15 @@
   justify-content: center;
   width: 700px;
 }
-.site-footer div ul{
+#site-footer div ul{
   display: flex;
   justify-content: space-between;
 }
-.site-footer div span{
+#site-footer div span{
   padding-top: 10px;
   text-align: center;
   font-size: 10px;
 }
-.site-footer div ul li p{
+#site-footer div ul li p{
   font-size: 10px;
-}
+} 

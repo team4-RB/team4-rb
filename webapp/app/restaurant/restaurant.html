@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>함께 걸음</title>
+  <title>함께 걸음 - 음식점 리스트</title>
   <link rel="stylesheet" href="./../../assets/css/restaurant/restaurant.css">
   <link rel="stylesheet" href="./../../assets/css/header.css">
   <link rel="stylesheet" href="./../../assets/css/footer.css">
@@ -17,49 +17,56 @@
       <p class="page_title">
         음식점 리스트
       </p>
-      <div>
-        <button id="myButton">
-          토글토글
-        </button>
-        <div id="myDiv" style="width: 60px; height: 60px; background-color: aqua;">
-          후후
-        </div>
-      </div>
       <div class="context">
         <div class="region_select">
           <ul class="region_list">
-            <li class="region_button">
+            <li onclick="reClicked(0)" class="region_button">
               <div class="region_mark"></div>
               방배동
             </li>
-            <li class="region_button">
+            <li onclick="reClicked(1)" class="region_button">
               <div class="region_mark"></div>
               반포동
             </li>
-            <li class="region_button">
+            <li onclick="reClicked(2)" class="region_button">
               <div class="region_mark"></div>
               서초동
             </li>
-            <li class="region_button">
+            <li onclick="reClicked(3)" class="region_button">
               <div class="region_mark"></div>
               양재동
             </li>
-            <li class="region_button">
+            <li onclick="reClicked(4)" class="region_button">
               <div class="region_mark"></div>
               내곡동
             </li>
-            <li class="region_button">
+            <li onclick="reClicked(5)" class="region_button">
               <div class="region_mark"></div>
               잠원동
             </li>
           </ul>
+          <div class="region_small">
+            <ul id="region_small_list"></ul>
+          </div>
         </div>
         <div class="restaurant_select">
-          냥
+          <div class="restaurant_board">
+            <div class="restaurant_row">
+              <div class="restaurant_card"></div>
+              <div class="restaurant_card"></div>
+            </div>
+            <div class="restaurant_row">
+              <div class="restaurant_card"></div>
+              <div class="restaurant_card"></div>
+            </div>
+          </div>
+          <div class="restaurant_pagenation">
+            페이지네이션
+          </div>
         </div>
       </div>
     </div>
   </main>
   <div id="footer"></div>
 </body>
-</html>
+</html> 

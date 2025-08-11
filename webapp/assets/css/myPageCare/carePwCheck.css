@@ -1,40 +1,42 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Pretendard-Regular';
 }
-
-header, footer {
-  width: 100%;
-  height: 110px;
-  background-color: black;
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
 }
-
 main {
   width: 100%;
   height: calc(100vh - 200px);
   display: flex;
+  color: #ffffff;
 }
 
-nav {
+.main_sidebar {
   width: 180px;
   height: 100%;
-  background-color: rgb(159, 159, 255);
+  background-color: #2f4db1;
   display: flex;
   flex-direction: column;
+  color: white;
 }
 
-.main_sidebar div{
+.main_sidebar ul li img {
   height: 150px;
   width: 150px;
-  background-color: rgb(27, 255, 217);
   border-radius: 100%;
-  margin: 15px;
 }
 
-nav ul li {
+.main_sidebar ul li {
   padding: 15px;
+  color: white;
 }
-/* ======================== */
+
+/* ============================= */
 
 .pw_check{
   flex: 1;
@@ -49,6 +51,7 @@ input{
   height: 50px;
   margin-left: 20px;
   font-size: 20px;
+  border: 1px solid black;
 }
 button{
   width: 100px;

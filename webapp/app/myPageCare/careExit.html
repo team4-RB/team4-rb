@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,38 +9,23 @@
   <link rel="stylesheet" href="./../../assets/css/footer.css">
   <script defer src="./../../assets/js/main/include.js"></script>
   <link rel="stylesheet" href="./../../assets/css/myPageCare/careExit.css">
+  <script defer src="./../../assets/js/myPageCare/careExit.js"></script>
 </head>
+
 <body>
   <div id="header"></div>
-  
   <main>
     <nav class="sidebar">
-      <div></div>
       <ul>
-        <a href="">
-          <li>개인정보 수정</li>
-        </a>
-        <a href="">
-          <li>찜한 목록</li>
-        </a>
-        <a href="">
-          <li>매칭 기록</li>
-        </a>
-        <a href="">
-          <li>쪽지함</li>
-        </a>
-        <a href="">
-          <li>게시글 관리</li>
-        </a>
-        <a href="">
-          <li>포인트 환급</li>
-        </a>
-        <a href="">
-          <li>1 대 1 문의</li>
-        </a>
-        <a href="">
-          <li>회원 탈퇴</li>
-        </a>
+        <li><a href="./careProfile.html"><img src="./../../assets/img/myPageNormal/normalMember.jpg" alt="#"></a></li>
+        <li><a href="./careModify.html">개인정보 수정</a></li>
+        <li><a href="./careMark.html">찜한 목록</a></li>
+        <li><a href="./careMatching.html">매칭 기록</a></li>
+        <li><a href="./careMessage.html">쪽지함</a></li>
+        <li><a href="./carePost.html">게시글 관리</a></li>
+        <li><a href="./carePointreturn.html">포인트 환급</a></li>
+        <li><a href="./careReference.html">1 대 1 문의</a></li>
+        <li><a href="./careExit.html">회원 탈퇴</a></li>
       </ul>
     </nav>
     <section class="exit-section">
@@ -73,40 +59,42 @@
       </div>
 
       <div class="exit-button-area">
-        <button class="exit-button">다음</button>
+        <button class="exit-button" type="button">다음</button>
+        <p id="reasonError" class="error-text">탈퇴사유를 꼭 입력해주세요</p>
+      </div>
+
+
+      <div class="modal" id="modalConfirm" aria-hidden="true">
+        <div class="modal-content">
+          <p>정말로 회원 탈퇴를 진행하시겠습니까?<br><span class="red">※ 탈퇴는 되돌릴 수 없습니다.</span></p>
+          <div class="modal-buttons">
+            <button class="btn" onclick="closeModal('modalConfirm')">취소</button>
+            <button class="btn blue" onclick="checkWithdrawal()">확인</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" id="modalFail" aria-hidden="true">
+        <div class="modal-content">
+          <p>예약된 거동 불편자가 있어 회원 탈퇴가 불가합니다.</p>
+          <div class="modal-buttons">
+            <button class="btn" onclick="closeModal('modalFail')">취소</button>
+            <button class="btn blue" onclick="closeModal('modalFail')">확인</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" id="modalSuccess" aria-hidden="true">
+        <div class="modal-content">
+          <p>성공적으로 회원을 탈퇴 하셨습니다.</p>
+          <div class="modal-buttons">
+            <button class="btn blue" onclick="closeModal('modalSuccess')">확인</button>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- <footer></footer>
-  <div class="modal" id="modalConfirm">
-    <div class="modal-content">
-      <p>정말로 회원 탈퇴를 진행하시겠습니까?<br><span class="red">※ 탈퇴는 되돌릴 수 없습니다.</span></p>
-      <div class="modal-buttons">
-        <button class="btn" onclick="closeModal('modalConfirm')">취소</button>
-        <button class="btn blue" onclick="checkWithdrawal()">확인</button>
-      </div>
-    </div>
-  </div> -->
-  
-  <div class="modal" id="modalFail">
-    <div class="modal-content">
-      <p>예약된 거동 불편자가 있어 회원 탈퇴가 불가합니다.</p>
-      <div class="modal-buttons">
-        <button class="btn" onclick="closeModal('modalFail')">취소</button>
-        <button class="btn blue" onclick="closeModal('modalFail')">확인</button>
-      </div>
-    </div>
-  </div>
-  
-  <!-- <div class="modal" id="modalSuccess">
-    <div class="modal-content">
-      <p>성공적으로 회원을 탈퇴 하셨습니다.</p>
-      <div class="modal-buttons">
-        <button class="btn blue" onclick="closeModal('modalSuccess')">확인</button>
-      </div>
-    </div>
-  </div> -->
   <div id="footer"></div>
 </body>
 
