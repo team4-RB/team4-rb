@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
   // html 문서에 모달 불러오기
-  fetch('/team04-RB_frontend/webapp/app/modal/modalDeleteNotice.html')
+  fetch('./../../../app/modal/modalDeleteNotice.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('modalDeleteNotice').innerHTML = data;

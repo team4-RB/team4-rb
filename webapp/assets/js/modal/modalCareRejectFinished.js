@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
   // html 문서에 모달 불러오기
-  fetch('/team04-RB_frontend/webapp/app/modal/modalCareRejectFinished.html')
+  fetch('./../../../app/modal/modalCareRejectFinished.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('modalCareRejectFinished').innerHTML = data;
