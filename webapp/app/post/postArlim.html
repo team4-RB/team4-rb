@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Post_Modify</title>
-  <link rel="stylesheet" href="./../../assets/css/post/postModify.css">
+  <title>Document</title>
+  <link rel="stylesheet" href="./../../assets/css/post/postArlim.css">
   <link rel="stylesheet" href="./../../assets/css/header.css">
   <link rel="stylesheet" href="./../../assets/css/footer.css">
   <script defer src="./../../assets/js/main/include.js"></script>
-  <script defer src="./../../assets/js/post/postModify.js"></script>
+  <script defer src="./../../assets/js/post/postDetaillogin.js"></script>
 </head>
+
 <body>
   <div id="header"></div>
   <main>
     <form action="">
       <nav class="post_title">
         <ul>
-          <li class="post_name"> 안녕하세요</li>
+          <li class="post_name">공지사항입니다</li>
           <li>
             <ul class="post_info">
               <li>
                 <div>등록자명</div>
               </li>
               <li class="post_member">
-                <div>홍길동</div>
+                <div>관리자</div>
               </li>
               <li>
                 <div>등록일</div>
@@ -43,26 +45,18 @@
           </li>
         </ul>
       </nav>
-      <div class="api">글쓰기 api?</div>
-      <div class="input">
-        <textarea></textarea>
-        <input type="text">
-      </div>
-      <div class="button">
-        <button class="list"><a href="./postMain.html">목록</a></button>
-        <button class="button_write">작성</button>
-      </div>
+      <nav class="post_content">
+        <ul>
+          <li>
+            <div>안녕하세요</div>
+          </li>
+        </ul>
+      </nav>
     </form>
-  </main>
-  <div class="notmodal" id="editModal">
-    <div class="modal_box">
-      <p>수정하시겠습니까?</p>
-      <div class="modal_buttons">
-        <a href="./postDetaillogin.html"><button id="check">확인</button></a>
-        <button id="cancle">취소</button>
-      </div>
+    <div class="button">
+      <button class="button_list"><a href="./postMain.html">목록</a></button>
     </div>
-  </div>
-  <div id="footer"></div>
+  </main>
 </body>
+
 </html>
