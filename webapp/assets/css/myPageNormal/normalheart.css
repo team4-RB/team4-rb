@@ -43,3 +43,105 @@ main {
 form {
   width: 100%;
 }
+.context{
+  margin-top: 30px;
+  /* background-color: orange; */
+  width: 1700px;
+  overflow: hidden;
+}
+.card_row{
+  width: 100%;
+  /* background-color: blue; */
+  display: flex;
+  margin-bottom: 20px;
+}
+#card_list_1,
+#card_list_2{
+  display: flex;
+  justify-content: space-around;
+  /* background-color: yellow; */
+  width: 100%;
+  height: max-content;
+}
+.care_card{
+  background-color: #FFF8EF;
+  width: 430px;
+  height: 530px;
+  border-radius: 30px;
+  border: solid 3px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.heart_img_box{
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+  right: 0;
+  margin: 10px;
+}
+.heart_img{
+  position: absolute;
+  height: 100%;
+}
+.profile{
+  /* background-color: green; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile_pic_box{
+  /* background-color: aquamarine; */
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: solid 2px black;
+  margin-top: 45px;
+}
+.profile_pic{
+  width: 100%;
+}
+.profile_name{
+  background-color: wheat;
+  width: max-content;
+  font-size: 20px;
+  border-radius: 15px;
+  padding: 5px 13px;
+  border: solid 1px black;
+  margin: 20px 10px 0 10px;
+}
+.day_row{
+  /* background-color: crimson; */
+  display: flex;
+  padding-left: 7px;
+  /* margin: 5px 0 0 2px; */
+  margin: 0 10px;
+  margin-top: 10px;
+}
+.day{
+  border: solid 3px #1D3266;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  margin-right: 7px;
+  font-size: 16px;
+  background-color: wheat;
+}
+.profile_intro{
+  /* background-color: greenyellow; */
+  margin: 0 10px;
+  text-align: center;
+  margin-top: 10px;
+}
+.short_intro{
+  margin: 5px 0;
+  font-size: 16px;
+}
+.long_intro{
+  margin: 5px 0;
+  font-size: 16px;
+}

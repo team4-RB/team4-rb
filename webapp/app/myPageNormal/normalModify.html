@@ -17,7 +17,7 @@
     <nav class="main_sidebar">
       <img src="./../../assets/img/myPageNormal/normalMember.jpg" alt="#">
       <ul>
-        <a href="./normalModify.html"><li>개인정보 수정</li></a>
+        <a href="./normalPwCheck.html"><li>개인정보 수정</li></a>
         <a href="./normalMark.html"><li>찜한 목록</li></a>
         <a href="./normalheart.html"><li>하트 목록</li></a>
         <a href="./normalMatching.html"><li>매칭 기록</li></a>
@@ -68,7 +68,7 @@
                   <ul>
                     <li><input type="text" placeholder="우편번호"></li>
                     <li><input type="text" placeholder="주소"><button id="mailbutton">우편번호 찾기</button></li>
-                    <li><input type="text" placeholder="상세주소"><button id="addressbutton">확인</button></li>
+                    <li><input type="text" placeholder="상세주소"><button  id="addressbutton">확인</button></li>
                   </ul>
                 </li>
               </ul>
@@ -133,7 +133,7 @@
   <div class="modal_mail">
     <div class="modal-content">
       <p>우편번호 찾기 api?</p>
-      <button id="saveConfirmBtn">확인</button>
+      <button onclick="openmailModalClose()" id="saveConfirmBtn">확인</button>
     </div>
   </div>
   <div id="footer"></div>
