@@ -1,57 +1,93 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const deleteButton = document.querySelector('.btn_list_delete');
-  const deleteModal = document.getElementById('deleteModal');
-  const cancelDeleteButton = document.getElementById('cancelDelete');
-  const confirmDeleteButton = document.getElementById('confirmDelete');
+  var delBtn = document.querySelector('.btn_list_delete');
 
-  deleteButton.addEventListener('click', function (e) {
-    e.preventDefault();
-    deleteModal.classList.add('open');
-  });
-  cancelDeleteButton.addEventListener('click', function () {
-    deleteModal.classList.remove('open');
-  });
-  confirmDeleteButton.addEventListener('click', function () {
-    console.log('게시글 삭제 완료');
-    deleteModal.classList.remove('open');
-  });
+  var deleteModal = document.getElementById('deleteModal');
+  var checkModal  = document.getElementById('checkModal');
+  var doneModal   = document.getElementById('chek_deleteModal'); 
 
-  const master = document.querySelector('.mark_nav input[type="checkbox"]');
-  const rows = Array.from(document.querySelectorAll('.mark_list input[type="checkbox"]'));
+  var cancelDeleteButton = document.getElementById('cancelDelete'); 
+  var confirmDeleteButton = document.getElementById('confirmDelete');
+  var confirmDeleteCheckButton = document.getElementById('confirmDelete_check');
+  var doneConfirmButton = document.getElementById('check_confirmDelete');
+
+  var masterCB = document.querySelector('.mark_nav input[type="checkbox"]');
+
+  // 모달 열기/닫기 함수
+  function openM(modal) {
+    modal.classList.add('open');
+  }
+  function closeM(modal) {
+    modal.classList.remove('open');
+  }
+
+  function getRowCheckboxes() {
+    return Array.prototype.slice.call(document.querySelectorAll('.mark_list input[type="checkbox"]'));
+  }
+
+  function countChecked() {
+    return getRowCheckboxes().filter(function (cb) { return cb.checked; }).length;
+  }
 
   function refreshMaster() {
-    const total = rows.length;
-    const checked = rows.filter(cb => cb.checked).length;
-
-    if (checked === 0) {
-      master.checked = false;
-      master.indeterminate = false;
-    } else if (checked === total) {
-      master.checked = true;
-      master.indeterminate = false;
-    } else {
-      master.checked = false;
-    }
+    var boxes = getRowCheckboxes();
+    var total = boxes.length;
+    var checked = countChecked();
+    if (!masterCB) return;
+    masterCB.checked = (checked === total && total > 0);
   }
 
   refreshMaster();
 
-  master.addEventListener('change', () => {
-    rows.forEach(cb => (cb.checked = master.checked));
-    master.indeterminate = false;
+  masterCB && masterCB.addEventListener('change', function () {
+    var boxes = getRowCheckboxes();
+    boxes.forEach(function (cb) { cb.checked = masterCB.checked; });
+    refreshMaster();
   });
 
-  deleteButton.addEventListener('click', e => {
+  function bindRowCheckboxEvents() {
+    getRowCheckboxes().forEach(function (cb) {
+      if (cb._bound) return;
+      cb.addEventListener('change', refreshMaster);
+      cb._bound = true;
+    });
+  }
+  bindRowCheckboxEvents();
+
+  // 삭제 버튼 클릭 시
+  delBtn && delBtn.addEventListener('click', function (e) {
     e.preventDefault();
-    const checked = getRowCbs().filter(cb => cb.checked);
-    if (checked.length === 0) {
-      openStatusModal('삭제할 쪽지를 선택하세요.');
+    if (countChecked() === 0) {
+      openM(checkModal);
     } else {
-      e.preventDefault();
-      deleteButton.classList.add('open');
+      openM(deleteModal);
     }
-    openDeleteConfirm();
   });
-  rows.forEach(cb => cb.addEventListener('change', refreshMaster));
-});
 
+  cancelDeleteButton && cancelDeleteButton.addEventListener('click', function () {
+    closeM(deleteModal);
+  });
+
+  // "삭제 확인" 버튼 → 삭제 처리 후 완료 모달
+  confirmDeleteButton && confirmDeleteButton.addEventListener('click', function () {
+    closeM(deleteModal);
+
+    // 체크된 행 삭제
+    var checkedRows = document.querySelectorAll('.mark_list input[type="checkbox"]:checked');
+    checkedRows.forEach(function (cb) {
+      var row = cb.closest('.mark_list');
+      if (row) row.remove();
+    });
+
+    openM(doneModal);
+    refreshMaster();
+    bindRowCheckboxEvents();
+  });
+
+  confirmDeleteCheckButton && confirmDeleteCheckButton.addEventListener('click', function () {
+    closeM(checkModal);
+  });
+
+  doneConfirmButton && doneConfirmButton.addEventListener('click', function () {
+    closeM(doneModal);
+  });
+});

@@ -10,30 +10,47 @@
   font-weight: 400;
   font-style: normal;
 }
+
+body {
+  background-color: #ffffff;
+}
+
 main {
-  width: 100%;
-  height: calc(100vh - 200px);
   display: flex;
+  min-height: calc(100vh - 220px);
 }
 
 .main_sidebar {
   width: 180px;
-  height: 100%;
   background-color: #2f4db1;
-  display: flex;
-  flex-direction: column;
   color: white;
+  padding: 20px 0;
 }
 
-.main_sidebar ul li img {
-  height: 150px;
-  width: 150px;
-  border-radius: 100%;
+.main_sidebar img {
+  height: 130px;
+  width: 130px;
+  background-color: #ff80ab;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: block;
 }
 
-.main_sidebar ul li {
-  padding: 15px;
-  color: white;
+.main_sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.main_sidebar li {
+  padding: 12px 20px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.main_sidebar li a {
+  padding: 12px 20px;
+  cursor: pointer;
+  color: #ffffff;
 }
 
 /* ============================= */
@@ -53,69 +70,112 @@ form {
 }
 
 .mark_nav {
+  max-width: 1200px;
   display: flex;
-  margin: 100px 150px 0px 150px;
+  width: calc(100% - 40px);
+  margin: 0 auto;
   height: 50px;
-  align-items: center;
-  background-color: rgb(191, 201, 201);
+  align-items:center;
+  background-color: #F2F2F2;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
+  justify-content: center;
+
 }
 
 .mark_nav ul {
   display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 .mark_nav ul li {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 50px;
+  line-height: 50px;   
+}
+
+.mark_nav ul li:first-child {
+  width: 64px;
+  flex: 0 0 64px;
+  justify-content: center;
 }
 
 .mark_nav input {
-  margin: 0px 30px;
-  width: 30px;
-  height: 30px;
-}
-
-.name div {
-  width: 100px;
-  text-align: center;
-}
-
-.location div {
-  width: 1000px;
-  text-align: center;
-}
-
-.phone div {
-  width: 200px;
-  text-align: center;
+  margin: 0;
+  width: 22px;
+  height: 22px;
 }
 
 .mark_list {
-  display: flex;
-  margin: 0px 150px;
+  max-width: 1200px;
+  width: calc(100% - 40px);
+  margin: 0 auto;
   height: 50px;
   align-items: center;
-  background-color: rgb(214, 236, 236);
   border-bottom: 1px solid black;
 }
 
 .mark_list ul {
   display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 .mark_list ul li {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 50px;
+  line-height: 50px;   
+}
+
+.mark_list ul li:first-child {
+  width: 64px;
+  flex: 0 0 64px;
+  justify-content: center;
 }
 
 .mark_list input {
-  margin: 0px 30px;
-  width: 30px;
-  height: 30px;
+  margin: 0;
+  width: 22px;
+  height: 22px;
+}
+
+.name {
+  flex: 0 0 160px;
+}
+
+.location {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.phone {
+  flex: 0 0 180px;
+}
+
+.name div {
+  width: auto;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.location div {
+  width: auto;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.phone div {
+  width: auto;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
 }
 
 .page {
@@ -138,11 +198,64 @@ form {
   justify-content: center;
 }
 
-button {
+#btnDelete {
   background-color: red;
   color: white;
   width: 80px;
   height: 40px;
   border-radius: 15px;
+}
 
+#cacnceDelete {
+  background-color: white;
+  border: 2px solid rgb(255, 0, 0);
+  color: black;
+}
+
+#confirmDelete{
+  background-color: #2f4db1;
+  color: white;
+}
+#check_confirmDelete{
+  background-color: #2f4db1;
+  color: white;
+}
+
+
+.modal {
+  position: fixed;
+  inset: 0;
+  top: 0px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal.open {
+  display: flex;
+}
+
+.modal_box {
+  background: #fff;
+  min-width: 320px;
+  max-width: 90vw;
+  padding: 20px 24px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.modal_buttons {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.modal_buttons button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
