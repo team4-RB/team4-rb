@@ -73,30 +73,88 @@ main {
   margin: 30px;
 }
 
+form {
+  width: 100%;
+}
+
+.div_choose {
+  width: 500px;
+}
+
 .div_choose ul {
   display: flex;
   list-style-type: none;
-  margin: 100px 0px 0px 150px;
+  padding: 50px 0px 0px 150px;
+}
+
+.div_choose ul li {
+  margin: 10px;
 }
 
 .mark_nav {
   display: flex;
-  margin: 0px 150px 0px 150px;
+  margin: 0px 150px;
   height: 50px;
   align-items: center;
   background-color: rgb(191, 201, 201);
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 .mark_nav ul {
   display: flex;
-  flex: 1;
-  list-style-type: none;
-  background-color: rgb(191, 201, 201);
-  justify-content: space-around;
+}
+
+.mark_nav ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .mark_nav input {
-  margin-left: 20px;
+  margin: 0px 30px;
+  width: 30px;
+  height: 30px;
+}
+
+.name div {
+  width: 100px;
+  text-align: center;
+}
+
+.posttitle div {
+  width: 900px;
+  text-align: center;
+}
+
+.day div {
+  width: 200px;
+  text-align: center;
+}
+
+.mark_list {
+  display: flex;
+  margin: 0px 150px;
+  height: 50px;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid black;
+}
+
+.mark_list ul {
+  display: flex;
+}
+
+.mark_list ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mark_list input {
+  margin: 0px 30px;
+  width: 30px;
+  height: 30px;
 }
 
 .page {

@@ -186,10 +186,14 @@
   }
 
   .modal_container form label {
-    font-size: 14px;
+    font-size: 20px;
     margin-bottom: 5px;
   }
-
+.modal_container form label input{
+    width: 200px;
+    height: 60px;
+    font-size: 20px;
+  }
   .modal_container .modal_button {
     display: flex;
     justify-content: flex-end;
