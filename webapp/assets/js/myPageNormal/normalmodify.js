@@ -15,7 +15,8 @@ const modalclose = document.getElementById("saveConfirmBtn");
 addressmodal.addEventListener('click', function () {
   openaddress.style.display = 'block';
 });
-mailmodal.addEventListener('click', function () {
+mailmodal.addEventListener('click', function(e) {
+  e.preventDefault();
   openmail.style.display = 'block';
 });
 phonemodal.addEventListener('click', function () {
@@ -28,6 +29,7 @@ pwmodal.addEventListener('click', function () {
   openpw.style.display = 'block';
 });
 
-modalclose.addEventListener('click', function () {
-  modal.style.display = 'none';
-});
+function openmailModalClose(){
+    openmail.style.display = 'none';
+  console.log("우편모달확인버튼눌림");
+}

@@ -42,7 +42,7 @@ form{
   margin: 50px 200px;
   border: 1px solid black;
   border-radius: 15px;
-  background-color: bisque;
+  background-color: rgb(255, 255, 255);
 }
 .month{
   border-bottom: 1px solid black;
