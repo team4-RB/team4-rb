@@ -20,11 +20,11 @@ function modalDeleteNewsFinishedShow() {
   modalDeleteNewsFinished.style.display = "flex";
 
   //모달 텍스트 요소 가져오기
-  const modalText = document.getElementById("modal_text");
+  const modalText = document.getElementsByClassName("modal_text");
 
   let str = `제목 : ` + newsTitle + `\n뉴스를 삭제 완료했습니다.`;
   
-  modalText.innerText = str;
+  modalText[0].innerText = str;
 
   //엔터로 확인 버튼 누르기
   document.onkeydown = (event) => {
