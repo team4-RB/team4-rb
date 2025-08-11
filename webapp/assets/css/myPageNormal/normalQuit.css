@@ -47,7 +47,7 @@ main {
  }
 
  .arlim {
-   background-color: blueviolet;
+   background-color: rgb(255, 255, 255);
    display: flex;
    flex-direction: row;
    margin: 0px 30px;
@@ -135,7 +135,7 @@ button{
 }
 
 .modal_box {
-  background-color: aqua;
+  background-color: rgb(255, 255, 255);
   text-align: center;
   padding: 30px;
   border-radius: 30px;
@@ -170,7 +170,7 @@ button{
 }
 
 .modal {
-  display: block;
+  display: none;
   position: fixed;
   top: 0;
   width: 900px;
@@ -183,7 +183,8 @@ button{
 }
 
 .modal_box {
-  background-color: aqua;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
   text-align: center;
   padding: 30px;
   border-radius: 30px;
