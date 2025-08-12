@@ -35,6 +35,7 @@
           <!-- 마이페이지 제목 -->
 
       <div class="title">쪽지함</div>
+      <!-- 받은 쪽지와 보낸 쪽지로 이동 할 수 있는 칸 -->
       <nav class="div_choose">
         <ul>
           <li class="send"><a href="./careMessage.html">받은 쪽지</a></li>
@@ -42,6 +43,7 @@
           <li class="reseive"><a href="./careMessageReturn.html"><strong>보낸 쪽지</strong></a></li>
         </ul>
       </nav>
+      <!-- 페이지 분류 창 -->
       <nav class="mark_nav">
         <ul>
           <li><input type="checkbox"></li>
@@ -59,6 +61,7 @@
           </li>
         </ul>
       </nav>
+      <!-- 보낸 사람 목록 -->
       <nav class="mark_list">
         <ul>
           <li><input type="checkbox"></li>
@@ -76,58 +79,64 @@
           </li>
         </ul>
       </nav>
-      <nav class="mark_list">
-        <ul>
-          <li><input type="checkbox"></li>
-          <li class="name">
-            <div>받을 사람</div>
-          </li>
-          <li class="messeagetitle">
-            <div id="headline">제목</div>
-          </li>
-          <li class="day">
-            <div>날짜</div>
-          </li>
-          <li class="read">
-            <div>읽음 상태</div>
-          </li>
-        </ul>
-      </nav>
-      <nav class="mark_list">
-        <ul>
-          <li><input type="checkbox"></li>
-          <li class="name">
-            <div>받을 사람</div>
-          </li>
-          <li class="messeagetitle">
-            <div id="headline">제목</div>
-          </li>
-          <li class="day">
-            <div>날짜</div>
-          </li>
-          <li class="read">
-            <div>읽음 상태</div>
-          </li>
-        </ul>
-      </nav>
-      <nav class="mark_list">
-        <ul>
-          <li><input type="checkbox"></li>
-          <li class="name">
-            <div>받을 사람</div>
-          </li>
-          <li class="messeagetitle">
-            <div id="headline">제목</div>
-          </li>
-          <li class="day">
-            <div>날짜</div>
-          </li>
-          <li class="read">
-            <div>읽음 상태</div>
-          </li>
-        </ul>
-      </nav>
+            <!-- 보낸 사람 목록 -->
 
+      <nav class="mark_list">
+        <ul>
+          <li><input type="checkbox"></li>
+          <li class="name">
+            <div>받을 사람</div>
+          </li>
+          <li class="messeagetitle">
+            <div id="headline">제목</div>
+          </li>
+          <li class="day">
+            <div>날짜</div>
+          </li>
+          <li class="read">
+            <div>읽음 상태</div>
+          </li>
+        </ul>
+      </nav>
+            <!-- 보낸 사람 목록 -->
+
+      <nav class="mark_list">
+        <ul>
+          <li><input type="checkbox"></li>
+          <li class="name">
+            <div>받을 사람</div>
+          </li>
+          <li class="messeagetitle">
+            <div id="headline">제목</div>
+          </li>
+          <li class="day">
+            <div>날짜</div>
+          </li>
+          <li class="read">
+            <div>읽음 상태</div>
+          </li>
+        </ul>
+      </nav>
+            <!-- 보낸 사람 목록 -->
+
+      <nav class="mark_list">
+        <ul>
+          <li><input type="checkbox"></li>
+          <li class="name">
+            <div>받을 사람</div>
+          </li>
+          <li class="messeagetitle">
+            <div id="headline">제목</div>
+          </li>
+          <li class="day">
+            <div>날짜</div>
+          </li>
+          <li class="read">
+            <div>읽음 상태</div>
+          </li>
+        </ul>
+      </nav>
+<!-- 페이지 네이션 -->
       <nav class="page">
         <ul>
           <li><a href="">&lt;</a></li>
@@ -138,6 +147,7 @@
           <li><a href="">&gt;</a></li>
         </ul>
       </nav>
+      <!-- 삭제 버튼 -->
       <div class="div_delete">
         <button class="btn_list_delete">삭제</button>
       </div>
@@ -145,7 +155,7 @@
 
 
   </main>
-
+  <!-- 삭제버튼 클릭 시 출력되는 모달 -->
   <div class="modal_bg" id="deleteMsgModal">
     <div class="modal_box confirm_modal">
       <p class="confirm_text">정말로 쪽지를 삭제하시겠습니까?</p>
@@ -155,7 +165,7 @@
       </div>
     </div>
   </div>
-
+<!-- 삭제 확인 모달에서 확인 버튼 클릭시 나오는 모달 -->
   <div class="modal_bg" id="sendSuccessModal">
     <div class="modal_box modal_send">
       <p class="send_message">쪽지가 삭제되었습니다.</p>
@@ -164,6 +174,7 @@
       </div>
     </div>
   </div>
+  <!-- 리스트 클릭 시 보낸 쪽지 내용 출력 모달 -->
   <div id="msgModal" class="modal_bg">
     <div class="modal_box">
       <div class="modal_read">
@@ -178,6 +189,7 @@
           나 이대나온 남자야. 까불지마
         </div>
       </div>
+      <!-- 삭제 버튼 클릭시 삭제 -->
       <div class="modal_button">
         <button class="btn_delete">삭제</button>
       </div>
