@@ -57,3 +57,11 @@ function checkId() {
     errorID.style.display = "block";
   }
 }
+
+function nextPg() {
+  if(!input.value&!nameInput.value&!phoneInput.value) {
+    alert('입력해주세요')
+  }else {
+    location.href= "./../../../webapp/app/login/findPasswordResult.html";
+  }
+}
