@@ -21,22 +21,28 @@
   background-color: #FFF8EF;
   display: flex;
   justify-content: center;
+  position: relative;
+  align-items: center;
 }
 .footerDiv{
   display: flex;
+  width: 1500px;
   flex-direction: column;
   justify-content: center;
-  width: 700px;
+  /* background-color: aqua; */
+  position: absolute;
 }
 #site-footer div ul{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 #site-footer div span{
   padding-top: 10px;
   text-align: center;
-  font-size: 10px;
+  font-size: 16px;
 }
 #site-footer div ul li p{
-  font-size: 10px;
+  font-size: 16px;
+  /* background-color: green; */
+  margin: 0 15px;
 } 
