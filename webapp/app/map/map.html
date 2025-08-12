@@ -15,22 +15,36 @@
 <body>
   <div id="header"></div>
   <main>
+    <!-- 지도 페이지 컨테이너 -->
     <div class="map_container">
+      <!-- 지도 api 칸 -->
       <div class="map_api"><img class="map_img" src="./../../assets/img/map/mapImg.png" alt="지도그림"></div>
+      <!-- 지도 클릭 시 사이드바 -->
       <div class="sidebar">
+        <!-- 지역 정보 -->
         <div class="map_info">
+          <!-- 정보 칸 닫기 -->
           <div class="closebtn">&times;</div>
+          <!-- 정보 내용 컨테이너 -->
           <div class="info_content_container">
+            <!-- 정보 내용 ul -->
             <ul class="info_content">
+              <!-- 지역 제목 -->
               <li class="info_title"></li>
+              <!-- 지역 주소 -->
               <li class="info_address"></li>
+              <!-- 오픈 시간 -->
               <li class="info_times"></li>
+              <!-- 장소 전화번호 -->
               <li class="info_phonenum"></li>
+              <!-- 장소 상세(인터넷 유무, 배달 유무 등등...) -->
               <li class="info_detail"></li>
             </ul>
           </div>
+          <!-- 찜 버튼 -->
           <div class="wishbtn">찜버튼</div>
         </div>
+        <!-- 장소 상세설명 -->
         <div class="map_detail"></div>
       </div>
     </div>
@@ -38,8 +52,11 @@
   <div id="footer"></div>
   <!-- 모달창 -->
   <article class="modalbox">
+    <!-- 비로그인 시 체크 모달 -->
     <div class="login_check_model">
+      <!-- 모달 닫기 버튼 -->
       <div class="modal_closebtn">&times;</div>
+      <!-- 모달 내용 -->
       <div class="modal_text">로그인이 필요합니다.</div>
     </div>
   </article>
