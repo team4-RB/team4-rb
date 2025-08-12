@@ -1,9 +1,11 @@
+/* 폰트 */
 @font-face {
     font-family: 'Pretendard-Regular';
     src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
     /* font-weight: 500; 적용 안됨 */
     font-style: normal;
 }
+/* 전체 내용 */
 *{
   margin: 0;
   padding: 0;
@@ -15,12 +17,14 @@
   /* #FFE7C9 */
   /* #1D3266 */
 }
+/* 메인 세션 */
 main{
   background-color: #FFE7C9;
   /* height: calc(100vh - 220px); */
   display: flex;
   justify-content: center;
 }
+/* 페이지 컨테이너 */
 .main_body{
   width: 1100px;
   height: 100%;
@@ -29,12 +33,15 @@ main{
   align-items: center;
   background-color: rgba(104, 104, 104, 0.1);
 }
+/* 페이지 제목 */
 .page_title{
   /* background-color: yellowgreen; */
   margin-top: 30px;
   font-size: 24px;
   text-align: center;
 }
+
+/* 검색 영역 */
 #search_area{
   margin-top: 20px;
   background-color: white;
@@ -46,35 +53,42 @@ main{
   align-items: center;
   justify-content: space-between;
 }
+/* 검색 분류 선택 메뉴 */
 #search_criteria{
   /* background-color: rebeccapurple; */
   width: 80px;
   border-radius: 4px;
   margin-left: 20px;
 }
+/* 검색 입력 창 */
 #criteria{
   flex: 1;
   margin: 0 10px;
 }
+/* 검색 아이콘 박스 */
 #search_icon_box{
   width: 25px;
   margin-right: 20px;
 }
+/* 검색 버튼 이미지 */
 #search_icon{
   width: 100%;
 }
+/* 카드 리스트 내용 */
 .context{
   margin-top: 30px;
   /* background-color: orange; */
   width: 1000px;
   overflow: hidden;
 }
+/* 카드 행 */
 .card_row{
   width: 100%;
   /* background-color: blue; */
   display: flex;
   margin-bottom: 20px;
 }
+/* 카드 리스트 ul */
 #card_list_1,
 #card_list_2{
   display: flex;
@@ -83,6 +97,7 @@ main{
   width: 100%;
   height: max-content;
 }
+/* 카드 리스트 li */
 .care_card{
   background-color: #FFF8EF;
   width: 230px;
@@ -94,6 +109,7 @@ main{
   align-items: center;
   position: relative;
 }
+/* 하트 이미지 박스 */
 .heart_img_box{
   position: absolute;
   height: 35px;
@@ -102,16 +118,19 @@ main{
   right: 0;
   margin: 10px;
 }
+/* 하트 이미지 */
 .heart_img{
   position: absolute;
   height: 100%;
 }
+/* 프로필 */
 .profile{
   /* background-color: green; */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+/* 프로필 픽 박스 */
 .profile_pic_box{
   /* background-color: aquamarine; */
   width: 100px;
@@ -121,6 +140,7 @@ main{
   border: solid 2px black;
   margin-top: 45px;
 }
+/*  */
 .profile_pic{
   width: 100%;
 }
