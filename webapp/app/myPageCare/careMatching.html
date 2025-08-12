@@ -18,6 +18,8 @@
 
   </header>
   <main>
+          <!-- 마이페이지 사이드 바 목록과 이동 경로 -->
+
     <nav class="sidebar">
       <ul>
         <li><a href="./careProfile.html"><img src="./../../assets/img/myPageNormal/normalMember.jpg" alt="#"></a></li>
@@ -33,7 +35,11 @@
     </nav>
 
     <div class="div_mark">
+          <!-- 마이페이지 제목 -->
+
       <div class="title"> 매칭 기록 </div>
+      <!-- 페이지 월 분류 제목 -->
+
       <div class="matching_month">
         <ul class="months">
           <li class="month">1월</li>
@@ -49,6 +55,7 @@
           <li class="month">11월</li>
           <li class="month">12월</li>
         </ul>
+        <!-- 매칭 페이지 원래 넣었던 값 (js 넣어서 이건 안나와요) -->
         <ul class="matching_list">
           <li class="matching">
             <div class="matching_day">
@@ -69,6 +76,7 @@
           </li>
         </ul>
       </div>
+      <!-- 페이지네이션 -->
       <nav class="page">
         <ul>
           <li><a href="">&lt;</a></li>
@@ -80,6 +88,7 @@
         </ul>
 
       </nav>
+      <!-- 추가 버튼 클릭시 하단에 있는 모달창 출력 -->
       <div class="div_add">
         <button>추가</button>
       </div>
@@ -88,7 +97,7 @@
   <footer>
 
   </footer>
-
+<!-- 추가 버튼을 클릭 시 아래의 모달 생성 -->
   <div class="modal" id="matching_add">
     <div class="modal_container">
       <h2> 매칭 추가 </h2>
@@ -104,6 +113,7 @@
       </form>
     </div>
   </div>
+  <!-- 매칭 추가 등록 버튼 클릭 시 나오는 모달 -->
   <div class="modal" id="complete_modal">
     <div class="modal_container">
       <p>매칭 정보가 등록되었습니다</p>
