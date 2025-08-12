@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const headCb = $('.mark_nav input[type="checkbox"]');
   const getRowCbs = () => $$('.mark_list input[type="checkbox"]');
+
   function syncHeaderFromRows() {
     const cbs = getRowCbs();
     const total = cbs.length;
@@ -11,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!headCb) return;
     headCb.checked = (total > 0 && checked === total);
   }
+
   headCb?.addEventListener('change', () => {
     getRowCbs().forEach(cb => cb.checked = headCb.checked);
   });
@@ -27,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
   rows.forEach(row => {
     row.addEventListener('click', e => {
       if (e.target.closest('input[type="checkbox"]')) return;
-      if (e.target.closest('a')) e.preventDefault();
+      e.preventDefault();
       currentRow = row;
       openReadModal();
     });
@@ -38,24 +40,53 @@ document.addEventListener('DOMContentLoaded', function () {
     if (e.target === readModal) closeReadModal();
   });
 
+  const sendModal = $('#sendMsgModal');
+  const sendCloseX = sendModal?.querySelector('.modal_close');
+  const sendCancel = sendModal?.querySelector('.btn_cancel');
+  const sendBtn = sendModal?.querySelector('.btn_send');
+  const replyBtn = $('#msgModal .btn_reply');
+
+  function openSendModal() { sendModal?.classList.add('open'); }
+  function closeSendModal() { sendModal?.classList.remove('open'); }
+  window.closeSendMsgModal = closeSendModal;
+
+  replyBtn?.addEventListener('click', () => {
+    closeReadModal();
+    openSendModal();
+  });
+
+  sendCloseX?.addEventListener('click', closeSendModal);
+  sendCancel?.addEventListener('click', closeSendModal);
+  sendModal?.addEventListener('click', e => {
+    if (e.target === sendModal) closeSendModal();
+  });
+
   const statusModal = $('#sendSuccessModal');
   const statusMsgEl = statusModal?.querySelector('.send_message');
-  function openStatusModal(msg) {
-    if (statusMsgEl) statusMsgEl.textContent = msg;
+  function openStatusModal(message) {
+    if (statusMsgEl) statusMsgEl.textContent = message;
     statusModal?.classList.add('open');
   }
   function closeStatusModal() { statusModal?.classList.remove('open'); }
-  window.closeSendModal = closeStatusModal;
-
+  window.closeSendModal = function () {
+    closeSendModal();
+    closeStatusModal();
+  };
   statusModal?.addEventListener('click', e => {
     if (e.target === statusModal) closeStatusModal();
+  });
+
+  sendBtn?.addEventListener('click', () => {
+    closeSendModal();
+    openStatusModal('쪽지를 보냈습니다.');
+    const ta = document.getElementById('message_textarea');
+    if (ta) ta.value = '';
   });
 
   const deleteConfirmModal = $('#deleteMsgModal');
   function openDeleteConfirm() { deleteConfirmModal?.classList.add('open'); }
   function closeDeleteConfirm() { deleteConfirmModal?.classList.remove('open'); }
   window.closeDeleteModal = closeDeleteConfirm;
-
   deleteConfirmModal?.addEventListener('click', e => {
     if (e.target === deleteConfirmModal) closeDeleteConfirm();
   });
@@ -83,11 +114,11 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   window.confirmDelete = function () {
-    deleteTargets.forEach(row => row && row.remove());
+    deleteTargets.forEach(el => el && el.remove());
     deleteTargets = [];
     currentRow = null;
-    closeDeleteConfirm();
 
+    closeDeleteConfirm();
     syncHeaderFromRows();
     if (headCb) headCb.checked = false;
 
@@ -96,9 +127,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.addEventListener('keydown', e => {
     if (e.key !== 'Escape') return;
-    const opens = $$('.modal_bg.open');
-    if (!opens.length) return;
-    opens[opens.length - 1].classList.remove('open');
+    const openModals = $$('.modal_bg.open');
+    if (!openModals.length) return;
+    openModals[openModals.length - 1].classList.remove('open');
   });
 
   getRowCbs().forEach(cb => cb.addEventListener('change', syncHeaderFromRows));
