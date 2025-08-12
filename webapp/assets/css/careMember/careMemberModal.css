@@ -12,12 +12,14 @@
   align-items: center;
   /* 안 보여지게 해 둠 */
 }
+/* 모달 창 */
 .modal_window{
   position: absolute;
   background-color: white;
   padding: 17px;
   border-radius: 30px;
 }
+/* 모달 닫기 박스 */
 .modal_x_box{
   height: 25px;
   /* background-color: aquamarine; */
@@ -25,11 +27,13 @@
   justify-content: end;
   width: 100%;
 }
+/* 모달 닫기 버튼 */
 .modal_x{
   height: 100%;
   /* background-color:aqua; */
   right: 0;
 }
+/* 모달 바디 */
 .modal_body_confirm{
   /* 여기 width 값으로 모달 창 크기 조정 가능 */
   width: 400px;
@@ -38,12 +42,14 @@
   flex-direction: column;
   align-items: center;
 }
+/* 모달 내용 */
 #modal_text{
   font-size: 20px;
   text-align: center;
   padding-top: 30px;
   padding-top: 20px
 }
+/* 보내는 사람 정보 */
 .letter_info{
   /* background-color: yellow; */
   width: 100%;
@@ -59,6 +65,7 @@
   border-radius: 5px;
   padding: 0 10px;
 }
+/* 모달 버튼 박스 */
 .modal_button_box{
   margin-top: 10px;
   display: flex;
@@ -66,6 +73,7 @@
   /* background-color: greenyellow; */
   justify-content: center;
 }
+/* 확인 버튼 */
 .modal_check_button{
   background-color: #1D3266;
   color: white;
@@ -75,6 +83,7 @@
   border: solid 1px black;
   margin: 9px;
 }
+/* 취소 버튼 */
 .modal_cancel_button{
   background-color: white;
   color:#1D3266;
@@ -101,6 +110,7 @@
   border: solid 2px #1D3266;
   border-radius: 15px;
 }
+/* 날짜 선택 */
 .select_month{
   margin : 20px 0 20px 0;
   display: flex;
