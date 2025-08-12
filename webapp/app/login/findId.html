@@ -23,7 +23,7 @@
             <div class="box_content">
               <div class="box_name">
                 <p>이름</p>
-                <input type="text" placeholder="" name="name" />
+                <input type="text" placeholder="" name="name" id="name_input" />
                 <label for="member_normal">
                   <input
                     type="radio"
@@ -44,7 +44,7 @@
               <div>
                 <div class="box_phone">
                   <p>휴대전화</p>
-                  <input type="text" placeholder="-없이 숫자만 입력해주세요" />
+                  <input type="text" placeholder="-없이 숫자만 입력해주세요" id="phone_input"/>
                   <button onclick="sendMsg()">인증번호 받기</button>
                   <div class="alert">인증번호가 발송되었습니다.</div>
                 </div>
@@ -61,7 +61,7 @@
                     id="author_number"
                   />
                   <div class="timer"></div>
-                  <button onclick="checkMsg()">인증번호 확인</button>
+                  <button onclick="checkMsg()" type="button">인증번호 확인</button>
                 </div>
                 <div class="error_box_msg">
                   <p class="error_msg">인증번호가 올바르지 않습니다.</p>
@@ -69,7 +69,7 @@
                 </div>
               </div>
               <div class="box_next">
-                <button type="submit">다음</button>
+                <button type="button" class="next_btn" onclick="nextPg()">다음</button>
               </div>
             </div>
           </div>

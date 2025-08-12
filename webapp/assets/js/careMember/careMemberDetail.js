@@ -16,7 +16,7 @@ function writeComment(){
 
     let today = new Date();
 
-    let str = '<a href="./../post/postDetail.html"><div class="comment_number">';
+    let str = '<div><div class="comment_number">';
     str += count+1;
     str += `</div><div class="comment_author">`;
     str += `아무개`;
@@ -28,7 +28,7 @@ function writeComment(){
     str += today.getMonth() < 10 ? "0" + today.getMonth() : today.getMonth();
     str += `-`;
     str += today.getDate();
-    str += `</div></a>`;
+    str += `</div></div>`;
 
     li.innerHTML = str;
 
