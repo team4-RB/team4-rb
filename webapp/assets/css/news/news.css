@@ -1,8 +1,10 @@
+/* 전체 내용 */
 * {
   margin: 0;
   padding: 0;
 }
 
+/* 폰트 */
 @font-face {
   font-family: 'Pretendard-Regular';
   src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
@@ -10,66 +12,79 @@
   font-style: normal;
 }
 
+/* 메인 세션 */
 main {
   width: 100%;
   height: calc(100vh - 220px);
   background-color: #FFE7C9;
 }
 
+/* 뉴스 컨테이너 */
 .news_container {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
+/* 뉴스 탑메뉴 */
 .news_topmenu {
   display: flex;
   flex-direction: row;
   margin: 30px auto;
 }
 
+/* 검색 아이콘 */
 .searchIcon {
   width: 20px;
   height: 20px;
 }
 
+/* 검색 창 바 */
 .searchbar {
   display: flex;
   justify-content: center;
 }
 
+/* 검색 입력 창 */
 .underbar {
   background-color: #FFE7C9;
   border: 0px;
   border-bottom: 1px solid black;
 }
 
+/* 검색 버튼 */
 .search_btn {
   background-color: #FFE7C9;
   border: 0px;
   cursor: pointer;
 }
 
+/* 전체 보기 : 링크상태,
+  전체 보기: 방문상태 */
 .all_news a:link,
 .all_news a:visited {
   color: black;
   text-decoration: none;
 }
 
+/* 뉴스 페이지 제목 */
 .title {
   font-size: 30px;
 }
 
+/* 전체 보기 박스 */
 .all_news {
   margin-right: 300px;
   margin-top: 50px;
 }
 
+/* 검색 창 바 */
 .searchbar {
   margin-left: 200px;
   margin-top: 50px;
 }
 
+/* 슬라이드 베너 랩 */
 .slides_wrap {
   border: 1px solid black;
   width: 800px;
@@ -79,6 +94,7 @@ main {
   list-style-type: none;
 }
 
+/* 베너 ul */
 .slides {
   display: flex;
   width: 100%;
@@ -89,12 +105,14 @@ main {
   left: 0;
 }
 
+/* 카드 뉴스 */
 .card {
   width: 800px;
   height: 300px;
   background-color: #FFF8EF;
 }
 
+/* ul의 li에서 2~5 까지 베너 */
 .slides>li:nth-child(2)>.card,
 .slides>li:nth-child(3)>.card,
 .slides>li:nth-child(4)>.card,
