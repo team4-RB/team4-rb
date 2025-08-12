@@ -140,10 +140,11 @@ main{
   border: solid 2px black;
   margin-top: 45px;
 }
-/*  */
+/* 프로필 사진 */
 .profile_pic{
   width: 100%;
 }
+/* 프로필 이름 */
 .profile_name{
   background-color: wheat;
   width: max-content;
@@ -153,6 +154,7 @@ main{
   border: solid 1px black;
   margin: 20px 10px 0 10px;
 }
+/* 날짜 행 */
 .day_row{
   /* background-color: crimson; */
   display: flex;
@@ -161,6 +163,7 @@ main{
   margin: 0 10px;
   margin-top: 10px;
 }
+/* 날짜 */
 .day{
   border: solid 3px #1D3266;
   border-radius: 50%;
@@ -171,20 +174,24 @@ main{
   font-size: 10;
   background-color: wheat;
 }
+/* 프로필 정보 칸 */
 .profile_intro{
   /* background-color: greenyellow; */
   margin: 0 10px;
   text-align: center;
   margin-top: 10px;
 }
+/* 프로필 소개 */
 .short_intro{
   margin: 5px 0;
   font-size: 10px;
 }
+/* 프로필 이력 */
 .long_intro{
   margin: 5px 0;
   font-size: 10px;
 }
+/* 페이지 네이션 */
 #pagenation{
   text-align: center;
   margin: 30px 0;

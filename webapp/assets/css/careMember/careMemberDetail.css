@@ -1,9 +1,11 @@
+/* 폰트 */
 @font-face {
     font-family: 'Pretendard-Regular';
     src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
     /* font-weight: 500; 적용 안됨 */
     font-style: normal;
 }
+/* 전체 내용 */
 *{
   margin: 0;
   padding: 0;
@@ -15,12 +17,14 @@
   /* #FFE7C9 */
   /* #1D3266 */
 }
+/* 메인 세션 */
 main{
   background-color: #FFE7C9;
   height: calc(100vh - 220px);
   display: flex;
   justify-content: center;
 }
+/* 페이지 컨테이너 */
 .main_body{
   width: 1100px;
   height: 100%;
@@ -29,6 +33,7 @@ main{
   justify-content: center;
   overflow: hidden;
 }
+/* 페이지 내용 칸 */
 .context{
   /* overflow: hidden; */
   margin-top: 70px;
@@ -37,25 +42,30 @@ main{
   height: 600px;
   display: flex;
 }
+/* 프로필 영역 */
 .profile_area{
   /* background-color: pink; */
   width: 550px;
 }
+/* 프로필 박스 */
 .profile{
   /* background-color: red; */
   display: flex;
 }
+/* 프로필 픽 박스 */
 .profile_pic_box{
   width: 100%;
   background-color: white;
   border-radius: 10px;
   display: flex;
 }
+/* 프로필 사진 */
 .profile_pic{
   width: 50%;
   border-radius: 20px;
   margin: 10px;
 }
+/* 프로필 정보 */
 .profile_intro{
   flex: 1;
   display: flex;
@@ -63,6 +73,7 @@ main{
   align-items: center;
   /* background-color: #1D3266; */
 }
+/* 프로필 이름 */
 .profile_name{
   background-color: wheat;
   width: max-content;
@@ -72,6 +83,7 @@ main{
   border: solid 3px black;
   margin: 20px 10px 0 10px;
 }
+/* 프로필 날짜 */
 .profile_day_row{
   /* background-color: crimson; */
   display: flex;
@@ -81,6 +93,7 @@ main{
   margin: 0 10px;
   margin-top: 10px;
 }
+/* 날짜 */
 .day{
   border: solid 3px #1D3266;
   border-radius: 50%;
@@ -92,28 +105,34 @@ main{
   font-size: 16px;
   background-color: wheat;
 }
+/* 프로필 이력 */
 .profile_info{
   margin-top: 15px;
   /* background-color: gray; */
   width: 85%;
   font-size: 16px;
 }
+/* 프로필 이력 ul */
 .profile_info ul{
   /* background-color: rebeccapurple; */
 }
+/* 프로필 이력 li */
 .profile_info ul li{
   padding: 5px 10px;
   /* background-color:crimson; */
 }
+/* 프로필 소개 */
 .profile_short_intro{
   margin-top: 10px;
   /* background-color: yellow; */
   width: 85%;
 }
+/* 프로필 소개 내용 */
 .profile_short_intro div{
   padding: 5px 10px;
   /* background-color: green; */
 }
+/* 쪽지 보내기 박스 */
 #send_button_box{
   display: flex;
   flex: 1;
@@ -121,6 +140,7 @@ main{
   justify-content: center;
   align-items: baseline;
 }
+/* 쪽지 보내기 버튼 */
 #send_button{
   margin-top: 30px;
   height: 40px;
@@ -129,6 +149,7 @@ main{
   color: white;
   background-color: #1D3266;
 }
+/* 후기 영역 */
 .comments_area{
   /* background-color: yellowgreen; */
   width: 550px;
@@ -138,10 +159,12 @@ main{
   align-items: center;
   margin-left: 10px;
 }
+/* 후기 패널 박스 */
 .comment_pannel{
   /* background-color: #1D3266; */
   width: 100%;
 }
+/* 후기 분류 제목 */
 .comment_column{
   background-color: rgb(211, 211, 211);
   display: flex;
@@ -153,6 +176,7 @@ main{
 .comment_list{
   /* background-color: yellow; */
 }
+/* 후기 리스트 div */
 .comment div{
   display: flex;
   height: 30px;
@@ -161,6 +185,7 @@ main{
   background-color: white;
   font-size: 12px;
 }
+/* 후기 순번 분류, 순번 */
 .comment_number_column,
 .comment_number{
   /* background-color: red; */
@@ -168,30 +193,38 @@ main{
   text-align: center;
 }
 
+/* 후기 작성자 분류, 작성자 */
 .comment_author_column,
 .comment_author{
   /* background-color: orange; */
   width: 14%;
   text-align: center;
 }
+
+/* 후기 작성자 분류 */
 .comment_author_column{
   border-left: solid 1px black;
   border-right: solid 1px black;
 }
+
+/* 후기 내용 분류, 내용 */
 .comment_context_column,
 .comment_context{
   /* background-color: green; */
   flex: 1;
   text-align: center;
 }
+/* 후기 내용 분류 */
 .comment_context_column{
   border-right: solid 1px black;
 }
+/* 후기 내용 */
 .comment_context{
   padding-left: 20px;
   text-align: left;
 }
 
+/* 후기 날짜 분류, 날짜 */
 .comment_date_column,
 .comment_date{
   /* background-color: blue; */
@@ -199,6 +232,7 @@ main{
   text-align: center;
 }
 
+/* 후기 작성 박스 */
 .input_box{
   margin-top: 10px;
   /* background-color: yellow; */
@@ -207,11 +241,13 @@ main{
   border: solid 1px black;
   background-color: white;
 }
+/* 후기 입력 창 */
 #comment_text{
   height: 30px;
   margin-left: 10px;
   flex: 1;
 }
+/* 후기 작성 버튼 */
 #comment_button{
   border: solid 1px black;
   height: 20px;
@@ -219,6 +255,7 @@ main{
   font: 10px;
   margin: 0 10px;
 }
+/* 후기 페이지 네이션 */
 #comment_pagenation{
   margin-top: 15px;
   /* background-color: blue; */
