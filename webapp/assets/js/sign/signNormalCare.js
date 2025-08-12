@@ -1,11 +1,12 @@
-const input = document.getElementById("get_id");
+const input = document.getElementById("get_id_input");
 const checkIdBox = document.querySelector(".id_err_box");
 const correctId = document.querySelector(".ok_id_msg");
 const errorID = document.querySelector(".err_id_msg");
-const val = input.value.trim();
+// const val = input.value.trim();
 function checkId() {
-  event.preventDefault();
-  if (val === "test") {
+  // event.preventDefault();
+  console.log(input.value);
+  if (input.value === "test") {
     checkIdBox.style.display = "block";
     correctId.style.display = "block";
     errorID.style.display = "none";
@@ -21,8 +22,8 @@ const msg = document.getElementById("msg_box");
 
 input1.addEventListener("input", () => {
   const val = input1.value;
-
-  const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  console.log(val)
+  const pattern = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*?_]).{8,16}$/;
 
   if (pattern.test(val)) {
     msg.style.display = "none";
@@ -130,17 +131,18 @@ const phone= document.querySelector("#phone")
 const authorNum= document.querySelector("#author_number")
 const address= document.querySelector(".address")
 const detailAddress= document.querySelector(".detail_address")
-const link= './../../app/sign/signSuccess.html';
+const link= './../../app/sign/signSucces.html';
 
 function hrefLink() {
   location.href = link;
 }
 
 function nextPg() {
-  if(input.value===!null&&input1===!null&&input2===!null&&email===!null&&nameInput===!null&&phone===!null&&authorNum===!null&&address===!null&&detailAddress===!null) {
+  event.preventDefault();
+  if(!input.value&&!input1&&!input2&&!email&&!nameInput&&!phone&&!authorNum&&!address&&!detailAddress) {
+    alert('값을 넣어주세요')
+  }else {
     alert('다음 페이지로 이동')
     hrefLink()
-  }else {
-    alert('값을 넣어주세요')
   }
 }
