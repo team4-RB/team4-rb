@@ -131,17 +131,18 @@ const phone= document.querySelector("#phone")
 const authorNum= document.querySelector("#author_number")
 const address= document.querySelector(".address")
 const detailAddress= document.querySelector(".detail_address")
-const link= './../../app/sign/signSuccess.html';
+const link= './../../app/sign/signSucces.html';
 
 function hrefLink() {
   location.href = link;
 }
 
 function nextPg() {
+  event.preventDefault();
   if(!input.value&&!input1&&!input2&&!email&&!nameInput&&!phone&&!authorNum&&!address&&!detailAddress) {
+    alert('값을 넣어주세요')
+  }else {
     alert('다음 페이지로 이동')
     hrefLink()
-  }else {
-    alert('값을 넣어주세요')
   }
 }

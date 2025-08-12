@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./../../assets/css/header.css">
   <link rel="stylesheet" href="./../../assets/css/footer.css">
   <script defer src="./../../assets/js/main/include.js"></script>
-  <!-- <script defer src="./../../assets/js/myPageNormal/normalPost.js"></script> -->
+  <script defer src="./../../assets/js/myPageNormal/normalPost.js"></script>
 </head>
 <body>
   <div id="header"></div>
@@ -38,75 +38,20 @@
         </nav>
         <nav class="mark_nav">
           <ul>
-            <li><input type="checkbox"></li>
-            <li class="name">
+            <li><input onclick="toggleMarksAll()" id="checkbox_col" name="mark_check_col" type="checkbox"></li>
+            <li class="name_col">
               <div>작성자</div>
             </li>
-            <li class="posttitle">
+            <li class="location_col">
               <div>제목</div>
             </li>
-            <li class="day">
+            <li class="phone_col">
               <div>날짜</div>
             </li>
           </ul>
         </nav>
-        <nav class="mark_list">
-          <ul>
-            <li><input type="checkbox"></li>
-            <li class="name">
-              <div>작성자</div>
-            </li>
-            <li class="posttitle"><a href="./../post/postDetaillogin.html">
-              <div>제목</div>
-              </a></li>
-            <li class="day">
-              <div>날짜</div>
-            </li>
-          </ul>
-        </nav>
-        <nav class="mark_list">
-          <ul>
-            <li><input type="checkbox"></li>
-            <li class="name">
-              <div>작성자</div>
-            </li>
-            <li class="posttitle"><a href="./../post/postDetaillogin.html">
-                <div>제목</div>
-              </a></li>
-            <li class="day">
-              <div>날짜</div>
-            </li>
-          </ul>
-        </nav>
-        <nav class="mark_list">
-          <ul>
-            <li><input type="checkbox"></li>
-            <li class="name">
-              <div>작성자</div>
-            </li>
-            <li class="posttitle"><a href="./../post/postDetaillogin.html">
-                <div>제목</div>
-              </a></li>
-            <li class="day">
-              <div>날짜</div>
-            </li>
-          </ul>
-        </nav>
-        <nav class="mark_list">
-          <ul>
-            <li><input type="checkbox"></li>
-            <li class="name">
-              <div>작성자</div>
-            </li>
-            <li class="posttitle"><a href="./../post/postDetaillogin.html">
-                <div>제목</div>
-              </a></li>
-            <li class="day">
-              <div>날짜</div>
-            </li>
-          </ul>
-        </nav>
-
+        <ul class="mark_list">
+        </ul>
 
         <nav class="page">
           <ul>
@@ -119,7 +64,7 @@
           </ul>
         </nav>
         <div class="div_delete">
-          <button>삭제</button>
+          <button type="button" onclick="delMarks()">삭제</button>
         </div>
       </div>
     </form>
