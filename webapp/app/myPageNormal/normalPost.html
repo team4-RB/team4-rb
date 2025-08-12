@@ -14,6 +14,7 @@
   <div id="header"></div>
   
   <main>
+    <!-- 메뉴 사이드바 섹션 -->
     <nav class="main_sidebar">
       <ul>
         <li><img src="./../../assets/img/myPageNormal/normalMember.jpg" alt="#"></li>
@@ -30,12 +31,14 @@
     </nav>
     <form action="" method="get">
       <div class="div_mark">
+        <!-- 메뉴 제목 -->
         <div class="title">게시글 관리</div>
         <nav class="div_choose">
           <ul>
             <li>작성한 게시글 목록</li>
           </ul>
         </nav>
+        <!-- 게시글 목록 컬럼 -->
         <nav class="mark_nav">
           <ul>
             <li><input onclick="toggleMarksAll()" id="checkbox_col" name="mark_check_col" type="checkbox"></li>
@@ -50,9 +53,10 @@
             </li>
           </ul>
         </nav>
+        <!-- 게시글 리스트 목록 -->
         <ul class="mark_list">
         </ul>
-
+        <!-- 페이지네이션 -->
         <nav class="page">
           <ul>
             <a href=""><li>&lt;</li></a>
@@ -63,6 +67,7 @@
             <a href=""><li>&gt;</li></a>
           </ul>
         </nav>
+        <!-- 게시글 삭제 버튼 -->
         <div class="div_delete">
           <button type="button" onclick="delMarks()">삭제</button>
         </div>
