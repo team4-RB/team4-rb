@@ -160,11 +160,14 @@ form {
   justify-content: end;
 }
 button {
-  background-color: blue;
+  background-color: #2F52AA;
   color: white;
   width: 80px;
   height: 40px;
   margin-right: 150px;
   border-radius: 15px;
   border: 0px;
+}
+button a{
+  color: white;
 }

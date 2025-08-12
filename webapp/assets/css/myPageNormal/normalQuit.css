@@ -118,7 +118,7 @@ form{
   background-color: #fff;
 }
 
-button{
+#next{
   height: 50px;
   width: 100px;
   background-color: blue;
@@ -128,7 +128,7 @@ button{
   margin-top: 30px;
 }
 .checkmodal {
-  /* display: none; */
+  display: none;
   position: fixed;
   top: 0;
   width: 900px;
@@ -136,7 +136,7 @@ button{
   justify-content: center;
   align-items: center;
   text-align: center;
-  z-index: 10px;
+  z-index: 10;
   margin-left: 30%;
 }
 
@@ -164,12 +164,12 @@ button{
   cursor: pointer;
   border-radius: 15px;
 }
-#check{
+#checkBtn{
   background-color: white;
   color: black;
   border: 1px solid black;
 }
-#cancle{
+#cancelBtn{
   background-color: blue;
   color: white;
   border: 1px solid black;
@@ -184,7 +184,7 @@ button{
   justify-content: center;
   align-items: center;
   text-align: center;
-  z-index: 10px;
+  z-index: 10;
   margin-left: 30%;
 }
 
