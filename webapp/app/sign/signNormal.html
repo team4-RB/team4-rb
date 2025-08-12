@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="./../../assets/css/sign/signNormal.css">
   <link rel="stylesheet" href="./../../assets/css/header.css">
   <link rel="stylesheet" href="./../../assets/css/footer.css">
-  <script defer src="./../../assets/js/main/include.js"></script>
   <script defer src="./../../assets/js/sign/signNormalCare.js"></script>
+  <script defer src="./../../assets/js/main/include.js"></script>
 </head>
 
 <body>
@@ -23,8 +23,8 @@
         </div>
         <div class="sign_box sign_id">
           <p>아이디</p>
-          <input type="text" placeholder="8자리 이상, 문자 숫자 포함" id="get_id">
-          <button onclick="checkId()">중복확인</button>
+          <input type="text" placeholder="8자리 이상, 문자 숫자 포함" id="get_id_input">
+          <button onclick="checkId()" type="button">중복확인</button>
         </div>
         <div class="id_err_box">
           <p class="err_id_msg">중복된 아이디 입니다.</p>
@@ -144,9 +144,7 @@
       </form>
     </section>
   </main>
-  <footer>
-    <h1>푸터터터<h1>
-  </footer>
+<div id="footer"></div>
 </body>
 
 </html>
