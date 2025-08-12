@@ -6,8 +6,8 @@ const all = document.querySelector("#all");
 const terms = document.querySelectorAll(".check");
 const link= './../../app/sign/signNormal.html';
 
-console.log(all);
-console.log(terms);
+// console.log(all);
+// console.log(terms);
 
 all.addEventListener('click', () => {
   terms.forEach((term) => {
@@ -15,11 +15,13 @@ all.addEventListener('click', () => {
   })
 })
 
-terms.forEach((v) => {
+terms.forEach((term) => {
   term.addEventListener('click' , () => {
     all.checked = terms.map((term) => term.checked).filter((checked) =>checked).length === terms.length;
   })
 })
+
+
 
 function hrefLink() {
   location.href = link;
@@ -36,3 +38,4 @@ function goNext() {
     alert("전체 동의를 하셔야만 합니다.")
   }
 }
+
