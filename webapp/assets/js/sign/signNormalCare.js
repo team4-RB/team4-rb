@@ -1,11 +1,12 @@
-const input = document.getElementById("get_id");
+const input = document.getElementById("get_id_input");
 const checkIdBox = document.querySelector(".id_err_box");
 const correctId = document.querySelector(".ok_id_msg");
 const errorID = document.querySelector(".err_id_msg");
-const val = input.value.trim();
+// const val = input.value.trim();
 function checkId() {
-  event.preventDefault();
-  if (val === "test") {
+  // event.preventDefault();
+  console.log(input.value);
+  if (input.value === "test") {
     checkIdBox.style.display = "block";
     correctId.style.display = "block";
     errorID.style.display = "none";
@@ -21,8 +22,8 @@ const msg = document.getElementById("msg_box");
 
 input1.addEventListener("input", () => {
   const val = input1.value;
-
-  const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  console.log(val)
+  const pattern = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*?_]).{8,16}$/;
 
   if (pattern.test(val)) {
     msg.style.display = "none";
@@ -137,7 +138,7 @@ function hrefLink() {
 }
 
 function nextPg() {
-  if(input.value===!null&&input1===!null&&input2===!null&&email===!null&&nameInput===!null&&phone===!null&&authorNum===!null&&address===!null&&detailAddress===!null) {
+  if(!input.value&&!input1&&!input2&&!email&&!nameInput&&!phone&&!authorNum&&!address&&!detailAddress) {
     alert('다음 페이지로 이동')
     hrefLink()
   }else {

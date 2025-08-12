@@ -23,13 +23,13 @@ function sendMsg() {
   }, 1000);
 }
 
+const input = document.getElementById("author_number");
+const errorBoxMsg = document.querySelector(".error_box_msg");
+const errorMsg = document.querySelector(".error_msg");
+const okMsg = document.querySelector(".okay_msg");
+const val = input.value.trim();
 function checkMsg() {
   event.preventDefault();
-  const input = document.getElementById("author_number");
-  const errorBoxMsg = document.querySelector(".error_box_msg");
-  const errorMsg = document.querySelector(".error_msg");
-  const okMsg = document.querySelector(".okay_msg");
-  const val = input.value.trim();
   if (/^\d{6}$/.test(val)) {
     errorBoxMsg.style.display = "block";
     okMsg.style.display = "block";
@@ -38,5 +38,21 @@ function checkMsg() {
     errorBoxMsg.style.display = "block";
     okMsg.style.display = "none";
     errorMsg.style.display = "block";
+  }
+}
+
+const nameInput = document.getElementById("name_input");
+const phoneInput = document.getElementById("phone_input");
+
+
+function nextPg() {
+  if(!input.value&!nameInput.value&!phoneInput.value) {
+    alert('입력해주세요')
+    alert(nameInput.value)
+  }else {
+    location.href= "./../../../webapp/app/login/findIdResult.html";
+    console.log(input.value)
+    console.log(nameInput.value)
+    console.log(phoneInput.value)
   }
 }
