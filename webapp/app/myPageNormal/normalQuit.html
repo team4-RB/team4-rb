@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./../../assets/css/header.css">
   <link rel="stylesheet" href="./../../assets/css/footer.css">
   <script defer src="./../../assets/js/main/include.js"></script>
+  <script defer src="./../../assets/js/myPageNormal/normalQuit.js"></script>
 </head>
 </head>
 
@@ -60,25 +61,27 @@
             </div>
           </div>
         </div>
-        <button onclick="openquitmodal()" id="next">다음</button>
+        <button type="button" onclick="openQuitModal()" id="next">다음</button>
       </form>
     </div>
   </main>
-  <div class="checkmodal" id="editModal">
+  <!-- 확인 모달창 -->
+  <div class="checkmodal" id="checkModal">
     <div class="modal_box">
       <p>정말로 회원 탈퇴를 진행하시겠습니까?</p>
       <p>※미사용 포인트는 소멸됩니다</p>
       <div class="modal_buttons">
-        <button onclick="checkmodal()" id="check">확인</button>
-        <button onclick="canclemodal()"id="cancle">취소</button>
+        <button onclick="showDoneModal()" id="checkBtn">확인</button>
+        <button onclick="cancelQuit()" id="cancelBtn">취소</button>
       </div>
     </div>
   </div>
-  <div class="modal" id="editModal">
+  <!-- 완료 모달창 -->
+  <div class="modal" id="doneModal">
     <div class="modal_box">
       <p>성공적으로 회원을 탈퇴 하셨습니다.</p>
       <div class="modal_buttons">
-        <a href="./../../main.html"><button id="check">확인</button></a>
+        <a href="./../../main.html"><button id="doneOkBtn">확인</button></a>
       </div>
     </div>
   </div>
