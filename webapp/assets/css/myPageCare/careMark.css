@@ -1,8 +1,11 @@
+/* 밑의 주석 처리 전까지는 공통 */
+/* 전체 페이지 설정 */
 * {
   margin: 0;
   padding: 0;
   font-family: 'pretendard-regular';
 }
+/* 폰트 공통 설정 */
 
 @font-face {
   font-family: 'Pretendard-Regular';
@@ -10,15 +13,18 @@
   font-weight: 400;
   font-style: normal;
 }
+/* 전체 바디 색 설정 */
 
 body {
   background-color: #ffffff;
 }
+/* main 페이지 상세 설정 */
 
 main {
   display: flex;
   min-height: calc(100vh - 220px);
 }
+/* 마이페이지 왼쪽 사이드 바 설정 */
 
 .main_sidebar {
   width: 180px;
@@ -26,6 +32,7 @@ main {
   color: white;
   padding: 20px 0;
 }
+/* 사람 모양 이미지 설정 */
 
 .main_sidebar img {
   height: 130px;
@@ -35,17 +42,20 @@ main {
   margin: 0 auto 20px;
   display: block;
 }
+/* 사이드 바의 목록 스타일 설정 */
 
 .main_sidebar ul {
   list-style: none;
   padding-left: 0;
 }
+/* 글자들의 패딩 및 커서 설정 */
 
 .main_sidebar li {
   padding: 12px 20px;
   cursor: pointer;
   color: #ffffff;
 }
+/* 개인정보 수정, 찜한 목록 등 사이드바 상세 설정 */
 
 .main_sidebar li a {
   padding: 12px 20px;
@@ -54,21 +64,22 @@ main {
 }
 
 /* ============================= */
+/* 마이페이지 전체 스타일 설정 */
 .div_mark {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
-
+/* 마이페이지 제목 스타일 설정 */
 .div_mark .title {
   font-size: 30px;
   margin: 30px;
 }
-
+/* 전체적인 길이 설정 */
 form {
   width: 100%;
 }
-
+/* 페이지 분류칸 설정 */
 .mark_nav {
   max-width: 1200px;
   display: flex;
@@ -82,13 +93,13 @@ form {
   justify-content: center;
 
 }
-
+/* 맨 위 칸의 부분 설정 */
 .mark_nav ul {
   display: flex;
   align-items: center;
   width: 100%;
 }
-
+/* 이름, 위치 전화번호 등 각각의 위치 설정 */
 .mark_nav ul li {
   display: flex;
   justify-content: center;
@@ -96,19 +107,19 @@ form {
   height: 50px;
   line-height: 50px;   
 }
-
+/* 첫번째 고정을 냅두기 */
 .mark_nav ul li:first-child {
   width: 64px;
   flex: 0 0 64px;
   justify-content: center;
 }
-
+/* 체크박스 설정 */
 .mark_nav input {
   margin: 0;
   width: 22px;
   height: 22px;
 }
-
+/* 페이지 상세 내역의 길이 높이 위치 설정 */
 .mark_list {
   max-width: 1200px;
   width: calc(100% - 40px);
@@ -117,13 +128,13 @@ form {
   align-items: center;
   border-bottom: 1px solid black;
 }
-
+/* 상세페이지의 전체적으로 스타일 지정 */
 .mark_list ul {
   display: flex;
   align-items: center;
   width: 100%;
 }
-
+/* 상세페이지의 li 안쪽의 스타일 지정 */
 .mark_list ul li {
   display: flex;
   justify-content: center;
@@ -131,73 +142,73 @@ form {
   height: 50px;
   line-height: 50px;   
 }
-
+/* 첫번째 고정으로 냅두기 */
 .mark_list ul li:first-child {
   width: 64px;
   flex: 0 0 64px;
   justify-content: center;
 }
-
+/* 상세페이지 리스트 스타일 */
 .mark_list input {
   margin: 0;
   width: 22px;
   height: 22px;
 }
-
+/* 이름 나오는 칸 */
 .name {
   flex: 0 0 160px;
 }
-
+/* 위치 나오는 칸 */
 .location {
   flex: 1 1 auto;
   min-width: 0;
 }
-
+/* 전화번호 나오는 칸 */
 .phone {
   flex: 0 0 180px;
 }
-
+/* 이름 안의 글씨 */
 .name div {
   width: auto;
   height: 50px;
   line-height: 50px;
   text-align: center;
 }
-
+/* 위치 안의 글씨 */
 .location div {
   width: auto;
   height: 50px;
   line-height: 50px;
   text-align: center;
 }
-
+/* 전화번호 안의 글씨 */
 .phone div {
   width: auto;
   height: 50px;
   line-height: 50px;
   text-align: center;
 }
-
+/* 페이지 번호 */
 .page {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
+/* 페이지 번호 가로로 설정 */
 .page ul {
   display: flex;
   list-style-type: none;
 }
-
+/* 번호 간격 맞추기 */
 .page ul li {
   margin: 10px;
 }
-
+/* 삭제버튼 */
 .div_delete {
   display: flex;
   justify-content: center;
 }
-
+/* 삭제버튼 스타일 */
 #btnDelete {
   background-color: red;
   color: white;
@@ -205,23 +216,24 @@ form {
   height: 40px;
   border-radius: 15px;
 }
-
+/* 취소버튼 스타일 */
 #cacnceDelete {
   background-color: white;
   border: 2px solid rgb(255, 0, 0);
   color: black;
 }
-
+/* 확인버튼 스타일 */
 #confirmDelete{
   background-color: #2f4db1;
   color: white;
 }
+/* 체크확인 버튼 */
 #check_confirmDelete{
   background-color: #2f4db1;
   color: white;
 }
 
-
+/* 모달 스타일 */
 .modal {
   position: fixed;
   inset: 0;
@@ -232,11 +244,11 @@ form {
   background: rgba(0, 0, 0, 0.5);
   z-index: 1000;
 }
-
+/* 조건이 만족 했을 때 모달 출력 */
 .modal.open {
   display: flex;
 }
-
+/* 모달 안의 상자 */
 .modal_box {
   background: #fff;
   min-width: 320px;
@@ -245,14 +257,14 @@ form {
   border-radius: 10px;
   text-align: center;
 }
-
+/* 모달 안의 버튼 */
 .modal_buttons {
   margin-top: 16px;
   display: flex;
   gap: 10px;
   justify-content: center;
 }
-
+/* 모달 안의 버튼들 꾸미기 */
 .modal_buttons button {
   padding: 8px 16px;
   border: none;

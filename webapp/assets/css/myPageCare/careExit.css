@@ -1,33 +1,34 @@
 /* 밑의 주석 처리 전까지는 공통 */
+/* 전체 페이지 설정 */
 * {
   margin: 0;
   padding: 0;
   font-family: 'pretendard-regular';
 }
-
+/* 폰트 공통 설정 */
 @font-face {
   font-family: 'Pretendard-Regular';
   src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
-
+/* 전체 바디 색 설정 */
 body {
   background-color: #ffffff;
 }
-
+/* main 페이지 상세 설정 */
 main {
   display: flex;
   min-height: calc(100vh - 220px);
 }
-
+/* 마이페이지 왼쪽 사이드 바 설정 */
 .sidebar {
   width: 180px;
   background-color: #2f4db1;
   color: white;
   padding: 20px 0;
 }
-
+/* 사람 모양 이미지 설정 */
 .sidebar img {
   height: 130px;
   width: 130px;
@@ -36,18 +37,18 @@ main {
   margin: 0 auto 20px;
   display: block;
 }
-
+/* 사이드 바의 목록 스타일 설정 */
 .sidebar ul {
   list-style: none;
   padding-left: 0;
 }
-
+/* 글자들의 패딩 및 커서 설정 */
 .sidebar li {
   padding: 12px 20px;
   cursor: pointer;
   color: #ffffff;
 }
-
+/* 개인정보 수정, 찜한 목록 등 사이드바 상세 설정 */
 .sidebar li a {
   padding: 12px 20px;
   cursor: pointer;
@@ -61,12 +62,12 @@ main {
   padding: 40px 80px;
   background-color: #ffffff;
 }
-
+/* 마이페이지 제목 설정 */
 .exit-section h2 {
   font-size: 24px;
   margin-bottom: 20px;
 }
-
+/* 탈퇴하기 위한 알림창 설정 */
 .exit-guide {
   border: 2px solid #000000;
   border-radius: 15px;
@@ -74,44 +75,45 @@ main {
   padding: 20px;
   margin-bottom: 40px;
 }
-
+/* 알림창 안의 글자들 설정 */
 .exit-guide li {
   font-size: 15px;
   line-height: 1.6;
   color: #000000;
 }
-
+/* 강조할 문장 따로 설정 */
 .exit-guide li.red {
   color: red;
 }
-
+/* 탈퇴 정보 창의 진짜 내용 설정 */
 .exit-box {
   border: 2px solid #000;
   border-radius: 15px;
   overflow: hidden;
   font-size: 16px;
 }
-
+/* 탈퇴 사유 등 선택하기 위한 박스들 상태표시 */
 .exit-row {
   display: flex;
   border-bottom: 1px solid #000;
 }
-
+/* 삭제 이유 선택의 마지막 아이 설정 */
 .exit-row:last-child {
   border-bottom: none;
 }
-
+/* 탈퇴 날짜 글자 설정ㅇ */
 .exit-label {
   width: 150px;
   padding: 15px;
   background-color: #f9f9f9;
   border-right: 1px solid #000;
 }
-
+/* 탈퇴 날짜 보여주는 형식 설정 */
 .exit-value {
   flex: 1;
   padding: 15px;
 }
+/* 탈퇴사유 선택 옵션 */
 .exit-select {
   width: 100%;
   padding: 12px;
@@ -119,7 +121,7 @@ main {
   font-size: 15px;
   background-color: #fff;
 }
-
+/* 드롭다운으로 표시되는 것들  */
 .exit-button-area {
   margin-top: 30px;
   display: inline-flex;
@@ -128,6 +130,7 @@ main {
   align-items: flex-end;
   width: 100%;
 }
+/* 탈퇴의 버튼 색 및 스타일 지정 */
 .exit-button {
   padding: 12px 30px;
   font-size: 16px;
@@ -137,12 +140,13 @@ main {
   border-radius: 12px;
   cursor: pointer;
 }
+/* 오류메시지 색 설정 */
 .error-text {
   color: red;
   font-size: 14px;
   display: none;
 }
-
+/* 전체적인 모달 스타일 설정 */
 .modal {
   display: none;
   position: fixed;
@@ -155,11 +159,11 @@ main {
   justify-content: center;
   align-items: center;
 }
-
+/* 모달이 클릭 되었을 때 바꿔주는  css */
 .modal.open {
   display: flex;
 }
-
+/* 모달의 내용 스타일 설정 */
 .modal-content {
   background: #ffffff;
   padding: 30px;
@@ -168,30 +172,38 @@ main {
   text-align: center;
   border: 2px solid #000000;
 }
+/* 모달의 뜨는 글자 설정 */
 .modal-content p {
   font-size: 18px;
   margin-bottom: 25px;
 }
-
+/* 회원 탈퇴 불가 뜨는 모달 */
 .modal-content .red {
   color: red;
   font-size: 12px;
 }
-
+/* 탈퇴사유 입력하라고 뜨는 문구 위치 */
+#error-text{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-right: 50%;
+}
+/* 모달의 버튼들 스타일 설정 */
 .modal-buttons {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
-
+/* 모달의 버튼들의 크기와 커서 설정 */
 .btn {
   padding: 10px 20px;
   border-radius: 10px;
   border: none;
   cursor: pointer;
 }
-
+/* 회원 탈퇴의 버튼 색 설정 */
 .btn.blue {
   background-color: #2F52AA;
   color: #fff;
