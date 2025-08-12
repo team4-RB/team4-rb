@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
   // html 문서에 모달 불러오기
-  fetch('./../../../app/careMember/careMemberModal.html')
+  fetch('./../../app/careMember/careMemberModal.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('modal').innerHTML = data;
@@ -36,6 +36,7 @@ function modalCheck(){
   console.log("전달할 값 : ", value);
   alert("입력됨 - " + value);
   turnOffModal();
+  input.value = null;
 }
 function modalCancel(){
   turnOffModal();
