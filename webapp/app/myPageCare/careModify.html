@@ -48,21 +48,24 @@
           </ul>
         </nav>
       </div>
-      <!-- 페이지 세부 정보 -->
+      <!-- 페이지 세부 정보 수정-->
 
       <form action="" method="get">
+        <!-- 수정하는 것의 제목 -->
         <div> 
           <div>회원 정보</div>
         </div>
         <nav class="caremodify">
           <ul>
             <li class="member">
+              <!-- 저장되어 있는 이름과 성명 -->
               <ul>
                 <li class="info">성명</li>
                 <li class="myinfo">이름</li>
               </ul>
             </li>
             <li class="member">
+              <!-- 주소를 수정하기 위한 칸 -->
               <ul>
                 <li class="info">주소</li>
                 <li class="myinfo">
@@ -74,24 +77,28 @@
                 </li>
               </ul>
             </li>
+            <!-- 전화번호를 수정 할 수 있는 칸 -->
             <li class="member">
               <ul>
                 <li class="info">전화번호</li>
-                <li class="myinfo"><div>010-1234-5678</div><button>수정</button></li>
+                <li class="myinfo"><input type="text" placeholder="010-1234-5678"><button>수정</button></li>
               </ul>
             </li>
+            <!-- 아이디를 보여주는 칸 -->
             <li class="member">
               <ul>
                 <li class="info">아이디</li>
                 <li class="myinfo">아이디</li>
               </ul>
             </li>
+            <!-- 이메일 수정 할 수 있는 칸 -->
             <li class="member">
               <ul>
                 <li class="info">이메일</li>
                 <li class="myinfo"><input type="email" placeholder="이메일"><button>수정</button></li>
               </ul>
             </li>
+            <!-- 비밀번호를 수정 하기 위한 칸 -->
             <li class="member">
               <ul>
                 <li class="info">비밀번호</li>
@@ -107,9 +114,16 @@
       </form>
     </div>
   </main>
+  <!-- 모든 확인 버튼 클릭시 정보 저장 모달 출력 -->
   <div id="saveSuccessModal" class="modal">
     <div class="modal-content">
       <p>정보가 저장되었습니다.</p>
+      <button id="saveConfirmBtn">확인</button>
+    </div>
+  </div>
+  <div id="findModal" class="modal">
+    <div class="modal-content">
+      <p>우편번호 찾기 api</p>
       <button id="saveConfirmBtn">확인</button>
     </div>
   </div>

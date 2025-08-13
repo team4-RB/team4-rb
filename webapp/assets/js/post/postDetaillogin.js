@@ -4,6 +4,8 @@ const deletebutton = document.querySelector('.button_delete');
 
 const checkmodal = document.querySelector('.checkmodal');
 
+
+
 deletebutton.addEventListener('click', function (e) {
   e.preventDefault();
   checkmodal.style.display = 'block';
@@ -11,3 +13,12 @@ deletebutton.addEventListener('click', function (e) {
 cancle.addEventListener('click', function () {
   checkmodal.style.display = 'none';
 });
+
+
+function postEnroll(){
+  if(inputPw.value == correct){
+    window.location.href="./normalModify.html";
+  }else{
+    pwChecktext.style.display='block';
+  }
+}

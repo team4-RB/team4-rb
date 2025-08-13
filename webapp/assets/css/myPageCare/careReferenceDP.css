@@ -1,8 +1,11 @@
+/* 밑의 주석 처리 전까지는 공통 */
+/* 전체 페이지 설정 */
 * {
   margin: 0;
   padding: 0;
   font-family: 'pretendard-regular';
 }
+/* 폰트 공통 설정 */
 
 @font-face {
   font-family: 'Pretendard-Regular';
@@ -10,15 +13,18 @@
   font-weight: 400;
   font-style: normal;
 }
+/* 전체 바디 색 설정 */
 
 body {
   background-color: #ffffff;
 }
+/* main 페이지 상세 설정 */
 
 main {
   display: flex;
   min-height: calc(100vh - 220px);
 }
+/* 마이페이지 왼쪽 사이드 바 설정 */
 
 .main_sidebar {
   width: 180px;
@@ -26,6 +32,7 @@ main {
   color: white;
   padding: 20px 0;
 }
+/* 사람 모양 이미지 설정 */
 
 .main_sidebar img {
   height: 130px;
@@ -35,17 +42,20 @@ main {
   margin: 0 auto 20px;
   display: block;
 }
+/* 사이드 바의 목록 스타일 설정 */
 
 .main_sidebar ul {
   list-style: none;
   padding-left: 0;
 }
+/* 글자들의 패딩 및 커서 설정 */
 
 .main_sidebar li {
   padding: 12px 20px;
   cursor: pointer;
   color: #ffffff;
 }
+/* 개인정보 수정, 찜한 목록 등 사이드바 상세 설정 */
 
 .main_sidebar li a {
   padding: 12px 20px;
@@ -54,21 +64,25 @@ main {
 }
 
 /* *********************** */
+/* 오른쪽 메인 영역 */
 .reference_dp {
   flex: 1;
   padding: 40px 100px;
 }
 
+/* 제목 영역 */
 .title {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
+/* 큰 제목 스타일 */
 .title h2 {
   padding: 5px;
   font-size: 30px;
   border: 2px solid #000;
 }
+/* 제목 입력칸 */
 .title input[type="text"] {
   width: 100%;
   height: 56px;
@@ -79,6 +93,7 @@ main {
   outline: none;
 }
 
+/* 작성자 줄 */
 .reference_info {
   display: flex;
   gap: 12px;
@@ -86,10 +101,12 @@ main {
   font-size: 24px;
   border: 2px solid #000;
 }
+/* 정보 항목 줄바꿈되게 */
 .reference_info span {
   display: block;
 }
 
+/* 본문  */
 .re_post_content,
 .reference_content {
   margin-top: 14px;
@@ -97,6 +114,7 @@ main {
   border: 0;
   min-height: 300px;
 }
+/* 입력창 */
 #contentInput {
   width: 100%;
   min-height: 500px;
@@ -110,12 +128,14 @@ main {
   resize: vertical;
 }
 
+/* 하단 버튼 줄 */
 .buttons {
   display: flex;
   justify-content: flex-end;
   gap: 10px;
   margin: 14px 0;
 }
+/* 버튼 공통 */
 .buttons a,
 .buttons button {
   min-width: 120px;
@@ -132,40 +152,50 @@ main {
   text-decoration: none;
   cursor: pointer;
 }
+/* 목록 버튼 */
 .btn_list {
   background: #f1f1f1;
   color: #222;
 }
+/* 취소 버튼 */
 .btn_cancle {
   background: #FF4D4F;
   color: #fff;
 }
+/* 완료 버튼 */
 .btn_compelete {
   background: #2F52AA;
   color: #fff;
 }
 
+/* 댓글 블록 테두리 */
 .reply {
   border: 2px solid #000;
 }
+/* 댓글 박스 */
 .comment {
   padding: 5px;
   border: 2px solid #000;
 }
+/* 댓글 제목 */
 .reply h4 {
   padding: 10px;
 }
+/* 작성자 표시 */
 .author {
   display: block;
 }
+/* 댓글 내용 여백 */
 .cmt_content {
   margin: 5px 5px 5px 10px;
 }
+/* 날짜 오른쪽 정렬 */
 .date {
   display: block;
   text-align: right;
 }
 
+/* 모달 배경 */
 .modal {
   position: fixed;
   inset: 0;
@@ -176,10 +206,12 @@ main {
   background: rgba(0,0,0,.45);
   z-index: 3000;
 }
+/* 보이기 */
 .modal.open {
   display: flex;
 }
 
+/* 모달 박스 */
 .modal_box {
   background: #fff;
   width: min(640px, 92vw);
@@ -191,12 +223,14 @@ main {
   margin-top: 0px;
 }
 
+/* 모달 */
 .modal_buttons {
   margin-top: 20px;
   display: flex;
   justify-content: center;
   gap: 20px;
 }
+/* 모달 버튼 공통 */
 .modal_buttons button {
   padding: 10px 24px;
   cursor: pointer;
@@ -204,11 +238,13 @@ main {
   border: 0;
   font-weight: 600;
 }
+/* 확인 버튼 */
 #confirmDelete,
 #check {
   background-color: #2F52AA;
   color: #fff;
 }
+/* 취소 버튼 */
 #cancelDelete {
   background-color: #fff;
   border: 2px solid red;
