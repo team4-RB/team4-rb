@@ -1,8 +1,11 @@
+/* 밑의 주석 처리 전까지는 공통 */
+/* 전체 페이지 설정 */
 * {
   margin: 0;
   padding: 0;
   font-family: 'pretendard-regular';
 }
+/* 폰트 공통 설정 */
 
 @font-face {
   font-family: 'Pretendard-Regular';
@@ -10,15 +13,18 @@
   font-weight: 400;
   font-style: normal;
 }
+/* 전체 바디 색 설정 */
 
 body {
   background-color: #ffffff;
 }
+/* main 페이지 상세 설정 */
 
 main {
   display: flex;
   min-height: calc(100vh - 220px);
 }
+/* 마이페이지 왼쪽 사이드 바 설정 */
 
 .main_sidebar {
   width: 180px;
@@ -26,6 +32,7 @@ main {
   color: white;
   padding: 20px 0;
 }
+/* 사람 모양 이미지 설정 */
 
 .main_sidebar img {
   height: 130px;
@@ -35,17 +42,20 @@ main {
   margin: 0 auto 20px;
   display: block;
 }
+/* 사이드 바의 목록 스타일 설정 */
 
 .main_sidebar ul {
   list-style: none;
   padding-left: 0;
 }
+/* 글자들의 패딩 및 커서 설정 */
 
 .main_sidebar li {
   padding: 12px 20px;
   cursor: pointer;
   color: #ffffff;
 }
+/* 개인정보 수정, 찜한 목록 등 사이드바 상세 설정 */
 
 .main_sidebar li a {
   padding: 12px 20px;
@@ -54,16 +64,18 @@ main {
 }
 
 /* *-******************* */
+/* 전체 설정 */
 .return_section {
   flex: 1;
   padding: 40px 80px;
   background-color: white;
 }
+/* 마이페이지 제목 */
 .return_section h2 {
   font-size: 24px;
   margin-bottom: 20px;
 }
-
+/* 알림 정보 */
 .info_box {
   border: 2px solid black;
   border-radius: 15px;
@@ -71,12 +83,13 @@ main {
   background-color: #f2f2f2;
   margin-bottom: 30px;
 }
+/* 알림 정보 글씨 */
 .info_box li {
   margin-bottom: 15px;
   font-size: 16px;
   margin-left: 10px;
 }
-
+/* 보유 포인트 표 */
 .point_table {
   width: 760px;
   display: grid;
@@ -85,12 +98,14 @@ main {
   margin-bottom: 10px;
   background: white;
 }
+/* 가로 정렬 */
 .point_table_wrap {
   display: flex;
   flex-direction: column;
   align-items: center; 
   margin-top: 20px;
 }
+/* 신청 포인트 환급 */
 .point_fixed {
   min-height: 54px;
   display: flex;
@@ -102,8 +117,11 @@ main {
   color: #222;
   font-weight: 500;
 }
-.point_fixed > label { cursor: default; }
-
+/* 마우스 올릴 때 커서 변환 */
+.point_fixed > label { 
+  cursor: pointer; 
+}
+/* 중앙정렬 등 포인트 행 가로로 */
 .point_row {
   min-height: 54px;
   display: flex;
@@ -113,7 +131,7 @@ main {
   font-size: 14px;
   color: #111;
 }
-
+/* 포인트 입력칸 (오른쪽 정렬) */
 #input_point {
   width: 150px;
   height: 36px;
@@ -123,17 +141,17 @@ main {
   border-radius: 6px;
   outline: none;
 }
-
+/* 포인트 입력 옆 설명 글씨 작게 */
 .point_row input + span {
   font-size: 12px;
   color: #7a8194;
 }
-
+/* 버튼 가운데 정렬 */
 .return_button {
   margin-top: 30px;
   text-align: center;
-
 }
+/* 공통 기본 스타일 */
 .return_button button {
   padding: 12px 24px;
   margin-right: 20px;
@@ -142,6 +160,7 @@ main {
   cursor: pointer;
   border: none;
 }
+/* 환급하기 버튼 */
 .btn_return {
   background-color: #2F52AA;
   color: white;
@@ -149,6 +168,7 @@ main {
   border-radius: 10px;
   cursor: pointer;
 }
+/* 목록으로 버튼 */
 .btn_return_list {
   background-color: white;
   border: 2px solid black;  
@@ -157,6 +177,7 @@ main {
   border-radius: 10px; 
   cursor: pointer; 
 }
+/* 링크가 버튼으로 보이게 */
 .btn_return_list a {
   background-color: white;
   border: 2px solid black;  
@@ -165,6 +186,7 @@ main {
   border-radius: 10px; 
   cursor: pointer; 
 }
+/* 모달  */
 .modal {
   display: none;
   position: fixed;
@@ -172,7 +194,7 @@ main {
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 500;
 }
-
+/* 모달 상자 */
 .modal_box {
   position: absolute;
   top: 0px;
@@ -187,7 +209,7 @@ main {
   max-width: calc(100vw - 40px);
   box-shadow: 0 8px 26px rgba(0,0,0,0.2);
 }
-
+/* 모달안에 문구 */
 .modal_box p {
   font-size: 20px;
   font-weight: 500;
@@ -195,13 +217,13 @@ main {
   margin-bottom: 30px; 
 
 }
-
+/* 모달 버튼 가로 가운데 정렬 */
 .modal_buttons {
   display: flex; 
   justify-content: center; 
   gap: 12px;
 }
-
+/* 모달 버튼 스타일 */
 .modal_buttons button {
   padding: 10px 30px;
   font-size: 16px;
