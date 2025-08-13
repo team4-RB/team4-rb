@@ -1,8 +1,12 @@
+/* 밑의 주석 처리 전까지는 공통 */
+/* 전체 페이지 설정 */
 * {
   margin: 0;
   padding: 0;
   font-family: 'pretendard-regular';
 }
+
+/* 폰트 공통 설정 */
 
 @font-face {
   font-family: 'Pretendard-Regular';
@@ -11,14 +15,20 @@
   font-style: normal;
 }
 
+/* 전체 바디 색 설정 */
+
 body {
   background-color: #ffffff;
 }
+
+/* main 페이지 상세 설정 */
 
 main {
   display: flex;
   min-height: calc(100vh - 220px);
 }
+
+/* 마이페이지 왼쪽 사이드 바 설정 */
 
 .sidebar {
   width: 180px;
@@ -26,6 +36,8 @@ main {
   color: white;
   padding: 20px 0;
 }
+
+/* 사람 모양 이미지 설정 */
 
 .sidebar img {
   height: 130px;
@@ -36,16 +48,22 @@ main {
   display: block;
 }
 
+/* 사이드 바의 목록 스타일 설정 */
+
 .sidebar ul {
   list-style: none;
   padding-left: 0;
 }
+
+/* 글자들의 패딩 및 커서 설정 */
 
 .sidebar li {
   padding: 12px 20px;
   cursor: pointer;
   color: #ffffff;
 }
+
+/* 개인정보 수정, 찜한 목록 등 사이드바 상세 설정 */
 
 .sidebar li a {
   padding: 12px 20px;
@@ -54,22 +72,23 @@ main {
 }
 
 /* ************** */
+/* 마이페이지 전체 스타일 */
 .point-history {
   flex: 1;
   padding: 40px;
   background-color: #fff;
 }
-
+/* 포인트 환급 내역 전체 페이지 */
 .history-box {
   display: flex;
   justify-content: space-between;
   gap: 40px;
 }
-
+/* 환급 내역 위치 */
 .history-section {
   flex: 1;
 }
-
+/* 달 움직이기 */
 .month-control {
   display: flex;
   justify-content: center;
@@ -77,47 +96,47 @@ main {
   gap: 10px;
   margin: 150px 0 20px;
 }
-
+/* 달 움직이기 위한 버튼 */
 .month-control button {
   background-color: transparent;
   cursor: pointer;
 }
-
+/* 환급내역 큰 틀 */
 .table-box {
   border: 1px solid #999;
   border-radius: 8px;
   overflow: hidden;
   font-size: 15px;
 }
-
+/* 환급내역의 헤더, 내용 칸 */
 .table-header, .table-row {
   display: flex;
   padding: 12px 10px;
   border-bottom: 1px solid #ccc;
 }
-
+/* 환급 내역의 스타일 */
 .table-header {
   background-color: #f7f7f7;
   font-weight: bold;
 }
-
+/* 환급내역의 패이지 세부사항 */
 .table-header span,
 .table-row span {
   flex: 1;
   text-align: center;
 }
-
+/* 페이지네이션 크기와 마진 위치 */
 .pagination {
   text-align: center;
   margin-top: 15px;
   font-size: 14px;
 }
-
+/* 간격 조절 및 커서 */
 .pagination span {
   margin: 0 4px;
   cursor: pointer;
 }
-
+/* 활성화 되었을 때 빨간색 */
 .pagination .active {
   color: red;
   font-weight: bold;

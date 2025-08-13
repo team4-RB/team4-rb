@@ -1,8 +1,12 @@
+/* 밑의 주석 처리 전까지는 공통 */
+/* 전체 페이지 설정 */
 * {
   margin: 0;
   padding: 0;
   font-family: 'pretendard-regular';
 }
+
+/* 폰트 공통 설정 */
 
 @font-face {
   font-family: 'Pretendard-Regular';
@@ -11,14 +15,20 @@
   font-style: normal;
 }
 
+/* 전체 바디 색 설정 */
+
 body {
   background-color: #ffffff;
 }
+
+/* main 페이지 상세 설정 */
 
 main {
   display: flex;
   min-height: calc(100vh - 220px);
 }
+
+/* 마이페이지 왼쪽 사이드 바 설정 */
 
 .sidebar {
   width: 180px;
@@ -26,6 +36,8 @@ main {
   color: white;
   padding: 20px 0;
 }
+
+/* 사람 모양 이미지 설정 */
 
 .sidebar img {
   height: 130px;
@@ -36,10 +48,14 @@ main {
   display: block;
 }
 
+/* 사이드 바의 목록 스타일 설정 */
+
 .sidebar ul {
   list-style: none;
   padding-left: 0;
 }
+
+/* 글자들의 패딩 및 커서 설정 */
 
 .sidebar li {
   padding: 12px 20px;
@@ -47,13 +63,17 @@ main {
   color: #ffffff;
 }
 
+/* 개인정보 수정, 찜한 목록 등 사이드바 상세 설정 */
+
 .sidebar li a {
   padding: 12px 20px;
   cursor: pointer;
   color: #ffffff;
 }
 
+
 /* ********************* */
+/* 오른쪽 메인 영역(내용 감싸는 박스) */
 .div_mark {
   flex: 1;
   display: flex;
@@ -61,19 +81,21 @@ main {
   width: 100%;
 }
 
-
+/* 페이지 큰 제목 */
 .title {
   padding: 40px 100px 0px;
   font-size: 24px;
   font-weight: bold;
 }
 
+/* 안쪽 컨테이너(양쪽 여백) */
 .main_container {
   display: flex;
   flex-direction: column;
   padding: 0 100px;
 }
 
+/* 프로필 영역(사진 + 버튼 묶음) */
 .profile_section {
   display: flex;
   justify-content: center;
@@ -81,6 +103,7 @@ main {
   margin: 20px 0;
 }
 
+/* 프로필 사진(동그랗게) */
 .profile_section img {
   border-radius: 50%;
   width: 200px;
@@ -88,6 +111,7 @@ main {
   object-fit: cover;
 }
 
+/* 프로필 교체 버튼 */
 .profile_section input {
   margin-bottom: 0px;
   padding: 5px 10px;
@@ -95,9 +119,9 @@ main {
   cursor: pointer;
   border-radius: 5px;
   align-self: flex-end;
-
 }
 
+/* 정보 수정 박스 전체 */
 .caremodify {
   margin: 30px 0;
   display: flex;
@@ -106,12 +130,14 @@ main {
   border: 1px solid black;
 }
 
+/* 각 줄(라벨/내용) 두 칸 레이아웃 */
 .caremodify>div {
   display: grid;
   grid-template-columns: 150px 1fr;
   border: 2px solid black;
 }
 
+/* 왼쪽 라벨칸(회색, 가운데 정렬) */
 .caremodify>div>div:first-child {
   background-color: #e5e5e5;
   padding: 20px;
@@ -122,17 +148,20 @@ main {
   border-right: 2px solid black;
 }
 
+/* 오른쪽 내용칸(연한 회색, 안쪽 여백) */
 .caremodify>div>div:last-child {
   background-color: #f4f4f4;
   padding: 20px;
 }
 
+/* 가능 날짜 줄(버튼들이 가로로 줄줄) */
 .name_date .possible_date {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
 }
 
+/* 날짜 버튼 기본 모양 */
 .possible_date button {
   width: 30px;
   height: 30px;
@@ -141,10 +170,12 @@ main {
   cursor: pointer;
 }
 
+/* 선택된 날짜 버튼(노란색) */
 .possible_date button.active {
   background-color: yellow;
 }
 
+/* 확인 버튼(파란색, 조금 큼) */
 .possible_date #check {
   width: 50px;
   background-color: #2f4db1;
@@ -152,37 +183,44 @@ main {
   border-radius: 5px;
 }
 
+/* 기록 첨부 영역 리스트(세로로 간격) */
 .reode_detail ul {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
+/* 각 줄(라벨 + 입력) 정렬 */
 .reode_detail li {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
+/* 라벨 너비 고정 */
 .reode_detail label {
   width: 100px;
 }
 
+/* 파일 입력은 나머지 공간 채우기 */
 .reode_detail input[type="file"] {
   flex: 1;
 }
 
+/* 장소 입력들(세로로 간격) */
 .palce_detail ul {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
+/* 장소 입력창 크기 */
 .palce_detail input {
   width: 300px;
   padding: 5px;
 }
 
+/* 장소 버튼(파란색) */
 .palce_detail button {
   margin-left: 10px;
   padding: 5px 10px;
@@ -192,17 +230,20 @@ main {
   color: white;
 }
 
+/* 이메일 수정 줄(가로 정렬) */
 .email_detail {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
+/* 이메일 입력창 */
 .email_detail input {
   width: 300px;
   padding: 5px;
 }
 
+/* 이메일 버튼(파란색) */
 .email_detail button {
   padding: 5px 10px;
   border-radius: 6px;
@@ -211,12 +252,14 @@ main {
   color: white;
 }
 
+/* 자기소개 줄(세로로 간격) */
 .introduce_detail {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
+/* 자기소개 입력칸(큰 박스 느낌) */
 .introduce_detail input {
   height: 120px;
   padding: 10px;
@@ -225,6 +268,7 @@ main {
   resize: none;
 }
 
+/* 자기소개 저장 버튼(오른쪽 아래) */
 .introduce_detail button {
   align-self: flex-end;
   background-color: #001860;
@@ -235,6 +279,7 @@ main {
   cursor: pointer;
 }
 
+/* 작은 확인 버튼(파란색) */
 .confrim {
   width: 50px;
   background-color: #2f4db1;
@@ -242,8 +287,7 @@ main {
   border-radius: 5px;
 }
 
-
-
+/* 모달 배경(처음엔 숨김) */
 .modal {
   display: none;
   position: fixed;
@@ -252,10 +296,12 @@ main {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+/* .open 붙으면 보이기 */
 .modal.open {
   display: block;
 }
 
+/* 모달 상자(가운데 위쪽) */
 .modal-content {
   position: fixed;
   top: 0px;
@@ -269,6 +315,7 @@ main {
   border-radius: 14px;
 }
 
+/* 모달 안 확인 버튼 */
 .modal-content button {
   margin-top: 16px;
   padding: 8px 22px;
