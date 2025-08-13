@@ -1,3 +1,4 @@
+/* 밑의 주석 처리 전까지는 공통 */
 * {
   margin: 0;
   padding: 0;
@@ -53,8 +54,8 @@ main {
   color: #ffffff;
 }
 
-
 /* *************************** */
+/* 마이페이지 전체 설정 */
 .exit-section {
   flex: 1;
   padding: 40px 80px;
