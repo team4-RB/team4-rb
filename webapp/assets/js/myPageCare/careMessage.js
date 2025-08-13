@@ -1,73 +1,86 @@
+// 페이지 로드 후 실행
 document.addEventListener('DOMContentLoaded', function () {
-  const $ = (sel, root = document) => root.querySelector(sel);
-  const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
-
-  const headCb = $('.mark_nav input[type="checkbox"]');
-  const getRowCbs = () => $$('.mark_list input[type="checkbox"]');
-
+  // 전체 선택 체크박스
+  const headCb = document.querySelector('.mark_nav input[type="checkbox"]');
+  // 체크박스 가져오기 함수
+  function getRowCbs() {
+    return Array.from(document.querySelectorAll('.mark_list input[type="checkbox"]'));
+  }
+  // 마크디브의 체크 박스 상태 맞추기
   function syncHeaderFromRows() {
+    // 전체 체크박스
     const cbs = getRowCbs();
+    // 전체 갯수
     const total = cbs.length;
+    // 체크되 갯수
     const checked = cbs.filter(cb => cb.checked).length;
     if (!headCb) return;
     headCb.checked = (total > 0 && checked === total);
   }
-
-  headCb?.addEventListener('change', () => {
-    getRowCbs().forEach(cb => cb.checked = headCb.checked);
-  });
-
-  const readModal = $('#msgModal');
+  // 전체 체크박스의 상태 맞추기
+  if (headCb) {
+    headCb.addEventListener('change', () => {
+      getRowCbs().forEach(cb => cb.checked = headCb.checked);
+    });
+  }
+  // 받은 쪽지 읽기 모달
+  const readModal = document.getElementById('msgModal');
   const readCloseX = readModal?.querySelector('.modal_close');
+  // 읽기모달
   function openReadModal() { readModal?.classList.add('open'); }
   function closeReadModal() { readModal?.classList.remove('open'); }
   window.closeMsgModal = closeReadModal;
-
+  // 쪽지 기억
   let currentRow = null;
-
-  const rows = $$('.mark_list');
+  // 리스트 클릭시 쪽지 읽기 모달
+  const rows = document.querySelectorAll('.mark_list');
   rows.forEach(row => {
     row.addEventListener('click', e => {
       if (e.target.closest('input[type="checkbox"]')) return;
+      // 다른것들은 막기
       e.preventDefault();
+      // 선택된 리스트만 저장
       currentRow = row;
       openReadModal();
     });
   });
-
+  // 읽기 모달 닫기
   readCloseX?.addEventListener('click', closeReadModal);
   readModal?.addEventListener('click', e => {
     if (e.target === readModal) closeReadModal();
   });
-
-  const sendModal = $('#sendMsgModal');
+  // 쪽지 보내기 모달
+  const sendModal = document.getElementById('sendMsgModal');
   const sendCloseX = sendModal?.querySelector('.modal_close');
   const sendCancel = sendModal?.querySelector('.btn_cancel');
   const sendBtn = sendModal?.querySelector('.btn_send');
-  const replyBtn = $('#msgModal .btn_reply');
-
+  const replyBtn = document.querySelector('#msgModal .btn_reply');
+  // 보내기 모달 열고 닫기
   function openSendModal() { sendModal?.classList.add('open'); }
   function closeSendModal() { sendModal?.classList.remove('open'); }
   window.closeSendMsgModal = closeSendModal;
-
+  // 답장 버튼 클릭시 모달 열기
   replyBtn?.addEventListener('click', () => {
     closeReadModal();
     openSendModal();
   });
-
+  // 보내기 모달 닫기
   sendCloseX?.addEventListener('click', closeSendModal);
   sendCancel?.addEventListener('click', closeSendModal);
   sendModal?.addEventListener('click', e => {
     if (e.target === sendModal) closeSendModal();
   });
-
-  const statusModal = $('#sendSuccessModal');
+  // 전송 완료 모달
+  const statusModal = document.getElementById('sendSuccessModal');
   const statusMsgEl = statusModal?.querySelector('.send_message');
+  // 전송 완료모달 열기
   function openStatusModal(message) {
     if (statusMsgEl) statusMsgEl.textContent = message;
     statusModal?.classList.add('open');
   }
+  // 모달 닫기
   function closeStatusModal() { statusModal?.classList.remove('open'); }
+  // 둘다 동시에 닫기
   window.closeSendModal = function () {
     closeSendModal();
     closeStatusModal();
@@ -75,25 +88,24 @@ document.addEventListener('DOMContentLoaded', function () {
   statusModal?.addEventListener('click', e => {
     if (e.target === statusModal) closeStatusModal();
   });
-
+  // 쪽지 전송 버튼 클릭 시
   sendBtn?.addEventListener('click', () => {
     closeSendModal();
     openStatusModal('쪽지를 보냈습니다.');
     const ta = document.getElementById('message_textarea');
     if (ta) ta.value = '';
   });
-
-  const deleteConfirmModal = $('#deleteMsgModal');
+  // 삭제 확인 모달
+  const deleteConfirmModal = document.getElementById('deleteMsgModal');
   function openDeleteConfirm() { deleteConfirmModal?.classList.add('open'); }
   function closeDeleteConfirm() { deleteConfirmModal?.classList.remove('open'); }
   window.closeDeleteModal = closeDeleteConfirm;
   deleteConfirmModal?.addEventListener('click', e => {
     if (e.target === deleteConfirmModal) closeDeleteConfirm();
   });
-
   let deleteTargets = [];
-
-  const deleteBtnInRead = $('#msgModal .btn_delete');
+  // 읽기 모달에서 삭제 버튼 클릭 시
+  const deleteBtnInRead = document.querySelector('#msgModal .btn_delete');
   deleteBtnInRead?.addEventListener('click', () => {
     if (!currentRow) return;
     closeReadModal();
@@ -101,6 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
     openDeleteConfirm();
   });
 
+  // 목록 페이지에서 삭제 버튼 클릭 시
   const mainDeleteBtn = document.querySelector('.btn_list_delete');
   mainDeleteBtn?.addEventListener('click', e => {
     e.preventDefault();
@@ -112,26 +125,18 @@ document.addEventListener('DOMContentLoaded', function () {
     deleteTargets = checkedCbs.map(cb => cb.closest('.mark_list')).filter(Boolean);
     openDeleteConfirm();
   });
-
+  // 삭제 확인 실행
   window.confirmDelete = function () {
     deleteTargets.forEach(el => el && el.remove());
     deleteTargets = [];
     currentRow = null;
-
     closeDeleteConfirm();
     syncHeaderFromRows();
     if (headCb) headCb.checked = false;
-
     openStatusModal('쪽지가 삭제되었습니다.');
   };
-
-  document.addEventListener('keydown', e => {
-    if (e.key !== 'Escape') return;
-    const openModals = $$('.modal_bg.open');
-    if (!openModals.length) return;
-    openModals[openModals.length - 1].classList.remove('open');
-  });
-
+  // 체크박스 상태랑 맞추기
   getRowCbs().forEach(cb => cb.addEventListener('change', syncHeaderFromRows));
+  // 처음 상태 맞추기
   syncHeaderFromRows();
 });
