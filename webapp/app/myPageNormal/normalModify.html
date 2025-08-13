@@ -76,7 +76,7 @@
             <li class="member">
               <ul>
                 <li class="info">전화번호</li>
-                <li class="myinfo"><div>010-1234-5678</div></li>
+                <li class="myinfo"><input type="text" placeholder="010-1234-5678"><button id="phonebutton">수정</button></li>
               </ul>
             </li>
             <li class="member">
@@ -96,8 +96,9 @@
                 <li class="info">비밀번호</li>
                 <li class="myinfo">
                   <ul>
-                    <li><input type="password" placeholder="비밀번호 입력"></li>
-                    <li><input type="password" placeholder="새 비밀번호 입력"><button id="pwbutton">확인</button></li></li>
+                    <li><input id="pwInput" type="password" placeholder="비밀번호 입력"></li>
+                    <li><input id="newPwIntput" type="password" placeholder="새 비밀번호 입력"><button type="button" id="pwbutton">확인</button></li>
+                    <li><div class="pwCheck" >비밀번호가 일치하지않습니다</div></li>
                   </ul>
               </ul>
             </li>
@@ -123,6 +124,12 @@
     <div class="modal-content">
       <p>비밀번호 수정이 완료 되었습니다.</p>
       <button onclick="openpwModalClose()" id="saveConfirmBtn">확인</button>
+    </div>
+  </div> 
+  <div class="modal_phone">
+    <div class="modal-content">
+      <p>전화번호 수정이 완료 되었습니다.</p>
+      <button onclick="openphoneModalClose()" id="saveConfirmBtn">확인</button>
     </div>
   </div> 
   <div class="modal_mail">

@@ -118,6 +118,10 @@ button{
   height: 30px;
   border-radius: 15px;
 }
+.pwCheck{
+  color: red;
+  display: none;
+}
 
 
 
