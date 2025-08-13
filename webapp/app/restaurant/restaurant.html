@@ -13,56 +13,75 @@
   <script defer src="./../../assets/js/restaurant/restaurantModalLogin.js"></script>
 </head>
 <body>
+  <!-- 헤더 -->
   <div id="header"></div>
-  <div onclick="restaurantModalLoginShow()" style="background-color: orange; height: 50px;">테스트버튼</div>
+  <!-- 메인 -->
   <main>
+    <!-- 메인 바디 -->
     <div class="main_body">
+      <!-- 페이지 타이틀 -->
       <p class="page_title">
         음식점 리스트
       </p>
+      <!-- 페이지 내용 -->
       <div class="context">
+        <!-- 지역 선택 영역 -->
         <div class="region_select">
+          <!-- 지역 목록 -->
           <ul class="region_list">
+            <!-- 지역 -->
             <li onclick="reClicked(0)" class="region_button">
               <div class="region_mark"></div>
               방배동
             </li>
+            <!-- 지역 -->
             <li onclick="reClicked(1)" class="region_button">
               <div class="region_mark"></div>
               반포동
             </li>
+            <!-- 지역 -->
             <li onclick="reClicked(2)" class="region_button">
               <div class="region_mark"></div>
               서초동
             </li>
+            <!-- 지역 -->
             <li onclick="reClicked(3)" class="region_button">
               <div class="region_mark"></div>
               양재동
             </li>
+            <!-- 지역 -->
             <li onclick="reClicked(4)" class="region_button">
               <div class="region_mark"></div>
               내곡동
             </li>
+            <!-- 지역 -->
             <li onclick="reClicked(5)" class="region_button">
               <div class="region_mark"></div>
               잠원동
             </li>
           </ul>
+          <!-- 동 선택 영역 -->
           <div class="region_small">
+            <!-- 동 리스트 -->
             <ul id="region_small_list"></ul>
           </div>
         </div>
+        <!-- 음식점 선택 영역 -->
         <div class="restaurant_select">
+          <!-- 음식점 카드 표출 영역 -->
           <div class="restaurant_board">
+            <!-- 음식점 카드 영역 윗줄(2개) -->
             <div class="restaurant_row">
               <div class="restaurant_card"></div>
               <div class="restaurant_card"></div>
             </div>
+            <!-- 음식점 카드 영역 아랫줄(2개) -->
             <div class="restaurant_row">
               <div class="restaurant_card"></div>
               <div class="restaurant_card"></div>
             </div>
           </div>
+          <!-- 페이지네이션 -->
           <div class="restaurant_pagenation">
             페이지네이션
           </div>
@@ -70,7 +89,9 @@
       </div>
     </div>
   </main>
+  <!-- 푸터 -->
   <div id="footer"></div>
+  <!-- 로그인 요청 모달 -->
   <div id="restaurantModalLogin"></div>
 </body>
 </html> 
