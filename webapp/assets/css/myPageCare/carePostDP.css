@@ -1,8 +1,13 @@
+/* 밑의 주석 처리 전까지는 공통 */
+/* 전체 페이지 설정 */
 * {
   margin: 0;
   padding: 0;
   font-family: 'pretendard-regular';
 }
+
+/* 폰트 공통 설정 */
+
 @font-face {
   font-family: 'Pretendard-Regular';
   src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
@@ -10,41 +15,29 @@
   font-style: normal;
 }
 
-html, body {
-  height: 100%;
-}
+/* 전체 바디 색 설정 */
+
 body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-main {
-  flex: 1 0 auto;
+  background-color: #ffffff;
 }
 
-#footer {
-  margin-bottom: 0px;
-}
-
-header,
-footer {
-  width: 100%;
-  height: 110px;
-  background-color: bisque;
-}
+/* main 페이지 상세 설정 */
 
 main {
-  width: 100%;
   display: flex;
+  min-height: calc(100vh - 220px);
 }
 
-.main_sidebar {
+/* 마이페이지 왼쪽 사이드 바 설정 */
+
+.sidebar {
   width: 180px;
-  height: 100%;
-  background-color: rgb(159, 159, 255);
-  display: flex;
-  flex-direction: column;
+  background-color: #2f4db1;
+  color: white;
+  padding: 20px 0;
 }
+
+/* 사람 모양 이미지 설정 */
 
 .sidebar img {
   height: 130px;
@@ -55,41 +48,53 @@ main {
   display: block;
 }
 
-.main_sidebar div {
-  height: 150px;
-  width: 150px;
-  background-color: #2f4db1;
-  border-radius: 100%;
-  margin: 15px;
+/* 사이드 바의 목록 스타일 설정 */
+
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
 }
 
-.main_sidebar ul li {
-  padding: 15px;
+/* 글자들의 패딩 및 커서 설정 */
+
+.sidebar li {
+  padding: 12px 20px;
+  cursor: pointer;
   color: #ffffff;
 }
+
+/* 개인정보 수정, 찜한 목록 등 사이드바 상세 설정 */
+
+.sidebar li a {
+  padding: 12px 20px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
 /* ***************************** */
+/* 페이지 세부 정보 */
 .post_dp {
   flex: 1;
   padding: 40px 100px;
 }
-
+/* 게시판 제목 */
 .title h2 {
   padding: 5px;
   font-size: 30px;
   border: 2px solid black;
 }
-
+/* 세부페이지 */
 .post_info {
   display: flex;
   padding: 5px;
   font-size: 24px;
   border: 2px solid black;
 }
-
+/* 세부페이지 블럭으로 설정 */
 .post_info span {
   display: block;
 }
-
+/* 게시글 내용 설정 */
 .post_content {
   margin-top: 10px;
   padding: 5px;
@@ -98,14 +103,14 @@ main {
   height: auto;
   min-height: 500px;
 }
-
+/* 버튼 클릭 */
 .buttons {
   display: flex;
   justify-content: flex-end;
   gap: 8px;
   margin: 10px 0;
 }
-
+/* 링크 스타일 */
 .buttons a {
   display: inline-flex;
   align-items: center;
@@ -119,55 +124,55 @@ main {
   cursor: pointer;
   border: none;
 }
-
+/* 버튼 리스트 */
 .btn_list {
   background: #f1f1f1;
   color: #222;
 }
-
+/* 버튼 삭제 */
 .btn_delete {
   background: #FF0000;
   color: white;
 }
-
+/* 버튼 확인 */
 .btn_retry {
   background: #2F52AA;
   color: white;
 }
-
+/* 댓글 스타일 */
 .reply {
   border: 2px solid black;
 }
-
+/* 댓긋 스타일 세부 */
 .comment {
   padding: 5px;
   border: 2px solid black;
 }
-
+/* 댓글 수 스타일 */
 .reply h4 {
   padding: 10px;
 }
-
+/* 쪽지 작성자 */
 .author {
   font-weight: bold;
   display: block;
 }
-
+/* 마진 주기 */
 .cmt_content {
   margin: 5px 5px 5px 10px;
 }
-
+/* 날짜 블럭으로 설정 */
 .date {
   display: block;
   text-align: right;
 }
-
+/* 댓글 작성 칸 */
 .comments input {
   width: 800px;
   height: 40px;
   text-align: center;
 }
-
+/* 작성 버튼 스타일 */
 .btn-comment {
   padding: 10px 20px;
   background-color: #2F52AA;
@@ -177,11 +182,7 @@ main {
   cursor: pointer;
 }
 
-#deleteModal {
-
-}
-
-
+/* 모달 스타일 */
 .modal {
   position: fixed;
   top: 0;
@@ -192,19 +193,18 @@ main {
   display: none;
   z-index: 500;
 }
-
+/* 모달 블럭 슽타일 */
 .modal:target {
   display: block;
 }
-
+/* 블러처리하기 */
 .modal::before {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,.45);
-  backdrop-filter: blur(2px);
   z-index: -1;
 }
-
+/* 모달 상자 중앙정렬 */
 .modal_box {
   background: #ffffff;
   border-radius: 18px;
@@ -212,19 +212,19 @@ main {
   box-shadow: 0 12px 40px rgba(0,0,0,.2);
   text-align: center;
 }
-
+/* 모달 상자 내용 스타일 */
 .modal_box p {
   font-size: 18px;
   margin-bottom: 12px;
 }
-
+/* 모달 버튼 스타일 */
 .modal_buttons {
   display: flex;
   justify-content: center;
   gap: 18px;
   margin-top: 14px;
 }
-
+/* 모달 버튼 스타일 */
 .modal_buttons button,
 .modal_buttons a {
   display: inline-flex;
@@ -238,12 +238,12 @@ main {
   cursor: pointer;
   text-decoration: none;
 }
-
+/* 확인버튼 클릭 */
 #confirmDelete {
   background-color: #2F52AA;
   color: white;
 }
-
+/* 취소 버튼 클릭 */
 #cansleDelete {
   color: #FF0000;
   border: 2px solid red;

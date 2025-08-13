@@ -8,6 +8,6 @@ function chPw(){
   if(inputPw.value == correct){
     window.location.href="./normalModify.html";
   }else{
-    alert("틀림");
+    pwChecktext.style.display='block';
   }
 }
