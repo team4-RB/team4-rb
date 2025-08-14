@@ -1,11 +1,23 @@
+// 지역 버튼 가져오기
 const reButtons = document.getElementsByClassName("region_button");
+// 지역 선택 화살표 가져오기
 const reMarks = document.getElementsByClassName("region_mark");
+// 동 버튼 박스 가져오기
 const reSmall = document.getElementsByClassName("region_small");
+// 동 버튼 목록 가져오기
 const reSmallList = document.getElementById("region_small_list");
+// 음식점 카드들 가져오기
 const reCards = document.getElementsByClassName("restaurant_card");
+// 음식점 찜하기(별)이미지들 가져오기
 const reStars = document.getElementsByClassName("star_img");
 
-var regionNum = 0;
+//로그인 여부
+let isLogin = false;
+
+// 불필요 (삭제 예정)
+// var regionNum = 0;
+
+// 동 목록
 var arr = [
   ['방배 1동','방배 2동','방배 3동','방배 4동','방배 본동'],
   ['반포 1동','반포 2동','반포 3동','반포 4동','반포 본동'],
@@ -15,27 +27,30 @@ var arr = [
   ['잠원동']
 ];
 
+// 음식점 더미데이터
 var restaurants = [
   ['비엔나커피하우스', '서울특별시 서초구 방배로 126', '평일 08:30 - 23:00 | 주말 11:00 - 23:00', '02-585-1683'],
   ['아트메이저', '서울특별시 서초구 서초대로 114', '월~금 : 08:30 ~ 21:50 토,일 : 09:00 ~ 21:50', '02-521-6239'],
   ['스타벅스', '서울특별시 서초구 방배로 84 (방배동,유성빌딩 지상1층)', '매장 07:00 - 21:00 딜리버스 10:00 - 20:30~18시', '-']
 ];
 
-
-
+// 음식점 카드 표출 함수(매개변수 : 지역, 동 인덱스)
 function showCards(num, value){
+  // (확인용)지역, 동 인덱스
   console.log("num은 "+ num + ", value는 " + value);
-
+  // 동 버튼 불러오기
   const villages = document.getElementsByClassName('village');
+  // 모든 동 버튼 스타일 지정(하얀 바탕에 검은 글씨)
   for(v of villages){
     v.style.backgroundColor = 'white';
     v.style.color = 'black';
   }
-
+  // 선택된 동의 버튼만 스타일 지정(남색 배경에 하얀 글씨)
   villages[value].style.backgroundColor = '#1D3266';
   villages[value].style.color = 'white';
-
+  // 음식점 카드 네 번 생성
   for(let i = 0 ;i < 4;i++){
+    // 현재 레스토랑 수 만큼 카드 생성
     if(i < restaurants.length){
       let c =` ` + (num + 1) + ` ` + (value + 1) + ` ` + (i + 1);
 
@@ -51,6 +66,7 @@ function showCards(num, value){
       reCards[i].innerHTML = str;
       reCards[i].style.opacity = 1;
     }else{
+      // 레스토랑 수가 4 미만이면 나머지 카드는 보이지 않게 한다.
       reCards[i].innerHTML = "";
       reCards[i].style.opacity = 0;
     }
@@ -58,8 +74,9 @@ function showCards(num, value){
   }
 }
 
+//지역 버튼 클릭 시 실행
 function reClicked(num){
-  // 입력한 숫자
+  // (확인용)입력한 숫자
   console.log("숫자는 : " + num);
 
   //버튼 색 초기화
@@ -102,10 +119,6 @@ function reClicked(num){
     reSmallList.appendChild(li);
     d++;
   }
-  
-
-
-
   // 화살표 표시
   var j = 0;
   for(i of reMarks){
@@ -116,13 +129,8 @@ function reClicked(num){
     }
     j++;
   }
-
-
-
-
 }
 
-let isLogin = false;
 
 function togleStar(num){
   console.log("별! " + num);
