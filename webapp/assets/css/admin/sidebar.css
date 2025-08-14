@@ -30,12 +30,12 @@
   justify-content: center;
 }
 
-ul>li:hover {
+ul>.side_attach:hover {
   background-color: #2f52aa;
   opacity: 0.5;
 }
 
-ul>div>li:hover {
+ul>div>.side_attach:hover {
   background-color: #2f52aa;
   opacity: 0.5;
 }
