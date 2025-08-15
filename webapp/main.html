@@ -23,17 +23,63 @@
         <!-- 여기부터 슬라이드 박스 -->
         <ul class="slide-box">
           <!-- 첫 번째 슬라이드 -->
-          <li><div class="slide-img">1</div></li>
-          <!-- 두 번째 슬라이드 -->
-          <li><div class="slide-img">2</div></li>
-          <!-- 세 번째 슬라이드 -->
-          <li><div class="slide-img">3</div></li>
-          <!-- 네 번째 슬라이드 -->
-          <li><div class="slide-img">4</div></li>
-          <!-- 다섯 번째 슬라이드 -->
-          <li><div class="slide-img">5</div></li>
-          <!-- 여섯 번째 슬라이드 -->
-          <li><div class="slide-img">6</div></li>
+          <li>
+            <div class="slide-img">
+              <img class="banner_img" draggable="false" src="./assets/img/main/banner1.png">
+              <a draggable="false" href="https://www.newsflix.co.kr/news/articleView.html?idxno=18740">
+                <h3>서초구, ‘2025년 서초장애인 한마음축제’ 19일 개최</h3>
+                <p>장애인과 비장애인이 함께하는 화합의 장…공연·체험·전시 다채롭게 구성</p>
+              </a>
+            </div>
+          </li>
+          <!-- 두번째 슬라이드 -->
+          <li>
+            <div class="slide-img">
+              <img class="banner_img" draggable="false" src="./assets/img/main/banner2.jfif">
+              <a draggable="false" href="https://mediahub.seoul.go.kr/archives/2014274">
+                <h3>걷고 싶은 길 걷기 좋은 길, 서초구 우면산 무장애숲길 2구간 개방</h3>
+              </a>
+            </div>
+          </li>
+          <!-- 세번째 슬라이드 -->
+          <li>
+            <div class="slide-img">
+              <img class="banner_img" draggable="false" src="./assets/img/main/banner3.jpg">
+              <a draggable="false" href="https://www.newsis.com/view/NISX20250725_0003266545">
+                <h3>김완선, 장애인 생산품 박람회 빛낸다…9월10일 폐막 공연</h3>
+                <p>보건복지부 주최·장애인직업재활시설협회 주관</p>
+              </a>
+            </div>
+          </li>
+          <!-- 네번째 슬라이드 -->
+          <li>
+            <div class="slide-img">
+              <img class="banner_img" draggable="false" src="./assets/img/main/banner4.jpg">
+              <a draggable="false" href="https://www.catholictimes.org/article/20250213500028">
+                <h3>서울가톨릭사회복지회 서초구립 한우리정보문화센터, 중증장애인 운영 카페 개소</h3>
+                <p>‘아이갓에브리씽’ 외교타운점…지적·청각 장애 바리스타 2명 근무</p>
+              </a>
+            </div>
+          </li>
+          <!-- 다섯번째 슬라이드 -->
+          <li>
+            <div class="slide-img">
+              <img class="banner_img" draggable="false" src="./assets/img/main/banner5.jpg">
+              <a draggable="false" href="https://www.fntoday.co.kr/news/articleView.html?idxno=360036">
+                <h3>서초구, ‘찾아가는 진료’로 건강 취약계층 돌본다…민·관 협력 의료돌봄 모델 확산</h3>
+                <p>의사와 간호사가 집으로…검진·처방·치료까지 원스톱</p>
+              </a>
+            </div>
+          </li>
+          <!-- 여섯번째 슬라이드 -->
+          <li>
+            <div class="slide-img">
+              <img class="banner_img" draggable="false" src="./assets/img/main/banner6.png">
+              <a draggable="false" href="https://www.koreadisablednews.com/news/articleView.html?idxno=34979">
+                <h3>서초장애인자립생활지원센터, 장애인 대상 협업형 영상 창작 프로그램 운영</h3>
+              </a>
+            </div>
+          </li>
         </ul>
       </div>
        <!-- 추천 활동 및 추천 게시물 영역 -->
@@ -107,9 +153,9 @@
         <!-- 인기 돌봄회원 박스 -->
         <div class="explore_care">
           <!-- 인기 돌봄회원 목록 -->
-          <ul>
+          <ul class="profile_list">
             <!-- 인기 돌봄회원 1 -->
-            <li>
+            <li class="profile">
               <a href ="./app/careMember/careMemberDetail.html" class="care_profile">
                 <!-- 사진이랑 소개 -->
                 <div class="profile_info">
@@ -118,7 +164,7 @@
                   </div>
                   <span class="profile_text">
                     <div class="profile_name">김괭이dddd</div>
-                    <div class="profile_introduction">오프라인처럼 이제 온라인 세상에서 나를 노출시킬 때, 가장 먼저 해야 할 일은 좋은 첫인상을 남기는 일이다.</div>
+                    <div class="profile_introduction">안녕하세요~!</div>
                   </span>
                 </div>
                 <!-- 요일 -->
@@ -128,12 +174,15 @@
                     <li class="day">화</li>
                     <li class="day">화</li>
                     <li class="day">화</li>
+                    <li class="day">화</li>
+                    <li class="day">화</li>
+                    <li class="day">화</li>
                   </ul>
                 </div>
               </a>
             </li>
             <!-- 인기 돌봄회원 2 -->
-            <li>
+            <li class="profile">
               <a href ="./app/careMember/careMemberDetail.html" class="care_profile">
                 <!-- 사진이랑 소개 -->
                 <div class="profile_info">
@@ -142,7 +191,7 @@
                   </div>
                   <span class="profile_text">
                     <div class="profile_name">김괭이dddd</div>
-                    <div class="profile_introduction">오프라인처럼 이제 온라인 세상에서 나를 노출시킬 때, 가장 먼저 해야 할 일은 좋은 첫인상을 남기는 일이다.</div>
+                    <div class="profile_introduction">안녕하세요~!</div>
                   </span>
                 </div>
                 <!-- 요일 -->
@@ -157,7 +206,7 @@
               </a>
             </li>
             <!-- 인기 돌봄회원 3 -->
-            <li>
+            <li class="profile">
               <a href ="./app/careMember/careMemberDetail.html" class="care_profile">
                 <!-- 사진이랑 소개 -->
                 <div class="profile_info">
@@ -166,7 +215,7 @@
                   </div>
                   <span class="profile_text">
                     <div class="profile_name">김괭이dddd</div>
-                    <div class="profile_introduction">오프라인처럼 이제 온라인 세상에서 나를 노출시킬 때, 가장 먼저 해야 할 일은 좋은 첫인상을 남기는 일이다.</div>
+                    <div class="profile_introduction">안녕하세요~!</div>
                   </span>
                 </div>
                 <!-- 요일 -->
@@ -181,7 +230,7 @@
               </a>
             </li>
             <!-- 인기 돌봄회원 4 -->
-            <li>
+            <li class="profile">
               <a href ="./app/careMember/careMemberDetail.html" class="care_profile">
                 <!-- 사진이랑 소개 -->
                 <div class="profile_info">
@@ -190,7 +239,7 @@
                   </div>
                   <span class="profile_text">
                     <div class="profile_name">김괭이dddd</div>
-                    <div class="profile_introduction">오프라인처럼 이제 온라인 세상에서 나를 노출시킬 때, 가장 먼저 해야 할 일은 좋은 첫인상을 남기는 일이다.</div>
+                    <div class="profile_introduction">안녕하세요~!</div>
                   </span>
                 </div>
                 <!-- 요일 -->

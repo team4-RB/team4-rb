@@ -31,6 +31,8 @@ main{
   width: 100%;
   height: 300px;
   border-radius: 30px;
+  box-shadow: 0 0 10px;
+
 
   /* 슬라이드 박스로 설정하기 위한 요소 */
   overflow: hidden;
@@ -42,27 +44,55 @@ main{
   left: 0;
   position: absolute;
 }
+.slide-box li:first-child > .slide-img{
+  /* background-color: lightblue; */
+}
+.slide-box li:nth-child(2) > .slide-img{
+  /* background-color: rgb(238, 144, 180); */
+}
+.slide-box li:nth-child(3) > .slide-img{
+  /* background-color: rgb(132, 130, 243); */
+}
+.slide-box li:nth-child(4) > .slide-img{
+  /* background-color: rgb(224, 238, 144); */
+}
+.slide-box li:nth-child(5) > .slide-img{
+  /* background-color: lightgreen; */
+}
+.slide-box li:last-child > .slide-img{
+  /* background-color: lightcoral; */
+}
 .slide-img{
   width: 1200px;
   height: 300px;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: antiquewhite;
 }
-.slide-box li:first-child > .slide-img{
-  background-color: lightblue;
+.banner_img{
+  position: absolute;
+  width: 100%;
 }
-.slide-box li:nth-child(2) > .slide-img{
-  background-color: rgb(238, 144, 180);
+.slide-img a{
+  position: absolute;
+  cursor: pointer;
+  width: 600px;
+  bottom:5%;
+  left: 5%;
+  /* background-color: #1D3266; */
+  background-color: #F0F0F0;
+  /* opacity: 0.9; */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px;
 }
-.slide-box li:nth-child(3) > .slide-img{
-  background-color: rgb(132, 130, 243);
-}
-.slide-box li:nth-child(4) > .slide-img{
-  background-color: rgb(224, 238, 144);
-}
-.slide-box li:nth-child(5) > .slide-img{
-  background-color: lightgreen;
-}
-.slide-box li:last-child > .slide-img{
-  background-color: lightcoral;
+.slide-img a:hover{
+  color: yellow;
+  box-shadow: 0 0 10px;
+  
 }
 .recommend{
   margin-top: 50px;
@@ -72,16 +102,18 @@ main{
 .recommend_activity {
   margin-right: 10px;
   background-color: #F0F0F0;
-  border: solid 3px #1D3266;
+  /* border: solid 3px #1D3266; */
   border-radius: 20px;
   flex: 1;
+  box-shadow: 0 0 7px;
 }
 .recommend_board{
   margin-left: 10px;
   background-color: #F0F0F0;
-  border: solid 3px #1D3266;
+  /* border: solid 3px #1D3266; */
   border-radius: 20px;
   flex: 1;
+  box-shadow: 0 0 7px;
 }
 .recommend_title{
   background-color: lightgray;
@@ -140,7 +172,8 @@ main{
   flex: 1;
   border-radius: 20px;
   overflow: hidden;
-  border: #1D3266 4px solid;
+  /* border: #1D3266 4px solid; */
+  box-shadow: 0 0 7px;
 }
 .map_img{
   height: 100%;
@@ -150,13 +183,24 @@ main{
   height: 100%;
   width: 300px;
   background-color: #F0F0F0;
-  border: solid 3px #1D3266;
+  /* border: solid 3px #1D3266; */
   border-radius: 20px;
+  box-shadow: 0 0 5px;
+}
+.profile_list{
+  /* background-color: mediumaquamarine; */
+}
+.profile{
+  /* background-color: blue; */
+  border-radius: 20px;
+  margin: 4px 7px;
+  box-shadow: 0 0 2px;
+  padding: 10px;
 }
 .care_profile{
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 .profile_info{
   display: flex;
@@ -173,10 +217,11 @@ main{
 }
 .day_box{
   display: flex;
-  padding-left: 10px;
+  padding-left: 2px;
   width: max-content;
   /* margin: 5px 0 0 2px; */
   margin-top: 7px;
+  /* background-color: black; */
 }
 .day{
   border: solid 3px #1D3266;
@@ -206,7 +251,8 @@ main{
 .profile_introduction{
   width:100%;
   padding-top: 7px;
-  font-size: 10px;
+  font-size: 16px;
   height: 100%;
   overflow: hidden;
+  text-align: center;
 } 

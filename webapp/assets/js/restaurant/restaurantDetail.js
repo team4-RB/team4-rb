@@ -22,7 +22,7 @@ const shortRamp = document.getElementById("short_ramp");
 //설명
 const introduction = document.getElementById("introduction");
 
-
+// 음식점 더미데이터
 var restaurants = [
   ['비엔나커피하우스', '서울특별시 서초구 방배로 126', '평일 08:30 - 23:00 | 주말 11:00 - 23:00', '02-585-1683'],
   ['아트메이저', '서울특별시 서초구 서초대로 114', '월~금 : 08:30 ~ 21:50 토,일 : 09:00 ~ 21:50', '02-521-6239'],
@@ -30,16 +30,18 @@ var restaurants = [
 ];
 
 
-
+// 이전 페이지에서 클릭한 음식점에 대한 파라미터를 가져오기
 const params = new URLSearchParams(window.location.search);
 
 // 파라미터 읽기
 const restaurantNum = params.get("restaurant"); 
 
+//이미지 변경 함수
 function editImage(){
   pageImage.src = `./../../assets/img/restaurant/re` + restaurantNum + `.jpg`;
 }
 
+//소개글 변경 함수
 function editTexts(){
   pageTitle.innerHTML = restaurants[restaurantNum][0];
   shortName.innerHTML = restaurants[restaurantNum][0];
@@ -50,5 +52,7 @@ function editTexts(){
   introduction.innerHTML = "(js로 변경)서초 방배 1동 자담치킨입니다. 저희 자담치킨은 동물복지웰빙 치킨과 자담프리미엄 전용유로 튀긴 건강한 치킨 입니다. 세스코에 가입한 식당으로 보다 더 깨끗한 위생관리를 하고 있습니다. 다같이 코로나19를 이겨냈으면 좋겠습니다";
 }
 
+// 이미지 변경
 editImage();
+// 소개글 변경
 editTexts();
