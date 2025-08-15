@@ -58,20 +58,26 @@ function checkId() {
   }
 }
 
-
-
 function nextPg() {
   const input2 = document.getElementById("get_id");
+  const checkedRadio = document.querySelector('input[name="type"]:checked');
   const nameInput = document.getElementById("name_input");
   const phoneInput = document.getElementById("phone_input");
   const input = document.getElementById("author_number");
   const val = input.value.trim();
-  if(!input.value||!nameInput.value||!phoneInput.value||!input2.value||!/^\d{6}$/.test(val)) {
-    alert('입력해주세요')
-  }else {
-    location.href= "./../../../webapp/app/login/findPasswordResult.html";
-    console.log(input.value)
-    console.log(nameInput.value)
-    console.log(phoneInput.value)
+  if (
+    !input.value ||
+    !nameInput.value ||
+    !phoneInput.value ||
+    !input2.value ||
+    !/^\d{6}$/.test(val) ||
+    !checkedRadio
+  ) {
+    alert("입력해주세요");
+  } else {
+    location.href = "./../../../webapp/app/login/findPasswordResult.html";
+    console.log(input.value);
+    console.log(nameInput.value);
+    console.log(phoneInput.value);
   }
 }

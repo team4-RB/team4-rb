@@ -4,16 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>회원 상세페이지(일반)</title>
-    <link rel="stylesheet" href="./../../assets/css/admin/" />
-    <link rel="stylesheet" href="./../../assets/css/header.css" />
+    <link rel="stylesheet" href="./../../assets/css/headerAdmin.css" />
     <link rel="stylesheet" href="./../../assets/css/footer.css" />
     <link rel="stylesheet" href="./../../assets/css/admin/basic.css" />
     <link rel="stylesheet" href="./../../assets/css/admin/reportDetail.css" />
     <link rel="stylesheet" href="./../../assets/css/admin/sidebar.css" />
-    <script defer src="./../../assets/js/main/include.js"></script>
-    <!-- <script defer src="./../../assets/js/admin/admin.js"></script> -->
-    <script defer src="./../../assets/js/modal/modalDeleteReportedPost.js"></script>
-    <link rel="stylesheet" href="./../../assets/css/modalAdmin.css">
+    <script defer src="./../../assets/js/main/includeAdmin.js"></script>
+    <!-- <script
+      defer
+      src="./../../assets/js/modal/modalDeleteReportedPost.js"
+    ></script> -->
+    <script
+      defer
+      src="./../../assets/js/modal/modalDeletePostReason.js"
+    ></script>
+    <link rel="stylesheet" href="./../../assets/css/modalAdmin.css" />
   </head>
   <body>
     <div id="header"></div>
@@ -78,13 +83,18 @@
           </div>
         </div>
         <div class="notice_btn">
-          <button class="list" onclick="linkHref()">목록</button>
-          <button class="delete" onclick="modalDeleteReportedPostShow()" type="button">삭제</button>
+          <button class="list" onclick="linkHref()" type="button">목록</button>
+          <button
+            class="delete"
+            onclick="modalDeletePostReasonShow()"
+            type="button"
+          >
+            삭제
+          </button>
         </div>
       </section>
     </main>
     <div id="footer"></div>
-    <div id="modalDeleteReportedPost"></div>
-
+    <div id="modalDeletePostReason"></div>
   </body>
 </html>

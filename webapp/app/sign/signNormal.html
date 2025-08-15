@@ -64,18 +64,18 @@
           <input type="text" placeholder="- 없이 숫자만 입력해주세요." id="phone">
         </div>
         <div class="sign_box sign_phone">
-          <input type="text" placeholder="인증번호 6자리 입력">
-          <button onclick="sendMsg()">인증번호 발송</button>
-          <div class="alert">인증번호가 발송되었습니다.</div>
+          <!-- <input type="text" placeholder="인증번호 6자리 입력1"> -->
         </div>
         <div class="error_box">
           <p class="error_phone">존재하지 않는 휴대폰번호입니다.</p>
         </div>
         <div class="sign_box sign_author">
-          <input type="text" placeholder="" id="author_number">
+          <input type="text" placeholder="인증번호 6자리 입력" id="author_number" >
           <div class="timer"></div>
+          <button onclick="sendMsg()">인증번호 발송</button>
           <button onclick="checkMsg()">인증번호 확인</button>
         </div>
+        <div class="alert">인증번호가 발송되었습니다.</div>
         <div class="error_box_msg">
           <p class="error_msg">인증번호가 올바르지 않습니다.</p>
           <p class="okay_msg">제대로 인증되었습니다.</p>

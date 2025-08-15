@@ -1,0 +1,57 @@
+#site_header,
+#site_header_login {
+  background-color: #fff8ef;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+#site_header div span a img,
+#site_header_login div span a img {
+  height: 109px;
+}
+#site_header div,
+#site_header_login div {
+  height: 109px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#site_header div span a,
+#site_header_login div span a {
+  font-size: 16px;
+  margin-right: 7px;
+}
+#site_header nav,
+#site_header_login nav {
+  background-color: #1d3266;
+}
+#site_header nav ul,
+#site_header_login nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+#site_header nav ul li div a,
+#site_header_login nav ul li div a {
+  text-decoration-line: none;
+  color: white;
+}
+#site_header nav ul li div,
+#site_header_login nav ul li div {
+  height: 50px;
+}
+/* 관리자 헤더용 설정 */
+#site_header div span,
+#site_header_login div span {
+  display: flex;
+}
+.admin_text {
+  /* background-color: aqua; */
+  height: 100%;
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+.logout {
+  padding-right: 20px;
+}

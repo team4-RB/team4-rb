@@ -63,20 +63,20 @@ main {
 }
 
 .board_number {
-  width: 100px;
+  width: 15%;
   height: 95%;
 }
 .board_title {
-  width: 600px;
+  width: 35%;
   height: 95%;
 }
 
 .board_cnt {
-  width: 100px;
+  width: 15%;
   height: 95%;
 }
 .board_date {
-  width: 500px;
+  width: 35%;
   height: 95%;
 }
 
@@ -96,38 +96,25 @@ main {
   } */
 
 .body_number {
-  width: 100px;
-  height: 30px;
+  width: 15%;
+  height: 30px;;
   /* border: 1px solid black; */
 }
 .body_content {
-  width: 600px;
-  height: 30px;
-  /* border: 1px solid black; */
-}
-.body_name {
-  width: 300px;
-  height: 30px;
-  /* border: 1px solid black; */
-}
-.body_type {
-  width: 124px;
+  width:35%;
   height: 30px;
   /* border: 1px solid black; */
 }
 
+
+
 .body_cnt {
-  width: 100px;
+  width: 15%;
   height: 30px;
   /* border: 1px solid black; */
 }
 .body_date {
-  width: 500px;
-  height: 30px;
-  /* border: 1px solid black; */
-}
-.body_delete {
-  width: 50px;
+  width: 35%;
   height: 30px;
   /* border: 1px solid black; */
 }

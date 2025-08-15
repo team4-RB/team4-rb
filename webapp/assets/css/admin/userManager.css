@@ -62,26 +62,105 @@ main {
 }
 
 .board_number {
-  width: 150px;
+  width: 10%;
   height: 95%;
 }
 .board_name {
-  width: 150px;
+  width: 15%;
   height: 95%;
 }
 .board_id {
-  width: 150px;
+  width: 25%;
   height: 95%;
 }
 .board_email {
-  width: 400px;
+  width: 25%;
   height: 95%;
 }
 .board_phone {
-  width: 400px;
+  width: 15%;
   height: 95%;
 }
 .board_type {
-  width: 150px;
+  width: 10%;
   height: 95%;
+}
+
+.table_big {
+  width: 90%;
+}
+
+.table_body {
+  border-bottom: 1px solid black;
+}
+
+.table_body {
+  display: flex;
+}
+
+/* 테스트(간격 조절) */
+/* .board_head {
+  border: 1px solid black;
+  } */
+/* .table_body > li {
+    border: 1px solid black;
+  } */
+
+.body_number {
+  width: 10%;
+  height: 30px;
+  /* border: 1px solid black; */
+}
+.body_name {
+  width: 15%;
+  height: 30px;
+  /* border: 1px solid black; */
+}
+
+.body_id {
+  width: 25%;
+  height: 30px;
+  /* border: 1px solid black; */
+}
+
+.body_email {
+  width: 25%;
+  height: 30px;
+  /* border: 1px solid black; */
+}
+.body_phone {
+  width: 15%;
+  height: 30px;
+  /* border: 1px solid black; */
+}
+.body_type {
+  width: 10%;
+  height: 30px;
+  /* border: 1px solid black; */
+}
+.table_body {
+  width: 100%;
+}
+
+.table_body > li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paging_box {
+  width: 70%;
+  /* border: 1px solid black; */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.paging {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
 }
