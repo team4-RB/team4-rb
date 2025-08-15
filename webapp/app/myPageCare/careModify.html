@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +12,11 @@
   <script defer src="./../../assets/js/myPageCare/careModify.js"></script>
 </head>
 </head>
+
 <body>
   <div id="header"></div>
   <main>
-          <!-- 마이페이지 사이드 바 목록과 이동 경로 -->
+    <!-- 마이페이지 사이드 바 목록과 이동 경로 -->
 
     <nav class="main_sidebar">
       <ul>
@@ -31,14 +33,14 @@
     </nav>
 
     <div class="div_mark">
-          <!-- 마이페이지 제목 -->
+      <!-- 마이페이지 제목 -->
 
       <div class="title">개인정보 수정</div>
       <div class="arlim">
         <div>
 
         </div>
-              <!-- 알림 정보 -->
+        <!-- 알림 정보 -->
 
         <nav>
           <ul>
@@ -52,7 +54,7 @@
 
       <form action="" method="get">
         <!-- 수정하는 것의 제목 -->
-        <div> 
+        <div>
           <div>회원 정보</div>
         </div>
         <nav class="caremodify">
@@ -95,18 +97,30 @@
             <li class="member">
               <ul>
                 <li class="info">이메일</li>
-                <li class="myinfo"><input type="email" placeholder="이메일"><button>수정</button></li>
+                <li class="myinfo"><input type="email" placeholder="abcde@ 형식으로 입력해 주십시오"><button>수정</button></li>
               </ul>
             </li>
             <!-- 비밀번호를 수정 하기 위한 칸 -->
             <li class="member">
               <ul>
-                <li class="info">비밀번호</li>
+                <li class="info">비밀번호 재설정</li>
                 <li class="myinfo">
-                  <ul>
-                    <li><input type="password" placeholder="비밀번호 입력"></li>
-                    <li><input type="password" placeholder="새 비밀번호 입력"><button>확인</button></li></li>
+                  <ul class="pw_reset">
+                    <li>
+                      <input type="password" placeholder="비밀번호 8자리 입력(숫자와 영어 특수기호 포함)" id="rePw">
+                    </li>
+                    <li>
+                      <!-- 형식 오류 메시지 (초기 숨김) -->
+                      <div class="box_error_pw" id="msg_box" style="display:none" aria-live="polite">
+                        <p class="error_pw_msg">형식에 맞게 입력해주세요.</p>
+                      </div>
+                    </li>
+                    <li>
+                      <input type="password" placeholder="비밀번호 재입력" id="reCheckPw">
+                      <button type="button">확인</button>
+                    </li>
                   </ul>
+                </li>
               </ul>
             </li>
           </ul>
@@ -127,6 +141,13 @@
       <button id="saveConfirmBtn">확인</button>
     </div>
   </div>
+  <div id="notCorecetModal" class="modal">
+    <div class="modal-content">
+      <p>비밀번호가 맞지 않습니다.</p>
+      <button id="CorrectBtn">확인</button>
+    </div>
+  </div>
   <div id="footer"></div>
 </body>
+
 </html>
