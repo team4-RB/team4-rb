@@ -15,6 +15,7 @@
 <body>
   <div id="header"></div>
   <main>
+    <!-- 메뉴 사이드바 섹션 -->
     <nav class="main_sidebar">
       <ul>
         <li><img src="./../../assets/img/myPageNormal/normalMember.jpg" alt="#"></li>
@@ -31,7 +32,9 @@
     </nav>
     <form action="" method="get">
       <div class="div_mark">
+        <!-- 메뉴 제목 -->
         <div class="title">쪽지함</div>
+        <!-- 받은 쪽지, 보낸 쪽지로 이동 -->
         <nav class="div_choose">
           <ul> 
             <li class="send"><a href="./normalsendMesseage.html">받은 쪽지</a></li>
@@ -40,6 +43,7 @@
           </ul>
         </nav>
         <nav class="mark_nav">
+          <!-- 보낸 쪽지 컬럼 -->
           <ul>
             <li><input onclick="toggleMarksAll()" id="checkbox_col" name="mark_check_col" type="checkbox"></li>
             <li class="name_col">
@@ -56,10 +60,10 @@
             </li>
           </ul>
         </nav>
+        <!-- 보낸 쪽지 목록 리스트 -->
         <ul class="mark_list">
         </ul>
-        
-
+        <!-- 페이지네이션 -->
         <nav class="page">
           <ul>
             <li><a href="">&lt;</a></li>
@@ -70,6 +74,7 @@
             <li><a href="">&gt;</a></li>
           </ul>
         </nav>
+        <!-- 보낸 쪽지 삭제 버튼 -->
         <div class="div_delete">
           <button type="button" onclick="delMarks()" id="delete">삭제</button>
         </div>
@@ -77,6 +82,7 @@
     </form>
 
   </main>
+  <!-- 보낸 쪽지 확인 모달 -->
   <div class="modal">
     <div class="modal-content">
       <button id="sendxbutton">X</button>

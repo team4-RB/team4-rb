@@ -14,6 +14,7 @@
 <body>
   <div id="header"></div>
   <main>
+    <!-- 메뉴 사이드바 섹션 -->
     <nav class="main_sidebar">
       <ul>
         <li><img src="./../../assets/img/myPageNormal/normalMember.jpg" alt="#"></li>
@@ -28,21 +29,20 @@
         <li><a href="./normalQuit.html">회원 탈퇴</a></li>
       </ul>
     </nav>
-
     <div class="div_mark">
+      <!-- 메뉴 제목 -->
       <div class="title">개인정보 수정</div>
+      <!-- 주의사항 표시 -->
       <div class="arlim">
-        <div>
-
-        </div>
         <nav>
           <ul>
-            <li>저희 함께걸음은 회원님의 개인 정보를 신중히 취급하며, 회원님의 동의 없이 기재하신 회원정보를 공개하지 않습니다.</li>
+            <li>🛈 저희 함께걸음은 회원님의 개인 정보를 신중히 취급하며, 회원님의 동의 없이 기재하신 회원정보를 공개하지 않습니다.</li>
             <li>회원님의 개인 정보를 안전하게 보호하기 위해 최선을 다하고 있습니다. </li>
             <li>회원님의 정보를 특정할 수 있는 것은 입력을 지양해 주시길 바랍니다.</li>
           </ul>
         </nav>
       </div>
+      <!-- 회원 정보 섹션 -->
       <form action="" method="get">
         <div>
           <div>회원 정보</div>
@@ -76,7 +76,7 @@
             <li class="member">
               <ul>
                 <li class="info">전화번호</li>
-                <li class="myinfo"><div>010-1234-5678</div></li>
+                <li class="myinfo"><input type="text" placeholder="010-1234-5678"><button id="phonebutton">수정</button></li>
               </ul>
             </li>
             <li class="member">
@@ -96,8 +96,9 @@
                 <li class="info">비밀번호</li>
                 <li class="myinfo">
                   <ul>
-                    <li><input type="password" placeholder="비밀번호 입력"></li>
-                    <li><input type="password" placeholder="새 비밀번호 입력"><button id="pwbutton">확인</button></li></li>
+                    <li><input id="pwInput" type="password" placeholder="비밀번호 입력"></li>
+                    <li><input id="newPwIntput" type="password" placeholder="새 비밀번호 입력"><button type="button" id="pwbutton">확인</button></li>
+                    <li><div class="pwCheck" >비밀번호가 일치하지않습니다</div></li>
                   </ul>
               </ul>
             </li>
@@ -106,16 +107,11 @@
       </form>
     </div>
   </main>
+  <!-- 정보 수정 확인 모달들 -->
   <div class="modal_address">
     <div class="modal-content">
       <p>주소 수정이 완료 되었습니다.</p>
       <button onclick="openaddressModalClose()" id="saveConfirmBtn">확인</button>
-    </div>
-  </div>
-  <div class="modal_phone">
-    <div class="modal-content">
-      <p>전화번호 수정이 완료 되었습니다.</p>
-      <button onclick="openphoneModalClose()" id="saveConfirmBtn">확인</button>
     </div>
   </div>
   <div class="modal_email">
@@ -128,6 +124,12 @@
     <div class="modal-content">
       <p>비밀번호 수정이 완료 되었습니다.</p>
       <button onclick="openpwModalClose()" id="saveConfirmBtn">확인</button>
+    </div>
+  </div> 
+  <div class="modal_phone">
+    <div class="modal-content">
+      <p>전화번호 수정이 완료 되었습니다.</p>
+      <button onclick="openphoneModalClose()" id="saveConfirmBtn">확인</button>
     </div>
   </div> 
   <div class="modal_mail">

@@ -14,9 +14,9 @@
 
 
 
-const nextBtn   = document.getElementById("next");
-const checkBox  = document.getElementById("checkModal");
-const doneBox   = document.getElementById("doneModal");
+// const nextBtn   = document.getElementById("next");
+// const checkBox  = document.getElementById("checkModal");
+// const doneBox   = document.getElementById("doneModal");
 
 window.openQuitModal = function () {
   document.getElementById('checkModal').style.display = 'block';

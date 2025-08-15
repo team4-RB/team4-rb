@@ -8,6 +8,6 @@ function chPw(){
   if(inputPw.value == correct){
     window.location.href="./normalModify.html";
   }else{
-    pwChecktext.style.display='block';
+    pwChecktext.style.display = 'block';
   }
 }
