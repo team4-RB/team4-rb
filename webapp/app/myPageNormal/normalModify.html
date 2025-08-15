@@ -67,8 +67,8 @@
                 <li class="myinfo">
                   <ul>
                     <li><input type="text" placeholder="우편번호"></li>
-                    <li><input type="text" placeholder="주소"><button id="mailbutton">우편번호 찾기</button></li>
-                    <li><input type="text" placeholder="상세주소"><button  id="addressbutton">확인</button></li>
+                    <li><input type="text" placeholder="주소"><button  type="button" id="mailbutton">우편번호 찾기</button></li>
+                    <li><input type="text" placeholder="상세주소"><button  type="button" id="addressbutton">확인</button></li>
                   </ul>
                 </li>
               </ul>
@@ -76,7 +76,7 @@
             <li class="member">
               <ul>
                 <li class="info">전화번호</li>
-                <li class="myinfo"><input type="text" placeholder="010-1234-5678"><button id="phonebutton">수정</button></li>
+                <li class="myinfo"><input type="text" placeholder="010-1234-5678"><button type="button" id="phonebutton">수정</button></li>
               </ul>
             </li>
             <li class="member">
@@ -88,7 +88,7 @@
             <li class="member">
               <ul>
                 <li class="info">이메일</li>
-                <li class="myinfo"><input type="text" placeholder="이메일"><button id="emailbutton">수정</button></li>
+                <li class="myinfo"><input type="text" placeholder="이메일"><button type="button" id="emailbutton">수정</button></li>
               </ul>
             </li>
             <li class="member">
@@ -111,31 +111,31 @@
   <div class="modal_address">
     <div class="modal-content">
       <p>주소 수정이 완료 되었습니다.</p>
-      <button onclick="openaddressModalClose()" id="saveConfirmBtn">확인</button>
+      <button type="button" onclick="openaddressModalClose()" id="saveConfirmBtn">확인</button>
     </div>
   </div>
   <div class="modal_email">
     <div class="modal-content">
       <p>이메일 수정이 완료 되었습니다.</p>
-      <button onclick="openemailModalClose()" id="saveConfirmBtn">확인</button>
+      <button type="button" onclick="openemailModalClose()" id="saveConfirmBtn">확인</button>
     </div>
   </div>
   <div class="modal_pw">
     <div class="modal-content">
       <p>비밀번호 수정이 완료 되었습니다.</p>
-      <button onclick="openpwModalClose()" id="saveConfirmBtn">확인</button>
+      <button type="button" onclick="openpwModalClose()" id="saveConfirmBtn">확인</button>
     </div>
   </div> 
   <div class="modal_phone">
     <div class="modal-content">
       <p>전화번호 수정이 완료 되었습니다.</p>
-      <button onclick="openphoneModalClose()" id="saveConfirmBtn">확인</button>
+      <button type="button" onclick="openphoneModalClose()" id="saveConfirmBtn">확인</button>
     </div>
   </div> 
   <div class="modal_mail">
     <div class="modal-content">
       <p>우편번호 찾기 api?</p>
-      <button onclick="openmailModalClose()" id="saveConfirmBtn">확인</button>
+      <button type="button" onclick="openmailModalClose()" id="saveConfirmBtn">확인</button>
     </div>
   </div>
   <div id="footer"></div>

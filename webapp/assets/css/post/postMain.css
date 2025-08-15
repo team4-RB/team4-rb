@@ -52,7 +52,7 @@ form{
   height: 40px;
   display: flex;
   border-bottom: 1px solid black;
-  background-color: rgb(202, 202, 202);
+  background-color: #F2F2F2;
 }
 
 .post_notify ul {
@@ -69,7 +69,7 @@ form{
   height: 40px;
   display: flex;
   border-bottom: 1px solid black;
-  background-color: white;
+  background-color: #F2F2F2;
   justify-content: center;
 }
 .notify_open ul {
@@ -139,7 +139,7 @@ form{
   margin: 0px 100px 0px 400px;
   width: 100px;
   height: 30px;
-  background-color: blue;
+  background-color: #2F52AA;
   color: white;
 }
 .search a{
