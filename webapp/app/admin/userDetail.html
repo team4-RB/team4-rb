@@ -4,18 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>회원 상세페이지(일반)</title>
-    <link rel="stylesheet" href="./../../assets/css/admin/" />
-    <link rel="stylesheet" href="./../../assets/css/header.css" />
+    <link rel="stylesheet" href="./../../assets/css/headerAdmin.css" />
     <link rel="stylesheet" href="./../../assets/css/footer.css" />
     <link rel="stylesheet" href="./../../assets/css/admin/basic.css" />
     <link rel="stylesheet" href="./../../assets/css/admin/userDetail.css" />
     <link rel="stylesheet" href="./../../assets/css/admin/sidebar.css" />
-    <script defer src="./../../assets/js/main/include.js"></script>
+    <script defer src="./../../assets/js/main/includeAdmin.js"></script>
     <script defer src="./../../assets/js/admin/admin.js"></script>
     <script defer src="./../../assets/js/modal/modalEditName.js"></script>
     <script defer src="./../../assets/js/modal/modalDeleteMember.js"></script>
     <script defer src="./../../assets/js/modal/modalPointChargeLog.js"></script>
-    <link rel="stylesheet" href="./../../assets/css/modalAdmin.css">
+    <link rel="stylesheet" href="./../../assets/css/modalAdmin.css" />
   </head>
   <body>
     <div id="header"></div>
@@ -32,7 +31,9 @@
                 <div class="table_head_name">성명</div>
                 <div class="table_name_detail">
                   <span id="name">슬립핑</span>
-                  <button onclick="modalEditNameShow()">수정</button>
+                  <button onclick="modalEditNameShow()" type="button">
+                    수정
+                  </button>
                 </div>
                 <div class="table_member_type">
                   <div class="table_member_type_title">
@@ -92,12 +93,21 @@
                 <div class="table_head_point">포인트 잔액</div>
                 <div class="table_point_detail">
                   <input type="text" readonly />
-                  <button onclick="modalPointChargeLogShow()">충전내역 조회</button>
+                  <button onclick="modalPointChargeLogShow()" type="button">
+                    충전내역 조회
+                  </button>
                 </div>
               </div>
             </div>
             <div class="delete">
-              <button type="submit" class="delete_btn"  onclick="modalDeleteMemberShow()">삭제</button>
+              <button
+                type="submit"
+                class="delete_btn"
+                onclick="modalDeleteMemberShow()"
+                type="button"
+              >
+                삭제
+              </button>
             </div>
           </form>
         </div>

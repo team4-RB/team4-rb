@@ -63,24 +63,29 @@ main {
 }
 
 .board_number {
-  width: 100px;
+  width: 10%;
   height: 95%;
 }
 .board_name {
-  width: 300px;
+  width: 20%;
   height: 95%;
 }
 .board_id {
-  width: 200px;
+  width: 20%;
   height: 95%;
 }
 .board_date {
-  width: 400px;
+  width: 20%;
+  height: 95%;
+}
+
+.board_refund_date {
+  width: 20%;
   height: 95%;
 }
 
 .board_type {
-  width: 100px;
+  width: 10%;
   height: 95%;
 }
 
@@ -101,24 +106,29 @@ main {
 }
 
 .body_number {
-  width: 100px;
+  width: 10%;
+  height: 30px;
+}
+
+.body_refund_date{
+   width: 20%;
   height: 30px;
 }
 .body_type {
-  width: 100px;
+  width: 10%;
   height: 30px;
 }
 
 .body_name {
-  width: 300px;
+  width: 20%;
   height: 30px;
 }
 .body_id {
-  width: 200px;
+  width: 20%;
   height: 30px;
 }
 .body_date {
-  width: 400px;
+  width: 20%;
   height: 30px;
 }
 
