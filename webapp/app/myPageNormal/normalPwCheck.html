@@ -13,6 +13,7 @@
 <body>
   <div id="header"></div>
   <main>
+    <!-- 메뉴 사이드바 섹션 -->
     <nav class="main_sidebar">
       <ul>
         <li><img src="./../../assets/img/myPageNormal/normalMember.jpg" alt="#"></li>
@@ -27,12 +28,13 @@
         <li><a href="./normalQuit.html">회원 탈퇴</a></li>
       </ul>
     </nav>
+    <!-- 비밀번호 확인 섹션 -->
     <div class="pw_check">
       <form action="" method="get"> 
         비밀번호<input id="pw_input" type="password" placeholder="비밀번호 8자리 입력">
         <div id="pwaccord">일치하지 않는 비밀번호 입니다</div>
       </form>
-      <button onclick="chPw()" class="checkBtn">비밀번호 확인</button>
+      <button type="button" onclick="chPw()" class="checkBtn">비밀번호 확인</button>
     </div>
   </main>
   <div id="footer"></div>

@@ -2,12 +2,14 @@
   margin: 0;
   padding: 0;
 }
+
 @font-face {
   font-family: 'Pretendard-Regular';
   src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
+
 main {
   width: 100%;
   height: calc(100vh - 200px);
@@ -17,7 +19,7 @@ main {
 .main_sidebar {
   width: 180px;
   height: 100%;
-  background-color: #2f4db1;
+  background-color: #2F52AA;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -32,6 +34,10 @@ main {
 
 .main_sidebar ul li {
   padding: 12px 20px;
+}
+
+.main_sidebar ul li a {
+  color: white;
 }
 
 /* ============================= */
@@ -55,7 +61,7 @@ form {
   margin: 30px 150px 0px 150px;
   height: 50px;
   align-items: center;
-  background-color: rgb(191, 201, 201);
+  background-color: #F2F2F2;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
 }
@@ -70,7 +76,7 @@ form {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(191, 201, 201);
+  background-color: #F2F2F2;
 }
 
 .mark_nav input {
@@ -110,7 +116,7 @@ form {
   justify-content: space-between;
   align-items: center;
   height: 50px;
-  background-color: rgb(214, 236, 236);
+  background-color: rgb(255, 255, 255);
   border-bottom: 1px solid black;
 
 }
@@ -118,7 +124,7 @@ form {
 .mark_list li input,
 .mark_list li div,
 .mark_list li a {
-  background-color: rgb(214, 236, 236);
+  background-color: rgb(255, 255, 255);
 }
 
 .checkbox_li {
@@ -154,4 +160,66 @@ button {
   height: 40px;
   border-radius: 15px;
 
+}
+
+/* 취소버튼 스타일 */
+#cacnceDelete {
+  background-color: white;
+  border: 2px solid rgb(255, 0, 0);
+  color: black;
+}
+
+/* 확인버튼 스타일 */
+#confirmDelete {
+  background-color: #2f4db1;
+  color: white;
+}
+
+/* 체크확인 버튼 */
+#check_confirmDelete {
+  background-color: #2f4db1;
+  color: white;
+}
+
+/* 모달 스타일 */
+.modal {
+  position: fixed;
+  inset: 0;
+  top: 0px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+/* 조건이 만족 했을 때 모달 출력 */
+.modal.open {
+  display: flex;
+}
+
+/* 모달 안의 상자 */
+.modal_box {
+  background: #fff;
+  min-width: 320px;
+  max-width: 90vw;
+  padding: 20px 24px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* 모달 안의 버튼 */
+.modal_buttons {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* 모달 안의 버튼들 꾸미기 */
+.modal_buttons button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }

@@ -10,6 +10,7 @@ let isLogin=true;
 
 // 작성된 후기 수
 let count = 0;
+
 // 입력창에 작성된 후기 내용을 가져와 후기 리스트에 추가하는 함수
 function writeComment(){
 

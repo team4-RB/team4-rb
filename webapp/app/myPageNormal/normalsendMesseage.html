@@ -13,6 +13,7 @@
 <body>
   <div id="header"></div>
   <main>
+    <!-- 메뉴 사이드바 섹션 -->
     <nav class="main_sidebar">
       <ul>
         <li><img src="./../../assets/img/myPageNormal/normalMember.jpg" alt="#"></li>
@@ -29,7 +30,9 @@
     </nav>
     <form action="" method="get">
       <div class="div_mark">
+        <!-- 메뉴 제목 -->
         <div class="title">쪽지함</div>
+        <!-- 받은 쪽지, 보낸 쪽지 이동 -->
         <nav class="div_choose">
           <ul>
             <li class="send"><a href="./normalsendMesseage.html">받은 쪽지</a></li>
@@ -37,6 +40,7 @@
             <li class="reseive"><a href="./normalreseiveMesseage.html">보낸 쪽지</a></li>
           </ul>
         </nav>
+        <!-- 받은 쪽지 컬럼 -->
         <nav class="mark_nav">
           <ul>
             <li><input onclick="toggleMarksAll()" id="checkbox_col" name="mark_check_col" type="checkbox"></li>
@@ -54,9 +58,10 @@
             </li>
           </ul>
         </nav>
+        <!-- 받은 쪽지 목록 리스트 -->
         <ul class="mark_list">
         </ul>
-
+        <!-- 페이지네이션 -->
         <nav class="page">
           <ul>
             <li><a href="">&lt;</a></li>
@@ -67,6 +72,7 @@
             <li><a href="">&gt;</a></li>
           </ul>
         </nav>
+        <!-- 받은 쪽지 삭제 버튼 -->
         <div class="div_delete">
           <button type="button" onclick="delMarks()" id="delete">삭제</button>
         </div>
@@ -74,34 +80,82 @@
     </form>
   
   </main>
-  <div class="modal">
-    <div class="modal-content">
-      <button id="sendxbutton">X</button>
-      <p>받은 쪽지 읽기</p>
-      <div class="sendmember"><div>보낸 사람 : 홍길동 | honggildong123</div></div>
-      <div class="content"><div>쪽지 내용</div></div>
-      <button id="sendBtn">답장</button>
-
+<!-- 쪽지 row 클릭시 나오는 모달창 -->
+  <div class="modal_bg" id="msgModal">
+    <div class="modal_box">
+      <div class="modal_read">
+        <span class="modal_title">받은 쪽지 읽기</span>
+        <span class="modal_close" onclick="closeMsgModal()">&times;</span>
+      </div>
+      <div class="modal_info">
+        <div class="sender_info">
+          <span>보낸 사람 : </span>티라노사우루스 | <span class="sender_id">Trano</span>
+        </div>
+        <div class="message_content">
+          나는나는 육식 공룡 풀떼기는 안먹지
+        </div>
+      </div>
+      <!-- 해당 모달에 있는 모달창 -->
+      <div class="modal_button">
+        <button class="btn_reply">답장</button>
+        <button class="btn_delete">삭제</button>
+      </div>
     </div>
   </div>
-  <div class="modal_reseive">
-    <div class="modal-content">
-      <button id="reseivexbutton">X</button>
-      <p>쪽지 보내기</p>
-      <div class="sendmember">
-        <div>받는 사람 : 홍길동 | honggildong123</div>
+  <!-- 답장 버튼 클릭 시 모달 출력 -->
+  <div class="modal_bg" id="sendMsgModal">
+    <div class="modal_box">
+      <div class="modal_read">
+        <span class="modal_title">쪽지 보내기</span>
+        <span class="modal_close" onclick="closeSendMsgModal()">&times;</span>
       </div>
-      <div class="content">
-          <textarea></textarea>
+      <div class="modal_info">
+        <div class="sender_info">
+          <span>받는 사람 : </span>스태고사우루스 | <span class="sender_id">stago</span>
+        </div>
+        <textarea id="message_textarea" placeholder="내용을 입력하세요"></textarea>
       </div>
-      <button id="reseiveBtn">보내기</button>
-      <button id="cancleBtn">취소</button>
+      <div class="modal_button">
+        <button class="btn_send">보내기</button>
+        <button class="btn_cancel">취소</button>
+      </div>
     </div>
   </div>
-  <div class="modal_messeage">
-    <div class="modal-checkcontent">
-      <p>쪽지를 보냈습니다</p>
-      <button id="messeagecheckBtn">확인</button>
+  <!-- 보내기 버튼 클릭 시 모달 출력 -->
+  <div class="modal_bg" id="sendSuccessModal">
+    <div class="modal_box modal_send">
+      <p class="send_message">쪽지를 보냈습니다.</p>
+      <div class="modal_button">
+        <button class="btn_confirm" onclick="closeSendModal()">확인</button>
+      </div>
+    </div>
+  </div>
+  <!-- 삭제 버튼 클릭 시 모달 출력 -->
+  <div class="modal_bg" id="deleteMsgModal">
+    <div class="modal_box confirm_modal">
+      <p class="confirm_text">정말로 쪽지를 삭제하시겠습니까?</p>
+      <div class="confirm_buttons">
+        <button class="btn_confirm" onclick="confirmDelete()">확인</button>
+        <button class="btn_cancel" onclick="closeDeleteModal()">취소</button>
+      </div>
+    </div>
+  </div>
+  <!-- 삭제 모달에서 확인 클릭시 모달 출력 -->
+  <div class="modal_bg" id="sendSuccessModal">
+    <div class="modal_box modal_send">
+      <p class="send_message">쪽지가 삭제되었습니다.</p>
+      <div class="modal_button">
+        <button class="btn_confirm" onclick="closeSendModal()">확인</button>
+      </div>
+    </div>
+  </div>
+  <!-- 보낸 쪽지 페이지에서 사용하는 모달 -->
+  <div class="modal_bg" id="sentMsgReadModal">
+    <div class="modal_box read_modal">
+      <div class="modal_header">
+        <span class="modal_title">보낸 쪽지 읽기</span>
+        <span class="modal_close" onclick="closeSentMsgModal()">&times;</span>
+      </div>
     </div>
   </div>
 

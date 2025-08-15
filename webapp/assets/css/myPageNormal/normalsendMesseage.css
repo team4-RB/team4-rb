@@ -33,7 +33,9 @@ main {
 .main_sidebar ul li {
   padding: 12px 20px;
 }
-
+.main_sidebar ul li a {
+  color: white;
+}
 /* ============================= */
 .div_mark {
   flex: 1;
@@ -59,7 +61,7 @@ form {
   margin: 0px 150px 0px 150px;
   height: 50px;
   align-items: center;
-  background-color: rgb(191, 201, 201);
+  background-color: #F2F2F2;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
 }
@@ -74,7 +76,7 @@ form {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(191, 201, 201);
+  background-color: #F2F2F2;
 }
 
 .mark_nav input {
@@ -93,7 +95,7 @@ form {
 .location div {
   width: 700px;
   text-align: center;
-  background-color: rgb(191, 201, 201);
+  background-color: #F2F2F2;
 }
 
 .phone_col div,
@@ -120,7 +122,7 @@ form {
   justify-content: space-between;
   align-items: center;
   height: 50px;
-  background-color: rgb(214, 236, 236);
+  background-color: rgb(255, 255, 255);
   border-bottom: 1px solid black;
 
 }
@@ -128,7 +130,7 @@ form {
 .mark_list li input,
 .mark_list li div,
 .mark_list li a {
-  background-color: rgb(214, 236, 236);
+  background-color: rgb(255, 255, 255);
 }
 
 .checkbox_li {
@@ -166,7 +168,7 @@ form {
   margin: 0;
   padding: 0;
 }
-button {
+#delete{
   background-color: red;
   color: white;
   width: 80px;
@@ -179,203 +181,191 @@ button {
 
 
 
-.modal {
+.modal_bg {
   display: none;
   position: fixed;
-  justify-content: center;
   top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modal-content {
-  position: fixed;
-  top: 25%;
-  left: 40%;
-  background-color: #fff;
-  padding: 20px;
-  border: 1px solid #ccc;
-  width: 400px;
-  text-align: center;
-  border-radius: 20px;
-  justify-content: center;
-  align-items: center;
-}
-.modal-content p{
-  margin-bottom: 20px;
-  font-size: 20px;
-}
-.content{
-  display: flex;
-  justify-content: start;
-  width: auto;
-  height: 200px;
-  border: 1px solid black;
-  border-radius: 15px;
-  padding: 10px;
-  margin-top: 10px;
-}
-.sendmember{
-  display: flex;
-  justify-content: start;
-}
-
-#sendBtn {
-  margin: 20px 0px 0px 0px;
-  padding: 10px;
-  border: none;
-  border-radius: 10px;
-  background-color: #001860;
-  color: white;
-  cursor: pointer;
-  justify-content: center;
-}
-#deleteBtn{
-  margin: 20px 0px 0px 0px;
-  padding: 10px;
-  border: 2px solid red;
-  border-radius: 10px;
-  background-color: white;
-  color: red;
-  cursor: pointer;
-  justify-content: center;
-}
-
-#sendxbutton{
-  display: flex;
-  justify-content: end;
-  font-size: 30px;
-  background-color: white;
-  color: black;
-  margin-left: 300px;
-}
-#reseivexbutton {
-  display: flex;
-  justify-content: end;
-  font-size: 30px;
-  background-color: white;
-  color: black;
-  margin-left: 300px;
-}
-
-
-
-.modal_reseive {
-  display: none;
-  position: fixed;
-  justify-content: center;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.modal-content {
-  position: fixed;
-  top: 25%;
-  left: 40%;
-  background-color: #fff;
-  padding: 20px;
-  border: 1px solid #ccc;
-  width: 400px;
-  text-align: center;
-  border-radius: 20px;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content p {
-  margin-bottom: 20px;
-  font-size: 20px;
-}
-
-.content {
-  display: flex;
-  justify-content: start;
-  width: auto;
-  height: 200px;
-  border: 1px solid black;
-  border-radius: 15px;
-  padding: 10px;
-  margin-top: 10px;
-}
-.content textarea{
-  width: 100%;
-  height: 100%;
-  font-size: 20px;
-}
-
-.content input{
-  font-size: 20px;
-  width: 380px;
-  height: 200px;
-}
-.sendmember {
-  display: flex;
-  justify-content: start;
-}
-
-#reseiveBtn {
-  margin: 20px 0px 0px 0px;
-  padding: 10px;
-  border: none;
-  border-radius: 10px;
-  background-color: #001860;
-  color: white;
-  cursor: pointer;
-  justify-content: center;
-}
-
-#cancleBtn {
-  margin: 20px 0px 0px 0px;
-  padding: 10px;
-  border: 2px solid red;
-  border-radius: 10px;
-  background-color: white;
-  color: red;
-  cursor: pointer;
-  justify-content: center;
-}
-
-.modal_messeage {
-  display: none;
-  position: fixed;
-  justify-content: center;
   left: 0;
-  top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1000;
 }
-.modal_delete {
-  display: none;
-  position: fixed;
-  justify-content: center;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.modal-checkcontent {
-  position: fixed;
-  top: 0;
-  left: 40%;
-  background-color: #fff;
-  padding: 40px;
-  border: 1px solid #ccc;
-  width: 400px;
-  text-align: center;
-  border-radius: 20px;
-  justify-content: center;
+
+/* 모달 켜졌을 때 */
+.modal_bg.open {
+  display: flex;
   align-items: center;
+  justify-content: center;
 }
-.modal-checkcontent button {
-  margin-top: 20px;
-  padding: 10px;
-  border: none;
-  border-radius: 10px;
-  background-color: #001860;
-  color: white;
+
+/* 모달 상자 */
+.modal_box {
+  width: 420px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .25);
+  overflow: hidden;
+}
+
+/* 모달 제목  */
+.modal_read {
+  position: relative;
+  padding: 14px 18px;
+  text-align: center;
+  border-bottom: 1px solid #eaeaea;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/* 모달 제목 색 */
+.modal_title {
+  color: #111;
+}
+
+/* 모달 닫기 버튼 */
+.modal_close {
+  position: absolute;
+  right: 16px;
+  top: 8px;
+  font-size: 24px;
   cursor: pointer;
+}
+
+/* 모달 안 내용 */
+.modal_info {
+  padding: 16px 18px;
+}
+
+/* 보낸사람 정보 스타일 */
+.sender_info {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* 아이디 표시 */
+.sender_id {
+  color: #2f4db1;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* 내용 표시 */
+.message_content {
+  min-height: 220px;
+  padding: 14px 12px;
+  border: 2px solid #d9d9d9;
+  border-radius: 12px;
+  background: #fff;
+  color: #111;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow: auto;
+}
+
+/* 모달의 모든 버튼들 */
+.modal_button {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 14px 18px 18px;
+}
+
+/* 모달 버튼 디자인 */
+.modal_button button {
+  min-width: 92px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* 답장 버튼 */
+.btn_reply {
+  background: #2F52AA;
+  color: #fff;
+}
+
+/* 삭제 버튼 */
+.btn_delete {
+  background: #fff;
+  color: #ff0400;
+  border: 2px solid #ff0400;
+}
+
+/* 쪽지 쓰기 버튼 */
+.write_modal {
+  width: 420px;
+}
+
+/* 쪽지 작성 영역 */
+#message_textarea {
+  width: 100%;
+  min-height: 220px;
+  padding: 12px;
+  border: 2px solid #d9d9d9;
+  border-radius: 12px;
+  outline: none;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+/* 확인 모달 */
+.confirm_modal {
+  width: 420px;
+  padding: 22px 20px;
+}
+
+/* 확인모달 글자 */
+.confirm_text {
+  padding: 24px 16px 8px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #111;
+}
+
+/* 확인모달 버튼 */
+.confirm_buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 12px 16px 6px;
+}
+
+/* 모달에서 사용되는 버튼 공통 */
+.confirm_buttons .btn_confirm,
+.confirm_buttons .btn_cancel {
+  min-width: 92px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* 확인은 파란색 */
+.modal_button .btn_send,
+.modal_button .btn_confirm,
+.confirm_buttons .btn_confirm {
+  background: #2F52AA;
+  color: #fff;
+}
+
+/* 취소는 빨간색 */
+.modal_button .btn_cancel,
+.confirm_buttons .btn_cancel {
+  background: #fff;
+  color: #ff0400;
+  border: 2px solid #ff0400;
+}
+
+/* 전송 완료 모달 글씨 */
+.modal_send .send_message {
+  padding: 24px 16px 8px;
+  text-align: center;
+  font-size: 16px;
+  color: #111;
 }

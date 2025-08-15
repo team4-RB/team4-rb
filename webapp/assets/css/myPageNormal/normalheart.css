@@ -17,7 +17,7 @@ main {
 .main_sidebar {
   width: 180px;
   height: 100%;
-  background-color: #2f4db1;
+  background-color: #2F52AA;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -32,6 +32,9 @@ main {
 
 .main_sidebar ul li {
   padding: 12px 20px;
+}
+.main_sidebar ul li a{
+    color: white;
 }
 
 /* ============================= */

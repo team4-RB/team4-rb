@@ -33,7 +33,9 @@ main {
 .main_sidebar ul li {
   padding: 12px 20px;
 }
-
+.main_sidebar ul li a {
+  color: white;
+}
 /* ============================= */
 .div_mark {
   flex: 1;
@@ -46,7 +48,7 @@ main {
 }
 form{
   margin: 50px 200px;
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 15px;
   background-color: rgb(255, 255, 255);
 }
@@ -83,6 +85,8 @@ form{
   margin-right: 100px;
 }
 .matching ul li button{
+  background-color: white;
+  border: 1px solid black;
   height: 50px;
   width: 100px;
   margin: 0px 20px;

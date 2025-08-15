@@ -1,11 +1,14 @@
+
 // 하트 이미지를 감싼 div를 불러오기
 const hearts = document.getElementsByClassName("heart_img");
 // 윗줄 프로필 카드 영역(리스트)
+
 const cardRow1 = document.getElementById("card_list_1");
 // 아랫줄 프로필 카드 영역(리스트)
 const cardRow2 = document.getElementById("card_list_2");
 
-let isLogin = false;
+let isLogin = true;
+
 
 // 화면에 프로필 카드 8개 추가 반복문
 for(let i = 0 ; i < 8;i++){
@@ -47,6 +50,7 @@ for(let i = 0 ; i < 8;i++){
   if(i < 4){// 처음 네 번은 윗줄에 추가
     cardRow1.appendChild(li);
   }else{// 이후는 아랫줄에 추가
+
     cardRow2.appendChild(li);
   }
 }
