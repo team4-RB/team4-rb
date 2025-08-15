@@ -1,42 +1,71 @@
+// 후기 입력 창
 const inputComment = document.getElementById("comment_text");
+// 작성 버튼
 const inputButton = document.getElementById("comment_button");
+// 후기 리스트
 const commentList = document.getElementsByClassName("comment_list");
 
+// 로그인 토글
+let isLogin=true;
+
+// 작성된 후기 수
 let count = 0;
 
-// 후기 입력 시 리스트에 추가
+// 입력창에 작성된 후기 내용을 가져와 후기 리스트에 추가하는 함수
 function writeComment(){
-  let commentText = inputComment.value.trim();
-  console.log("commentText : " + commentText);
-  if(commentText == ""){
-    alert("입력된 내용이 없습니다.");
+
+  if(isLogin){
+    // 입력된 내용 가져오기
+    let commentText = inputComment.value.trim();
+    // (확인용) 콘솔로 출력
+    console.log("commentText : " + commentText);
+    // 작성된 내용이 없는 경우 알림
+    if(commentText == ""){
+      alert("입력된 내용이 없습니다.");
+    }else{
+      // li 요소 생성
+      const li = document.createElement("li");
+      // comment 클래스 추가(서식을 주기 위해 추가)
+      li.className += 'comment';
+      // 오늘 날짜 가져오기
+      let today = new Date();
+      // str 변수에 html 코드 추가
+      let str = '<div class="comment_div"><div class="comment_number">';
+      // 후기 번호 추가(count + 1)
+      str += count+1;
+      // 작성자 이름 추가
+      str += `</div><div class="comment_author">`;
+      str += `아무개`;
+      // 입력된 내용 추가
+      str += `</div><input class="comment_context" value="`;
+      str += commentText;
+      // 오늘 날짜에서 년, 월, 일 가져오기
+      str += `"><div class="comment_del"><button type="button">수정</button></div><div class="comment_edit"><button type="button">수정</button></div><div class="comment_date">`;
+      // 년도
+      str += today.getFullYear();
+      str += `-`;
+      // 월
+      // 1 ~ 9 월은 앞에 0을 붙여서 추가
+      str += today.getMonth() < 10 ? "0" + today.getMonth() : today.getMonth();
+      str += `-`;
+      // 일
+      str += today.getDate();
+      str += `</div></div>`;
+
+      // li 요소에 위에서 작성된 html 코드 추가
+      li.innerHTML = str;
+      // 후기 리스트에 li 요소를 자식 요소로 추가
+      commentList[0].appendChild(li);
+      // count 증감
+      count++;
+      // 입력창 초기화
+      inputComment.value = "";
+    }
   }else{
-
-    const li = document.createElement("li");
-    li.className += 'comment';
-
-    let today = new Date();
-
-    let str = '<div><div class="comment_number">';
-    str += count+1;
-    str += `</div><div class="comment_author">`;
-    str += `아무개`;
-    str += `</div><div class="comment_context">`;
-    str += commentText;
-    str += `</div><div class="comment_date">`;
-    str += today.getFullYear();
-    str += `-`;
-    str += today.getMonth() < 10 ? "0" + today.getMonth() : today.getMonth();
-    str += `-`;
-    str += today.getDate();
-    str += `</div></div>`;
-
-    li.innerHTML = str;
-
-    commentList[0].appendChild(li);
-
-    count++;
-    inputComment.value = "";
+    careMemberModalLoginShow();
   }
+
+
+    // 후기 리스트 초기화
     // commentList[0].innerHTML = "";
 }
