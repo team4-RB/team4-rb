@@ -202,3 +202,57 @@ button {
   border-radius: 15px;
   border: 0px;
 }
+
+/* 확인버튼 스타일 */
+#confirmDelete {
+  background-color: #2f4db1;
+  color: white;
+}
+
+/* 체크확인 버튼 */
+#check_confirmDelete {
+  background-color: #2f4db1;
+  color: white;
+}
+/* 모달 스타일 */
+.modal {
+  position: fixed;
+  inset: 0;
+  top: 0px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+/* 조건이 만족 했을 때 모달 출력 */
+.modal.open {
+  display: flex;
+}
+
+/* 모달 안의 상자 */
+.modal_box {
+  background: #fff;
+  min-width: 320px;
+  max-width: 90vw;
+  padding: 20px 24px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* 모달 안의 버튼 */
+.modal_buttons {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* 모달 안의 버튼들 꾸미기 */
+.modal_buttons button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
