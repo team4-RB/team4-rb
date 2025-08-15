@@ -36,4 +36,5 @@ function restaurantModalLoginCheck(){
 function restaurantModalLoginCancel(){
   restaurantModalLoginNone();
 }
+// 모달 안 보이게 하기
 restaurantModalLoginNone();

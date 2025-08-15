@@ -6,7 +6,7 @@ const inputButton = document.getElementById("comment_button");
 const commentList = document.getElementsByClassName("comment_list");
 
 // 로그인 토글
-let isLogin=false;
+let isLogin=true;
 
 // 작성된 후기 수
 let count = 0;
@@ -29,17 +29,17 @@ function writeComment(){
       // 오늘 날짜 가져오기
       let today = new Date();
       // str 변수에 html 코드 추가
-      let str = '<div><div class="comment_number">';
+      let str = '<div class="comment_div"><div class="comment_number">';
       // 후기 번호 추가(count + 1)
       str += count+1;
       // 작성자 이름 추가
       str += `</div><div class="comment_author">`;
       str += `아무개`;
       // 입력된 내용 추가
-      str += `</div><div class="comment_context">`;
+      str += `</div><input class="comment_context" value="`;
       str += commentText;
       // 오늘 날짜에서 년, 월, 일 가져오기
-      str += `</div><div class="comment_date">`;
+      str += `"><div class="comment_del"><button type="button">수정</button></div><div class="comment_edit"><button type="button">수정</button></div><div class="comment_date">`;
       // 년도
       str += today.getFullYear();
       str += `-`;
