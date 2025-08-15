@@ -61,27 +61,27 @@ main {
 }
 
 .board_number {
-  width: 150px;
+  width: 10%;
   height: 95%;
 }
 .board_name {
-  width: 150px;
+  width: 10%;
   height: 95%;
 }
 .board_id {
-  width: 150px;
+  width: 20%;
   height: 95%;
 }
 .board_title {
-  width: 400px;
+  width: 30%;
   height: 95%;
 }
 .board_date {
-  width: 400px;
+  width: 20%;
   height: 95%;
 }
 .board_type {
-  width: 150px;
+  width: 10%;
   height: 95%;
 }
 
@@ -103,15 +103,18 @@ main {
 
 .body_number,
 .body_name,
-.body_id,
 .body_type {
-  width: 124px;
+  width: 10%;
+  height: 30px;
+}
+.body_title {
+  width: 30%;
   height: 30px;
 }
 
-.body_title,
+.body_id,
 .body_date {
-  width: 330px;
+  width: 20%;
   height: 30px;
 }
 
