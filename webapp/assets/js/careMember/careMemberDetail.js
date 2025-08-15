@@ -4,6 +4,7 @@ const commentList = document.getElementsByClassName("comment_list");
 
 let count = 0;
 
+// 후기 입력 시 리스트에 추가
 function writeComment(){
   let commentText = inputComment.value.trim();
   console.log("commentText : " + commentText);
