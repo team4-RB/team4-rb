@@ -13,6 +13,7 @@
 <body>
   <div id="header"></div>
   <main>
+    <!-- 메뉴 사이드바 섹션 -->
     <nav class="main_sidebar">
       <ul>
         <li><img src="./../../assets/img/myPageNormal/normalMember.jpg" alt="#"></li>
@@ -29,7 +30,9 @@
     </nav>
     <form action="" method="get">
       <div class="div_mark">
+        <!-- 메뉴 제목 -->
         <div class="title">쪽지함</div>
+        <!-- 받은 쪽지, 보낸 쪽지 이동 -->
         <nav class="div_choose">
           <ul>
             <li class="send"><a href="./normalsendMesseage.html">받은 쪽지</a></li>
@@ -37,6 +40,7 @@
             <li class="reseive"><a href="./normalreseiveMesseage.html">보낸 쪽지</a></li>
           </ul>
         </nav>
+        <!-- 받은 쪽지 컬럼 -->
         <nav class="mark_nav">
           <ul>
             <li><input onclick="toggleMarksAll()" id="checkbox_col" name="mark_check_col" type="checkbox"></li>
@@ -54,9 +58,10 @@
             </li>
           </ul>
         </nav>
+        <!-- 받은 쪽지 목록 리스트 -->
         <ul class="mark_list">
         </ul>
-
+        <!-- 페이지네이션 -->
         <nav class="page">
           <ul>
             <li><a href="">&lt;</a></li>
@@ -67,6 +72,7 @@
             <li><a href="">&gt;</a></li>
           </ul>
         </nav>
+        <!-- 받은 쪽지 삭제 버튼 -->
         <div class="div_delete">
           <button type="button" onclick="delMarks()" id="delete">삭제</button>
         </div>
@@ -74,6 +80,7 @@
     </form>
   
   </main>
+  <!-- 받은 쪽지 확인 모달 -->
   <div class="modal">
     <div class="modal-content">
       <button id="sendxbutton">X</button>
@@ -81,9 +88,9 @@
       <div class="sendmember"><div>보낸 사람 : 홍길동 | honggildong123</div></div>
       <div class="content"><div>쪽지 내용</div></div>
       <button id="sendBtn">답장</button>
-
     </div>
   </div>
+  <!-- 쪽지 보내기 모달 -->
   <div class="modal_reseive">
     <div class="modal-content">
       <button id="reseivexbutton">X</button>
@@ -98,6 +105,7 @@
       <button id="cancleBtn">취소</button>
     </div>
   </div>
+  <!-- 쪽지 보내기 확인 모달 -->
   <div class="modal_messeage">
     <div class="modal-checkcontent">
       <p>쪽지를 보냈습니다</p>

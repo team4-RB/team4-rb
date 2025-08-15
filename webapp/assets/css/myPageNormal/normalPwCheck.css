@@ -33,7 +33,9 @@ main {
 .main_sidebar ul li {
   padding: 12px 20px;
 }
-
+.main_sidebar ul li a {
+  color: white;
+}
 /* ============================= */
 
 .pw_check{

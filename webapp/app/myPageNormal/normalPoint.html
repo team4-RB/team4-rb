@@ -16,6 +16,7 @@
 <body>
   <div id="header"></div>
   <main>
+    <!-- 메뉴 사이드바 섹션 -->
     <nav class="main_sidebar">
       <ul>
         <li><img src="./../../assets/img/myPageNormal/normalMember.jpg" alt="#"></li>
@@ -31,18 +32,20 @@
       </ul>
     </nav>
     <div class="div_mark">
+      <!-- 메뉴 제목 -->
       <div class="title">개인정보 수정</div>  
+      <!-- 주의사항  표시-->
       <div class="arlim">
-        <div></div>
         <nav>
           <ul>
-            <li>저희 함께걸음은 회원님의 개인 정보를 신중히 취급하며, 회원님의 동의 없이 기재하신 회원정보를 공개하지 않습니다.</li>
+            <li>🛈저희 함께걸음은 회원님의 개인 정보를 신중히 취급하며, 회원님의 동의 없이 기재하신 회원정보를 공개하지 않습니다.</li>
             <li>회원님의 개인 정보를 안전하게 보호하기 위해 최선을 다하고 있습니다. </li>
             <li>회원님의 정보를 특정할 수 있는 것은 입력을 지양해 주시길 바랍니다.</li>
           </ul>
         </nav>
       </div>
       <form action="" method="get"> 
+        <!-- 포인트  충전, 충전 내역 섹션 -->
         <div class="point_have">
           <div class="point_have_title">포인트 잔액</div>
           <div class="point_point">10000 포인트</div>
@@ -50,8 +53,8 @@
             <button id="chargeBtn">포인트 충전</button>
             <button id="chargehis">충전 내역</button>
           </div>
-          
         </div>
+        <!-- 포인트 사용 내역 섹션 -->
         <div class="point_use">
           <div class="point_use_title">포인트 사용 내역</div>
           <nav class="month">
@@ -75,6 +78,7 @@
         </div>
       </form>
     </div>
+    <!-- 포인트 충전 모달 -->
     <div class="modal">
       <div class="modal-content">
         <p>포인트 충전</p>
@@ -110,6 +114,7 @@
         <button onclick="openpointcharge()" id="completeBtn">완료</button>
       </div>
     </div>
+    <!-- 포인트 충전 내역 모달 -->
     <div class="modal_history">
       <div class="modal-content">
         <p>포인트 충전 내역</p>
@@ -134,7 +139,6 @@
             </nav>
           </div>
         </div>
-
         <button id="deletebutton">취소</button>
         <button onclick="openpointhis()" id="completeBtn">완료</button>
       </div>

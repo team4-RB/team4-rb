@@ -1,11 +1,11 @@
 
-  const hearts = document.getElementsByClassName("heart_img");
+const hearts = document.getElementsByClassName("heart_img");
 const cardRow1 = document.getElementById("card_list_1");
 const cardRow2 = document.getElementById("card_list_2");
 
 let cnt = 0;
 
-for(let i = 0 ; i < 8;i++){
+for (let i = 0; i < 8; i++) {
   const li = document.createElement("li");
   li.className += 'care_card';
 
@@ -27,20 +27,21 @@ for(let i = 0 ; i < 8;i++){
 
   li.innerHTML = str;
 
-  if(i < 4){
+  // 행에 4개보다 덜 있으면
+  if (i < 4) {
     cardRow1.appendChild(li);
-  }else{
+  } else { // 행에 4개보다 더 많이 있으면
     cardRow2.appendChild(li);
   }
   switchHeart(i);
 }
 
-
-function switchHeart(num){
+// 하트 누를 때 하트 이미지 변경
+function switchHeart(num) {
   console.log(hearts[num].style.left);
-  if(hearts[num].style.left == "-100%"){
+  if (hearts[num].style.left == "-100%") {
     hearts[num].style.left = "0%";
-  }else{
+  } else {
     hearts[num].style.left = "-100%";
   }
 }
