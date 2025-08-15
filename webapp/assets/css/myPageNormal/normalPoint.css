@@ -17,7 +17,7 @@ main {
 .main_sidebar {
   width: 180px;
   height: 100%;
-  background-color: #2f4db1;
+  background-color: #2F52AA;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -55,7 +55,7 @@ main {
  }
 
  .arlim {
-   background-color: #f2f2f2;
+   background-color: #EAEAEA;
    display: flex;
    flex-direction: row;
    margin: 0px 30px;
@@ -84,7 +84,7 @@ form{
 .point_have{
   border: 1px solid black;
   border-radius: 15px;
-  background-color: rgb(225, 225, 225);
+  background-color: #F2F2F2;
   width: 400px;
   display: flex;
   flex-direction: column;
@@ -130,7 +130,7 @@ form{
 .point_use{
   border: 1px solid black;
   border-radius: 15px;
-  background-color: rgb(226, 226, 226);
+  background-color: #F2F2F2;
   width: 400px;
   display: flex;
   flex-direction: column;
@@ -168,7 +168,7 @@ form{
 }
 .point_day{
   border: 1px solid black;
-  background-color: rgb(224, 224, 224);
+  background-color: #F2F2F2;
   border-radius: 15px;
   width: 300px;
   height: 200px;
@@ -265,7 +265,7 @@ form{
   padding: 10px;
   border: none;
   border-radius: 10px;
-  background-color: #001860;
+  background-color: #2F52AA;
   color: white;
   cursor: pointer;
   justify-content: center;
@@ -360,7 +360,7 @@ form{
   padding: 10px;
   border: none;
   border-radius: 10px;
-  background-color: #001860;
+  background-color: #2F52AA;
   color: white;
   cursor: pointer;
   justify-content: center;
