@@ -27,6 +27,7 @@ function writeComment(){
       const li = document.createElement("li");
       // comment 클래스 추가(서식을 주기 위해 추가)
       li.className += 'comment';
+      li.id = 'comment_' + count;
       // 오늘 날짜 가져오기
       let today = new Date();
       // str 변수에 html 코드 추가
@@ -37,10 +38,10 @@ function writeComment(){
       str += `</div><div class="comment_author">`;
       str += `아무개`;
       // 입력된 내용 추가
-      str += `</div><input class="comment_context" value="`;
+      str += `</div><input id="input_`+ count +`" class="comment_context_input" value="`;
       str += commentText;
       // 오늘 날짜에서 년, 월, 일 가져오기
-      str += `"><div class="comment_del"><button type="button">수정</button></div><div class="comment_edit"><button type="button">수정</button></div><div class="comment_date">`;
+      str += `"><div class="comment_del"><button onclick="comment_delete(` + count + `)" type="button">삭제</button></div><div class="comment_edit"><button onclick="comment_edit(` + count + `)" type="button">수정</button></div><div class="comment_date">`;
       // 년도
       str += today.getFullYear();
       str += `-`;
@@ -65,7 +66,25 @@ function writeComment(){
     careMemberModalLoginShow();
   }
 
-
     // 후기 리스트 초기화
     // commentList[0].innerHTML = "";
+}
+
+function comment_delete(num){
+  const targetComment = document.getElementById('comment_'+num);
+  const targetInput = document.getElementById('input_'+num);
+  alert("삭제됨 - " + targetInput.value);
+  targetComment.remove();
+}
+function comment_edit(num){
+  const targetInput = document.getElementById('input_'+num);
+  alert("수정됨 - " + targetInput.value);
+}
+
+function sendLetterButtonClick(){
+  if(isLogin){
+    confirmShowup();
+  }else{
+    careMemberModalLoginShow();
+  }
 }
