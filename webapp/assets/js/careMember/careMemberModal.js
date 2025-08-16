@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
   // html 문서에 모달 불러오기
-  fetch('./../../app/careMember/careMemberModal.html')
+  fetch('./careMemberModal.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('modal').innerHTML = data;
@@ -15,7 +15,7 @@ let input;
 
 // 모달이 나타나는 함수(버튼에 추가하여 사용)
 function confirmShowup() {
-  console.log("모달버튼클릭!!");
+  console.log("쪽지보내기 모달 클릭!!!");
   modal.style.display = "flex";
   console.log(modal);
   console.log("플렉스로 변경!!!");

@@ -224,7 +224,8 @@ main{
 
 /* 후기 내용 분류, 내용 */
 .comment_context_column,
-.comment_context{
+.comment_context,
+.comment_context_input{
   /* background-color: green; */
   flex: 1;
   text-align: center;
@@ -234,25 +235,40 @@ main{
   border-right: solid 1px black;
 }
 /* 후기 내용 */
-.comment_context{
+.comment_context,
+.comment_context_input{
   padding-left: 20px;
   text-align: left;
   /* background-color: mediumaquamarine; */
 }
+.comment_context_input{
+  margin-right: 7px;
+  height: 80%;
+  background-color:rgb(241, 241, 241);
+  border-radius: 5px;
+}
 
 /* 후기 수정버튼 */
 .comment_edit{
-  margin: 0 5px;
+  margin: 0 2px;
   border: solid 2px #1D3266;
-  padding: 2px;
 }
-
+.comment_edit button{
+  background-color: gray;
+  padding: 2px;
+  cursor:pointer;
+  color: white;
+}
 /* 후기 삭제버튼 */
 .comment_del{
-  margin: 0 5px;
+  margin: 0 2px;
   border: solid 2px #1D3266;
-  padding: 2px;
+}
+.comment_del button{
   background-color: red;
+  padding: 2px;
+  cursor:pointer;
+  color: white;
 }
 
 /* 후기 날짜 분류, 날짜 */
