@@ -5,15 +5,15 @@
 
 main {
   width: 100%;
-  height: calc(100vh - 200px);
+  /* height: calc(100vh - 200px); */
   display: flex;
   flex-direction: column;
 }
-.del{
+.del {
   display: flex;
   justify-content: end;
 }
-.button_del{
+.button_del {
   margin-right: 100px;
   width: 100px;
   height: 30px;
@@ -31,49 +31,52 @@ form {
   display: flex;
   flex-direction: column;
 }
-.post_title{
+.post_title {
   display: flex;
   flex-direction: column;
 }
-.post_name{
+.post_name {
   font-size: 24px;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
-.post_info{
+.post_info {
   display: flex;
   flex-direction: row;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   border-bottom: 1px solid black;
-
 }
-.post_info li{
+.post_info li {
   width: 150px;
   margin-left: 10px;
 }
-.post_member, .post_day, .post_view{
+.post_member,
+.post_day,
+.post_view {
   display: flex;
   flex: 1;
   background-color: rgb(255, 255, 255);
 }
-.post_member div, .post_day div, .post_view div{
+.post_member div,
+.post_day div,
+.post_view div {
   margin-left: 10px;
 }
 
-.post_content{
+.post_content {
   margin-top: 10px;
 }
 
-.post_content ul li div{
+.post_content ul li div {
   border: 1px solid black;
   height: 30vh;
 }
-.button{
+.button {
   display: flex;
   justify-content: end;
 }
-.button_list{
+.button_list {
   width: 100px;
   height: 30px;
   border: 1px solid black;
@@ -95,10 +98,10 @@ form {
   border: 1px solid black;
   border-radius: 15px;
   margin: 5px;
-  background-color: #2F52AA;
+  background-color: #2f52aa;
   color: white;
 }
-.post_total_reply{
+.post_total_reply {
   padding-left: 30px;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
@@ -106,35 +109,35 @@ form {
   display: flex;
   align-items: center;
 }
-.post_reply{
+.post_reply {
   border-bottom: 1px solid black;
 }
-.post_reply ul{
+.post_reply ul {
   display: flex;
   justify-content: space-between;
   padding: 0px 30px;
   height: 30px;
   align-items: center;
 }
-.reply_content{
+.reply_content {
   border-top: 1px dotted black;
 }
 
-.reply_write{
+.reply_write {
   border-bottom: 1px solid black;
   border-right: 1px solid black;
   border-left: 1px solid black;
   margin-top: 10px;
 }
 
-.reply_write ul li{
+.reply_write ul li {
   border-top: 1px solid black;
   height: 30px;
   display: flex;
   padding-left: 30px;
   align-items: center;
 }
-.reply_write ul li input{
+.reply_write ul li input {
   flex: 1;
   height: 30px;
   font-size: 20px;
@@ -143,7 +146,7 @@ form {
   height: 30px;
   width: 100px;
   border-left: 1px solid black;
-} 
+}
 
 .checkmodal {
   display: none;
@@ -200,12 +203,10 @@ form {
 }
 
 #cancle {
-  background-color: #2F52AA;
+  background-color: #2f52aa;
   color: white;
   border: 1px solid black;
 }
-
-
 
 .notmodal {
   display: none;
@@ -243,7 +244,7 @@ form {
 }
 
 #notcheck {
-  background-color: #2F52AA;
+  background-color: #2f52aa;
   color: white;
   border: 1px solid black;
 }

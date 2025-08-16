@@ -1,13 +1,12 @@
-
-  const hearts = document.getElementsByClassName("heart_img");
+const hearts = document.getElementsByClassName("heart_img");
 const cardRow1 = document.getElementById("card_list_1");
 const cardRow2 = document.getElementById("card_list_2");
 
 let cnt = 0;
 
-for(let i = 0 ; i < 3;i++){
+for (let i = 0; i < 3; i++) {
   const li = document.createElement("li");
-  li.className += 'care_card';
+  li.className += "care_card";
 
   let str = "";
   str += `<div class="heart_img_box"><img onclick="switchHeart(`;
@@ -27,21 +26,18 @@ for(let i = 0 ; i < 3;i++){
 
   li.innerHTML = str;
 
-  if(i < 3){
+  if (i < 3) {
     cardRow1.appendChild(li);
   }
-  switchHeart(i);
+  // switchHeart(i);
 }
 
-
-function switchHeart(num){
+function switchHeart(num) {
   console.log(hearts[num].style.left);
-  if(hearts[num].style.left == "0%"){
+  if (hearts[num].style.left == "0%") {
     hearts[num].style.left = "-100%";
-  }else{
+  } else {
     hearts[num].style.left = "0%";
   }
-  // cardRow1.removeChild(li);
-
-
+  cardRow1.removeChild(li);
 }
