@@ -2,7 +2,7 @@ const pwChecktext = document.getElementById("pwaccord");
 const pwCheck = document.querySelector('checkBtn');
 const inputPw = document.getElementById("pw_input");
 
-let correct = "123456";
+let correct = "12345678";
 
 function chPw(){
   if(inputPw.value == correct){

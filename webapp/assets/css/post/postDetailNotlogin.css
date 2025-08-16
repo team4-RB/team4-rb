@@ -5,7 +5,7 @@
 
 main {
   width: 100%;
-  height: calc(100vh - 200px);
+  min-height: calc(100vh - 200px);
   display: flex;
   flex-direction: column;
 }
@@ -194,13 +194,13 @@ form {
 }
 
 #check {
-  background-color: white;
-  color: black;
+  background-color: #2F52AA;
+  color: white;
   border: 1px solid black;
 }
 
 #cancle {
-  background-color: #2F52AA;
+  background-color: red;
   color: white;
   border: 1px solid black;
 }
@@ -243,6 +243,53 @@ form {
 }
 
 #notcheck {
+  background-color: #2F52AA;
+  color: white;
+  border: 1px solid black;
+}
+
+
+
+.reportmodal {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 900px;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 10px;
+  margin-left: 30%;
+}
+.modal_box {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+  text-align: center;
+  padding: 30px;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.modal_buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.modal_buttons button {
+  padding: 8px 20px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+#notcheck {
+  background-color: #2F52AA;
+  color: white;
+  border: 1px solid black;
+}
+#reportcheck {
   background-color: #2F52AA;
   color: white;
   border: 1px solid black;

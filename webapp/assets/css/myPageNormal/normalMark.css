@@ -12,13 +12,14 @@
 
 main {
   width: 100%;
-  height: calc(100vh - 200px);
+  /* height: calc(100vh - 200px); */
+  /* height: 100vh; */
   display: flex;
 }
 
 .main_sidebar {
   width: 180px;
-  height: 100%;
+  /* height: 100%; */
   background-color: #2F52AA;
   color: #fff;
   display: flex;
@@ -87,19 +88,19 @@ form {
 
 .name_col div,
 .name div {
-  width: 100px;
+  width: 10vw;
   text-align: center;
 }
 
 .location_col div,
 .location div {
-  width: 1000px;
+  width: 30vw;
   text-align: center;
 }
 
 .phone_col div,
 .phone div {
-  width: 200px;
+  width: 20vw;
   text-align: center;
 }
 
