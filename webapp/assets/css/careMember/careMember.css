@@ -122,6 +122,7 @@ main{
 .heart_img{
   position: absolute;
   height: 100%;
+  right: 0%;
 }
 /* 프로필 */
 .profile{

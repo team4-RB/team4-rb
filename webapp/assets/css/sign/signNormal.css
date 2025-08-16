@@ -117,7 +117,7 @@ label > input {
 
 .sign_author {
   position: relative;
-  left: 155px;
+  left: 225px;
 }
 
 .sign_address {
@@ -198,12 +198,17 @@ label > input {
 
 .alert {
   display: none;
+  padding-left: 225px;
 }
 
-.error_box,
-.error_box_msg {
+.error_box {
   display: none;
   padding-left: 77px;
+}
+
+.error_box_msg {
+  display: none;
+  padding-left: 225px;
 }
 
 .error_phone,
@@ -254,5 +259,5 @@ label > input {
 }
 
 .section_care {
-  display:none;
+  display: none;
 }

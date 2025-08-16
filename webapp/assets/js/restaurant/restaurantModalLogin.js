@@ -30,9 +30,11 @@ function restaurantModalLoginNone(){
 //확인 버튼
 function restaurantModalLoginCheck(){
   restaurantModalLoginNone();
+  location.href="./../login/login.html";
 }
 //취소 버튼
 function restaurantModalLoginCancel(){
   restaurantModalLoginNone();
 }
+// 모달 안 보이게 하기
 restaurantModalLoginNone();

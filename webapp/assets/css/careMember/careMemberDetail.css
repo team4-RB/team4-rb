@@ -45,7 +45,7 @@ main{
 /* 프로필 영역 */
 .profile_area{
   /* background-color: pink; */
-  width: 550px;
+  width: 300px;
 }
 /* 프로필 박스 */
 .profile{
@@ -58,12 +58,22 @@ main{
   background-color: white;
   border-radius: 10px;
   display: flex;
+  flex-direction: column;
+  height: 600px;
+  align-items: center;
+}
+.profile_pic_frame{
+  margin-top: 30px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: midnightblue;
+  box-shadow: 0 0 10px;
 }
 /* 프로필 사진 */
 .profile_pic{
-  width: 50%;
-  border-radius: 20px;
-  margin: 10px;
+  width: 100%;
 }
 /* 프로필 정보 */
 .profile_intro{
@@ -77,9 +87,9 @@ main{
 .profile_name{
   background-color: wheat;
   width: max-content;
-  font-size: 30px;
+  font-size: 24px;
   border-radius: 25px;
-  padding: 5px 20px;
+  padding: 2px 20px;
   border: solid 3px black;
   margin: 20px 10px 0 10px;
 }
@@ -158,6 +168,7 @@ main{
   flex-direction: column;
   align-items: center;
   margin-left: 10px;
+  flex: 1;
 }
 /* 후기 패널 박스 */
 .comment_pannel{
@@ -173,23 +184,27 @@ main{
   border-bottom: solid 1px black;
   align-items: center;
 }
+/* 후기 리스트 */
 .comment_list{
   /* background-color: yellow; */
+  /* background-color: blue; */
+  height: 562px;
 }
 /* 후기 리스트 div */
-.comment div{
+.comment_div{
   display: flex;
   height: 30px;
   border-bottom: solid 1px black;
   align-items: center;
   background-color: white;
   font-size: 12px;
+  justify-content: center;
 }
 /* 후기 순번 분류, 순번 */
 .comment_number_column,
 .comment_number{
   /* background-color: red; */
-  width: 9%;
+  width: 5%;
   text-align: center;
 }
 
@@ -209,7 +224,8 @@ main{
 
 /* 후기 내용 분류, 내용 */
 .comment_context_column,
-.comment_context{
+.comment_context,
+.comment_context_input{
   /* background-color: green; */
   flex: 1;
   text-align: center;
@@ -219,16 +235,47 @@ main{
   border-right: solid 1px black;
 }
 /* 후기 내용 */
-.comment_context{
+.comment_context,
+.comment_context_input{
   padding-left: 20px;
   text-align: left;
+  /* background-color: mediumaquamarine; */
+}
+.comment_context_input{
+  margin-right: 7px;
+  height: 80%;
+  background-color:rgb(241, 241, 241);
+  border-radius: 5px;
+}
+
+/* 후기 수정버튼 */
+.comment_edit{
+  margin: 0 2px;
+  border: solid 2px #1D3266;
+}
+.comment_edit button{
+  background-color: gray;
+  padding: 2px;
+  cursor:pointer;
+  color: white;
+}
+/* 후기 삭제버튼 */
+.comment_del{
+  margin: 0 2px;
+  border: solid 2px #1D3266;
+}
+.comment_del button{
+  background-color: red;
+  padding: 2px;
+  cursor:pointer;
+  color: white;
 }
 
 /* 후기 날짜 분류, 날짜 */
 .comment_date_column,
 .comment_date{
   /* background-color: blue; */
-  width: 20%;
+  width: 15%;
   text-align: center;
 }
 
@@ -240,6 +287,7 @@ main{
   align-items: center;
   border: solid 1px black;
   background-color: white;
+  background-color: aquainput_box;
 }
 /* 후기 입력 창 */
 #comment_text{

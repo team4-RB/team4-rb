@@ -63,24 +63,24 @@ main {
 }
 
 .board_number {
-  width: 150px;
+  width: 15%;
   height: 95%;
 }
 .board_name {
-  width: 300px;
+  width: 20%;
   height: 95%;
 }
 .board_id {
-  width: 200px;
+  width: 20%;
   height: 95%;
 }
 .board_date {
-  width: 350px;
+  width: 35%;
   height: 95%;
 }
 
 .board_condition {
-  width: 100px;
+  width: 10%;
   height: 95%;
 }
 
@@ -101,24 +101,24 @@ main {
 }
 
 .body_number {
-  width: 150px;
+  width: 15%;
   height: 30px;
 }
 .body_condition {
-  width: 100px;
+  width: 10%;
   height: 30px;
 }
 
 .body_name {
-  width: 300px;
+  width: 20%;
   height: 30px;
 }
 .body_id {
-  width: 200px;
+  width: 20%;
   height: 30px;
 }
 .body_date {
-  width: 350px;
+  width: 35%;
   height: 30px;
 }
 

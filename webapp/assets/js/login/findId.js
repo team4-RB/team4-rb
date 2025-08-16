@@ -31,11 +31,12 @@ const regex = /^\d{6}$/;
 function checkMsg() {
   // event.preventDefault();
   const input = document.getElementById("author_number");
-const errorBoxMsg = document.querySelector(".error_box_msg");
-const errorMsg = document.querySelector(".error_msg");
-const okMsg = document.querySelector(".okay_msg");
-const val = input.value.trim();
-  if (/^\d{6}$/.test(val)) {
+  const errorBoxMsg = document.querySelector(".error_box_msg");
+  const errorMsg = document.querySelector(".error_msg");
+  const okMsg = document.querySelector(".okay_msg");
+  const val = input.value.trim();
+  const isAuthor = /^\d{6}$/.test(val);
+  if (isAuthor) {
     errorBoxMsg.style.display = "block";
     okMsg.style.display = "block";
     errorMsg.style.display = "none";
@@ -44,7 +45,6 @@ const val = input.value.trim();
     okMsg.style.display = "none";
     errorMsg.style.display = "block";
   }
-  
 }
 // console.log(valTF)
 // &&valTF
@@ -53,12 +53,15 @@ function nextPg() {
   const phoneInput = document.getElementById("phone_input");
   const input = document.getElementById("author_number");
   const val = input.value.trim();
-  if(!input.value||!nameInput.value||!phoneInput.value||!/^\d{6}$/.test(val)) {
-    alert('입력해주세요')
-  }else {
-    location.href= "./../../../webapp/app/login/findIdResult.html";
-    console.log(input.value)
-    console.log(nameInput.value)
-    console.log(phoneInput.value)
+  const isAuthor = /^\d{6}$/.test(val);
+  if (
+    !input.value ||
+    !nameInput.value ||
+    !phoneInput.value ||
+    !/^\d{6}$/.test(val)
+  ) {
+    alert("입력해주세요");
+  } else {
+    location.href = "./../../../webapp/app/login/findIdResult.html";
   }
 }
