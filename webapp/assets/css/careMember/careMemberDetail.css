@@ -19,16 +19,12 @@
   /* #1D3266 */
 }
 /* 메인 세션 */
-<<<<<<< HEAD
+
 main {
   background-color: #ffe7c9;
   /* height: calc(100vh - 220px); */
   height: 100%;
-=======
-main{
-  background-color: #FFE7C9;
-  /* height: calc(100vh - 220px); */
->>>>>>> main
+
   display: flex;
   height: 800px;
   justify-content: center;
@@ -74,7 +70,7 @@ main{
   position: relative;
 }
 /* 하트 이미지 박스 */
-#heart_img_box{
+#heart_img_box {
   position: absolute;
   height: 35px;
   width: 35px;
@@ -82,7 +78,7 @@ main{
   top: 10px;
   right: 10px;
 }
-#heart_img{
+#heart_img {
   position: absolute;
   height: 100%;
   right: 0%;
