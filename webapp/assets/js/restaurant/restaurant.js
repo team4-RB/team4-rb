@@ -14,8 +14,7 @@ const reStars = document.getElementsByClassName("star_img");
 //로그인 여부
 let isLogin = false;
 
-// 불필요 (삭제 예정)
-// var regionNum = 0;
+
 
 // 동 목록
 var arr = [
@@ -36,6 +35,8 @@ var restaurants = [
 
 // 음식점 카드 표출 함수(매개변수 : 지역, 동 인덱스)
 function showCards(num, value){
+
+
   // (확인용)지역, 동 인덱스
   console.log("num은 "+ num + ", value는 " + value);
   // 동 버튼 불러오기
@@ -52,10 +53,10 @@ function showCards(num, value){
   for(let i = 0 ;i < 4;i++){
     // 현재 레스토랑 수 만큼 카드 생성
     if(i < restaurants.length){
-      let c =` ` + (num + 1) + ` ` + (value + 1) + ` ` + (i + 1);
+      let c =` ` + (num) + ` ` + (value) + ` ` + (i);
 
       let str = "";
-      str += `<a href="./../restaurant/restaurantDetail.html?restaurant=`+ i +`"><div class="restaurant_name">` + restaurants[i][0];
+      str += `<a class="go_detail" href="./../restaurant/restaurantDetail.html?restaurant=`+ i +`&leNum=`+num+`&adNum=`+value+`"><div class="restaurant_name">` + restaurants[i][0];
       str += c; // 좌표 확인용
       str += `</div></a><div class="restaurant_introduce"><div class="restaurant_info"><div>` + `⌂ ` + restaurants[i][1];
       str += `</div><div>` + `⌂ ` + restaurants[i][2];
@@ -72,6 +73,10 @@ function showCards(num, value){
     }
     
   }
+
+  
+
+
 }
 
 //지역 버튼 클릭 시 실행
@@ -145,5 +150,38 @@ function togleStar(num){
   }
 }
 
+// 처음 페이지에 들어오면 0번째 법정동 버튼을 클릭함
 reClicked(0);
+// 0번째 법정동의 0번째 행정동 버튼을 클릭함
 showCards(0, 0);
+
+// url 파라미터를 가져옴
+// 디테일 페이지에서 뒤로가기 버튼을 누른 경우 법정동과 행정동
+const params = new URLSearchParams(window.location.search);
+
+let leNum;
+let adNum;
+
+if (params.has('leNum')) {
+  // 'paramName' 파라미터가 존재합니다.
+  // const paramValue = urlParams.get('paramName');
+  // console.log(`파라미터 값: ${paramValue}`);
+  leNum = params.get("leNum");
+  adNum = params.get("adNum");
+
+  console.log("leNum = "+ leNum);
+  console.log("adNum = "+ adNum);
+
+  console.log("아까 그 카드 다시 보여주기");
+
+  //카드 초기화
+  for(let i = 0 ;i < 4;i++){
+    reCards[i].innerHTML = "";
+  }
+  reClicked(leNum);
+  showCards(leNum, adNum);
+
+} else {
+  // 'paramName' 파라미터가 존재하지 않습니다.
+  console.log('파라미터가 없습니다.');
+}

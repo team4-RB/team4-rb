@@ -20,9 +20,11 @@
 /* 메인 세션 */
 main{
   background-color: #FFE7C9;
-  height: calc(100vh - 220px);
+  /* height: calc(100vh - 220px); */
   display: flex;
+  height: 800px;
   justify-content: center;
+  min-width: 600px;
 }
 /* 페이지 컨테이너 */
 .main_body{
@@ -61,6 +63,21 @@ main{
   flex-direction: column;
   height: 600px;
   align-items: center;
+  position: relative;
+}
+/* 하트 이미지 박스 */
+#heart_img_box{
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  overflow: hidden;
+  top: 10px;
+  right: 10px;
+}
+#heart_img{
+  position: absolute;
+  height: 100%;
+  right: 0%;
 }
 .profile_pic_frame{
   margin-top: 30px;

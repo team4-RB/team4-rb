@@ -18,15 +18,15 @@
 main{
   background-color: #FFE7C9;
   width: 100%;
-  height: calc(100vh - 220px);
+  /* height: calc(100vh - 220px); */
   display: flex;
   justify-content: center;
+  overflow: hidden;
+  min-width: 600px;
 }
 .main_body{
   width: 1200px;
-  height: 100%;
   /* background-color: rgba(104, 104, 104, 0.1); */
-  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -35,31 +35,12 @@ main{
   /* background-color: yellowgreen; */
   font-size: 30px;
 }
-#short_info{
-  position: absolute;
-  background-color: white;
-  left: 57.5%;
-  top:75%;
-  padding: 20px 40px;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  border: solid 1px gray;
-}
-#short_info div{
-  margin: 0 20px;
-  /* background-color: red; */
-}
-#short_info p{
-  margin: 1px 0;
-  white-space: nowrap;
-}
 .context{
   margin-top: 40px;
   /* background-color: gray; */
   display: flex;
   flex: 1;
-  width: 1200px;
+  width: 100%;
   margin-bottom: 40px;
   /* background-color: black; */
 }
@@ -86,12 +67,11 @@ main{
   width: 80%;
   display: flex;
   flex-direction: column;
-  flex:1;
 }
 .restaurant_information{
   /* background-color: aqua; */
-  flex: 1;
-  margin: 10px 10px; 
+  margin: 25px 10px; 
+  /* height: 254px; */
 }
 #short_name, #short_branch{
   display: inline-block;
@@ -103,29 +83,84 @@ main{
 .restaurant_introduction{
   /* background-color: gray; */
   background-color: #EFEFEF;
-  width: 480px;
+  width: 125%;
   overflow: hidden;
   border: solid 1px black;
   border-radius: 10px;
   display: flex;
-  padding: 5px;
+  max-width: 480px;
 }
 #introduction{
-  margin: 10px 20px;
+  margin: 12px 25px;
 }
 .detail_map_area{
   /* background-color: aquamarine; */
   width: 45%;
-  height: 70%;
   /* margin-right: 80px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .map_img_box{
-  height: 100%;
   overflow: hidden;
   /* border: solid 3px black; */
   border-radius: 20px;
   box-shadow: 0 0 5px;
+  width: 100%;
+  position: relative;
+  height: 497px;
 }
 .map_img{
   height: 100%;
-} 
+  position:absolute;
+  right: 0%;
+}
+#short_info{
+  background-color: white;
+  padding: 20px 40px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  border: solid 1px gray;
+  margin: 10px 0;
+  width: 50%;
+  position: relative;
+}
+#short_info div{
+  margin: 0 20px;
+  /* background-color: red; */
+}
+#short_info p{
+  margin: 1px 0;
+  white-space: nowrap;
+}
+#star_img_box{
+  position: absolute;
+  width: 52px;
+  height: 80px;
+  overflow: hidden;
+  right: -105px;
+  top:27px;
+}
+#star_img_box span{
+  position: relative;
+  top:2px;
+  margin-left: 6px;
+  /* background-color: aquamarine; */
+  color: black;
+  font-size: 16px;
+}
+#star_img{
+  position: relative;
+  /* height: 100%; */
+  width: 196%;
+  right: 100%;
+}
+#list_button{
+  position: absolute;
+  width: 80px;
+  height: 20px;
+  text-align: center;
+  border: solid 1px black;
+  right: -100px;
+}

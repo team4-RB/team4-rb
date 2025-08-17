@@ -65,7 +65,7 @@ main{
   height: 40px;
   position: relative;
   line-height: 40px;
-  border: solid 3px black;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 /* 선택된 지역을 가리키는 삼각형 */
 .region_mark{
@@ -77,13 +77,12 @@ main{
   border-bottom: 15px solid transparent;
   border-top: 15px solid transparent;
   border-left: 25px solid transparent;
-  border-right: 25px solid white;
+  border-right: 25px solid #FFF8EF;
   display: none;
 }
 /* 동 버튼 영역 */
 .region_small{
-  background-color:white;
-  border: solid 3px black;
+  background-color: #FFF8EF;
   width: 140px;
   border-radius: 30px;
   margin-left: 25px;
@@ -102,7 +101,7 @@ main{
 /* 동 버튼 */
 .region_small ul li{
   background-color:white;
-  border: solid 2px black;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   border-radius: 15px;
   width: 70%;
   height: 40px;
@@ -146,7 +145,7 @@ main{
   flex-direction: column;
   border-radius: 20px;
   overflow: hidden;
-  border: solid 3px black;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 /* 음식점 카드 소개 영역 */
 .restaurant_introduce{
@@ -157,35 +156,42 @@ main{
 /* 음식점 정보 */
 .restaurant_info{
   /* background-color: skyblue; */
-  width: 60%;
-  padding: 10px;
+  margin-left: 20px;
+  width: 70%;
   font-size: 16px;
 }
 /* 음식점 소개 */
 .restaurant_info div{
-  margin-top: 2px;
+  margin-top: 3px;
+  margin-left: 10px;
+}
+.go_detail{
+  background-color: #1D3266;
+  margin-bottom: 7px;
 }
 /* 음식점 이름 */
 .restaurant_name{
   background-color:wheat;
-  text-align: center;
+  text-align: left;
   height: 30px;
-  width: 60%;
-  margin: 10px 0 10px 20px;
+  margin: 20px 0 10px 30px;
   line-height: 30px;
-  color:#1D3266;
-  border: solid 3px #1D3266;
+  color:white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   border-radius: 10px;
   font-size: 20px;
+  cursor: pointer;
+  background-color: #1D3266;
 }
 /* 찜하기 부분 */
 .restaurant_mark{
   /* background-color: pink; */
-  width: 40%;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   /* justify-content: center; */
+  padding-top: 15px;
 }
 /* 별 아이콘 */
 .restaurant_mark div{
