@@ -83,7 +83,7 @@
             <li class="member">
               <ul>
                 <li class="info">전화번호</li>
-                <li class="myinfo"><input type="text" placeholder="010-1234-5678"><button>수정</button></li>
+                <li class="myinfo"><input type="text" placeholder="010-1234-5678" id="check"><button>수정</button></li>
               </ul>
             </li>
             <!-- 아이디를 보여주는 칸 -->
@@ -94,12 +94,14 @@
               </ul>
             </li>
             <!-- 이메일 수정 할 수 있는 칸 -->
-            <li class="member">
-              <ul>
-                <li class="info">이메일</li>
-                <li class="myinfo"><input type="email" placeholder="abcde@ 형식으로 입력해 주십시오"><button>수정</button></li>
-              </ul>
-            </li>
+            <div class="email">
+              <div>이메일</div>
+              <div class="email_detail">
+                <input type="email" id="email" placeholder="abcde@naver.com">
+                <button onclick="validateEmail()">수정</button>
+                <div id="result"></div>
+              </div>
+            </div>
             <!-- 비밀번호를 수정 하기 위한 칸 -->
             <li class="member">
               <ul>
