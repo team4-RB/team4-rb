@@ -8,7 +8,7 @@ let cnt = 0;
 for(let i = 0 ; i < 3;i++){
   const li = document.createElement("li");
   li.className += 'care_card';
-
+  li.id += 'card'+i;
   let str = "";
   str += `<div class="heart_img_box"><img onclick="switchHeart(`;
   str += i;
@@ -36,12 +36,16 @@ for(let i = 0 ; i < 3;i++){
 
 function switchHeart(num){
   console.log(hearts[num].style.left);
-  if(hearts[num].style.left == "0%"){
-    hearts[num].style.left = "-100%";
-  }else{
-    hearts[num].style.left = "0%";
-  }
-  // cardRow1.removeChild(li);
+  // if(hearts[num].style.left == "0%"){
+  //   hearts[num].style.left = "-100%";
+  // }else{
+  //   hearts[num].style.left = "0%";
+  // }
+  let id = "card"+num;
+  const deleteHeart = document.getElementById(id);
+  // const deletecard = deleteHeart.parentNode;
+  // deletecard.removeChild(deleteHeart);
+  // deleteHeart.remove();
 
 
 }
