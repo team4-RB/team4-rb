@@ -12,9 +12,7 @@ const pwmodal = document.getElementById("pwbutton");
 
 const modalclose = document.getElementById("saveConfirmBtn");
 
-const pwCheck = document.querySelector('.pwCheck');
-const pwInput = document.getElementById('pwInput');
-const newPwInput = document.getElementById('newPwInput');
+
 
 
 addressmodal.addEventListener('click', function(e) {
@@ -54,6 +52,9 @@ function openemailModalClose(){
   openemail.style.display = 'none';
 }
 
+const pwCheck = document.querySelector('.pwCheck');
+const pwInput = document.getElementById('pwInput');
+const newPwInput = document.getElementById('newPwInput');
 
 newPwInput.addEventListener("input", () => {
   const val = newPwInput.value;

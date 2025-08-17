@@ -21,11 +21,28 @@
         <input type="text">
       </div>
       <div class="button">
-        <button class="list"><a href="./postMain.html">목록</a></button>
-        <button class="button_write"><a href="./postMain.html">작성</a></button>
+        <button type="button" class="list"><a href="./postMain.html">목록</a></button>
+        <button type="button" class="button_write">작성</button>
       </div>
     </form>
   </main>
+  <div class="writecheckmodal">
+    <div class="modal_box">
+      <p>작성하시겠습니까?</p>
+      <div class="modal_buttons">
+        <button type="button" id="writecheck">확인</button>
+        <button type="button" id="writecancel">취소</button>
+      </div>
+    </div>
+  </div>
+  <div class="writemodal">
+    <div class="modal_box">
+      <p>작성되었습니다</p>
+      <div class="modal_buttons">
+        <a href="./postMain.html"><button type="button" id="reportcheck">확인</button></a>
+      </div>
+    </div>
+  </div>
   <div id="footer"></div>
 </body>
 </html>
