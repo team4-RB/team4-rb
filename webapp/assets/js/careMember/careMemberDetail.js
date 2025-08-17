@@ -4,9 +4,11 @@ const inputComment = document.getElementById("comment_text");
 const inputButton = document.getElementById("comment_button");
 // 후기 리스트
 const commentList = document.getElementsByClassName("comment_list");
+// 하트 이미지
+const heartImg = document.getElementById("heart_img");
 
 // 로그인 토글
-let isLogin=true;
+let isLogin=false;
 
 // 작성된 후기 수
 let count = 0;
@@ -88,3 +90,18 @@ function sendLetterButtonClick(){
     careMemberModalLoginShow();
   }
 }
+
+function switchHeart(){
+  if(isLogin){
+    if(heartImg.style.right == "0%"){
+      heartImg.style.right = "-100%";
+    }else{
+      heartImg.style.right = "0%";
+    }
+  }else{
+    careMemberModalLoginShow();
+  }
+}
+
+// 하트이미지 초기화 (right 값을 넣어주기 위함)
+heartImg.style.right = "0%";

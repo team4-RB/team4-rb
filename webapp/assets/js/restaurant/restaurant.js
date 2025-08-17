@@ -14,9 +14,6 @@ const reStars = document.getElementsByClassName("star_img");
 //로그인 여부
 let isLogin = true;
 
-// 불필요 (삭제 예정)
-// var regionNum = 0;
-
 // 동 목록
 var arr = [
   ["방배 1동", "방배 2동", "방배 3동", "방배 4동", "방배 본동"],
@@ -168,5 +165,7 @@ function togleStar(num) {
   }
 }
 
+// 처음 페이지에 들어오면 0번째 법정동 버튼을 클릭함
 reClicked(0);
+// 0번째 법정동의 0번째 행정동 버튼을 클릭함
 showCards(0, 0);

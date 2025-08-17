@@ -39,5 +39,5 @@ function switchHeart(num) {
   } else {
     hearts[num].style.left = "0%";
   }
-  cardRow1.removeChild(li);
+  // cardRow1.removeChild(li);
 }

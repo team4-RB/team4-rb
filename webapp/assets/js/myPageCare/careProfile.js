@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const saveModal = document.getElementById('saveSuccessModal');
   const saveModalOk = saveModal?.querySelector('button');
   // 저장 모달 열기
-  const openSaveModal  = () => saveModal?.classList.add('open');
+  const openSaveModal = () => saveModal?.classList.add('open');
   // 저장 모달 닫기
   const closeSaveModal = () => saveModal?.classList.remove('open');
   // 확인 버튼 클릭하면 닫기
@@ -58,12 +58,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // 확인 버튼
-  const placeConfirm = document.querySelector('.palce_detail ul li:last-child button');
-  // 저장 모달 열기
-  placeConfirm?.addEventListener('click', e => {
-    e.preventDefault();
-    openSaveModal();
-  });
+  // const placeConfirm = document.querySelector('.palce_detail ul li:last-child button');
+  // // 저장 모달 열기
+  // placeConfirm?.addEventListener('click', e => {
+  //   e.preventDefault();
+  //   openSaveModal();
+  // });
 
   // 우편번호 찾기 버튼
   const placeFindBtn = document.querySelector('.palce_detail ul li:nth-child(2) button');
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const findModal = document.getElementById('findModal');
   const findOkBtn = findModal?.querySelector('button');
   // 우편번호 모달 열기
-  const openFindModal  = () => findModal?.classList.add('open');
+  const openFindModal = () => findModal?.classList.add('open');
   // 우편번호 모달 닫기
   const closeFindModal = () => findModal?.classList.remove('open');
   // 우편번호 찾기 누르면 모달 열기
@@ -85,10 +85,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // 소개글 확인 버튼
   const introduceConfirm = document.querySelector('.introduce_detail button');
   // 저장 모달 열기
-  introduceConfirm?.addEventListener('click', e => {
-    e.preventDefault();
-    openSaveModal();
-  });
+  //   introduceConfirm?.addEventListener('click', e => {
+  //     e.preventDefault();
+  //     openSaveModal();
+  // });
 
   // 이력 확인 버튼
   const historyConfirmBtn = document.querySelector('.recode .confrim'); // HTML 철자 그대로 사용
@@ -96,15 +96,57 @@ document.addEventListener('DOMContentLoaded', () => {
   const proposeModal = document.getElementById('proposeSuccessModal');
   const proposeOkBtn = proposeModal?.querySelector('button');
   // 이력 모달 열기
-  const openProposeModal  = () => proposeModal?.classList.add('open');
+  const openProposeModal = () => proposeModal?.classList.add('open');
   // 이력 모달 닫기
   const closeProposeModal = () => proposeModal?.classList.remove('open');
 
   // 확인 버튼 클릭 모달 열기
-  historyConfirmBtn?.addEventListener('click', e => {
-    e.preventDefault();
-    openProposeModal();
-  });
+  // historyConfirmBtn?.addEventListener('click', e => {
+  //   e.preventDefault();
+  //   openProposeModal();
+  // });
   // 확인 버튼 클릭시 닫기
   proposeOkBtn?.addEventListener('click', closeProposeModal);
+
+
+  //빈칸 검증 칸 - 지역쪽
+  const placeConfirm = document.querySelector('.palce_detail ul li:last-child button');
+  placeConfirm?.addEventListener('click', e => {
+    e.preventDefault();
+    const detailInput = document.getElementById('detail');
+
+    // 기본 테두리 복원
+    if (detailInput) detailInput.style.borderColor = '#000';
+
+    if (!detailInput?.value.trim()) {
+      alert("빈 칸을 입력해 주세요.");
+      if (detailInput) detailInput.style.borderColor = 'red';
+      detailInput?.focus();
+      return; 
+    }
+
+    openSaveModal();  
+  });
+
+  //빈칸 검증칸 = 소개글 쪽
+  introduceConfirm?.addEventListener('click', e => {
+    e.preventDefault();
+    const introduceInput = document.querySelector('#detail');
+    if (!introduceInput.value.trim()) {
+      alert("빈 칸을 입력해 주세요.");
+      return;
+    }
+    openSaveModal();
+  });
+
+  //빈칸검증칸 --이력
+  historyConfirmBtn?.addEventListener('click', e => {
+    e.preventDefault();
+    const experienceInput = document.getElementById('experience');
+    if (!experienceInput.value.trim()) {
+      alert("빈 칸을 입력해 주세요.");
+      return;
+    }
+    openProposeModal();
+  });
 });

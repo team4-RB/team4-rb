@@ -23,6 +23,8 @@
   justify-content: center;
   position: relative;
   align-items: center;
+  overflow: hidden;
+  min-width: 600px;
 }
 .footerDiv{
   display: flex;

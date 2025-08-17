@@ -5,7 +5,11 @@
 
 main {
   width: 100%;
+<<<<<<< HEAD
   /* height: calc(100vh - 200px); */
+=======
+  min-height: calc(100vh - 200px);
+>>>>>>> main
   display: flex;
   flex-direction: column;
 }
@@ -174,13 +178,17 @@ form {
 }
 
 #check {
-  background-color: white;
-  color: black;
+  background-color: #2F52AA;
+  color: white;
   border: 1px solid black;
 }
 
 #cancle {
+<<<<<<< HEAD
   background-color: #2f52aa;
+=======
+  background-color: red;
+>>>>>>> main
   color: white;
   border: 1px solid black;
 }
