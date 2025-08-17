@@ -1,69 +1,100 @@
-// news.js
-const searchBar = document.querySelector(".search_btn");
-
-// 검색 버튼 입력시 검색 결과 페이지 이동
-searchBar.addEventListener("click", function () {
-  location.href = './../../app/news/newsSearch.html'
-})
-
+const slidesWrap = document.querySelector(".slides_wrap");
 const slides = document.querySelector(".slides");
-const cards = Array.from(slides.querySelectorAll('.cardlist'));
+let cards = Array.from(slides.querySelectorAll(".cardlist"));
 
-let isDragging = false;
-let startPosition = 0;
+let currentIndex = 1; // 복제 후 첫 카드 기준
+let cardWidth = cards[0].offsetWidth + 20; // margin 포함
+let wrapWidth = slidesWrap.offsetWidth;
 let currentTranslate = 0;
-let prevTranslate = 0;
-let currentIndex = 0;
-const cardWidth = cards[0].offsetWidth;
 
-slides.addEventListener('mousedown', dragStart); // 마우스 누를시
-slides.addEventListener('mouseup', dragEnd); // 마우스 눌렀다 땔 시
-slides.addEventListener('mouseleave', dragEnd); // 마우스 벗어날 시
-slides.addEventListener('mousemove', drag); // 마우스 이동 시
+// 무한 슬라이드용 카드 복제
+function cloneSlides() {
+  const first = cards[0].cloneNode(true);
+  const last = cards[cards.length - 1].cloneNode(true);
+  slides.appendChild(first);
+  slides.insertBefore(last, cards[0]);
+  cards = Array.from(slides.querySelectorAll(".cardlist"));
+}
+cloneSlides();
 
-// 드래그 시작
+// 가운데 카드 강조
+function updateActiveCard() {
+  cards.forEach((card, index) => {
+    card.classList.toggle("active", index === currentIndex);
+  });
+}
+
+function setPositionByIndex() {
+  const centerOffset = (wrapWidth / 2) - (cardWidth / 2);
+  const scaleExtra = cards[currentIndex].offsetWidth * 0.2 / 2; // 가운데 카드 확대 보정
+  currentTranslate = currentIndex * -cardWidth + centerOffset - scaleExtra;
+
+  // wrap 밖으로 나가지 않게 제한
+  const maxTranslate = 0;
+  const minTranslate = wrapWidth - slides.scrollWidth;
+  if (currentTranslate > maxTranslate) currentTranslate = maxTranslate;
+  if (currentTranslate < minTranslate) currentTranslate = minTranslate;
+
+  slides.style.transform = `translateX(${currentTranslate}px)`;
+  updateActiveCard();
+}
+
+// 초기 위치
+setPositionByIndex(false);
+
+// 무한 루프 처리
+slides.addEventListener("transitionend", () => {
+  if (currentIndex === 0) currentIndex = cards.length - 2;
+  if (currentIndex === cards.length - 1) currentIndex = 1;
+  setPositionByIndex(false);
+});
+
+// 자동 슬라이드
+let autoSlide = setInterval(() => {
+  currentIndex++;
+  setPositionByIndex();
+}, 3000);
+
+// 드래그 이벤트
+let isDragging = false;
+let startX = 0;
+let prevTranslate = currentTranslate;
+
+slides.addEventListener("mousedown", dragStart);
+slides.addEventListener("mouseup", dragEnd);
+slides.addEventListener("mouseleave", dragEnd);
+slides.addEventListener("mousemove", drag);
+slides.addEventListener("touchstart", dragStart);
+slides.addEventListener("touchend", dragEnd);
+slides.addEventListener("touchmove", drag);
+
 function dragStart(e) {
   isDragging = true;
-  startPosition = getPositionX(e);
-  slides.classList.add('dragging');
+  startX = e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+  clearInterval(autoSlide); // 드래그 중 자동 슬라이드 중지
+  slides.style.transition = "none";
+  cards.forEach(card => card.classList.remove("active"));
 }
 
-// 드래그 끝
-function dragEnd(){
-  if(!isDragging) return;
+function dragEnd(e) {
+  if (!isDragging) return;
   isDragging = false;
-  slides.classList.remove('dragging');
+  const endX = e.type.includes('mouse') ? e.pageX : e.changedTouches[0].clientX;
+  const diff = endX - startX;
 
-  const movedBy = currentTranslate - prevTranslate;
-
-  if(movedBy < -50 && currentIndex < cards.length - 1){
-    currentIndex += 1;
-  }
-
-  if (movedBy > 50 && currentIndex > 0) {
-    currentIndex -= 1;
-  }
+  if (diff < -50) currentIndex++;
+  if (diff > 50) currentIndex--;
 
   setPositionByIndex();
+  autoSlide = setInterval(() => {
+    currentIndex++;
+    setPositionByIndex();
+  }, 3000);
 }
 
-// 드래그 시
 function drag(e) {
   if (!isDragging) return;
-  const currentPosition = getPositionX(e);
-  const diffPosition = currentPosition - startPosition;
-  currentTranslate = prevTranslate + diffPosition;
-  slides.style.transform = `translateX(${currentTranslate}px)`;
-}
-
-// X축 위치 가져오기
-function getPositionX(e) {
-  return e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
-}
-
-// 카드 뉴스 위치 자동 조정
-function setPositionByIndex(){
-  currentTranslate = currentIndex * -cardWidth;
-  prevTranslate = currentTranslate;
-  slides.style.transform = `translateX(${currentTranslate}px)`;
+  const moveX = e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+  const diff = moveX - startX;
+  slides.style.transform = `translateX(${prevTranslate + diff}px)`;
 }
