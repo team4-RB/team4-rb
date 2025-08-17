@@ -158,8 +158,24 @@ form>div:first-child>div {
   min-height: 58px;
 }
 
+.caremodify > ul > .email {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  align-items: center;
+  min-height: 58px;
+  border-top: 2px solid #000;
+}
+
 /* 첫번째 있는 것을 가운대로 */
 .member>ul>.info {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  background: #fff;
+  border-right: 2px solid #000;
+  font-weight: 600;
+}
+.caremodify > ul > .email > div:first-child {
   display: flex;
   align-items: center;
   padding: 10px 12px;
@@ -175,7 +191,13 @@ form>div:first-child>div {
   gap: 8px;
   padding: 10px 12px;
 }
-
+.email>ul>.email_detail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  flex-direction: row;
+}
 /* 표로 만들 수 잇는건 표 형식으로 */
 .member>ul>.myinfo>ul {
   display: grid;
@@ -185,6 +207,12 @@ form>div:first-child>div {
 
 /* 글자 중앙 맞춤 */
 .member>ul>.myinfo>ul>li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.member>ul>.myinfo>ul>div {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -216,14 +244,15 @@ form>div:first-child>div {
 }
 
 /* 이메일 입력 할 수 잇는 칸 */
-.myinfo input[type="email"] {
-  width: 300px;
+.email_detail input[type="email"] {
   height: 36px;
-  padding: 0 10px;
+  padding: 0 10px 0 10px;
   border: 2px solid #000;
   border-radius: 6px;
   outline: none;
   background: #fff;
+  width: auto;
+  margin-left: 10px;
 }
 
 /* 플레이스 홀더 색 */
@@ -244,8 +273,34 @@ form>div:first-child>div {
   cursor: pointer;
   white-space: nowrap;
 }
+/* 이메일 수정 줄(가로 정렬) */
+.email_detail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/* 이메일 입력창 */
+.email_detail input {
+  width: 300px;
+  padding: 5px;
+}
+/* 이메일 버튼(파란색) */
+.email_detail button {
+  height: 32px;
+  padding: 0 12px;
+  border: 2px solid #2f4db1;
+  background: #2f4db1;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
 
-
+#email button {
+  flex-direction: column;
+}
 
 /* 모달 기본 */
 .modal {
@@ -259,6 +314,11 @@ form>div:first-child>div {
   justify-content: center;
   align-items: center;
 }
+
+.modal.open { 
+  display: flex;
+}
+
 
 /* 모달 안의 컨텐츠 */
 .modal-content {
