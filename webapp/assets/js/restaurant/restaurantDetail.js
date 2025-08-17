@@ -36,10 +36,16 @@ const shortElevator = document.getElementById("short_elevator");
 const shortParking = document.getElementById("short_parking");
 // 장애인주차장 가져오기
 const shortDisabledparking = document.getElementById("short_disabled_parking");
+// 찜하기(별) 이미지
+const starImg = document.getElementById("star_img");
 
 
 //설명
 const introduction = document.getElementById("introduction");
+
+
+const isLogin = false;
+
 
 // 음식점 더미데이터
 var restaurants = [
@@ -53,7 +59,19 @@ var restaurants = [
 const params = new URLSearchParams(window.location.search);
 
 // 파라미터 읽기
-const restaurantNum = params.get("restaurant"); 
+let restaurantNum = 0; 
+let leNum = 0;
+let adNum = 0;
+
+if(params.has('restaurant')){
+  restaurantNum = params.get("restaurant"); 
+  leNum = params.get("leNum");
+  adNum = params.get("adNum");
+}
+
+console.log("leNum = "+ leNum);
+console.log("adNum = "+ adNum);
+
 
 //이미지 변경 함수
 function editImage(){
@@ -86,7 +104,27 @@ shortTakeout.innerHTML = `· 테이크아웃: ` + restaurants[restaurantNum][16]
   introduction.innerHTML = "서초 방배 1동 자담치킨입니다. 저희 자담치킨은 동물복지웰빙 치킨과 자담프리미엄 전용유로 튀긴 건강한 치킨 입니다. 세스코에 가입한 식당으로 보다 더 깨끗한 위생관리를 하고 있습니다. 다같이 코로나19를 이겨냈으면 좋겠습니다";
 }
 
+function switchStar(){
+  console.log("starImg.style.right : " + starImg.style.right);
+  if(isLogin){
+    if(starImg.style.right == "0%"){
+      starImg.style.right= "100%";
+    }else{
+    starImg.style.right= "0%";
+    }
+  }else{
+    restaurantModalLoginShow();
+  }
+}
+
+function goToList(){
+  location.href=`./restaurant.html?leNum=`+leNum+`&adNum=`+adNum;
+}
+
 // 이미지 변경
 editImage();
 // 소개글 변경
 editTexts();
+
+// 찜하기 이미지 초기화(right 속성값을 넣어주기 위함)
+starImg.style.right= "0%";

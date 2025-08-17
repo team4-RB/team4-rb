@@ -19,7 +19,7 @@ for(let i = 0 ; i < 8;i++){
   // 카드 생성 코드 문자열로 추가
   let str = "";
   // 이미지에 onclick으로 실행할 함수(하트 색 변경 함수) 추가하고
-  str += `<div class="heart_img_box"><img onclick="switchHeart(`;
+  str += `<div class="heart_img_box"><img draggable="false" onclick="switchHeart(`;
   // 매개변수로 i값 넣어주기
   str += i;
   // 하트 이미지 url 추가, 프로필 사진, 이름들을 담은 요소들을 추가
@@ -46,6 +46,8 @@ for(let i = 0 ; i < 8;i++){
   str += `</p></div></div></a>`;
   // li 요소에 문자열 추가
   li.innerHTML = str;
+
+  li.getElementsByClassName("heart_img");
   
   if(i < 4){// 처음 네 번은 윗줄에 추가
     cardRow1.appendChild(li);

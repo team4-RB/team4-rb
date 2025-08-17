@@ -7,8 +7,10 @@
   <link rel="stylesheet" href="./../../assets/css/restaurant/restaurantDetail.css">
   <link rel="stylesheet" href="./../../assets/css/header.css">
   <link rel="stylesheet" href="./../../assets/css/footer.css">
+  <link rel="stylesheet" href="./../../assets/css/restaurant/restaurantModal.css">
   <script defer src="./../../assets/js/main/include.js"></script>
   <script defer src="./../../assets/js/restaurant/restaurantDetail.js"></script>
+  <script defer src="./../../assets/js/restaurant/restaurantModalLogin.js"></script>
 </head>
 <body>
   <!-- 헤더 -->
@@ -21,23 +23,6 @@
       <h1 id="page_title">
         식당 이름 + 지점명
       </h1>
-      <div id="short_info">
-        <div>
-          <p id="short_firstfloor">일층: O</p>
-          <p id="short_ramp">경사로: O</p>
-          <p id="short_entrance_curb">입구턱: O</p>
-          <p id="short_entrance_step">입구문턱: O</p>
-          <p id="short_restroom_curb">화장실턱: O</p>
-        </div>
-        <div>
-          <p id="short_restroom_step">화장실문턱: O</p>
-          <p id="short_restroom">장애인화장실: O</p>
-          <p id="short_elevator">엘리베이터: O</p>
-          <p id="short_parking">주차장: O</p>
-          <p id="short_disabled_parking">장애인주차장: O</p>
-        </div>
-
-      </div>
       <!-- 페이지 내용 영역 -->
       <div class="context">
         <!-- 음식점 소개 영역 -->
@@ -77,11 +62,34 @@
           <div class="map_img_box">
             <img class="map_img" src="./../../assets/img/restaurant/map.PNG">
           </div>
+          <div id="short_info">
+            <div>
+              <p id="short_firstfloor">일층: O</p>
+              <p id="short_ramp">경사로: O</p>
+              <p id="short_entrance_curb">입구턱: O</p>
+              <p id="short_entrance_step">입구문턱: O</p>
+              <p id="short_restroom_curb">화장실턱: O</p>
+            </div>
+            <div>
+              <p id="short_restroom_step">화장실문턱: O</p>
+              <p id="short_restroom">장애인화장실: O</p>
+              <p id="short_elevator">엘리베이터: O</p>
+              <p id="short_parking">주차장: O</p>
+              <p id="short_disabled_parking">장애인주차장: O</p>
+              <div id="star_img_box">
+                <img draggable="false" id="star_img" onclick="switchStar()" src="./../../assets/img/restaurant/star.png">
+                <span>찜하기</span>
+              </div>
+              <button type="button" id="list_button" onclick="goToList()">목록</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </main>
   <!-- 푸터 -->
   <div id="footer"></div>
+  <!-- 로그인 요청 모달 -->
+  <div id="restaurantModalLogin"></div>
 </body>
 </html> 
