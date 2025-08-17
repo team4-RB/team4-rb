@@ -1,40 +1,41 @@
 @font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    /* font-weight: 500; 적용 안됨 */
-    font-style: normal;
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  /* font-weight: 500; 적용 안됨 */
+  font-style: normal;
 }
-*{
+* {
   margin: 0;
   padding: 0;
   border: 0;
   text-decoration-line: none;
   list-style-type: none;
   color: black;
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   /* #FFE7C9 */
   /* #1D3266 */
 }
 /* 메인 */
-main{
-  background-color: #FFE7C9;
-  height: calc(100vh - 220px);
+main {
+  background-color: #ffe7c9;
+  /* height: calc(100vh - 220px); */
   display: flex;
   justify-content: center;
 }
 /* 메인 바디 */
-.main_body{
+.main_body {
   width: 1200px;
   height: 100%;
 }
 /* 페이지 타이틀 */
-.page_title{
+.page_title {
   margin-top: 40px;
   /* background-color: yellowgreen; */
   font-size: 30px;
 }
 /* 페이지 내용 */
-.context{
+.context {
   margin-top: 60px;
   /* background-color: gray; */
   display: flex;
@@ -42,13 +43,13 @@ main{
   width: 100%;
 }
 /* 지역 선택 박스 */
-.region_select{
+.region_select {
   width: 260px;
   /* background-color: olive; */
   display: flex;
 }
 /* 지역 버튼 리스트 */
-.region_list{
+.region_list {
   /* background-color: aquamarine; */
   width: 120px;
   height: 100%;
@@ -57,7 +58,7 @@ main{
   justify-content: space-around;
 }
 /* 지역 버튼 */
-.region_button{
+.region_button {
   border-radius: 20px;
   background-color: white;
   text-align: center;
@@ -65,24 +66,25 @@ main{
   height: 40px;
   position: relative;
   line-height: 40px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 /* 선택된 지역을 가리키는 삼각형 */
-.region_mark{
+.region_mark {
   position: absolute;
-  top:12%;
+  top: 12%;
   right: -27px;
   width: 0;
   height: 0;
   border-bottom: 15px solid transparent;
   border-top: 15px solid transparent;
   border-left: 25px solid transparent;
-  border-right: 25px solid #FFF8EF;
+  border-right: 25px solid #fff8ef;
   display: none;
 }
 /* 동 버튼 영역 */
-.region_small{
-  background-color: #FFF8EF;
+.region_small {
+  background-color: white;
+  border: solid 3px black;
   width: 140px;
   border-radius: 30px;
   margin-left: 25px;
@@ -90,7 +92,7 @@ main{
   display: none;
 }
 /* 동 버튼 리스트 */
-.region_small ul{
+.region_small ul {
   /* background-color: aqua; */
   border-radius: 20px;
   display: flex;
@@ -99,9 +101,9 @@ main{
   height: 100%;
 }
 /* 동 버튼 */
-.region_small ul li{
-  background-color:white;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+.region_small ul li {
+  background-color: white;
+  border: solid 2px black;
   border-radius: 15px;
   width: 70%;
   height: 40px;
@@ -111,7 +113,7 @@ main{
   font-size: 16px;
 }
 /* 음식점 선택 영역 */
-.restaurant_select{
+.restaurant_select {
   /* background-color: orange; */
   flex: 1;
   height: 100%;
@@ -122,21 +124,21 @@ main{
   flex-direction: column;
 }
 /* 음식점 카드 영역 */
-.restaurant_board{
+.restaurant_board {
   /* background-color: blueviolet; */
   width: 93%;
   height: 80%;
 }
 /* 음식점 카드 줄 */
-.restaurant_row{
+.restaurant_row {
   display: flex;
   /* border: solid 1px black; */
   /* background-color: gray; */
   height: 50%;
 }
 /* 음식점 카드 */
-.restaurant_card{
-  background-color: #FFF8EF;
+.restaurant_card {
+  background-color: #fff8ef;
   opacity: 0;
   flex: 1;
   margin: 5px;
@@ -145,46 +147,41 @@ main{
   flex-direction: column;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 /* 음식점 카드 소개 영역 */
-.restaurant_introduce{
+.restaurant_introduce {
   /* background-color: darkslategrey; */
   flex: 1;
   display: flex;
 }
 /* 음식점 정보 */
-.restaurant_info{
+.restaurant_info {
   /* background-color: skyblue; */
   margin-left: 20px;
   width: 70%;
   font-size: 16px;
 }
 /* 음식점 소개 */
-.restaurant_info div{
-  margin-top: 3px;
-  margin-left: 10px;
-}
-.go_detail{
-  background-color: #1D3266;
-  margin-bottom: 7px;
+.restaurant_info div {
+  margin-top: 2px;
 }
 /* 음식점 이름 */
-.restaurant_name{
-  background-color:wheat;
-  text-align: left;
+.restaurant_name {
+  background-color: wheat;
+  text-align: center;
   height: 30px;
   margin: 20px 0 10px 30px;
   line-height: 30px;
-  color:white;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  color: #1d3266;
+  border: solid 3px #1d3266;
   border-radius: 10px;
   font-size: 20px;
   cursor: pointer;
-  background-color: #1D3266;
+  background-color: #1d3266;
 }
 /* 찜하기 부분 */
-.restaurant_mark{
+.restaurant_mark {
   /* background-color: pink; */
   flex: 1;
   display: flex;
@@ -194,22 +191,22 @@ main{
   padding-top: 15px;
 }
 /* 별 아이콘 */
-.restaurant_mark div{
+.restaurant_mark div {
   margin-top: 7px;
 }
 /*  */
-.star_img_box{
+.star_img_box {
   height: 40px;
   width: 42px;
   overflow: hidden;
   position: relative;
 }
-.star_img{
+.star_img {
   /* left: -100%; */
   height: 100%;
   /* background-color: aqua; */
   position: absolute;
 }
-.restaurant_pagenation{
+.restaurant_pagenation {
   margin-top: 20px;
-} 
+}

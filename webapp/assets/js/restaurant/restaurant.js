@@ -12,87 +12,103 @@ const reCards = document.getElementsByClassName("restaurant_card");
 const reStars = document.getElementsByClassName("star_img");
 
 //로그인 여부
-let isLogin = false;
-
-
+let isLogin = true;
 
 // 동 목록
 var arr = [
-  ['방배 1동','방배 2동','방배 3동','방배 4동','방배 본동'],
-  ['반포 1동','반포 2동','반포 3동','반포 4동','반포 본동'],
-  ['서초 1동','서초 2동','서초 3동','서초 4동'],
-  ['양재 1동','양재 2동'],
-  ['내곡동'],
-  ['잠원동']
+  ["방배 1동", "방배 2동", "방배 3동", "방배 4동", "방배 본동"],
+  ["반포 1동", "반포 2동", "반포 3동", "반포 4동", "반포 본동"],
+  ["서초 1동", "서초 2동", "서초 3동", "서초 4동"],
+  ["양재 1동", "양재 2동"],
+  ["내곡동"],
+  ["잠원동"],
 ];
 
 // 음식점 더미데이터
 var restaurants = [
-  ['비엔나커피하우스', '서울특별시 서초구 방배로 126', '평일 08:30 - 23:00 | 주말 11:00 - 23:00', '02-585-1683'],
-  ['아트메이저', '서울특별시 서초구 서초대로 114', '월~금 : 08:30 ~ 21:50 토,일 : 09:00 ~ 21:50', '02-521-6239'],
-  ['스타벅스', '서울특별시 서초구 방배로 84 (방배동,유성빌딩 지상1층)', '매장 07:00 - 21:00 딜리버스 10:00 - 20:30~18시', '-']
+  [
+    "비엔나커피하우스",
+    "서울특별시 서초구 방배로 126",
+    "평일 08:30 - 23:00 | 주말 11:00 - 23:00",
+    "02-585-1683",
+  ],
+  [
+    "아트메이저",
+    "서울특별시 서초구 서초대로 114",
+    "월~금 : 08:30 ~ 21:50 토,일 : 09:00 ~ 21:50",
+    "02-521-6239",
+  ],
+  [
+    "스타벅스",
+    "서울특별시 서초구 방배로 84 (방배동,유성빌딩 지상1층)",
+    "매장 07:00 - 21:00 딜리버스 10:00 - 20:30~18시",
+    "-",
+  ],
 ];
 
 // 음식점 카드 표출 함수(매개변수 : 지역, 동 인덱스)
-function showCards(num, value){
-
-
+function showCards(num, value) {
   // (확인용)지역, 동 인덱스
-  console.log("num은 "+ num + ", value는 " + value);
+  console.log("num은 " + num + ", value는 " + value);
   // 동 버튼 불러오기
-  const villages = document.getElementsByClassName('village');
+  const villages = document.getElementsByClassName("village");
   // 모든 동 버튼 스타일 지정(하얀 바탕에 검은 글씨)
-  for(v of villages){
-    v.style.backgroundColor = 'white';
-    v.style.color = 'black';
+  for (v of villages) {
+    v.style.backgroundColor = "white";
+    v.style.color = "black";
   }
   // 선택된 동의 버튼만 스타일 지정(남색 배경에 하얀 글씨)
-  villages[value].style.backgroundColor = '#1D3266';
-  villages[value].style.color = 'white';
+  villages[value].style.backgroundColor = "#1D3266";
+  villages[value].style.color = "white";
   // 음식점 카드 네 번 생성
-  for(let i = 0 ;i < 4;i++){
+  for (let i = 0; i < 4; i++) {
     // 현재 레스토랑 수 만큼 카드 생성
-    if(i < restaurants.length){
-      let c =` ` + (num) + ` ` + (value) + ` ` + (i);
+    if (i < restaurants.length) {
+      let c = ` ` + (num + 1) + ` ` + (value + 1) + ` ` + (i + 1);
 
       let str = "";
-      str += `<a class="go_detail" href="./../restaurant/restaurantDetail.html?restaurant=`+ i +`&leNum=`+num+`&adNum=`+value+`"><div class="restaurant_name">` + restaurants[i][0];
+      str +=
+        `<a href="./../restaurant/restaurantDetail.html?restaurant=` +
+        i +
+        `"><div class="restaurant_name">` +
+        restaurants[i][0];
       str += c; // 좌표 확인용
-      str += `</div></a><div class="restaurant_introduce"><div class="restaurant_info"><div>` + `⌂ ` + restaurants[i][1];
+      str +=
+        `</div></a><div class="restaurant_introduce"><div class="restaurant_info"><div>` +
+        `⌂ ` +
+        restaurants[i][1];
       str += `</div><div>` + `⌂ ` + restaurants[i][2];
       str += `</div><div>` + `⌂ ` + restaurants[i][3];
-      str += `</div></div><div class="restaurant_mark"><div onclick="togleStar(` + i + `)" class="star_img_box"><img class="star_img" src="./../../assets/img/restaurant/star.png">`;
+      str +=
+        `</div></div><div class="restaurant_mark"><div onclick="togleStar(` +
+        i +
+        `)" class="star_img_box"><img class="star_img" src="./../../assets/img/restaurant/star.png">`;
       str += `</div><div>` + "찜하기";
       str += `</div></div></div></div>`;
       reCards[i].innerHTML = str;
       reCards[i].style.opacity = 1;
-    }else{
+    } else {
       // 레스토랑 수가 4 미만이면 나머지 카드는 보이지 않게 한다.
       reCards[i].innerHTML = "";
       reCards[i].style.opacity = 0;
     }
-    
   }
-
-  
-
-
 }
 
 //지역 버튼 클릭 시 실행
-function reClicked(num){
+function reClicked(num) {
   // (확인용)입력한 숫자
   console.log("숫자는 : " + num);
 
   //버튼 색 초기화
-  for(button of reButtons){
-    button.style.backgroundColor = 'white';
-    button.style.color = 'black';
+  for (button of reButtons) {
+    button.style.backgroundColor = "white";
+    button.style.color = "black";
   }
 
   //누른 버튼 스타일 수정
-  reButtons[num].style.backgroundColor = '#1D3266';
-  reButtons[num].style.color = 'white';
+  reButtons[num].style.backgroundColor = "#1D3266";
+  reButtons[num].style.color = "white";
 
   // 판 보이기
   reSmall[0].style.display = "block";
@@ -105,7 +121,7 @@ function reClicked(num){
 
   // 행정동별 버튼 생성
   let d = 0;
-  for(ar of arr[num]){
+  for (ar of arr[num]) {
     console.log(ar, typeof ar);
 
     // let str = "";
@@ -116,8 +132,8 @@ function reClicked(num){
     const li = document.createElement("li");
     li.innerText = ar;
     li.value = d;
-    li.className += 'village';
-    li.onclick = function(){
+    li.className += "village";
+    li.onclick = function () {
       showCards(num, li.value);
     };
 
@@ -126,26 +142,25 @@ function reClicked(num){
   }
   // 화살표 표시
   var j = 0;
-  for(i of reMarks){
-    if(j==num){
-      i.style.display="block";
-    }else{
-      i.style.display="none";
+  for (i of reMarks) {
+    if (j == num) {
+      i.style.display = "block";
+    } else {
+      i.style.display = "none";
     }
     j++;
   }
 }
 
-
-function togleStar(num){
+function togleStar(num) {
   console.log("별! " + num);
-  if(isLogin){
-    if(reStars[num].style.left == "-100%"){
+  if (isLogin) {
+    if (reStars[num].style.left == "-100%") {
       reStars[num].style.left = "0";
-    }else{
+    } else {
       reStars[num].style.left = "-100%";
     }
-  }else{
+  } else {
     restaurantModalLoginShow();
   }
 }
@@ -154,34 +169,3 @@ function togleStar(num){
 reClicked(0);
 // 0번째 법정동의 0번째 행정동 버튼을 클릭함
 showCards(0, 0);
-
-// url 파라미터를 가져옴
-// 디테일 페이지에서 뒤로가기 버튼을 누른 경우 법정동과 행정동
-const params = new URLSearchParams(window.location.search);
-
-let leNum;
-let adNum;
-
-if (params.has('leNum')) {
-  // 'paramName' 파라미터가 존재합니다.
-  // const paramValue = urlParams.get('paramName');
-  // console.log(`파라미터 값: ${paramValue}`);
-  leNum = params.get("leNum");
-  adNum = params.get("adNum");
-
-  console.log("leNum = "+ leNum);
-  console.log("adNum = "+ adNum);
-
-  console.log("아까 그 카드 다시 보여주기");
-
-  //카드 초기화
-  for(let i = 0 ;i < 4;i++){
-    reCards[i].innerHTML = "";
-  }
-  reClicked(leNum);
-  showCards(leNum, adNum);
-
-} else {
-  // 'paramName' 파라미터가 존재하지 않습니다.
-  console.log('파라미터가 없습니다.');
-}
