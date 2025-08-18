@@ -199,3 +199,11 @@ main{
 .map_detail{
   font-size: 14px;
 }
+
+/* 페이지 설명 */
+.site_info{
+  margin-top: 0px;
+  font-size: 20px;
+  background-color: #FFF8EF;
+  text-align: center;
+}
